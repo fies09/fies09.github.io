@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-03-30T06:37:37.868Z</updated>
+  <updated>2022-03-28T07:56:58.232Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -15,19 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://fies09.github.io/article/d87f7e0c.html"/>
-    <id>http://fies09.github.io/article/d87f7e0c.html</id>
-    <published>2022-03-30T06:37:31.000Z</published>
-    <updated>2022-03-30T06:37:37.868Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title></title>
@@ -614,6 +601,38 @@ ServerName www.myweb.com
     <category term="Django" scheme="http://fies09.github.io/tags/Django/"/>
     
     <category term="Web" scheme="http://fies09.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SVN</title>
+    <link href="http://fies09.github.io/article/ec3edfbe.html"/>
+    <id>http://fies09.github.io/article/ec3edfbe.html</id>
+    <published>2021-06-22T02:24:45.000Z</published>
+    <updated>2022-03-23T14:05:13.990Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p><p>提取码: 4iuo</p><p><a href="https://pan.baidu.com/s/1eWpX4ai5_eTaLHCn0x1_hQ">汉化包地址</a></p><p>提取码: 7u70 </p><p>汉化说明:</p><p>在任意位置右击—&gt;TortoiseSVN—&gt;settings—&gt;General—&gt;Language(简体中文)—&gt;应用 —&gt; 确定</p><p>1, 导出项目</p><p>在检出目录文件夹下:</p><p>右击—&gt;SVN检出—&gt;填写版本库url—&gt;确定</p><p>**版本库url为服务器地址,检出标志为绿色的√</p><p>2, 修改文件,添加文件,删除文件</p><p>​    2.1 添加文件</p><p>​        选中 —&gt; 右击 —&gt; 加入 (会出现蓝色感叹号) — &gt; 提交</p><p>总结: add ,commit</p><p>​    2.2 修改文件</p><pre><code>      检出要修改的文件 ---&gt; 右击 ---&gt; SVN更新 (对文件内容进行修改,保存,&#39;会出现红色感叹号&#39;) ---&gt; 提交(对提交文件进行相关备注)</code></pre><p>格式:</p><p>​    *XXXX年—XX月—XX日 姓名 修改内容：XXXXXXXX 修改原因：YYYYYYYYYYYYY*</p><p>​    2.3 重命名文件</p><p>​        选中文件—&gt;SVN更新—&gt;修改文件名—&gt;add—&gt;commit</p><p>​    2.4删除文件(删除前备份)</p><p>​        选中文件—&gt; SVN更新 —&gt; 删除 —&gt; 提交</p><p>总结:</p><p>​    更新,提交,显示日志,改名,删除</p><p>checkout:将文件添加到本地目录</p><p>add: 往版本库添加新的文件</p><p>commit: 将改动的文件提交到版本库</p><p>lock/unlock: 加锁/解锁</p><p>update: 更新</p><p>delete: 删除</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw&quot;&gt;软件地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提取码: 4iuo&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1eWpX4ai5_eTaLHCn0x1_hQ&quot;&gt;汉化包地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提取码: 7u70 &lt;/p&gt;
+&lt;p&gt;汉化说明:&lt;/p&gt;
+&lt;p&gt;在任意位置右击—&amp;gt;TortoiseSVN—&amp;gt;settings—&amp;gt;General—&amp;gt;Language(简体中文)—&amp;gt;应用 —&amp;gt; 确定&lt;/p&gt;
+&lt;p&gt;1, 导出项目&lt;/p&gt;
+&lt;p&gt;在检出目录文件夹下:&lt;/p&gt;
+&lt;p&gt;右击—&amp;gt;SVN检出—&amp;gt;填写版本库url—&amp;gt;确定&lt;/p&gt;
+&lt;p&gt;**版本库url为服务器地址,检出标志为绿色的√&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="版本管理工具" scheme="http://fies09.github.io/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="版本管理工具" scheme="http://fies09.github.io/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="SVN" scheme="http://fies09.github.io/tags/SVN/"/>
     
   </entry>
   
