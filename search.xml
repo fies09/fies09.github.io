@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title>Centos</title>
     <url>/article/cab4360e.html</url>
-    <content><![CDATA[<hr>
-<p>title: Centos<br>comments: true<br>copyright: true<br>date: 2022-03-28 14:59:04<br>tags:<br>    - Centos相关命令笔记<br>categories: Linux</p>
-<hr>
-<p>Centos安装docker/Python3/pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+    <content><![CDATA[<p>Centos安装docker/Python3/pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
 ]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Centos相关命令笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>Apache配置说明</title>
