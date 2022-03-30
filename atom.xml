@@ -489,9 +489,9 @@ ServerName www.myweb.com
     <category term="数据库" scheme="http://fies09.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-    <category term="MongoDB" scheme="http://fies09.github.io/tags/MongoDB/"/>
-    
     <category term="数据库" scheme="http://fies09.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="MongoDB" scheme="http://fies09.github.io/tags/MongoDB/"/>
     
   </entry>
   
@@ -537,9 +537,9 @@ ServerName www.myweb.com
     <category term="数据库" scheme="http://fies09.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-    <category term="数据库" scheme="http://fies09.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
     <category term="Mysql" scheme="http://fies09.github.io/tags/Mysql/"/>
+    
+    <category term="数据库" scheme="http://fies09.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
