@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Centos</title>
+    <url>/article/cab4360e.html</url>
+    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Centos相关命令笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Apache配置说明</title>
     <url>/article/7e84e351.html</url>
     <content><![CDATA[<p>1,运行php<br>运行php文件: php.exe的目录下    php.exe -f “php文件路径和文件名.php”<br>运行php代码: php.exe的目录下     php.exe -r “echo ‘hello world’ ; $i &#x3D; 1; $i++;echo $i;”</p>
@@ -58,31 +70,93 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Django的基础入门</title>
-    <url>/article/f6b2ae5.html</url>
-    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
-<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
-<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
-<p>​        #密码</p>
-<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
-<p>4,更新应用数据库</p>
-<p>python manage.py makemigrations</p>
-<p>python manage.py migrate</p>
-<p>5,创建超级管理员</p>
-<p>python manage.py createsuperuser</p>
-<p>6,运行项目</p>
-<p>python manage.py runserver</p>
-<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
-<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
-<p>8,Django原理</p>
-<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
+    <title>gitblit</title>
+    <url>/article/c361dd8f.html</url>
+    <content><![CDATA[<p>团队协作管理工具:</p>
+<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
+<p>​    飞书:协同管理工具</p>
+<p>​     飞秋:</p>
+<p>​      钉钉:</p>
+<p>Gitblit:</p>
+<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
+<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
+<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
 ]]></content>
       <categories>
-        <category>Web</category>
+        <category>版本管理工具</category>
       </categories>
       <tags>
-        <tag>Django</tag>
-        <tag>Web</tag>
+        <tag>Gitblit</tag>
+        <tag>版本管理工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客next主题的使用说明</title>
+    <url>/article/78fbf3e4.html</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
+<p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>下载hexo模块,</p>
+<p>cnpm install -g hexo-cli</p>
+<p>②建立博客文件夹<br>mkdir blog</p>
+<p>③生成博客文件<br>cd blog </p>
+<p>hexo init</p>
+<p>④下载next主题</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>⑤在github上建立仓库github名.github.io</p>
+<p>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
+<p>⑦当配置完成后执行以下命令:</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
+<p>安装的相关模块:</p>
+<p>rss:  npm install hexo-generator-feed –save</p>
+<p>search: npm install hexo-generator-searchdb –save</p>
+<p>wordcount: npm i –save hexo-wordcount</p>
+<p>gulp: npm install gulp -g</p>
+<p>gulp插件: </p>
+<p>npm install gulp-minify-css –save</p>
+<p>npm install gulp-uglify –save<br>npm install gulp-htmlmin –save<br>npm install gulp-htmlclean –save<br>npm install gulp-imagemin –save</p>
+<p>宠物:  npm install -save hexo-helper-live2d</p>
+<p>响应模型: npm install live2d-widget-model-wanko</p>
+<p>symbol-count-time: npm install hexo-symbols-count-time –save</p>
+<p>分类含子集形式:</p>
+<p>​    categories: [Python,数据分析]</p>
+<p>多层分类:</p>
+<p>categories:</p>
+<p>–  数据分析</p>
+<p>–  Python</p>
+<p>tags: [Python,数据分析]</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MongoDB</title>
+    <url>/article/8ead567e.html</url>
+    <content><![CDATA[<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p>
+<p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p>
+<p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p>
+<p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p>
+<p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p>
+<p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p>
+<p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p>
+<p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p>
+<p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p>
+<p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MongoDB</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -144,110 +218,8 @@ hexo d
         <category>Blog</category>
       </categories>
       <tags>
+        <tag>Hexo</tag>
         <tag>Yilia</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客next主题的使用说明</title>
-    <url>/article/78fbf3e4.html</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
-<p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载next主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
-<p>⑤在github上建立仓库github名.github.io</p>
-<p>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>安装的相关模块:</p>
-<p>rss:  npm install hexo-generator-feed –save</p>
-<p>search: npm install hexo-generator-searchdb –save</p>
-<p>wordcount: npm i –save hexo-wordcount</p>
-<p>gulp: npm install gulp -g</p>
-<p>gulp插件: </p>
-<p>npm install gulp-minify-css –save</p>
-<p>npm install gulp-uglify –save<br>npm install gulp-htmlmin –save<br>npm install gulp-htmlclean –save<br>npm install gulp-imagemin –save</p>
-<p>宠物:  npm install -save hexo-helper-live2d</p>
-<p>响应模型: npm install live2d-widget-model-wanko</p>
-<p>symbol-count-time: npm install hexo-symbols-count-time –save</p>
-<p>分类含子集形式:</p>
-<p>​    categories: [Python,数据分析]</p>
-<p>多层分类:</p>
-<p>categories:</p>
-<p>–  数据分析</p>
-<p>–  Python</p>
-<p>tags: [Python,数据分析]</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitblit</title>
-    <url>/article/c361dd8f.html</url>
-    <content><![CDATA[<p>团队协作管理工具:</p>
-<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
-<p>​    飞书:协同管理工具</p>
-<p>​     飞秋:</p>
-<p>​      钉钉:</p>
-<p>Gitblit:</p>
-<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
-<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
-<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
-]]></content>
-      <categories>
-        <category>版本管理工具</category>
-      </categories>
-      <tags>
-        <tag>Gitblit</tag>
-        <tag>版本管理工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos</title>
-    <url>/article/cab4360e.html</url>
-    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Centos相关命令笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MongoDB</title>
-    <url>/article/8ead567e.html</url>
-    <content><![CDATA[<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p>
-<p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p>
-<p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p>
-<p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p>
-<p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p>
-<p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p>
-<p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p>
-<p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p>
-<p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p>
-<p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>MongoDB</tag>
-        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -321,7 +293,7 @@ hexo d
 <p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
 <p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
 <p>总结:上传主要是add,commit,push</p>
-<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#121;&#48;&#x31;&#51;&#x30;&#52;&#x35;&#x37;&#52;&#64;&#x61;&#x6c;&#x69;&#98;&#x61;&#x62;&#97;&#45;&#x69;&#x6e;&#x63;&#46;&#x63;&#x6f;&#x6d;">&#x66;&#121;&#48;&#x31;&#51;&#x30;&#52;&#x35;&#x37;&#52;&#64;&#x61;&#x6c;&#x69;&#98;&#x61;&#x62;&#97;&#45;&#x69;&#x6e;&#x63;&#46;&#x63;&#x6f;&#x6d;</a>‘</p>
+<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#121;&#48;&#49;&#x33;&#x30;&#x34;&#53;&#55;&#x34;&#64;&#97;&#108;&#105;&#98;&#97;&#98;&#97;&#45;&#105;&#x6e;&#x63;&#x2e;&#99;&#111;&#x6d;">&#x66;&#121;&#48;&#49;&#x33;&#x30;&#x34;&#53;&#55;&#x34;&#64;&#97;&#108;&#105;&#98;&#97;&#98;&#97;&#45;&#105;&#x6e;&#x63;&#x2e;&#99;&#111;&#x6d;</a>‘</p>
 <p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
@@ -416,6 +388,58 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>Python第三方模块安装的几种方式</title>
+    <url>/article/126ed703.html</url>
+    <content><![CDATA[<p>1,pip安装方式</p>
+<p>eg:pip install 包名</p>
+<p>2,下载tar.gz包,执行python setup.py install安装 </p>
+<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
+<p>3,安装whl文件</p>
+<p>文件目录下:pip instll 文件名.后缀</p>
+<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>第三方模块</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs简单使用</title>
+    <url>/article/89b3a0ef.html</url>
+    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
+<p>5,检测npm是否安装 npm -v</p>
+<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
+<ol>
+<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
+<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
+<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
+</ol>
+<p>安装出错解决办法: npm config set proxy null</p>
+<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
+<p>7,常用模块express npm install express</p>
+<p>8,卸载常用命令 npm uninstall express</p>
+<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
+<p>更新模块:npm update express</p>
+<p>搜索模块:npm search express</p>
+<p>创建模块 npm init</p>
+<p>注册用户:npm adduser</p>
+<p>发布模块:npm publish</p>
+<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>然后可以用cnpm install 模块名 下载模块</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python关键字</title>
     <url>/article/5d17988a.html</url>
     <content><![CDATA[<p>一,各个关键字代表的含义<br>abs():取元素绝对值<br>np.array():表示数组<br>np.argsort():返回元素排序的下标位置(针对索引)</p>
@@ -467,33 +491,6 @@ hexo d
       <tags>
         <tag>Python</tag>
         <tag>关键字</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python概念</title>
-    <url>/article/7cf78c2.html</url>
-    <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
-<p>2,线程,进程,协程的区别<br>一,<br>    线程:指进程中的某一个控制单元<br>    单线程:指一个进程中只有一个线程(主线程),eg:dos操作系统<br>    多线程:指一个程序中包含多个执行流,多线程是实现并发的一种有效手段<br>    主线程:跟随应用程序创建的线程<br>    子线程:除应用程序外的其他线程<br>    python中有协程库gevent， pyweb框架tornado中也用了gevent封装好的协程。本文主要介绍进程、线程和协程三者之间的区别。<br>二、概念(详细说明)<br>    　　1、进程<br>    进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。<br>        2, 线程<br>    线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。<br>    　　3、协程<br>    协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</p>
-<p>三、进程和线程、协程在python中的使用<br>    　　1、多进程一般使用multiprocessing库，来利用多核CPU，主要是用在CPU密集型的程序上，当然生产者消费者这种也可以使用。多进程的优势就是一个子进程崩溃并不会影响其他子进程和主进程的运行，但缺点就是不能一次性启动太多进程，会严重影响系统的资源调度，特别是CPU使用率和负载。使用多进程可以查看文章《python 多进程使用总结》。注：python2的进程池在类中的使用会有问题，需要把类函数定义成全局函数。具体可参考 <a href="http://bbs.chinaunix.net/thread-4111379-1-1.html">http://bbs.chinaunix.net/thread-4111379-1-1.html</a><br>    　　2、多线程一般是使用threading库，完成一些IO密集型并发操作。多线程的优势是切换快，资源消耗低，但一个线程挂掉则会影响到所有线程，所以不够稳定。现实中使用线程池的场景会比较多，具体可参考《python线程池实现》。<br>    　　3、协程一般是使用gevent库，当然这个库用起来比较麻烦，所以使用的并不是很多。相反，协程在tornado的运用就多得多了，使用协程让tornado做到单线程异步，据说还能解决C10K的问题。所以协程使用的地方最多的是在web应用上。<br>    总结一下就是IO密集型一般使用多线程或者多进程，CPU密集型一般使用多进程，强调非阻塞异步并发的一般都是使用协程，当然有时候也是需要多进程线程池结合的，或者是其他组合方式。</p>
-<p>3,python如何进行内存管理的<br>对象引用计数机制:python语言内部依靠引用计数来持续追踪内存中的对象,就是说,他的Python内部记录的对象有多少个引用,及引用计数,当对象被创建时就等于创建了一个引用计数,当对象不需要时,这个对象的引用计数归零时,它将被垃圾收集机制处理掉<br>垃圾回收:<br>1,在Python语言内部,当一个对象的引用计数为0时,它将被垃圾收集机制处理掉<br>2,当遇到两个对象a和b相互引用时的这种情况,del语句可以减少a和b的引用计数,并销毁用于引用底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除<br>内存池机制:Python语言虽然提供了对内存的垃圾收集机制,但实际上它将不用的内存放到内存池而不是返回给操作系统,所以就有了以下:<br>1,Pymalloc机制；这个主要是为了加速Python的执行效率，Python引入了一个内存池机制，用于管理，为了对小块内存的申请和释放。<br>2 Python中所有小于256个字节的对象都是依靠pymalloc分配器来实现的，而稍大的对象用的则是系统的malloc。<br>3 对于Python对象，比如整数、浮点数和List这些，都有自己独立的内存池，对象间并不共享他们的内存池。换句话说就是，假设你分配并且释放了大量的整数，那么用于缓存这些整数的内存就不能再分配给浮点数。</p>
-<p>4,简述一个前端请求的处理流程,在uwsgi&#x2F;nginx&#x2F;django之间的处理流程<br>答:wsgi：一种实现python解析的通用接口标准&#x2F;协议，是一种通用的接口标准或者接口协议，实现了python web程序与服务器之间交互的通用性。<br>利用它，web.py或bottle或者django等等的python web开发框架，就可以轻松地部署在不同的web server上了；<br>uwsgi:同WSGI一样是一种通信协议<br>uwsgi协议是一个uWSGI服务器自有的协议，它用于定义传输信息的类型，它与WSGI相比是两样东西。 uWSGI :一种python web server或称为Server&#x2F;Gateway<br>uWSGI类似tornadoweb或者flup，是一种python web server，uWSGI是实现了uwsgi和WSGI两种协议的Web服务器，负责响应python 的web请求。<br>uWSGI实现了wsgi协议、uwsgi协议、http等协议。<br>Nginx中HttpUwsgiModule的作用是与uWSGI服务器进行交换。</p>
-<p>nginx&#x2F;uwsgi&#x2F;django交互流程：<br>1.首先客户端请求服务资源，<br>2.nginx作为直接对外的服务接口,接收到客户端发送过来的http请求,会解包、分析，<br>3.如果是静态文件请求就根据nginx配置的静态文件目录，返回请求的资源，<br>4.如果是动态的请求,nginx就通过配置文件,将请求传递给uWSGI；uWSGI 将接收到的包进行处理，并转发给wsgi，<br>5.wsgi根据请求调用django工程的某个文件或函数，处理完后django将返回值交给wsgi，<br>6.wsgi将返回值进行打包，转发给uWSGI，<br>7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(如浏览器)。<br>*注:不同的组件之间传递信息涉及到数据格式和协议的转换</p>
-<p>5,celery队列<br>celery队列包含两个模块：worker和beat<br>worker:用于执行队列中的任务<br>beat：用于定时分配任务<br>这两个模块可以同时启动，也可以分别启动<br>任务可以有两个来源：<br>代码内调用：将需要放入执行队列的任务函数import进来<br>beat定时派发：在配置文件里设置好需要调用的任务函数和调用日期，beat就会自动派发任务到队列里了</p>
-<p>Celery安装<br>使用之前需要配置消息中间件<br>一般是用Redis数据库来通讯更加方便，需要在本地安装redis服务并启动<br>pip install -U redis<br>以下为celery的具体使用<br><a href="https://www.jianshu.com/p/34291d6b5f47">https://www.jianshu.com/p/34291d6b5f47</a></p>
-<p>6,modelfirst dbfirst的区别<br>datebase first：就是代表数据库优先，那么提前就是先创建数据库<br>model firast:就是代表model优先，那么提前也就先创建model,然后根据model自动建立数据库<br>这两EF的编程方式在使用的过程中的区别为：<br>在添加ADO.NET实体数据模型的时候，database first选择的是从数据库生成<br>在数据结构发生变化的时候，database first编程方式中是选择从数据库更新模型，因此就导致database first是以数据库为主，而Model first选择的是空模型生成<br>当数据发生变化的时候，model first选择的是从模型中生成数据库                          </p>
-<p>7,RESTful&#x2F;WebSocket接口机制<br>WebSocket:服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，<br>属于服务器推送技术的一种。</p>
-<p>8,XMl进行网络通信<br>xpath对xml格式的东西解析比较规范,基本上能够做到想要那个数据就取哪个数据</p>
-<p>9,</p>
-<p>Lamdba简化代码.递归:自身调用自身,高阶函数:将函数作为参数传递,<br>装饰器:把函数作为参数传递<br>#扩展 函数功能,在不改变原代码的情况下,<br>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包<br>生成器:一遍循环,一遍计算的机制称为生成器,<br>迭代器:取数据,高效遍历一组可迭代对象<br>类:包含对象所包含的属性和方法<br>对象:调用方法和属性<br>属性分为两大类:实例属性,类属性,实例属性的调用修改影响实例属性的值但不影响类属性的值,类属性的调用的修改既不影响类属性的值,也不影响实例属性 的值<br>构造方法:数据初始化,特殊的实例方法<br>使用__new__和__init__来完成的<br>_<em>new__负责进行对象的创建,<strong>init__负责进行对象的初始化<br>访问权限:私有</strong>(双下划线 ),受保护</em>(单下划线),公开<br>作用域,将局部变量转化为全局变量<br>方法分为四大类:<br>实例方法:第一个形参为self<br>类方法:第一个形参为cls,和装饰器类似:由@classmethod表示<br>静态方法:无参数,由@staticmethod表示<br>普通方法:是一个错误的方法,几乎不用</p>
-<p>10,IOError,AttributeError,ImportError,IndentationError,IndexError,KeyError,<br>SyntaxError,NameError分别代表什么异常<br>IOError: 输入输出异常<br>AttributeError: 试图访问一个对象没有的属性<br>ImportError: 无法引入模块或包，基本是路径问题<br>IndentationError: 语法错误，代码没有正确的对齐<br>IndexError: 下标索引超出序列边界<br>KeyError: 试图访问你字典里不存在的键<br>SyntaxError: Python代码逻辑语法出错，不能执行<br>NameError: 使用一个还未赋予对象的变量</p>
-<p>11,r,r+,rb,rb+打开文件模式区别<br>答:r: 以只读方式打开文件。文件的指针将放在文件的开头。这是默认模式。<br>w: 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a: 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果文件不存在，创建新的文件进行写入。<br>rb: 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。<br>wb: 以二进制格式打开一个文件只用于写入。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab: 以二进制格式打开一个文件用于追加。如果文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容会被写入到已有内容之后。如果文件不存在，创建新文件进行写入。<br>r+: 打开一个文件用于读写。文件指针将会放在文件开头。<br>w+: 打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a+: 打开一个文件用于读写。如果文件已存在，文件指针将会放在文件结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。<br>rb+: 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。<br>wb+: 以二进制格式打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab+: 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>概念</tag>
       </tags>
   </entry>
   <entry>
@@ -557,6 +554,126 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>Mysql</title>
+    <url>/article/54e1373e.html</url>
+    <content><![CDATA[<p>总结<br>    有关数据库的DDL操作</p>
+<pre><code>- SHOW DATABASES;
+-CREATE DATABASES 数据库名;
+-DROP DATABASES [IF EXISTS]数据库名;
+-USE 数据库名;
+
+有关数据表的DDL操作
+-SHOW TABLES;
+-DESC 表名;
+-CREATE TABLES 表名(......);
+-DROP TABLE 表名;
+-ALTER TABLE  表名;
+
+数据表的列类型
+-数值类型:INT,FLOAT
+-日期类型:DATE,TIME
+-字符串类型:CHAR,VARCHAR,TEXT
+</code></pre>
+<p>一,<br>库操作<br>①show databases;  查询当前用户下所有数据库</p>
+<p>②create database 数据库名;  创建数据库</p>
+<p>③use 数据库名;    打开库(包括切换其他数据库)</p>
+<p>④show tables;     显示当前数据库下所有的数据表</p>
+<p>⑤drop database 数据库名;  删除数据库</p>
+<p>⑥desc 表名;(dos下)      显示表结构</p>
+<p>float(7,2)——-整数部分99999     99999.99</p>
+<p>char(4):  不可变字符串长度3位<br>varchar(4),可变数据长度</p>
+<p>二,<br>表操作<br>①create table 表名(id int);   建表<br> create table demo3(id int,username varchar(20),userpass varchar(20),ctime datetime);</p>
+<p>float(7,2)—- 整数值99999  最大值99999.99</p>
+<p>char(4)<br>abc<br>verchar(4)<br>ab</p>
+<p>②drop table 表名;      删除数据表</p>
+<p>③alter<br>添加字段<br>alter table 表名 add 字段名 数据类型;    [单字段]<br>alter table demo1 add name varchar(20);    </p>
+<p>alter table 表名 add(字段1 数据类型,字段2 数据类型…);    [多字段]<br>alter table demo1 add(dates date,flag int);</p>
+<p>insert into 表名 values(字段1值,,字段2值)</p>
+<p>⑤drop<br>alter table 表名 drop 字段名;    删除字段</p>
+<p>④modify<br>修改字段 (原表中已存在的,不修改列名)<br>alter table 表名 modify 字段名 字段类型;        [单字段]<br>alter table demo1 modify flag char(1);</p>
+<p>alter table 表名 modify 字段名1 字段类型1,modify 字段名2 字段类型2…;        [多字段]<br>alter table demo1 modify flag char(1);</p>
+<p>⑥<br>重命名字段<br>alter table 表名 change 旧字段名 新字段名 字段类型;</p>
+<p>重命名表名<br>alter table 表名 rename 新表名;<br>rename table 表名 to 新表名;</p>
+<p>删除表数据(表截断),保留结构,清除表中所有数据,不清选择性删除,不能回退<br>truncate 表名;       </p>
+<p>三,约束<br>数据库约束概念:在数据表上强制执行的效验规则,保证了数据的完整性<br>(唯一约束,主键约束,外键约束会自动创建索引,非空约束不会,)</p>
+<p>非空约束 :<br>建立数据表字段中使用或者在修改数据表字段中使用 ,      格式: 字段名 字段类名 约束名<br>不等于null :空字符串,0,’null’,null不区分大小写,主键或非空不为null<br>创建,修改<br>create table 表名(字段名 字段类型 not null);     不填可默认为null<br>create table 表名(id int not null);</p>
+<p>alter table 表名 modify 字段名 字段类型 约束名;<br>alter table demo1 modify url text not null;</p>
+<p>alter table 表名 drop 字段名;    删除字段<br>alter table demo drop id;</p>
+<p>唯一约束:<br>建立在not null 前<br>.修改,<br>不出现重复值,允许出现多个NULL,同一张表可有多个唯一约束,可由多列组合而成,会为之建立对应的索引,若不给唯一约束起名.该唯一约束默认与列名相同,<br>alter table 表名 modify 字段名 字段类型 unique;<br>alter table demo modify id int unique;</p>
+<p>alter table 表名 drop 字段名;      删除唯一约束 (必须有多个字段)<br>alter table demo drop id;</p>
+<p>主键约束<br>相当于 非空约束 + 唯一约束   唯一确定一行记录的字段或字段组合<br>注意.一张数据表中只能有一个主键<br>创建<br>create table 表名(字段名1 字段类型1 primary key,字段名2 字段类型2);<br>create table demo5(id int primary key,name varchar(20));</p>
+<p>alter table 表名 drop primary key; 删除主键</p>
+<p>alter table 表名 modify 字段名 字段类型 primary key;<br>alter table demo5 modify id int primary key; 修改主键 [将非主键字段修改为 主键字段]</p>
+<p>create table 表名(字段名1 字段类型1,字段名2 字段类型2,primary key(字段名1,字段名2 ));<br>create table demo6(id int,name varchar(20),primary key(id,name)); 两个字段共用一个主键.复合主键</p>
+<p>create table 表名(主键名 主键类型 primary key auto_increment,字段名2 字段类型2);<br>create table demo6(id int primary key auto_increment,name varchar(20));主键自增,在primary key 后加上auto_increment</p>
+<p>insert into 表名(字段名) values(字段值); [主键自增时增加字段内容]<br>insert into demo6(name) values(‘zs’);</p>
+<p>外键 约束([一对一,可选择任意一方来增加外键列,只要为外键列增加唯一约束就可],[一对多,在多的一端增加外键列])<br>有外键的为从表,没有的为主表,保证两个数据表间的参照关系<br>创建<br>先创建主表<br>create table 主表名(主键名 主键类型 primary key,字段名2 字段类型2);<br>create table dept(deptno int primary key,dname varchar(20));</p>
+<p>再建从表<br>create table 从表名(从表主键名 从表主键类型 primary key,字段名2 字段类型2,主表主键名 主表主键类型,constraint 从表名_fk foreign key(主表主键名) references 主表名(主表主键名));    从表名_fk:自定义的约束名<br>create table emp(empno int primary key,ename varchar(20),sal int,deptno int,constraint emp_fk  foreign key(deptno) references dept (deptno));</p>
+<p>删除外键约束<br>①删除外键<br>alter table 从表名 drop foreign key 约束名;<br>alter table emp drop foreign key emp_fk;emp_fk,约束名</p>
+<p>②删除外键索引<br>alter table 从表名 drop index 约束名;<br>alter table emp drop index emp_fk;</p>
+<p>增加外键<br>alter table 从表名 add foreign key(主表主键) references 主表名(主表主键名);references 参照表及其主键(主表的主键)<br>alter table emp add foreign key(deptno) references dept(deptno);</p>
+<p>检查约束:保证数据的输入校验规则(oracle支持,mysql 不支持)<br>create table 表名(id int check(id in (1,2)));<br>插入数据时只能输入1或2<br>create table 表名(age int check(age&gt;8));<br>插入数据时只能是大于8的数据</p>
+<p>show create table 表名;查询建表结构</p>
+<p>DML语句,数据操作语言<br>插入,修改,删除语句</p>
+<p>插入数据:向新行中写入insert<br>insert into 表名(字段名…) values(值…)  指定插入字段,如果字段名没写,默认值为NULL<br>insert into demo1(id,name,url) values(1,’zs’,’test’);<br>insert into demo1(name,url) values(‘zs’,’test’);</p>
+<p>insert into 表名 values(值…)  默认插入所有字段<br>insert into demo1 values(1,’zs’,’test’);</p>
+<p>插入多条记录(行)<br>insert into 表名 values(值…),(值…);<br>insert into demo1 values(4,’zs’,’test’),(5,’aa’,’test’);</p>
+<p>修改&#x2F;更新数据update<br>update 表名 set 需要修改的字段 &#x3D; 新值;</p>
+<p>[单个修改]<br>[多条记录]update 表名 set 需要修改的字段 &#x3D; 新值;<br>update demo1 set url &#x3D; ‘a’;</p>
+<p>[多个字段值修改]<br>update 表名 set 需修改的字段1 &#x3D; 新值1,需修改的字段2 &#x3D; 新值2;</p>
+<p>[根据条件修改]<br>update 表名 set 需要修改的字段 &#x3D; 新值 where 条件;<br>update demo1 set name &#x3D; ‘test’ where id &#x3D; 4;</p>
+<p>删除delete from<br>[单条删除]<br>delete from 表名 where 条件;<br>delete from demo1 where name &#x3D; ‘zs’;<br>[多条删除]<br>delete from 表名;<br>delete from demo1;</p>
+<p>DQL数据库查询语言<br>查询<br>select 字段列表 from 表名;[查询指定行数据]<br>select name from demo1;<br>select * from 表名;[查询所有行数据]<br>select * from demo1;</p>
+<p>算术运算符:+-*&#x2F;<br>为字段名起别名 格式:字段名 as 别名(使用双引号)<br>select name,sal + 500 as “sals” from demo1;<br>注意:as可以省略,双引号可以省略(在别名中出现空格时不能省略)<br>select name,sal + 500 sals from demo1;</p>
+<p>去重:distinct<br>a,单字段去重<br>select distinct 字段名 from 表名;<br>b,组合字段去重<br>select distinct 字段名1,字段名2… from 表名;</p>
+<p>not &gt; and &gt; or</p>
+<p>limit 取数据记录<br>limit n —–记录数<br>limit n,m n—起始索引  (从0开始) m—-记录数</p>
+<p>大多数 用于分页<br>select * from 表名 limit n;</p>
+<p>数据排序<br>格式: order by 字段名;(查询 语句 结尾)<br>—升序:asc[默认]<br>select * from 表名 order by 字段名;<br>eg:select * from demo1 order by sal asc; 按工资升序排列<br>—降序 :desc<br>select * from 表名 order by 字段名 desc;<br>eg:select * from demo1 order by sal desc; 按工资 降序排列<br>—组合排序<br>select * from demo1 order by sal,name desc;按照第一个字段排序,如果有重复数据则按照第二个字段排序<br>select * from 表名 order by 字段名1 排序类型1,字段名2 排序类型2;</p>
+<p>—别名排序<br>select 字段名1,对字段名2修改 字段名2修改的别名 from 表名 order by 字段名2修改的别名;一般情况是为生成的新字段数据,执行排序操作<br>eg: select name,sal+200 sals from demo1 order by sals;</p>
+<p>索引<br>作用:用于提高数据表查询效率<br>创建索引:<br>自动:由数据库自动完成,通过创建主键约束 ,唯一约束,外键约束会自动建立索引<br>手动:<br> create index i_name on demo1(name);<br>格式:create index 索引名 on 表名(字段…);<br>create index i_us on demo1(url,sal);组合索引</p>
+<p>删除索引<br>drop index 索引名  on 表名;<br>drop index i_us on demo1;</p>
+<p>alter table 表名 drop index 索引名<br>alter table demo1 drop index i_name;</p>
+<p>函数<br>字符串<br>concat(‘a’,’b’);连接ab.一般是select查询<br>数值<br>mod(1,3);1&#x2F;3的余数<br>select ceil(0.8);1 —-ceil向上取整   ceil(-0.8);0<br>select floor(0.8);0 —floor向下取整  floor(-0.8);-1<br>截断<br>select truncate(3.21,2);—3.21<br>select truncate(3.21,1);—3.2<br>当前日期<br>select curdate();<br>当前时间<br>select curtime();<br>当前时间日期<br>select now();<br>一般计算年龄:<br>select dates,year(now())-year(dates)  age from demo1;</p>
+<p>select ifnull(1,2);1<br>select ifnull(数据1,数据 2);如果数据1为null,返回数据2,否则返回数据1</p>
+<p>select nullif(3,2);3<br>select nullif(数据1,数据2);如果数据1和数据2相等,返回null,否则返回数据1</p>
+<p>select name,sal,if(sal,’有值’,’空值’) result from demo1;<br>if(数据1,数据2,数据3);如果数据1 为true,返回数据2,否则返回数据3</p>
+<p>select isnull(sal) from demo1;0表示false.1表示true(是不是空值,如果是空值true,不是空值false)<br>isnull(数据1);判断数据1是否为null,如果为null返回true,否则返回false</p>
+<p>select version();显示数据库当前版本<br>select database();显示当前数据库名<br>select password(‘123’);123字符password加密的方式<br>select md5(‘123’);字符123md5加密的方式</p>
+<p>多行函数(聚合函数)   除 count外 都会 忽略null的值<br>avg():平均值<br>count():统计行数<br>max():求最大值<br>min():求最小值<br>sum():求和<br>select avg(sal),max(sal),min(sal),sum(sal) from demo1;</p>
+<p>where + group by + order by</p>
+<p>数据分组 group by<br>select deptno,avg(sql) from emp group by deptno;从员工 表中依据部门编号分组查询部门编号 —-分组查询</p>
+<p>分组排序<br>select deptno,(ename,)avg(sql) avgs from emp group by deptno order by avgs desc;</p>
+<p>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p>
+<p>分组排序 加条件<br>查询平均工资大于1500的部门<br>select deptno,avg(sql) avgs from emp group by deptno having sal &gt; 1500  order by avgs desc;</p>
+<p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno; </p>
+<p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno having sums &gt;3000;</p>
+<p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno having sums &gt;3000 order by sums;<br>{<br>    DQL:数据库查询语言<br>    主要由SELECT . WHERE,ORDER BY,GROUP BY,和HAVING关键字构成</p>
+<pre><code>DML:数据操作语言
+主要由insert,update,和delete三个关键字完成,对数据库记录修改
+
+DDL:数据定义语言
+主要由create,alter和drop和truncate四个关键字完成
+
+DCL:数据控制语言
+主要由grant和revoke关键字完成
+
+TPL:事务处理语言
+主要由commit,rollback,transaction关键字完成
+</code></pre>
+<p>}</p>
+<p>字段属性说明:</p>
+<p>isdelete bit default 0:只有两种取值,o和1</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ROS操作系统使用说明</title>
     <url>/article/a4d8e474.html</url>
     <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1qV41167d2?p=1">视频链接</a></p>
@@ -614,109 +731,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>Python面试题2</title>
-    <url>/article/72f963fe.html</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">面试题参考链接</a></p>
-<p>1,Python的GIL?<br>答:GIL是Python的全局解释器锁,同一进程中加入有多个线程运行,一个线程在运行 Python程序的时候会霸占python解释器,也就是加了一把锁(即GIL),使该进程内其他线程无法运行,等该线程运行完成后其他 线程才能运行.</p>
-<p>2,with方法打开处理文件帮助我们做了什么?<br>答:在处理完文件之后,会帮助我们自动关闭文件</p>
-<p>3,数据表student有id,name,score,city字段,其中name中的名字可有重复,需消除重复行,请写sql语句<br>答:select distinct name from student;</p>
-<p>4,match和search的区别?<br>match()函数检查re是不是在String的开始位置匹配,<br>只有在开始位置匹配成功才返回,不是在开始位置就返回None<br>search()全局查找匹配,会扫描整个字符串并返回第一个成功的匹配</p>
-<p>5,分类算法有:<br>NBC算法<br>LR算法<br>SVM算法<br>ID3算法<br>C4.5 算法<br>C5.0算法<br>KNN 算法<br>ANN 算法</p>
-<p>6,linux命令?<br>grep:查找文件中符合条件的字符串<br>awk:处理文本文件的语言,强大额文本处理工具<br>sed:利用脚本处理文本文件<br>chmod:控制用户对文本的权限命令<br>lsof:列出当前系统打开文件的工具<br>ping:测试与目标主机的连通性<br>less:浏览文件<br>ftp:设置系统文件相关功能<br>ifconfig:用来查看或配置网络设备<br>ps:    进程查看命令<br>mount:挂载命令</p>
-<p>7,将字符转为字典?<br>答:<br>1,通过json进行转换<br>2,通过eval进行转换<br>3,通过literal_eval进行转换</p>
-<p>8,可变数据类型和不可变数据类型的原理?<br>不可变类型:数值型,字符串型string和元组tuple<br>如果变量的值发生了变化,相当于新建了一个对象,而对于相同值的对象,在内存中只有一个地址</p>
-<p>可变类型:列表list和字典dict<br>如果对对象进行了append,+&#x3D;等这些操作之后,只是改变了变量的值,而不会新建一个对象,变量引用的对象的地址也不会发生变化,不过相对于相同值的不同对象,在内存中则会存在不同的对象,即每个对象都有自己的地址</p>
-<p>9,正则re.complie作用<br>答:将正则表达式编译成一个对象,加快速度,并重复使用</p>
-<p>用于编译正则表达式,生成一个pattern对象,返回的是一匹配对象,一般情况需要和findall(),search(),match()搭配使用<br>和findall()一起使用返回一个列表<br>和match()使用返回一个class,str,tuple<br>和search()搭配使用和match返回的类型差不多</p>
-<p>10 a&#x3D; (1,)  b &#x3D; (1) c &#x3D; (“1”)分别表示什么类型的数据<br>答:元组,整型,字符串类型</p>
-<p>11,用python删除文件和用linux删除文件方法<br>答:<br>python:<br>import os<br>os.remove(文件名)<br>linux:<br>rm 文件名</p>
-<p>12,数据库优化查询方法<br>答:外键,索引,联合查询,选择特定字段等等</p>
-<p>13,请列出你会的任意一种统计图(条形图,折线图等)绘制的开源软件,第三方也行<br>答:pychart  matplotlib</p>
-<p>14,正则表达式匹配中,(.)和(.?)匹配区别<br>答:’.’是匹配除了’\n’之外的任意一个字符<br>‘?’是匹配前一个字符1次或0次</p>
-<p>(.<em>)是贪婪匹配,会把满足正则的尽可能多的往后匹配<br>(.</em>?)是非贪婪匹配,会把满足正则的尽可能少匹配</p>
-<p>15,举例说明异常模块中try except else finally 的相关意义<br>答:try…except…else没有铺获到异常,执行else语句<br>try…except…finally不管有没有铺获到异常,都执行finally语句</p>
-<p>16,python中交换两个数值<br>a,b &#x3D; b,a</p>
-<p>17,写5条常用sql语句<br>答:show databases;<br>show tables;<br>desc tb_name;<br>select * from tb_name<br>delete from tb_name where id &#x3D; 5;<br>update tb_name set name&#x3D;’xue’,age&#x3D;23 where id &#x3D; 5;</p>
-<p>18,[1,2,3]+[4,5,6]的结果是多少<br>答:[1,2,3,4,5,6]</p>
-<p>19,简述mysql和redis区别<br>答:redis:内存型非关系数据库,数据保存在内存中,速度快<br>    mysql:关系型数据库,数据保存在磁盘中,速度相对慢</p>
-<p>20,遇到bug如何处理<br>答:1,细节上错误,通过print()打印,能执行到print()说明一般上面的代码没什么问题,分段检测程序是否有问题,如果是js的话使用alert或console.log<br>2,如果涉及一些第三方框架的话,查官方文档或技术博客<br>3,对于bug的管理和归类总结</p>
-<p>21,python字典和json字符串相互转化方法<br>json.dumps()将字典转化为json字符串,<br>json.loads()将json字符串转化为字典</p>
-<p>22,MyISAM和InnoDB区别:<br>答:<br>1,存储结构,<br>2,存储空间<br>3,事物支持<br>4,CURD支持<br>5,外键<br><a href="http://blog.itpub.net/21374452/viewspace-2136284/">区别详解</a></p>
-<p>23,,int(“1.4”),int(1.4)输出结果<br>int(‘1.4’)报错<br>int(1.4)输出1</p>
-<p>24,列举3条以上PEP8编码规则<br>答:①顶级定义之间空两格,比如函数或类定义<br>②方法定义,类定义与第一个方法之间,都应该空一行<br>③三引号进行注释<br>④pycharm用4个空格缩进代码</p>
-<p>25,正则表达式匹配第一个URL<br>答:findall结果无需加group(),search需要加group()提取</p>
-<p>26,简述乐观锁和悲观锁<br>答:悲观锁,就是很悲观,每次拿数据的时候都认为别人会修改,所以每次在拿数据的时候都会上锁,这样别人想拿这个数据就会block直到它拿到锁</p>
-<p>乐观锁:很乐观,每次拿数据都认为别人不会修改,所以不会上锁</p>
-<p>27,python传参数是传值还是传址<br>答:python中的函数参数是引用传递(不是值传递),对于不可变数据类型(数字,字符串,元组),因变量不能修改,所以运算不会影响到变量自身,而对于可变数据类型(列表,字典)来说,函数体运算可能会更改传入的参数变量</p>
-<p>28,C:\Users\re-wu.junya\Desktop&gt;python 1.py 22 33 命令行启动程序并传参,print(sys.argv)会输出什么数据?<br>[‘1.py’, ‘22’, ‘33’]</p>
-<p>29,简述同源策略<br>答:同源策略需同时满足以下三点要求<br>    1,协议相同<br>    2,域名相同<br>    3,端口相同<br>ex:<br>http:<a href="http://www.test.com与https:www.test.com">www.test.com与https:www.test.com</a> 协议不同<br>http:<a href="http://www.test.com与http:www.admin.com">www.test.com与http:www.admin.com</a> 域名不同<br>http:<a href="http://www.test.com/">www.test.com</a> 与http:<a href="http://www.test.com:8081/">www.test.com:8081</a> 端口不同<br>只要不满足其中任意一个要求,就不符合同源策略,就会出现”跨域”</p>
-<p>30,简述any()和all()方法<br>答:any():只要迭代器中有一个元素为真就为真,<br>all():迭代器中所有的判断项返回都是真,结果才是真<br>python中为假的元素:0,空字符串,空列表,空元组,None,False</p>
-<p>31,列出几种魔法方法并简要介绍用途<br><strong>init</strong>: 对象初始化的方法<br><strong>del</strong>: 删除对象执行的方法<br><strong>str</strong>: 当用print输出对象的时候，如果自己定义了__str__(self)方法，就会打印从这个方法中return的数据<br><strong>new</strong>: 创建对象会执行的方法，单例模式会用到</p>
-<p>32,列出常见mysql数据存储引擎<br>InnoDB:支持事物处理,支持外键,支持崩溃修复能力和并发控制.<br>MyISAM:插入数据快,空间和内存使用比较低,<br>MEMORY:所有数据都在内存中,数据的处理速度快.但是安全性不高</p>
-<p>33,常见转态码和意义<br>200 OK: 请求正常处理完毕<br>204 No Content: 请求成功处理，没有实体的主体返回<br>206 Partial Content: GET范围请求已成功处理<br>301 Moved Permanently: 永久重定向，资源已永久分配新URI<br>302 Found: 临时重定向，资源已临时分配新URI<br>303 See Other: 临时重定向，期望使用GET定向获取<br>304 Not Modified: 发送的附带条件请求未满足<br>307 Temporary Redirect: 临时重定向，POST不会变成GET<br>400 Bad Request: 请求报文语法错误或者参数错误<br>401 Unauthorized: 需要通过HTTP认证，或认证失败<br>403 Forbidden: 请求资源被拒绝<br>404 Not Found: 无法找到请求资源(服务器无理由拒绝)<br>500 Internal Server Error: 服务器故障或Web应用故障<br>503 Service Unavailable: 服务器超负载或停机维护 </p>
-<p>34,分别从前端,后端,数据库阐述web项目的性能优化<br>前端优化:<br>①,减少http请求,例如制作精灵图<br>②,html和CSS放在页面上部,javascript放在页面下部</p>
-<p>后端优化:<br>①,缓存存储读写次数高,变化少的数据,<br>②,异步方式,如果有耗时操作,可采用异步,如celery<br>③,代码优化,避免循环和判断次数太多,如果多个if else判断,优先判断最有可能发生的情况</p>
-<p>数据库优化:<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,简历索引,外键等</p>
-<p>35:map函数<br>map用法:<br>①,定义一个函数,<br>def square(x):  #计算平方数<br>    return x ** 2<br>map(函数名(square),一个或多个序列(列表))<br>#计算列表中的元素平方</p>
-<p>②,使用lambda匿名函数<br>map(lambda x: x **2 ,序列(列表))<br>#计算列表中的元素平方</p>
-<p>③,提供了两个列表.对相同位置的数据进行相加<br>map(lambda x,y:x+y,[1,3,1,4,5,2,1],[1,0,1,0,1,0,9])</p>
-<p>36,软件开发的设计模式?<br><a href="https://www.cnblogs.com/tangkaishou/p/9246353.html">设计模式</a><br>①创建型模式<br>②结构型模式<br>③行为型模式</p>
-<p>37,del,pop和remove之间的不同区别<br>del:按指定索引值删除元素<br>remove:默认第一次出现的元素<br>pop:默认删除最后一个元素或者根据索引值删除索引</p>
-<p>38,python中的异步关键字<br>异步编程模块:asyncio</p>
-<p>39，python语言?<br>答：Python是一种面向对象的,交互式的,解释型的计算机程序设计语言,Python的设计具有高可读性,他使用英语关键字而非标点符号,语法结构简单,它的特点有:</p>
-<p>①Python是动态类型的,这意味着不需要在声明变量时指定类型,</p>
-<p>②Python是面向对象语言,所有允许定义类并且可以继承和组合.</p>
-<p>③虽然Python运行比较慢.但是允许使用c扩展写程序.</p>
-<p>④python应用场景比较广,Web开发,数据科学,人工智能等 </p>
-<p>40, Python里如何实现tuple和list的转换?<br>答:直接使用tuple和list函数</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python第三方模块安装的几种方式</title>
-    <url>/article/126ed703.html</url>
-    <content><![CDATA[<p>1,pip安装方式</p>
-<p>eg:pip install 包名</p>
-<p>2,下载tar.gz包,执行python setup.py install安装 </p>
-<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
-<p>3,安装whl文件</p>
-<p>文件目录下:pip instll 文件名.后缀</p>
-<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>第三方模块</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Scrapy框架的使用</title>
-    <url>/article/e85d868e.html</url>
-    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
-<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
-<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
-<p>③,编写主程序</p>
-<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
-<p>注意:设置浏览器标识时,第一个应为项目名</p>
-<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-        <tag>Scrapy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SVN</title>
     <url>/article/ec3edfbe.html</url>
     <content><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p>
@@ -760,6 +774,33 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>Python概念</title>
+    <url>/article/7cf78c2.html</url>
+    <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
+<p>2,线程,进程,协程的区别<br>一,<br>    线程:指进程中的某一个控制单元<br>    单线程:指一个进程中只有一个线程(主线程),eg:dos操作系统<br>    多线程:指一个程序中包含多个执行流,多线程是实现并发的一种有效手段<br>    主线程:跟随应用程序创建的线程<br>    子线程:除应用程序外的其他线程<br>    python中有协程库gevent， pyweb框架tornado中也用了gevent封装好的协程。本文主要介绍进程、线程和协程三者之间的区别。<br>二、概念(详细说明)<br>    　　1、进程<br>    进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。<br>        2, 线程<br>    线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。<br>    　　3、协程<br>    协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</p>
+<p>三、进程和线程、协程在python中的使用<br>    　　1、多进程一般使用multiprocessing库，来利用多核CPU，主要是用在CPU密集型的程序上，当然生产者消费者这种也可以使用。多进程的优势就是一个子进程崩溃并不会影响其他子进程和主进程的运行，但缺点就是不能一次性启动太多进程，会严重影响系统的资源调度，特别是CPU使用率和负载。使用多进程可以查看文章《python 多进程使用总结》。注：python2的进程池在类中的使用会有问题，需要把类函数定义成全局函数。具体可参考 <a href="http://bbs.chinaunix.net/thread-4111379-1-1.html">http://bbs.chinaunix.net/thread-4111379-1-1.html</a><br>    　　2、多线程一般是使用threading库，完成一些IO密集型并发操作。多线程的优势是切换快，资源消耗低，但一个线程挂掉则会影响到所有线程，所以不够稳定。现实中使用线程池的场景会比较多，具体可参考《python线程池实现》。<br>    　　3、协程一般是使用gevent库，当然这个库用起来比较麻烦，所以使用的并不是很多。相反，协程在tornado的运用就多得多了，使用协程让tornado做到单线程异步，据说还能解决C10K的问题。所以协程使用的地方最多的是在web应用上。<br>    总结一下就是IO密集型一般使用多线程或者多进程，CPU密集型一般使用多进程，强调非阻塞异步并发的一般都是使用协程，当然有时候也是需要多进程线程池结合的，或者是其他组合方式。</p>
+<p>3,python如何进行内存管理的<br>对象引用计数机制:python语言内部依靠引用计数来持续追踪内存中的对象,就是说,他的Python内部记录的对象有多少个引用,及引用计数,当对象被创建时就等于创建了一个引用计数,当对象不需要时,这个对象的引用计数归零时,它将被垃圾收集机制处理掉<br>垃圾回收:<br>1,在Python语言内部,当一个对象的引用计数为0时,它将被垃圾收集机制处理掉<br>2,当遇到两个对象a和b相互引用时的这种情况,del语句可以减少a和b的引用计数,并销毁用于引用底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除<br>内存池机制:Python语言虽然提供了对内存的垃圾收集机制,但实际上它将不用的内存放到内存池而不是返回给操作系统,所以就有了以下:<br>1,Pymalloc机制；这个主要是为了加速Python的执行效率，Python引入了一个内存池机制，用于管理，为了对小块内存的申请和释放。<br>2 Python中所有小于256个字节的对象都是依靠pymalloc分配器来实现的，而稍大的对象用的则是系统的malloc。<br>3 对于Python对象，比如整数、浮点数和List这些，都有自己独立的内存池，对象间并不共享他们的内存池。换句话说就是，假设你分配并且释放了大量的整数，那么用于缓存这些整数的内存就不能再分配给浮点数。</p>
+<p>4,简述一个前端请求的处理流程,在uwsgi&#x2F;nginx&#x2F;django之间的处理流程<br>答:wsgi：一种实现python解析的通用接口标准&#x2F;协议，是一种通用的接口标准或者接口协议，实现了python web程序与服务器之间交互的通用性。<br>利用它，web.py或bottle或者django等等的python web开发框架，就可以轻松地部署在不同的web server上了；<br>uwsgi:同WSGI一样是一种通信协议<br>uwsgi协议是一个uWSGI服务器自有的协议，它用于定义传输信息的类型，它与WSGI相比是两样东西。 uWSGI :一种python web server或称为Server&#x2F;Gateway<br>uWSGI类似tornadoweb或者flup，是一种python web server，uWSGI是实现了uwsgi和WSGI两种协议的Web服务器，负责响应python 的web请求。<br>uWSGI实现了wsgi协议、uwsgi协议、http等协议。<br>Nginx中HttpUwsgiModule的作用是与uWSGI服务器进行交换。</p>
+<p>nginx&#x2F;uwsgi&#x2F;django交互流程：<br>1.首先客户端请求服务资源，<br>2.nginx作为直接对外的服务接口,接收到客户端发送过来的http请求,会解包、分析，<br>3.如果是静态文件请求就根据nginx配置的静态文件目录，返回请求的资源，<br>4.如果是动态的请求,nginx就通过配置文件,将请求传递给uWSGI；uWSGI 将接收到的包进行处理，并转发给wsgi，<br>5.wsgi根据请求调用django工程的某个文件或函数，处理完后django将返回值交给wsgi，<br>6.wsgi将返回值进行打包，转发给uWSGI，<br>7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(如浏览器)。<br>*注:不同的组件之间传递信息涉及到数据格式和协议的转换</p>
+<p>5,celery队列<br>celery队列包含两个模块：worker和beat<br>worker:用于执行队列中的任务<br>beat：用于定时分配任务<br>这两个模块可以同时启动，也可以分别启动<br>任务可以有两个来源：<br>代码内调用：将需要放入执行队列的任务函数import进来<br>beat定时派发：在配置文件里设置好需要调用的任务函数和调用日期，beat就会自动派发任务到队列里了</p>
+<p>Celery安装<br>使用之前需要配置消息中间件<br>一般是用Redis数据库来通讯更加方便，需要在本地安装redis服务并启动<br>pip install -U redis<br>以下为celery的具体使用<br><a href="https://www.jianshu.com/p/34291d6b5f47">https://www.jianshu.com/p/34291d6b5f47</a></p>
+<p>6,modelfirst dbfirst的区别<br>datebase first：就是代表数据库优先，那么提前就是先创建数据库<br>model firast:就是代表model优先，那么提前也就先创建model,然后根据model自动建立数据库<br>这两EF的编程方式在使用的过程中的区别为：<br>在添加ADO.NET实体数据模型的时候，database first选择的是从数据库生成<br>在数据结构发生变化的时候，database first编程方式中是选择从数据库更新模型，因此就导致database first是以数据库为主，而Model first选择的是空模型生成<br>当数据发生变化的时候，model first选择的是从模型中生成数据库                          </p>
+<p>7,RESTful&#x2F;WebSocket接口机制<br>WebSocket:服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，<br>属于服务器推送技术的一种。</p>
+<p>8,XMl进行网络通信<br>xpath对xml格式的东西解析比较规范,基本上能够做到想要那个数据就取哪个数据</p>
+<p>9,</p>
+<p>Lamdba简化代码.递归:自身调用自身,高阶函数:将函数作为参数传递,<br>装饰器:把函数作为参数传递<br>#扩展 函数功能,在不改变原代码的情况下,<br>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包<br>生成器:一遍循环,一遍计算的机制称为生成器,<br>迭代器:取数据,高效遍历一组可迭代对象<br>类:包含对象所包含的属性和方法<br>对象:调用方法和属性<br>属性分为两大类:实例属性,类属性,实例属性的调用修改影响实例属性的值但不影响类属性的值,类属性的调用的修改既不影响类属性的值,也不影响实例属性 的值<br>构造方法:数据初始化,特殊的实例方法<br>使用__new__和__init__来完成的<br>_<em>new__负责进行对象的创建,<strong>init__负责进行对象的初始化<br>访问权限:私有</strong>(双下划线 ),受保护</em>(单下划线),公开<br>作用域,将局部变量转化为全局变量<br>方法分为四大类:<br>实例方法:第一个形参为self<br>类方法:第一个形参为cls,和装饰器类似:由@classmethod表示<br>静态方法:无参数,由@staticmethod表示<br>普通方法:是一个错误的方法,几乎不用</p>
+<p>10,IOError,AttributeError,ImportError,IndentationError,IndexError,KeyError,<br>SyntaxError,NameError分别代表什么异常<br>IOError: 输入输出异常<br>AttributeError: 试图访问一个对象没有的属性<br>ImportError: 无法引入模块或包，基本是路径问题<br>IndentationError: 语法错误，代码没有正确的对齐<br>IndexError: 下标索引超出序列边界<br>KeyError: 试图访问你字典里不存在的键<br>SyntaxError: Python代码逻辑语法出错，不能执行<br>NameError: 使用一个还未赋予对象的变量</p>
+<p>11,r,r+,rb,rb+打开文件模式区别<br>答:r: 以只读方式打开文件。文件的指针将放在文件的开头。这是默认模式。<br>w: 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a: 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果文件不存在，创建新的文件进行写入。<br>rb: 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。<br>wb: 以二进制格式打开一个文件只用于写入。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab: 以二进制格式打开一个文件用于追加。如果文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容会被写入到已有内容之后。如果文件不存在，创建新文件进行写入。<br>r+: 打开一个文件用于读写。文件指针将会放在文件开头。<br>w+: 打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a+: 打开一个文件用于读写。如果文件已存在，文件指针将会放在文件结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。<br>rb+: 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。<br>wb+: 以二进制格式打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab+: 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu</title>
     <url>/article/7be7930f.html</url>
     <content><![CDATA[<p>乌班图笔记整理</p>
@@ -770,54 +811,6 @@ hexo d
       <tags>
         <tag>Linux</tag>
         <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优秀网址</title>
-    <url>/article/a1f63686.html</url>
-    <content><![CDATA[<p> 学信网网站:<a href="http://www.chsi.com.cn/">http://www.chsi.com.cn/</a></p>
-<p> github:<a href="https://github.com/fies09">https://github.com/fies09</a></p>
-<p> 打印机共享:<a href="https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html">https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html</a></p>
-<p> 教务系统:<a href="http://jwc.spvec.com.cn/default2.aspx">http://jwc.spvec.com.cn/default2.aspx</a></p>
-<p> 西安交大官网:<a href="https://www.xjtudlc.com/">https://www.xjtudlc.com/</a></p>
-<p> winscp使用教程:<a href="https://blog.csdn.net/qccz123456/article/details/80345999">https://blog.csdn.net/qccz123456/article/details/80345999</a></p>
-<p> Pycharm在linux中的中文输入问题解决:<a href="https://blog.csdn.net/u013709332/article/details/81271923">https://blog.csdn.net/u013709332/article/details/81271923</a></p>
-<p> SSH KEY生成方式:<a href="https://blog.csdn.net/Coco_wjy/article/details/80003083">https://blog.csdn.net/Coco_wjy/article/details/80003083</a></p>
-<p> Git上传项目:</p>
-<p><a href="https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c">https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c</a></p>
-<p> git命令行上传项目到github&#x2F;gitblit:<a href="https://my.oschina.net/u/3354389/blog/2995483">https://my.oschina.net/u/3354389/blog/2995483</a></p>
-<p> gtiblit使用教程:<a href="https://blog.csdn.net/qq_32599479/article/details/89192287">https://blog.csdn.net/qq_32599479/article/details/89192287</a></p>
-<p>如何通过TortoiseGit上传项目:</p>
-<p><a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight</a></p>
-<p>git:相关命令详解:<a href="https://www.cnblogs.com/lifexy/p/8353040.html">https://www.cnblogs.com/lifexy/p/8353040.html</a></p>
-<p>正则表达式:<a href="https://deerchao.cn/tutorials/regex/regex.htm">https://deerchao.cn/tutorials/regex/regex.htm</a></p>
-<p>视频解析:<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&fenlei=256&rsv_pq=ade816940001292d&rsv_t=84fcq+WMOTaunj8ShyuZCCffyB/6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=21&rsv_sug1=20&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&inputT=9704&rsv_sug4=10648&rsv_sug=1">https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp&#x3D;1&amp;rsv_idx&#x3D;1&amp;tn&#x3D;baidu&amp;wd&#x3D;%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&amp;fenlei&#x3D;256&amp;rsv_pq&#x3D;ade816940001292d&amp;rsv_t&#x3D;84fcq%2BWMOTaunj8ShyuZCCffyB%2F6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&amp;rqlang&#x3D;cn&amp;rsv_enter&#x3D;1&amp;rsv_dl&#x3D;tb&amp;rsv_sug3&#x3D;21&amp;rsv_sug1&#x3D;20&amp;rsv_sug7&#x3D;101&amp;rsv_sug2&#x3D;0&amp;rsv_btype&#x3D;i&amp;inputT&#x3D;9704&amp;rsv_sug4&#x3D;10648&amp;rsv_sug&#x3D;1</a></p>
-<p>linux操作系统安装:<a href="https://blog.csdn.net/weixin_44733021/article/details/107159601">https://blog.csdn.net/weixin_44733021/article/details/107159601</a></p>
-<p>centos下mysql安装:<a href="https://blog.csdn.net/weixin_42140801/article/details/107859925">https://blog.csdn.net/weixin_42140801/article/details/107859925</a></p>
-<p>centos下django项目部署:</p>
-<p><a href="https://www.pianshen.com/article/1452452529/">https://www.pianshen.com/article/1452452529/</a></p>
-<p>centos安装redis:</p>
-<p><a href="https://www.cnblogs.com/heqiuyong/p/10463334.html">https://www.cnblogs.com/heqiuyong/p/10463334.html</a></p>
-<p>启动redis报错::Could not create server tcp listening socket *:6379…:</p>
-<p><a href="https://blog.csdn.net/weixin_45393094/article/details/104446648">https://blog.csdn.net/weixin_45393094/article/details/104446648</a></p>
-<p>软件测试面试题：<a href="https://blog.51cto.com/11392572/2105056">https://blog.51cto.com/11392572/2105056</a></p>
-<p>python面试题:<a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">https://blog.csdn.net/weixin_40318474/article/details/103744809</a></p>
-<p>各类图像数据集下载地址:<a href="https://bendfunction.gitbook.io/dataset-download/">https://bendfunction.gitbook.io/dataset-download/</a></p>
-<p><a href="https://blog.csdn.net/PY0312/article/details/105903320">gitbook使用教程</a></p>
-<p><a href="https://developer.aliyun.com/article/645159?spm=5176.21213303.J_6704733920.7.490a53c9Ybihxx&scm=20140722.S_community@@%E6%96%87%E7%AB%A0@@645159._.ID_community@@%E6%96%87%E7%AB%A0@@645159-RL_ubuntu%E5%AE%89%E8%A3%85wordpress-LOC_main-OR_ser-V_2-P0_0">wordpress安装教程</a></p>
-<p><a href="https://blog.csdn.net/qq_44324181/article/details/117817559">wordpress2</a></p>
-<p><a href="https://blog.csdn.net/Runaway_pilot/article/details/122855852">乌班图django部署教程</a></p>
-<p><a href="https://www.cnblogs.com/yinfei/p/11427259.html">navicat mysql破解链接</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/272735470">win10安装centos</a></p>
-<p><a href="https://blog.csdn.net/yaojiawan/article/details/89944319">win10安装乌班图</a></p>
-<p><a href="https://blog.csdn.net/weixin_45764765/article/details/113576331">win10下mysql安装使用教程</a></p>
-<p><a href="https://wangchujiang.com/linux-command/">linux命令搜索使用教程</a></p>
-]]></content>
-      <categories>
-        <category>常用网址</category>
-      </categories>
-      <tags>
-        <tag>常用网址</tag>
       </tags>
   </entry>
   <entry>
@@ -835,26 +828,6 @@ hexo d
       </categories>
       <tags>
         <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用编辑软件说明</title>
-    <url>/article/5e593225.html</url>
-    <content><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p>
-<p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
-<p>Sublime:</p>
-<p>1,Sublime背景颜色设置:<br>“preferences”——“color Scheme”——“color Scheme default”——“Mac Classic”:将背景色设置为白色</p>
-<p>“preferences”——“color Scheme”——“user”——“sublimelinter”——“Monokai”<br>:将背景色设置为默认颜色</p>
-<p>2,将package包放到:C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Installed Packages<br>此目录下,然后重启软件</p>
-<p>3,汉化教程<br>启动后步骤:<br>Preferences —&gt; package control —&gt; install package —&gt;<br>“输入localization”</p>
-<p>关闭自动更新:</p>
-<p>“update_check”:false,</p>
-]]></content>
-      <categories>
-        <category>编辑器</category>
-      </categories>
-      <tags>
-        <tag>编辑器</tag>
       </tags>
   </entry>
   <entry>
@@ -1024,6 +997,214 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>常用编辑软件说明</title>
+    <url>/article/5e593225.html</url>
+    <content><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p>
+<p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
+<p>Sublime:</p>
+<p>1,Sublime背景颜色设置:<br>“preferences”——“color Scheme”——“color Scheme default”——“Mac Classic”:将背景色设置为白色</p>
+<p>“preferences”——“color Scheme”——“user”——“sublimelinter”——“Monokai”<br>:将背景色设置为默认颜色</p>
+<p>2,将package包放到:C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Installed Packages<br>此目录下,然后重启软件</p>
+<p>3,汉化教程<br>启动后步骤:<br>Preferences —&gt; package control —&gt; install package —&gt;<br>“输入localization”</p>
+<p>关闭自动更新:</p>
+<p>“update_check”:false,</p>
+]]></content>
+      <categories>
+        <category>编辑器</category>
+      </categories>
+      <tags>
+        <tag>编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scrapy框架的使用</title>
+    <url>/article/e85d868e.html</url>
+    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
+<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
+<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
+<p>③,编写主程序</p>
+<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
+<p>注意:设置浏览器标识时,第一个应为项目名</p>
+<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>Scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python面试题2</title>
+    <url>/article/72f963fe.html</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">面试题参考链接</a></p>
+<p>1,Python的GIL?<br>答:GIL是Python的全局解释器锁,同一进程中加入有多个线程运行,一个线程在运行 Python程序的时候会霸占python解释器,也就是加了一把锁(即GIL),使该进程内其他线程无法运行,等该线程运行完成后其他 线程才能运行.</p>
+<p>2,with方法打开处理文件帮助我们做了什么?<br>答:在处理完文件之后,会帮助我们自动关闭文件</p>
+<p>3,数据表student有id,name,score,city字段,其中name中的名字可有重复,需消除重复行,请写sql语句<br>答:select distinct name from student;</p>
+<p>4,match和search的区别?<br>match()函数检查re是不是在String的开始位置匹配,<br>只有在开始位置匹配成功才返回,不是在开始位置就返回None<br>search()全局查找匹配,会扫描整个字符串并返回第一个成功的匹配</p>
+<p>5,分类算法有:<br>NBC算法<br>LR算法<br>SVM算法<br>ID3算法<br>C4.5 算法<br>C5.0算法<br>KNN 算法<br>ANN 算法</p>
+<p>6,linux命令?<br>grep:查找文件中符合条件的字符串<br>awk:处理文本文件的语言,强大额文本处理工具<br>sed:利用脚本处理文本文件<br>chmod:控制用户对文本的权限命令<br>lsof:列出当前系统打开文件的工具<br>ping:测试与目标主机的连通性<br>less:浏览文件<br>ftp:设置系统文件相关功能<br>ifconfig:用来查看或配置网络设备<br>ps:    进程查看命令<br>mount:挂载命令</p>
+<p>7,将字符转为字典?<br>答:<br>1,通过json进行转换<br>2,通过eval进行转换<br>3,通过literal_eval进行转换</p>
+<p>8,可变数据类型和不可变数据类型的原理?<br>不可变类型:数值型,字符串型string和元组tuple<br>如果变量的值发生了变化,相当于新建了一个对象,而对于相同值的对象,在内存中只有一个地址</p>
+<p>可变类型:列表list和字典dict<br>如果对对象进行了append,+&#x3D;等这些操作之后,只是改变了变量的值,而不会新建一个对象,变量引用的对象的地址也不会发生变化,不过相对于相同值的不同对象,在内存中则会存在不同的对象,即每个对象都有自己的地址</p>
+<p>9,正则re.complie作用<br>答:将正则表达式编译成一个对象,加快速度,并重复使用</p>
+<p>用于编译正则表达式,生成一个pattern对象,返回的是一匹配对象,一般情况需要和findall(),search(),match()搭配使用<br>和findall()一起使用返回一个列表<br>和match()使用返回一个class,str,tuple<br>和search()搭配使用和match返回的类型差不多</p>
+<p>10 a&#x3D; (1,)  b &#x3D; (1) c &#x3D; (“1”)分别表示什么类型的数据<br>答:元组,整型,字符串类型</p>
+<p>11,用python删除文件和用linux删除文件方法<br>答:<br>python:<br>import os<br>os.remove(文件名)<br>linux:<br>rm 文件名</p>
+<p>12,数据库优化查询方法<br>答:外键,索引,联合查询,选择特定字段等等</p>
+<p>13,请列出你会的任意一种统计图(条形图,折线图等)绘制的开源软件,第三方也行<br>答:pychart  matplotlib</p>
+<p>14,正则表达式匹配中,(.)和(.?)匹配区别<br>答:’.’是匹配除了’\n’之外的任意一个字符<br>‘?’是匹配前一个字符1次或0次</p>
+<p>(.<em>)是贪婪匹配,会把满足正则的尽可能多的往后匹配<br>(.</em>?)是非贪婪匹配,会把满足正则的尽可能少匹配</p>
+<p>15,举例说明异常模块中try except else finally 的相关意义<br>答:try…except…else没有铺获到异常,执行else语句<br>try…except…finally不管有没有铺获到异常,都执行finally语句</p>
+<p>16,python中交换两个数值<br>a,b &#x3D; b,a</p>
+<p>17,写5条常用sql语句<br>答:show databases;<br>show tables;<br>desc tb_name;<br>select * from tb_name<br>delete from tb_name where id &#x3D; 5;<br>update tb_name set name&#x3D;’xue’,age&#x3D;23 where id &#x3D; 5;</p>
+<p>18,[1,2,3]+[4,5,6]的结果是多少<br>答:[1,2,3,4,5,6]</p>
+<p>19,简述mysql和redis区别<br>答:redis:内存型非关系数据库,数据保存在内存中,速度快<br>    mysql:关系型数据库,数据保存在磁盘中,速度相对慢</p>
+<p>20,遇到bug如何处理<br>答:1,细节上错误,通过print()打印,能执行到print()说明一般上面的代码没什么问题,分段检测程序是否有问题,如果是js的话使用alert或console.log<br>2,如果涉及一些第三方框架的话,查官方文档或技术博客<br>3,对于bug的管理和归类总结</p>
+<p>21,python字典和json字符串相互转化方法<br>json.dumps()将字典转化为json字符串,<br>json.loads()将json字符串转化为字典</p>
+<p>22,MyISAM和InnoDB区别:<br>答:<br>1,存储结构,<br>2,存储空间<br>3,事物支持<br>4,CURD支持<br>5,外键<br><a href="http://blog.itpub.net/21374452/viewspace-2136284/">区别详解</a></p>
+<p>23,,int(“1.4”),int(1.4)输出结果<br>int(‘1.4’)报错<br>int(1.4)输出1</p>
+<p>24,列举3条以上PEP8编码规则<br>答:①顶级定义之间空两格,比如函数或类定义<br>②方法定义,类定义与第一个方法之间,都应该空一行<br>③三引号进行注释<br>④pycharm用4个空格缩进代码</p>
+<p>25,正则表达式匹配第一个URL<br>答:findall结果无需加group(),search需要加group()提取</p>
+<p>26,简述乐观锁和悲观锁<br>答:悲观锁,就是很悲观,每次拿数据的时候都认为别人会修改,所以每次在拿数据的时候都会上锁,这样别人想拿这个数据就会block直到它拿到锁</p>
+<p>乐观锁:很乐观,每次拿数据都认为别人不会修改,所以不会上锁</p>
+<p>27,python传参数是传值还是传址<br>答:python中的函数参数是引用传递(不是值传递),对于不可变数据类型(数字,字符串,元组),因变量不能修改,所以运算不会影响到变量自身,而对于可变数据类型(列表,字典)来说,函数体运算可能会更改传入的参数变量</p>
+<p>28,C:\Users\re-wu.junya\Desktop&gt;python 1.py 22 33 命令行启动程序并传参,print(sys.argv)会输出什么数据?<br>[‘1.py’, ‘22’, ‘33’]</p>
+<p>29,简述同源策略<br>答:同源策略需同时满足以下三点要求<br>    1,协议相同<br>    2,域名相同<br>    3,端口相同<br>ex:<br>http:<a href="http://www.test.com与https:www.test.com">www.test.com与https:www.test.com</a> 协议不同<br>http:<a href="http://www.test.com与http:www.admin.com">www.test.com与http:www.admin.com</a> 域名不同<br>http:<a href="http://www.test.com/">www.test.com</a> 与http:<a href="http://www.test.com:8081/">www.test.com:8081</a> 端口不同<br>只要不满足其中任意一个要求,就不符合同源策略,就会出现”跨域”</p>
+<p>30,简述any()和all()方法<br>答:any():只要迭代器中有一个元素为真就为真,<br>all():迭代器中所有的判断项返回都是真,结果才是真<br>python中为假的元素:0,空字符串,空列表,空元组,None,False</p>
+<p>31,列出几种魔法方法并简要介绍用途<br><strong>init</strong>: 对象初始化的方法<br><strong>del</strong>: 删除对象执行的方法<br><strong>str</strong>: 当用print输出对象的时候，如果自己定义了__str__(self)方法，就会打印从这个方法中return的数据<br><strong>new</strong>: 创建对象会执行的方法，单例模式会用到</p>
+<p>32,列出常见mysql数据存储引擎<br>InnoDB:支持事物处理,支持外键,支持崩溃修复能力和并发控制.<br>MyISAM:插入数据快,空间和内存使用比较低,<br>MEMORY:所有数据都在内存中,数据的处理速度快.但是安全性不高</p>
+<p>33,常见转态码和意义<br>200 OK: 请求正常处理完毕<br>204 No Content: 请求成功处理，没有实体的主体返回<br>206 Partial Content: GET范围请求已成功处理<br>301 Moved Permanently: 永久重定向，资源已永久分配新URI<br>302 Found: 临时重定向，资源已临时分配新URI<br>303 See Other: 临时重定向，期望使用GET定向获取<br>304 Not Modified: 发送的附带条件请求未满足<br>307 Temporary Redirect: 临时重定向，POST不会变成GET<br>400 Bad Request: 请求报文语法错误或者参数错误<br>401 Unauthorized: 需要通过HTTP认证，或认证失败<br>403 Forbidden: 请求资源被拒绝<br>404 Not Found: 无法找到请求资源(服务器无理由拒绝)<br>500 Internal Server Error: 服务器故障或Web应用故障<br>503 Service Unavailable: 服务器超负载或停机维护 </p>
+<p>34,分别从前端,后端,数据库阐述web项目的性能优化<br>前端优化:<br>①,减少http请求,例如制作精灵图<br>②,html和CSS放在页面上部,javascript放在页面下部</p>
+<p>后端优化:<br>①,缓存存储读写次数高,变化少的数据,<br>②,异步方式,如果有耗时操作,可采用异步,如celery<br>③,代码优化,避免循环和判断次数太多,如果多个if else判断,优先判断最有可能发生的情况</p>
+<p>数据库优化:<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,简历索引,外键等</p>
+<p>35:map函数<br>map用法:<br>①,定义一个函数,<br>def square(x):  #计算平方数<br>    return x ** 2<br>map(函数名(square),一个或多个序列(列表))<br>#计算列表中的元素平方</p>
+<p>②,使用lambda匿名函数<br>map(lambda x: x **2 ,序列(列表))<br>#计算列表中的元素平方</p>
+<p>③,提供了两个列表.对相同位置的数据进行相加<br>map(lambda x,y:x+y,[1,3,1,4,5,2,1],[1,0,1,0,1,0,9])</p>
+<p>36,软件开发的设计模式?<br><a href="https://www.cnblogs.com/tangkaishou/p/9246353.html">设计模式</a><br>①创建型模式<br>②结构型模式<br>③行为型模式</p>
+<p>37,del,pop和remove之间的不同区别<br>del:按指定索引值删除元素<br>remove:默认第一次出现的元素<br>pop:默认删除最后一个元素或者根据索引值删除索引</p>
+<p>38,python中的异步关键字<br>异步编程模块:asyncio</p>
+<p>39，python语言?<br>答：Python是一种面向对象的,交互式的,解释型的计算机程序设计语言,Python的设计具有高可读性,他使用英语关键字而非标点符号,语法结构简单,它的特点有:</p>
+<p>①Python是动态类型的,这意味着不需要在声明变量时指定类型,</p>
+<p>②Python是面向对象语言,所有允许定义类并且可以继承和组合.</p>
+<p>③虽然Python运行比较慢.但是允许使用c扩展写程序.</p>
+<p>④python应用场景比较广,Web开发,数据科学,人工智能等 </p>
+<p>40, Python里如何实现tuple和list的转换?<br>答:直接使用tuple和list函数</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库报错</title>
+    <url>/article/129a744.html</url>
+    <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
+<p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
+<p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
+]]></content>
+      <categories>
+        <category>Error</category>
+      </categories>
+      <tags>
+        <tag>Error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优秀网址</title>
+    <url>/article/a1f63686.html</url>
+    <content><![CDATA[<p> 学信网网站:<a href="http://www.chsi.com.cn/">http://www.chsi.com.cn/</a></p>
+<p> github:<a href="https://github.com/fies09">https://github.com/fies09</a></p>
+<p> 打印机共享:<a href="https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html">https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html</a></p>
+<p> 教务系统:<a href="http://jwc.spvec.com.cn/default2.aspx">http://jwc.spvec.com.cn/default2.aspx</a></p>
+<p> 西安交大官网:<a href="https://www.xjtudlc.com/">https://www.xjtudlc.com/</a></p>
+<p> winscp使用教程:<a href="https://blog.csdn.net/qccz123456/article/details/80345999">https://blog.csdn.net/qccz123456/article/details/80345999</a></p>
+<p> Pycharm在linux中的中文输入问题解决:<a href="https://blog.csdn.net/u013709332/article/details/81271923">https://blog.csdn.net/u013709332/article/details/81271923</a></p>
+<p> SSH KEY生成方式:<a href="https://blog.csdn.net/Coco_wjy/article/details/80003083">https://blog.csdn.net/Coco_wjy/article/details/80003083</a></p>
+<p> Git上传项目:</p>
+<p><a href="https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c">https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c</a></p>
+<p> git命令行上传项目到github&#x2F;gitblit:<a href="https://my.oschina.net/u/3354389/blog/2995483">https://my.oschina.net/u/3354389/blog/2995483</a></p>
+<p> gtiblit使用教程:<a href="https://blog.csdn.net/qq_32599479/article/details/89192287">https://blog.csdn.net/qq_32599479/article/details/89192287</a></p>
+<p>如何通过TortoiseGit上传项目:</p>
+<p><a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight</a></p>
+<p>git:相关命令详解:<a href="https://www.cnblogs.com/lifexy/p/8353040.html">https://www.cnblogs.com/lifexy/p/8353040.html</a></p>
+<p>正则表达式:<a href="https://deerchao.cn/tutorials/regex/regex.htm">https://deerchao.cn/tutorials/regex/regex.htm</a></p>
+<p>视频解析:<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&fenlei=256&rsv_pq=ade816940001292d&rsv_t=84fcq+WMOTaunj8ShyuZCCffyB/6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=21&rsv_sug1=20&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&inputT=9704&rsv_sug4=10648&rsv_sug=1">https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp&#x3D;1&amp;rsv_idx&#x3D;1&amp;tn&#x3D;baidu&amp;wd&#x3D;%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&amp;fenlei&#x3D;256&amp;rsv_pq&#x3D;ade816940001292d&amp;rsv_t&#x3D;84fcq%2BWMOTaunj8ShyuZCCffyB%2F6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&amp;rqlang&#x3D;cn&amp;rsv_enter&#x3D;1&amp;rsv_dl&#x3D;tb&amp;rsv_sug3&#x3D;21&amp;rsv_sug1&#x3D;20&amp;rsv_sug7&#x3D;101&amp;rsv_sug2&#x3D;0&amp;rsv_btype&#x3D;i&amp;inputT&#x3D;9704&amp;rsv_sug4&#x3D;10648&amp;rsv_sug&#x3D;1</a></p>
+<p>linux操作系统安装:<a href="https://blog.csdn.net/weixin_44733021/article/details/107159601">https://blog.csdn.net/weixin_44733021/article/details/107159601</a></p>
+<p>centos下mysql安装:<a href="https://blog.csdn.net/weixin_42140801/article/details/107859925">https://blog.csdn.net/weixin_42140801/article/details/107859925</a></p>
+<p>centos下django项目部署:</p>
+<p><a href="https://www.pianshen.com/article/1452452529/">https://www.pianshen.com/article/1452452529/</a></p>
+<p>centos安装redis:</p>
+<p><a href="https://www.cnblogs.com/heqiuyong/p/10463334.html">https://www.cnblogs.com/heqiuyong/p/10463334.html</a></p>
+<p>启动redis报错::Could not create server tcp listening socket *:6379…:</p>
+<p><a href="https://blog.csdn.net/weixin_45393094/article/details/104446648">https://blog.csdn.net/weixin_45393094/article/details/104446648</a></p>
+<p>软件测试面试题：<a href="https://blog.51cto.com/11392572/2105056">https://blog.51cto.com/11392572/2105056</a></p>
+<p>python面试题:<a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">https://blog.csdn.net/weixin_40318474/article/details/103744809</a></p>
+<p>各类图像数据集下载地址:<a href="https://bendfunction.gitbook.io/dataset-download/">https://bendfunction.gitbook.io/dataset-download/</a></p>
+<p><a href="https://blog.csdn.net/PY0312/article/details/105903320">gitbook使用教程</a></p>
+<p><a href="https://developer.aliyun.com/article/645159?spm=5176.21213303.J_6704733920.7.490a53c9Ybihxx&scm=20140722.S_community@@%E6%96%87%E7%AB%A0@@645159._.ID_community@@%E6%96%87%E7%AB%A0@@645159-RL_ubuntu%E5%AE%89%E8%A3%85wordpress-LOC_main-OR_ser-V_2-P0_0">wordpress安装教程</a></p>
+<p><a href="https://blog.csdn.net/qq_44324181/article/details/117817559">wordpress2</a></p>
+<p><a href="https://blog.csdn.net/Runaway_pilot/article/details/122855852">乌班图django部署教程</a></p>
+<p><a href="https://www.cnblogs.com/yinfei/p/11427259.html">navicat mysql破解链接</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/272735470">win10安装centos</a></p>
+<p><a href="https://blog.csdn.net/yaojiawan/article/details/89944319">win10安装乌班图</a></p>
+<p><a href="https://blog.csdn.net/weixin_45764765/article/details/113576331">win10下mysql安装使用教程</a></p>
+<p><a href="https://wangchujiang.com/linux-command/">linux命令搜索使用教程</a></p>
+]]></content>
+      <categories>
+        <category>常用网址</category>
+      </categories>
+      <tags>
+        <tag>常用网址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱因斯坦语录</title>
+    <url>/article/f11761cc.html</url>
+    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
+<p>​                                                                                                                                                        —–爱因斯坦</p>
+<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Django的基础入门</title>
+    <url>/article/f6b2ae5.html</url>
+    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
+<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
+<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
+<p>​        #密码</p>
+<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
+<p>4,更新应用数据库</p>
+<p>python manage.py makemigrations</p>
+<p>python manage.py migrate</p>
+<p>5,创建超级管理员</p>
+<p>python manage.py createsuperuser</p>
+<p>6,运行项目</p>
+<p>python manage.py runserver</p>
+<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
+<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
+<p>8,Django原理</p>
+<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据分析</title>
     <url>/article/d1c27656.html</url>
     <content><![CDATA[<p>numpy模块<br>1,数组的创建语法:<br>一维数组:</p>
@@ -1103,6 +1284,30 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>自动化测试</title>
+    <url>/article/f0a57b1b.html</url>
+    <content><![CDATA[<p><a href="https://blog.51cto.com/11392572/2105056">参考链接</a></p>
+<p>1,自我介绍:<br>        面试官，你好XXX，我叫，19年毕业，从事软件测试将近2年的时间。在此期间做过一些项目也积累过一些经验，能够独立地完成软件测试流程的一个工作。我之前主要做过的是功能测试，web自动化测试、接口测试、也有用过ipref3做过一些性能方面的测试。我对于缺陷管理工具比如禅道，版本控制器git与svn能够熟悉应用,对于app测试也比较熟悉,数据库、linux、Fiddler、postman这些应用也比较熟悉。以上就是我的一些简单的自我介绍，谢谢。</p>
+<p>2,web测试和app测试的区别<br>①Web项目一般都是b&#x2F;s架构,基于浏览器的,而app则是c&#x2F;s的,必须有客户端,<br>②web测试只要更新了服务器端,客户端就会同步更新,而客户端是可以保证每一个用户的客户端完全一致的,而app端不能够保证完全一致,除非用户更新了客户端,这意味着客户端所使用的核心版本必须进行回归测试一遍<br>③性能方面:web测试只考虑响应时间,而app还需要关心流量,电量,CPU,GPU,Memory这些了<br>④兼容性:web:浏览器,电脑硬件,<br>app:phone,pad,分辨率,机型,版本号,系统类型<br>④相比之下,app还有更多的专项测试:<br>健壮性测试:异常场景(中断,来电,关机,重启),弱网测试.</p>
+<p>安装,卸载,更新:</p>
+<p>界面操作,横竖屏切换,多点触控等测试</p>
+<p>3,测试报告主要内容:<br>测试过程和结果<br>风险评估<br>缺陷汇报和分析<br>测试工作总结和改进</p>
+<p>4，登陆模块<br>UI界面模块:输入框和按钮对齐方式是否一致,高度长度是否合适,界面是否正常<br>功能模块:用户名密码为空点击是否有提示<br>用户名密码正常是否正常跳转到登录页面<br>密码是否包含特殊字符,<br>密码长度是否在范围内<br>忘记密码.注册以及切换其他账号登录是否正常实现<br>性能模块:跳转到登录界面是否超出时长,登录成功登录成功时长是否超过5秒<br>记住密码功能<br>密码前后出现空格如何处理<br>兼容性:主流浏览器是否正常显示,不同平台是否可以正常显示,移动设备是否可以正常显示<br>不同分辨率<br>可用性:<br>是否支持全键盘操作,是否有快捷键,<br>输入用户名密码回车是否可以登录<br>Tab键是否可以切换输入框</p>
+<p>5,postman中post和get的区别<br>get请求:直接在浏览器里输入就可以,只要在浏览器里面直接请求到的,都是get请求<br>post请求:需要借助工具来发送<br>区别:<br>    1,get使用url或cookie传参,而post将数据放到body中<br>    2,get的url参数长度有限制,而post的数据则可以非常大<br>    3,post比get安全,因为数据在地址栏上不可见,<br>    4,一般get请求用来获取数据,post请求用来发送数据</p>
+<p>6,给你一个网站如何测试<br>1,查找需求说明,网站设计等相关文档,分析测试需求<br>2,制定测试计划,确定测试范围和测试策略<br>3,设计测试用例</p>
+<p>7,为什么要软件测试<br>以最少的人力,物力和时间找到软件中潜在的各种错误和缺陷,通过修正各种错误和缺陷提高软件质量,回避软件发布后由于潜在的软件缺陷和错误造成的隐患以及带来的商业风险</p>
+<p>8,白盒测试测试用例方法<br>逻辑覆盖,循环覆盖,基本路径覆盖</p>
+<p>9,a测试 B测试<br>a测试:用户在开发环境下进行测试<br>B测试:由软件的一个或多个用户在实际使用环境下进行的测试</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>有道云报错</title>
     <url>/article/4af4be97.html</url>
     <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
@@ -1165,55 +1370,32 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>爱因斯坦语录</title>
-    <url>/article/f11761cc.html</url>
-    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
-<p>​                                                                                                                                                        —–爱因斯坦</p>
-<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
+    <title>软测概念2</title>
+    <url>/article/5fa19c3c.html</url>
+    <content><![CDATA[<p>接口,性能测试</p>
+<p>SOW:statement of work，工作任务说明书</p>
+<p>HLD: High Level Design,概要设计说明书</p>
+<p>LLD: Low Level Design，详细设计说明书</p>
+<p>UTC: Unit Testing Cases，单元测试用例</p>
+<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
+<p>非增量–每个模块测试完了再连接；</p>
+<p>增量：测一个模块，就连接一个模块。</p>
+<p>基于测试对象进行分类:白盒黑盒</p>
+<p>集成测试:接口测试</p>
+<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
+<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
+<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
+<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
+<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
+<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
+<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
+<p>测试风险;</p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>软件测试</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库报错</title>
-    <url>/article/129a744.html</url>
-    <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
-<p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
-<p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
-]]></content>
-      <categories>
-        <category>Error</category>
-      </categories>
-      <tags>
-        <tag>Error</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自动化测试</title>
-    <url>/article/f0a57b1b.html</url>
-    <content><![CDATA[<p><a href="https://blog.51cto.com/11392572/2105056">参考链接</a></p>
-<p>1,自我介绍:<br>        面试官，你好XXX，我叫，19年毕业，从事软件测试将近2年的时间。在此期间做过一些项目也积累过一些经验，能够独立地完成软件测试流程的一个工作。我之前主要做过的是功能测试，web自动化测试、接口测试、也有用过ipref3做过一些性能方面的测试。我对于缺陷管理工具比如禅道，版本控制器git与svn能够熟悉应用,对于app测试也比较熟悉,数据库、linux、Fiddler、postman这些应用也比较熟悉。以上就是我的一些简单的自我介绍，谢谢。</p>
-<p>2,web测试和app测试的区别<br>①Web项目一般都是b&#x2F;s架构,基于浏览器的,而app则是c&#x2F;s的,必须有客户端,<br>②web测试只要更新了服务器端,客户端就会同步更新,而客户端是可以保证每一个用户的客户端完全一致的,而app端不能够保证完全一致,除非用户更新了客户端,这意味着客户端所使用的核心版本必须进行回归测试一遍<br>③性能方面:web测试只考虑响应时间,而app还需要关心流量,电量,CPU,GPU,Memory这些了<br>④兼容性:web:浏览器,电脑硬件,<br>app:phone,pad,分辨率,机型,版本号,系统类型<br>④相比之下,app还有更多的专项测试:<br>健壮性测试:异常场景(中断,来电,关机,重启),弱网测试.</p>
-<p>安装,卸载,更新:</p>
-<p>界面操作,横竖屏切换,多点触控等测试</p>
-<p>3,测试报告主要内容:<br>测试过程和结果<br>风险评估<br>缺陷汇报和分析<br>测试工作总结和改进</p>
-<p>4，登陆模块<br>UI界面模块:输入框和按钮对齐方式是否一致,高度长度是否合适,界面是否正常<br>功能模块:用户名密码为空点击是否有提示<br>用户名密码正常是否正常跳转到登录页面<br>密码是否包含特殊字符,<br>密码长度是否在范围内<br>忘记密码.注册以及切换其他账号登录是否正常实现<br>性能模块:跳转到登录界面是否超出时长,登录成功登录成功时长是否超过5秒<br>记住密码功能<br>密码前后出现空格如何处理<br>兼容性:主流浏览器是否正常显示,不同平台是否可以正常显示,移动设备是否可以正常显示<br>不同分辨率<br>可用性:<br>是否支持全键盘操作,是否有快捷键,<br>输入用户名密码回车是否可以登录<br>Tab键是否可以切换输入框</p>
-<p>5,postman中post和get的区别<br>get请求:直接在浏览器里输入就可以,只要在浏览器里面直接请求到的,都是get请求<br>post请求:需要借助工具来发送<br>区别:<br>    1,get使用url或cookie传参,而post将数据放到body中<br>    2,get的url参数长度有限制,而post的数据则可以非常大<br>    3,post比get安全,因为数据在地址栏上不可见,<br>    4,一般get请求用来获取数据,post请求用来发送数据</p>
-<p>6,给你一个网站如何测试<br>1,查找需求说明,网站设计等相关文档,分析测试需求<br>2,制定测试计划,确定测试范围和测试策略<br>3,设计测试用例</p>
-<p>7,为什么要软件测试<br>以最少的人力,物力和时间找到软件中潜在的各种错误和缺陷,通过修正各种错误和缺陷提高软件质量,回避软件发布后由于潜在的软件缺陷和错误造成的隐患以及带来的商业风险</p>
-<p>8,白盒测试测试用例方法<br>逻辑覆盖,循环覆盖,基本路径覆盖</p>
-<p>9,a测试 B测试<br>a测试:用户在开发环境下进行测试<br>B测试:由软件的一个或多个用户在实际使用环境下进行的测试</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>自动化测试</tag>
+        <tag>软件测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1247,61 +1429,6 @@ hexo d
 <p>4.2浏览器驱动程序 webdriver: chrome</p>
 <p>unittest框架:python的第三方单元测试框架也可以将单元测试组装为套件,可以依次执行多个单元测试案例 主要功能: 1,提供规范的测试函数声明 2,提供组装测试套件功能 3,提供了多个用于判断异常的断言 4,提供了装饰器用于屏蔽非目标测试函数</p>
 <p>单元测试用例:软件测试中最基本的组成单元,在unittest测试框架中被视为吃啥单元的运行实体,一个测试用例应包含一个或多个测试单元 测试用例:在unittest中测试用例对应一个实体类,包含多个测试函数(测试单元) 测试单元:对应一个测试函数,对应一个独立的单元测试用例,例如登录模块是测试用例,登录与退出登录分别为测试单元</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念3</title>
-    <url>/article/28a6acaa.html</url>
-    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
-<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
-<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
-<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
-<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
-<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
-<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
-<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
-<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
-<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
-<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
-<p>集成测试和系统测试偏多</p>
-<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
-<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
-<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念2</title>
-    <url>/article/5fa19c3c.html</url>
-    <content><![CDATA[<p>接口,性能测试</p>
-<p>SOW:statement of work，工作任务说明书</p>
-<p>HLD: High Level Design,概要设计说明书</p>
-<p>LLD: Low Level Design，详细设计说明书</p>
-<p>UTC: Unit Testing Cases，单元测试用例</p>
-<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
-<p>非增量–每个模块测试完了再连接；</p>
-<p>增量：测一个模块，就连接一个模块。</p>
-<p>基于测试对象进行分类:白盒黑盒</p>
-<p>集成测试:接口测试</p>
-<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
-<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
-<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
-<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
-<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
-<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
-<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
-<p>测试风险;</p>
 ]]></content>
       <categories>
         <category>软件测试</category>
@@ -1439,156 +1566,29 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>Nodejs简单使用</title>
-    <url>/article/89b3a0ef.html</url>
-    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
-<p>5,检测npm是否安装 npm -v</p>
-<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
-<ol>
-<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
-<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
-<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
-<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
-</ol>
-<p>安装出错解决办法: npm config set proxy null</p>
-<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
-<p>7,常用模块express npm install express</p>
-<p>8,卸载常用命令 npm uninstall express</p>
-<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
-<p>更新模块:npm update express</p>
-<p>搜索模块:npm search express</p>
-<p>创建模块 npm init</p>
-<p>注册用户:npm adduser</p>
-<p>发布模块:npm publish</p>
-<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>然后可以用cnpm install 模块名 下载模块</p>
+    <title>软测概念3</title>
+    <url>/article/28a6acaa.html</url>
+    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
+<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
+<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
+<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
+<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
+<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
+<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
+<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
+<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
+<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
+<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
+<p>集成测试和系统测试偏多</p>
+<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
+<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
+<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
 ]]></content>
       <categories>
-        <category>Blog</category>
+        <category>软件测试</category>
       </categories>
       <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mysql</title>
-    <url>/article/54e1373e.html</url>
-    <content><![CDATA[<p>总结<br>    有关数据库的DDL操作</p>
-<pre><code>- SHOW DATABASES;
--CREATE DATABASES 数据库名;
--DROP DATABASES [IF EXISTS]数据库名;
--USE 数据库名;
-
-有关数据表的DDL操作
--SHOW TABLES;
--DESC 表名;
--CREATE TABLES 表名(......);
--DROP TABLE 表名;
--ALTER TABLE  表名;
-
-数据表的列类型
--数值类型:INT,FLOAT
--日期类型:DATE,TIME
--字符串类型:CHAR,VARCHAR,TEXT
-</code></pre>
-<p>一,<br>库操作<br>①show databases;  查询当前用户下所有数据库</p>
-<p>②create database 数据库名;  创建数据库</p>
-<p>③use 数据库名;    打开库(包括切换其他数据库)</p>
-<p>④show tables;     显示当前数据库下所有的数据表</p>
-<p>⑤drop database 数据库名;  删除数据库</p>
-<p>⑥desc 表名;(dos下)      显示表结构</p>
-<p>float(7,2)——-整数部分99999     99999.99</p>
-<p>char(4):  不可变字符串长度3位<br>varchar(4),可变数据长度</p>
-<p>二,<br>表操作<br>①create table 表名(id int);   建表<br> create table demo3(id int,username varchar(20),userpass varchar(20),ctime datetime);</p>
-<p>float(7,2)—- 整数值99999  最大值99999.99</p>
-<p>char(4)<br>abc<br>verchar(4)<br>ab</p>
-<p>②drop table 表名;      删除数据表</p>
-<p>③alter<br>添加字段<br>alter table 表名 add 字段名 数据类型;    [单字段]<br>alter table demo1 add name varchar(20);    </p>
-<p>alter table 表名 add(字段1 数据类型,字段2 数据类型…);    [多字段]<br>alter table demo1 add(dates date,flag int);</p>
-<p>insert into 表名 values(字段1值,,字段2值)</p>
-<p>⑤drop<br>alter table 表名 drop 字段名;    删除字段</p>
-<p>④modify<br>修改字段 (原表中已存在的,不修改列名)<br>alter table 表名 modify 字段名 字段类型;        [单字段]<br>alter table demo1 modify flag char(1);</p>
-<p>alter table 表名 modify 字段名1 字段类型1,modify 字段名2 字段类型2…;        [多字段]<br>alter table demo1 modify flag char(1);</p>
-<p>⑥<br>重命名字段<br>alter table 表名 change 旧字段名 新字段名 字段类型;</p>
-<p>重命名表名<br>alter table 表名 rename 新表名;<br>rename table 表名 to 新表名;</p>
-<p>删除表数据(表截断),保留结构,清除表中所有数据,不清选择性删除,不能回退<br>truncate 表名;       </p>
-<p>三,约束<br>数据库约束概念:在数据表上强制执行的效验规则,保证了数据的完整性<br>(唯一约束,主键约束,外键约束会自动创建索引,非空约束不会,)</p>
-<p>非空约束 :<br>建立数据表字段中使用或者在修改数据表字段中使用 ,      格式: 字段名 字段类名 约束名<br>不等于null :空字符串,0,’null’,null不区分大小写,主键或非空不为null<br>创建,修改<br>create table 表名(字段名 字段类型 not null);     不填可默认为null<br>create table 表名(id int not null);</p>
-<p>alter table 表名 modify 字段名 字段类型 约束名;<br>alter table demo1 modify url text not null;</p>
-<p>alter table 表名 drop 字段名;    删除字段<br>alter table demo drop id;</p>
-<p>唯一约束:<br>建立在not null 前<br>.修改,<br>不出现重复值,允许出现多个NULL,同一张表可有多个唯一约束,可由多列组合而成,会为之建立对应的索引,若不给唯一约束起名.该唯一约束默认与列名相同,<br>alter table 表名 modify 字段名 字段类型 unique;<br>alter table demo modify id int unique;</p>
-<p>alter table 表名 drop 字段名;      删除唯一约束 (必须有多个字段)<br>alter table demo drop id;</p>
-<p>主键约束<br>相当于 非空约束 + 唯一约束   唯一确定一行记录的字段或字段组合<br>注意.一张数据表中只能有一个主键<br>创建<br>create table 表名(字段名1 字段类型1 primary key,字段名2 字段类型2);<br>create table demo5(id int primary key,name varchar(20));</p>
-<p>alter table 表名 drop primary key; 删除主键</p>
-<p>alter table 表名 modify 字段名 字段类型 primary key;<br>alter table demo5 modify id int primary key; 修改主键 [将非主键字段修改为 主键字段]</p>
-<p>create table 表名(字段名1 字段类型1,字段名2 字段类型2,primary key(字段名1,字段名2 ));<br>create table demo6(id int,name varchar(20),primary key(id,name)); 两个字段共用一个主键.复合主键</p>
-<p>create table 表名(主键名 主键类型 primary key auto_increment,字段名2 字段类型2);<br>create table demo6(id int primary key auto_increment,name varchar(20));主键自增,在primary key 后加上auto_increment</p>
-<p>insert into 表名(字段名) values(字段值); [主键自增时增加字段内容]<br>insert into demo6(name) values(‘zs’);</p>
-<p>外键 约束([一对一,可选择任意一方来增加外键列,只要为外键列增加唯一约束就可],[一对多,在多的一端增加外键列])<br>有外键的为从表,没有的为主表,保证两个数据表间的参照关系<br>创建<br>先创建主表<br>create table 主表名(主键名 主键类型 primary key,字段名2 字段类型2);<br>create table dept(deptno int primary key,dname varchar(20));</p>
-<p>再建从表<br>create table 从表名(从表主键名 从表主键类型 primary key,字段名2 字段类型2,主表主键名 主表主键类型,constraint 从表名_fk foreign key(主表主键名) references 主表名(主表主键名));    从表名_fk:自定义的约束名<br>create table emp(empno int primary key,ename varchar(20),sal int,deptno int,constraint emp_fk  foreign key(deptno) references dept (deptno));</p>
-<p>删除外键约束<br>①删除外键<br>alter table 从表名 drop foreign key 约束名;<br>alter table emp drop foreign key emp_fk;emp_fk,约束名</p>
-<p>②删除外键索引<br>alter table 从表名 drop index 约束名;<br>alter table emp drop index emp_fk;</p>
-<p>增加外键<br>alter table 从表名 add foreign key(主表主键) references 主表名(主表主键名);references 参照表及其主键(主表的主键)<br>alter table emp add foreign key(deptno) references dept(deptno);</p>
-<p>检查约束:保证数据的输入校验规则(oracle支持,mysql 不支持)<br>create table 表名(id int check(id in (1,2)));<br>插入数据时只能输入1或2<br>create table 表名(age int check(age&gt;8));<br>插入数据时只能是大于8的数据</p>
-<p>show create table 表名;查询建表结构</p>
-<p>DML语句,数据操作语言<br>插入,修改,删除语句</p>
-<p>插入数据:向新行中写入insert<br>insert into 表名(字段名…) values(值…)  指定插入字段,如果字段名没写,默认值为NULL<br>insert into demo1(id,name,url) values(1,’zs’,’test’);<br>insert into demo1(name,url) values(‘zs’,’test’);</p>
-<p>insert into 表名 values(值…)  默认插入所有字段<br>insert into demo1 values(1,’zs’,’test’);</p>
-<p>插入多条记录(行)<br>insert into 表名 values(值…),(值…);<br>insert into demo1 values(4,’zs’,’test’),(5,’aa’,’test’);</p>
-<p>修改&#x2F;更新数据update<br>update 表名 set 需要修改的字段 &#x3D; 新值;</p>
-<p>[单个修改]<br>[多条记录]update 表名 set 需要修改的字段 &#x3D; 新值;<br>update demo1 set url &#x3D; ‘a’;</p>
-<p>[多个字段值修改]<br>update 表名 set 需修改的字段1 &#x3D; 新值1,需修改的字段2 &#x3D; 新值2;</p>
-<p>[根据条件修改]<br>update 表名 set 需要修改的字段 &#x3D; 新值 where 条件;<br>update demo1 set name &#x3D; ‘test’ where id &#x3D; 4;</p>
-<p>删除delete from<br>[单条删除]<br>delete from 表名 where 条件;<br>delete from demo1 where name &#x3D; ‘zs’;<br>[多条删除]<br>delete from 表名;<br>delete from demo1;</p>
-<p>DQL数据库查询语言<br>查询<br>select 字段列表 from 表名;[查询指定行数据]<br>select name from demo1;<br>select * from 表名;[查询所有行数据]<br>select * from demo1;</p>
-<p>算术运算符:+-*&#x2F;<br>为字段名起别名 格式:字段名 as 别名(使用双引号)<br>select name,sal + 500 as “sals” from demo1;<br>注意:as可以省略,双引号可以省略(在别名中出现空格时不能省略)<br>select name,sal + 500 sals from demo1;</p>
-<p>去重:distinct<br>a,单字段去重<br>select distinct 字段名 from 表名;<br>b,组合字段去重<br>select distinct 字段名1,字段名2… from 表名;</p>
-<p>not &gt; and &gt; or</p>
-<p>limit 取数据记录<br>limit n —–记录数<br>limit n,m n—起始索引  (从0开始) m—-记录数</p>
-<p>大多数 用于分页<br>select * from 表名 limit n;</p>
-<p>数据排序<br>格式: order by 字段名;(查询 语句 结尾)<br>—升序:asc[默认]<br>select * from 表名 order by 字段名;<br>eg:select * from demo1 order by sal asc; 按工资升序排列<br>—降序 :desc<br>select * from 表名 order by 字段名 desc;<br>eg:select * from demo1 order by sal desc; 按工资 降序排列<br>—组合排序<br>select * from demo1 order by sal,name desc;按照第一个字段排序,如果有重复数据则按照第二个字段排序<br>select * from 表名 order by 字段名1 排序类型1,字段名2 排序类型2;</p>
-<p>—别名排序<br>select 字段名1,对字段名2修改 字段名2修改的别名 from 表名 order by 字段名2修改的别名;一般情况是为生成的新字段数据,执行排序操作<br>eg: select name,sal+200 sals from demo1 order by sals;</p>
-<p>索引<br>作用:用于提高数据表查询效率<br>创建索引:<br>自动:由数据库自动完成,通过创建主键约束 ,唯一约束,外键约束会自动建立索引<br>手动:<br> create index i_name on demo1(name);<br>格式:create index 索引名 on 表名(字段…);<br>create index i_us on demo1(url,sal);组合索引</p>
-<p>删除索引<br>drop index 索引名  on 表名;<br>drop index i_us on demo1;</p>
-<p>alter table 表名 drop index 索引名<br>alter table demo1 drop index i_name;</p>
-<p>函数<br>字符串<br>concat(‘a’,’b’);连接ab.一般是select查询<br>数值<br>mod(1,3);1&#x2F;3的余数<br>select ceil(0.8);1 —-ceil向上取整   ceil(-0.8);0<br>select floor(0.8);0 —floor向下取整  floor(-0.8);-1<br>截断<br>select truncate(3.21,2);—3.21<br>select truncate(3.21,1);—3.2<br>当前日期<br>select curdate();<br>当前时间<br>select curtime();<br>当前时间日期<br>select now();<br>一般计算年龄:<br>select dates,year(now())-year(dates)  age from demo1;</p>
-<p>select ifnull(1,2);1<br>select ifnull(数据1,数据 2);如果数据1为null,返回数据2,否则返回数据1</p>
-<p>select nullif(3,2);3<br>select nullif(数据1,数据2);如果数据1和数据2相等,返回null,否则返回数据1</p>
-<p>select name,sal,if(sal,’有值’,’空值’) result from demo1;<br>if(数据1,数据2,数据3);如果数据1 为true,返回数据2,否则返回数据3</p>
-<p>select isnull(sal) from demo1;0表示false.1表示true(是不是空值,如果是空值true,不是空值false)<br>isnull(数据1);判断数据1是否为null,如果为null返回true,否则返回false</p>
-<p>select version();显示数据库当前版本<br>select database();显示当前数据库名<br>select password(‘123’);123字符password加密的方式<br>select md5(‘123’);字符123md5加密的方式</p>
-<p>多行函数(聚合函数)   除 count外 都会 忽略null的值<br>avg():平均值<br>count():统计行数<br>max():求最大值<br>min():求最小值<br>sum():求和<br>select avg(sal),max(sal),min(sal),sum(sal) from demo1;</p>
-<p>where + group by + order by</p>
-<p>数据分组 group by<br>select deptno,avg(sql) from emp group by deptno;从员工 表中依据部门编号分组查询部门编号 —-分组查询</p>
-<p>分组排序<br>select deptno,(ename,)avg(sql) avgs from emp group by deptno order by avgs desc;</p>
-<p>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p>
-<p>分组排序 加条件<br>查询平均工资大于1500的部门<br>select deptno,avg(sql) avgs from emp group by deptno having sal &gt; 1500  order by avgs desc;</p>
-<p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno; </p>
-<p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno having sums &gt;3000;</p>
-<p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno having sums &gt;3000 order by sums;<br>{<br>    DQL:数据库查询语言<br>    主要由SELECT . WHERE,ORDER BY,GROUP BY,和HAVING关键字构成</p>
-<pre><code>DML:数据操作语言
-主要由insert,update,和delete三个关键字完成,对数据库记录修改
-
-DDL:数据定义语言
-主要由create,alter和drop和truncate四个关键字完成
-
-DCL:数据控制语言
-主要由grant和revoke关键字完成
-
-TPL:事务处理语言
-主要由commit,rollback,transaction关键字完成
-</code></pre>
-<p>}</p>
-<p>字段属性说明:</p>
-<p>isdelete bit default 0:只有两种取值,o和1</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>Mysql</tag>
+        <tag>软件测试</tag>
       </tags>
   </entry>
 </search>
