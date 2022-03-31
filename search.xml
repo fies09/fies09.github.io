@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Django的基础入门</title>
+    <url>/article/f6b2ae5.html</url>
+    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
+<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
+<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
+<p>​        #密码</p>
+<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
+<p>4,更新应用数据库</p>
+<p>python manage.py makemigrations</p>
+<p>python manage.py migrate</p>
+<p>5,创建超级管理员</p>
+<p>python manage.py createsuperuser</p>
+<p>6,运行项目</p>
+<p>python manage.py runserver</p>
+<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
+<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
+<p>8,Django原理</p>
+<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos</title>
+    <url>/article/cab4360e.html</url>
+    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Centos相关命令笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Apache配置说明</title>
     <url>/article/7e84e351.html</url>
     <content><![CDATA[<p>1,运行php<br>运行php文件: php.exe的目录下    php.exe -f “php文件路径和文件名.php”<br>运行php代码: php.exe的目录下     php.exe -r “echo ‘hello world’ ; $i &#x3D; 1; $i++;echo $i;”</p>
@@ -58,43 +98,90 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Django的基础入门</title>
-    <url>/article/f6b2ae5.html</url>
-    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
-<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
-<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
-<p>​        #密码</p>
-<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
-<p>4,更新应用数据库</p>
-<p>python manage.py makemigrations</p>
-<p>python manage.py migrate</p>
-<p>5,创建超级管理员</p>
-<p>python manage.py createsuperuser</p>
-<p>6,运行项目</p>
-<p>python manage.py runserver</p>
-<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
-<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
-<p>8,Django原理</p>
-<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
+    <title>gitblit</title>
+    <url>/article/c361dd8f.html</url>
+    <content><![CDATA[<p>团队协作管理工具:</p>
+<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
+<p>​    飞书:协同管理工具</p>
+<p>​     飞秋:</p>
+<p>​      钉钉:</p>
+<p>Gitblit:</p>
+<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
+<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
+<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
 ]]></content>
       <categories>
-        <category>Web</category>
+        <category>版本管理工具</category>
       </categories>
       <tags>
-        <tag>Django</tag>
-        <tag>Web</tag>
+        <tag>Gitblit</tag>
+        <tag>版本管理工具</tag>
       </tags>
   </entry>
   <entry>
-    <title>Centos</title>
-    <url>/article/cab4360e.html</url>
-    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+    <title>Hexo博客next主题的使用说明</title>
+    <url>/article/78fbf3e4.html</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
+<p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>下载hexo模块,</p>
+<p>cnpm install -g hexo-cli</p>
+<p>②建立博客文件夹<br>mkdir blog</p>
+<p>③生成博客文件<br>cd blog </p>
+<p>hexo init</p>
+<p>④下载next主题</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>⑤在github上建立仓库github名.github.io</p>
+<p>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
+<p>⑦当配置完成后执行以下命令:</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
+<p>安装的相关模块:</p>
+<p>rss:  npm install hexo-generator-feed –save</p>
+<p>search: npm install hexo-generator-searchdb –save</p>
+<p>wordcount: npm i –save hexo-wordcount</p>
+<p>gulp: npm install gulp -g</p>
+<p>gulp插件: </p>
+<p>npm install gulp-minify-css –save</p>
+<p>npm install gulp-uglify –save<br>npm install gulp-htmlmin –save<br>npm install gulp-htmlclean –save<br>npm install gulp-imagemin –save</p>
+<p>宠物:  npm install -save hexo-helper-live2d</p>
+<p>响应模型: npm install live2d-widget-model-wanko</p>
+<p>symbol-count-time: npm install hexo-symbols-count-time –save</p>
+<p>分类含子集形式:</p>
+<p>​    categories: [Python,数据分析]</p>
+<p>多层分类:</p>
+<p>categories:</p>
+<p>–  数据分析</p>
+<p>–  Python</p>
+<p>tags: [Python,数据分析]</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux的使用</title>
+    <url>/article/4549a880.html</url>
+    <content><![CDATA[<p>1,安装dep文件</p>
+<p>dpkg -i 文件名</p>
+<p>2,解决vmware tools失效</p>
+<p>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop</p>
+<p>重启: init 0&#x2F;reboot</p>
+<p>3,在乌班图上显示隐藏文件</p>
+<p>ctrl + h</p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Centos相关命令笔记</tag>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -149,7 +236,7 @@ ServerName localhost
 <p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
 <p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
 <p>总结:上传主要是add,commit,push</p>
-<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#x79;&#48;&#x31;&#x33;&#48;&#52;&#x35;&#55;&#x34;&#x40;&#x61;&#x6c;&#x69;&#98;&#x61;&#x62;&#97;&#x2d;&#105;&#110;&#x63;&#x2e;&#99;&#x6f;&#x6d;">&#x66;&#x79;&#48;&#x31;&#x33;&#48;&#52;&#x35;&#55;&#x34;&#x40;&#x61;&#x6c;&#x69;&#98;&#x61;&#x62;&#97;&#x2d;&#105;&#110;&#x63;&#x2e;&#99;&#x6f;&#x6d;</a>‘</p>
+<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#121;&#48;&#x31;&#x33;&#x30;&#52;&#x35;&#55;&#52;&#64;&#x61;&#x6c;&#105;&#x62;&#x61;&#98;&#x61;&#45;&#105;&#x6e;&#99;&#x2e;&#x63;&#x6f;&#109;">&#102;&#121;&#48;&#x31;&#x33;&#x30;&#52;&#x35;&#55;&#52;&#64;&#x61;&#x6c;&#105;&#x62;&#x61;&#98;&#x61;&#45;&#105;&#x6e;&#99;&#x2e;&#x63;&#x6f;&#109;</a>‘</p>
 <p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
@@ -176,118 +263,84 @@ ServerName localhost
         <category>版本管理工具</category>
       </categories>
       <tags>
-        <tag>GIT</tag>
         <tag>版本管理工具</tag>
+        <tag>GIT</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客yilia主题的使用说明</title>
-    <url>/article/31aab21a.html</url>
-    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
-<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载yilia主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
-<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>上传到github:<br>hexo d</p>
-<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
-<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
-<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>yilia模块下载总结:</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>hexo常见错误及解决方法:</p>
-<p>问题1,</p>
-<p>error：spawn failed…</p>
-<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
-<p>解决方法:</p>
-<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
-<p>​    2, git config –global core.autocrlf false</p>
-<p>​    3, 执行 </p>
-<pre><code>hexo clean &amp;&amp; hexo g 
-hexo d
-</code></pre>
-<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
-<p>解决方法:</p>
-<p>​    在public目录下寻找index.html是否存在,</p>
-<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
-<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
-<pre><code>  一般情况下执行npm install hexo-generator-index即可
-</code></pre>
-<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
-<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
-<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
-<p>git config –global http.sslVerify “false”</p>
+    <title>MongoDB</title>
+    <url>/article/8ead567e.html</url>
+    <content><![CDATA[<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p>
+<p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p>
+<p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p>
+<p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p>
+<p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p>
+<p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p>
+<p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p>
+<p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p>
+<p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p>
+<p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MongoDB</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs简单使用</title>
+    <url>/article/89b3a0ef.html</url>
+    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
+<p>5,检测npm是否安装 npm -v</p>
+<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
+<ol>
+<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
+<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
+<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
+</ol>
+<p>安装出错解决办法: npm config set proxy null</p>
+<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
+<p>7,常用模块express npm install express</p>
+<p>8,卸载常用命令 npm uninstall express</p>
+<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
+<p>更新模块:npm update express</p>
+<p>搜索模块:npm search express</p>
+<p>创建模块 npm init</p>
+<p>注册用户:npm adduser</p>
+<p>发布模块:npm publish</p>
+<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>然后可以用cnpm install 模块名 下载模块</p>
 ]]></content>
       <categories>
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>Yilia</tag>
-        <tag>Hexo</tag>
+        <tag>Nodejs</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客next主题的使用说明</title>
-    <url>/article/78fbf3e4.html</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
-<p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载next主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
-<p>⑤在github上建立仓库github名.github.io</p>
-<p>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>安装的相关模块:</p>
-<p>rss:  npm install hexo-generator-feed –save</p>
-<p>search: npm install hexo-generator-searchdb –save</p>
-<p>wordcount: npm i –save hexo-wordcount</p>
-<p>gulp: npm install gulp -g</p>
-<p>gulp插件: </p>
-<p>npm install gulp-minify-css –save</p>
-<p>npm install gulp-uglify –save<br>npm install gulp-htmlmin –save<br>npm install gulp-htmlclean –save<br>npm install gulp-imagemin –save</p>
-<p>宠物:  npm install -save hexo-helper-live2d</p>
-<p>响应模型: npm install live2d-widget-model-wanko</p>
-<p>symbol-count-time: npm install hexo-symbols-count-time –save</p>
-<p>分类含子集形式:</p>
-<p>​    categories: [Python,数据分析]</p>
-<p>多层分类:</p>
-<p>categories:</p>
-<p>–  数据分析</p>
-<p>–  Python</p>
-<p>tags: [Python,数据分析]</p>
+    <title>Notebook安装使用教程</title>
+    <url>/article/d9a032e2.html</url>
+    <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
+<p>2,生成配置文件<br>jupyter notebook –generate-config</p>
+<p>不同系统的目录:</p>
+<p>Windows：C:UsersUSERNAME.jupyterjupyter_notebook_config.py<br>OS X：&#x2F;Users&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py<br>Linux：&#x2F;home&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py</p>
+<p>root用户执行以下命令:<br>jupyter notebook –generate-config –allow-config</p>
+<p>3,生成密码:<br>jupyter notebook password</p>
+<p>4,在jupyter_notebook_config下修改相关配置:<br>c.NotebookApp.ip&#x3D;’*’<br>c.NotebookApp.password &#x3D; u’sha:ce…刚才复制的那个密文’<br>c.NotebookApp.open_browser &#x3D; False<br>c.NotebookApp.port &#x3D;8888 #可自行指定一个端口, 访问时使用该端口</p>
+<p>5,启动<br>jupyter notebook</p>
+<p>root用户执行以下命令:<br>jupyter notebook –allow-root</p>
 ]]></content>
       <categories>
-        <category>Blog</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
+        <tag>Jupyter Notebook</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -406,82 +459,71 @@ TPL:事务处理语言
         <category>数据库</category>
       </categories>
       <tags>
-        <tag>Mysql</tag>
         <tag>数据库</tag>
+        <tag>Mysql</tag>
       </tags>
   </entry>
   <entry>
-    <title>Nodejs简单使用</title>
-    <url>/article/89b3a0ef.html</url>
-    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
-<p>5,检测npm是否安装 npm -v</p>
-<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
-<ol>
-<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
-<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
-<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
-<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
-</ol>
-<p>安装出错解决办法: npm config set proxy null</p>
-<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
-<p>7,常用模块express npm install express</p>
-<p>8,卸载常用命令 npm uninstall express</p>
-<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
-<p>更新模块:npm update express</p>
-<p>搜索模块:npm search express</p>
-<p>创建模块 npm init</p>
-<p>注册用户:npm adduser</p>
-<p>发布模块:npm publish</p>
-<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>然后可以用cnpm install 模块名 下载模块</p>
+    <title>Hexo博客yilia主题的使用说明</title>
+    <url>/article/31aab21a.html</url>
+    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
+<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>下载hexo模块,</p>
+<p>cnpm install -g hexo-cli</p>
+<p>②建立博客文件夹<br>mkdir blog</p>
+<p>③生成博客文件<br>cd blog </p>
+<p>hexo init</p>
+<p>④下载yilia主题</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
+<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
+<p>⑦当配置完成后执行以下命令:</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>上传到github:<br>hexo d</p>
+<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
+<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
+<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
+<p>yilia模块下载总结:</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>hexo常见错误及解决方法:</p>
+<p>问题1,</p>
+<p>error：spawn failed…</p>
+<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
+<p>解决方法:</p>
+<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
+<p>​    2, git config –global core.autocrlf false</p>
+<p>​    3, 执行 </p>
+<pre><code>hexo clean &amp;&amp; hexo g 
+hexo d
+</code></pre>
+<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
+<p>解决方法:</p>
+<p>​    在public目录下寻找index.html是否存在,</p>
+<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
+<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
+<pre><code>  一般情况下执行npm install hexo-generator-index即可
+</code></pre>
+<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
+<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
+<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
+<p>git config –global http.sslVerify “false”</p>
 ]]></content>
       <categories>
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MongoDB</title>
-    <url>/article/8ead567e.html</url>
-    <content><![CDATA[<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p>
-<p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p>
-<p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p>
-<p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p>
-<p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p>
-<p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p>
-<p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p>
-<p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p>
-<p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p>
-<p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MongoDB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux的使用</title>
-    <url>/article/4549a880.html</url>
-    <content><![CDATA[<p>1,安装dep文件</p>
-<p>dpkg -i 文件名</p>
-<p>2,解决vmware tools失效</p>
-<p>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop</p>
-<p>重启: init 0&#x2F;reboot</p>
-<p>3,在乌班图上显示隐藏文件</p>
-<p>ctrl + h</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
+        <tag>Hexo</tag>
+        <tag>Yilia</tag>
       </tags>
   </entry>
   <entry>
@@ -539,48 +581,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Python基础模块</title>
-    <url>/article/9d100b5b.html</url>
-    <content><![CDATA[<p>1.必装模块pypiwin32  wheel:主要是为了装whl文件</p>
-<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
-<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
-<p>4,pip文件的配置(目的,提高下载速率)<br>①<br>pip文件的配置<br>    # 在用户Administrator下, 提高第三方模块的下载速率<br>    # C:\Users\Administrator\pip\pip.ini<br>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
-<p>②pip 安装包超时使用以下方法:<br>pip install –index-url <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a> 包名</p>
-<p>③pip install tensorflow&#x3D;&#x3D;2.3.0  -i <a href="https://pypi.doubanio.com/simple">https://pypi.doubanio.com/simple</a></p>
-<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
-<p>6,Beautiful Soup:<br><strong>用于数据收集的Python库:</strong><br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
-<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
-<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
-<p>9,**用于数据清理和数据操作的Python库<br>*<br>pandas:主要用于数据操作和数据分析</p>
-<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
-<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
-<p>12,<strong>用于数据可视化的Python库</strong><br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
-<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
-<p>14,<strong>用于建模的Python库</strong><br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
-<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
-<p>16,<strong>用于数据解释型的Python库</strong><br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
-<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
-<p>18,<strong>用于音频处理的Python库:</strong><br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
-<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
-<p>20,<strong>用于图像处理的Python库</strong><br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
-<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
-<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
-<p><strong>用于部署的Python库</strong><br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
-<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
-<p>25,mysql数据库模块的安装<br>pip install mysqlclient&#x3D;&#x3D;1.3.12</p>
-<p>26, keras(目前已被tensorflow收购)</p>
-<p>pip install keras</p>
-<p>27,pytorch</p>
-<p>下载whl文件,在文件目录下:pip  install 文件名</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python概念</title>
     <url>/article/7cf78c2.html</url>
     <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
@@ -627,63 +627,45 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Python面试题</title>
-    <url>/article/f16e0bd2.html</url>
-    <content><![CDATA[<p>1,深拷贝，浅拷贝？<br>答：深拷贝：外围和内部元素都拷贝了对象本身，而不是引用，也就是说把对象复制一遍，对象中引用的其他对象也复制。<br>浅拷贝：拷贝了最外围对象本身，内部元素只是拷贝了一个引用，也就是说把对象复制一遍，该对象引用的其他对象不复制。</p>
-<p>2,同步异步?<br>答:同步：多任务，多个任务执行期间要有先后顺序，必须一个执行完后另一个才能执行，只有一条主线。<br>异步：多任务，多个任务可以同时执行，执行顺序没有影响，存在多条主线</p>
-<p>3,创建数据库的四大原则?<br>答:原子性,一致性,隔离性,持久性.</p>
-<p>4,django用户权限管理?<br>答:<br>1⃣️在model中定义权限的名称和描述信息，这个信息是在admin中设置时显示的信息。<br>2⃣在model中定义用户权限表Permission,将权限的名称，url名称，请求方法（get or post），参数列表保存进去。<br>3⃣️定义判断权限的方法。</p>
-<p>5,cookie和session?<br>答：<br>1⃣️cookie的数据信息保存在客户端浏览器上，session的数据信息保存在服务器上。<br>2⃣️session安全性高于cookie。<br>3⃣️session占用服务器性能方面比cookie高<br>4⃣️单个cookie保存的参数长度不超过4k<br>5⃣️登陆等重要信息存放在session中，其他保留信息存放在cookie中</p>
-<p>6，get、post?<br>答：<br>1⃣️get在回退时是无害的，而post会再次被保留<br>2⃣️get产生的参数长度有限制，而post没有<br>3⃣️get产生的url地址可以被浏览器收藏，而post不行<br>4⃣️get请求在url中传递的参数长度有限制，而post没有<br>5⃣️get参数可以通过url传递，而post参数保存在request body中，</p>
-<p>7，mvc和mvt?<br>答：django框架遵循mvc设计，并有一个专有名字mvt，m全称model,与mvc中的m功能相同,负责数据处理.内嵌套了orm框架,业务对象和数据库的关系映射,V全称View,与MVC中的C功能相同,负责业务逻辑处理,适当时调用model和Template,T全称template.与mvc中的v功能相同,负责封装构造要返回的html,内嵌套了模板引擎,主要将页面展示给用户</p>
-<p>8，优化数据库?<br>答:<br>①选取合适的字段属性<br>②使用连接代替子查询<br>③使用联合来代替手动创建的临时表<br>④使用事物<br>⑤使用锁定表<br><a href="https://m.html.cn/qa/other/21247.html">优化数据库</a></p>
-<p>9,Python如何进行内存管理的?<br>答:<br>①,引用计数机制<br>②,垃圾回收<br>③,内存池机制</p>
-<p>10,什么是lamdba表达式,有什么好处?<br>答:<br>lamdba表达式,通常是在需要一个函数,但是又不想费神去命名一个函数的情况下使用.也就是匿名函数</p>
-<p>11,django和flask的区别?<br>答:<br>django:<br>①自带数据库管理app<br>②Python Web框架的先驱,第三方库丰富<br>③,上手容易开发文档详细,完善,资料丰富</p>
-<p>flask:<br>①适用于做小型网站及web服务的api,开发大型网站无压力.架构需自行设计<br>②与关系型数据库的结构不弱于django,与非关系型数据库的结合远远强于django,</p>
-<p>12,orm数据库?<br>orm数据库:称为对象–关系映射,主要实现模型对象到关系数据库数据的映射,把数据表中的每一条记录映射为一个模型对象,</p>
-<p>13,django中间件?<br>是处于request和response之间的一道处理过程,并在全局变量中改变django的输入与输出,是一个轻量低级别的插件系统.</p>
-<p>14,django声明周期?<br>从用户输入url到用户看到网页的整个过程。<br>1)用户输入网址，浏览器发起请求<br>2)WSGI（服务器网关接口）创建socket服务端，接受请求<br>3）中间件处理请求<br>4）url路由，根据当前请求的url找到相应的视图函数<br>5）进入view，进行业务处理，执行类或者函数，返回字符串<br>6）再次通过中间件处理相应的请求<br>7）WSGI返回响应<br>8）浏览器渲染</p>
-<p>15,FBV,CBV?<br>FBV:基于函数视图.<br>CBV:基于类视图.</p>
-<p>16,面向对象?<br>简称oop,把对象当做一个程序的基本单元,一个对象包含数据和操作数据的函数,提高了编程的效率,使其编程的重用性增高.<br>三大特点:<br>封装:把需要重用的函数或功能封装起来,方便其他程序直接调用,<br>继承 :子类继承父类,子类和父类拥有相同的方法和属性,子类会覆盖父类的方法和属性<br>多态:提高函数的健壮性和可扩展性,父类声明指向子类实现</p>
-<p>17,如何提高Python的运行效率?<br>①使用生成器,节省大量内存<br>②针对循环优化,避免过多重复代码的执行<br>③核心代码用Cython,PyPy等,提高效率<br>④多进程,多线程,协程<br>⑤多个if else条件判断,可以把最有可能发生的条件放最前面写,减少程序判断次数,提高效率</p>
-<p>18,描述数据,链表,队列,堆栈的区别?<br>答:数组和链表是数据存储方式的概念,数组在连续的自然空间中存储,链表在非连续的自然空间中存储<br>队列和堆栈是描述数据存储方式的概念,<br>队列是先进先出,堆栈是后进先出,堆栈和队列可以用数组表示,也可以用链表表示,<br>堆和栈<br>内存:<br>栈:内存小,速度快,有序,简单的数据类型放到栈里<br>堆:内存大,速度慢,无序,复杂的数据类型放到堆里</p>
-<p>19,面向过程和面向对象的区别?<br>面向过程:根据业务逻辑从上到下写代码,开发思路是将数据和函数按照执行的逻辑顺序组织在一起,分开考虑数据和函数<br>面向对象:将函数和数据封装在一起,更快捷高效 的开发程序,减少代码的重写</p>
-<p>20,线程和进程?<br>线程:1,CPU进行资源分配和调度的基本单位,线程是进程的一部分,是比进程更小的能够独立运行的基本单位,一个进程下的多个线程可以共享该进程的所有资源<br>2,如果IO操作密集,则可以多个线程运行,效率高,缺点是如果一个线程崩溃,就会造成进程崩溃</p>
-<p>进程:1,操作系统进行资源分配和调度的基本单位,多个进程之间相互独立<br>2,稳定性好,如果一个进程崩溃,不影响其他进程,但是进程消耗资源大,开启的进程数量有限</p>
-<p>应用:<br>IO密集的用多线程,在用户输入sleep的时候,可以切换到其他线程执行,减少等待时间<br>CPU密集的时候用多进程,如果IO操作少,勇夺线程的话,因为线程共享一个全局解释器,当前运行的线程会霸占DIL,其他线程没有DIL,就不能充分利用多核CPU的优势</p>
-<p>21，knn算法原理及实现流程?<br>答:原理:当预测一个新的样本x的时候,根据它距离最近的k个点是什么类别来判断x属于哪个类别</p>
-<p>实现流程:<br>收集相关数据<br>选取合适的feature和label<br>如果不知道如何选取feature和label可以先单独计算每个feature与label的相关度<br>选取合适的k<br>使用数据集进行新的预测</p>
-<p>22，梯度下降算法实现流程?<br>随机选取m和b<br>分别对mse求m和b的偏导,<br>如果m和b的偏导都很小,接近0,就成功<br>根据学习速率计算出要修改的值<br>b和m分别减去要修改的值</p>
-<p>23,restful:API接口的请求方式和路径统一的定义方式,一种软件架构风格,设计风格,而不是标准,常见的设计风格</p>
-<p>24.mysql和mongo的区别?<br>数据库模型:<br>mysql为关系型数据库,<br>Mongodb为非关系型数据库,<br>存储方式:<br>mysql:不同的引擎有不同的存储方式<br>mongodb:虚拟内存+持久化<br>查询方式:<br>mysql:传统sql语句<br>mongodb:独特的mongodb查询方式</p>
-<p>25,wsgi和uwsgi区别?<br>uWsgi是一种Web服务器,它实现了WSGI协议,uwsgi,http等协议,Nginx中HttpUWsgiMOdule的作用是与uWSGI服务器进行交换,WSGI是一种Web服务器网关接口,它是一个web服务器,(如nginx,uWSGI等服务器)与Web应用(如Flask框架写的程序)通信的一种规范</p>
-<p>26,__new__和__init__的区别?<br>__new__负责对象的创建,__init__负责对象的初始化<br>_new__是在实例创建之前被调用的，因为它的任务就是创建实例然后返回该实例对象，是个静态方法。</p>
-<p>__init__是当实例对象创建完成后被调用的，然后设置对象属性的一些初始值，通常用在初始化一个类实例的时候。是一个实例方法。</p>
-<p>27,python规则?<br>①,缩进统一.4个空格或tab,建议4个空格<br>②标识符的第一个字符必须是字母表中的字母(大写或小写)或者一个下划线(‘<em>‘)标识符名称的其他部分可以有字母(大写或小写),下划线(‘</em>‘)或数字(0-9)组成<br>③标识符名称对大小写敏感的<br>eg,myname和myName不是一个标识符<br>④注释单行:#多行三个单引号或三个双引号<br>⑤python变量和数据类型,变量不需要声明.直接赋值</p>
-<p>28,*args和**kw区别?<br>*args和**kw属于不定长参数<br>*args返回值为元组类型,**kw返回值为字典类型</p>
-<p>29,&#x3D;和&#x3D;&#x3D;的区别?<br>&#x3D;:表示赋值.将某一数值赋值 给变量<br>&#x3D;&#x3D;:表示判断是否相等,返回True或者False,相等True,不相等False</p>
-<p>30,TCP&#x2F;UDP&#x2F;HTTP&#x2F;HTTPS的区别? TCP协议:是一种面向连接,可靠的,基于字节流的传输层协议,在正式通信前必须和对方建立连接,一个tcp必须经过三次对话才能建立连接,在经历4次对话结束(即三握四挥),传输可靠,速度慢,应用,传输大量数据,对可靠性要求高</p>
-<p>UDP协议:用于www浏览的协议,特点是客户端发送的请求都需要服务器回送响应,在请求结束后会主动释放连接,从建立连接到关闭连接的过程成为”一次连接” 注: 1)在http1.0中客户端的每次请求都要求建立一次单独的连接,在处理完本次请求后就自动释放连接 2)在http1.1中,则可以在一次连接中处理多次请求,并可重叠进行,不需要等一个请求结束后再发下一个请求</p>
-<p>HTTP&#x2F;HTTPS协议 HTTP协议:超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种 发布和接收HTML页面的方法。<br>HTTPS协议: HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL&#x2F;TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。</p>
-<p>31,可变数据类型和不可变数据类型?<br>可变:列表(list),字典(dict),集合(set),<br>不可变:整型(int),字符串(str),元组(tuple),<br>布尔型(bool) </p>
-<p>32,异常:抛出异常,铺获异常.自定义 异常</p>
-<p>33.except:python中的except用来铺获所有异常<br>try: 代码段 except 异常类型 e: 异常处理代码段</p>
-<p>34,序列化:将对象转换为字节流(Json数据)<br>反序列化:将字节流(json数据)还原成对象</p>
-<p>35,字符流和字节流?<br>字符流:只能为字符,多用于文本文件<br>字节流:可以是任意类型,适用于所用文件</p>
-<p>36,next()和iter()的区别?<br>我们一般通过iter()函数获取可迭代对象的迭代器,通过对获取到的迭代器不断的通过next函数 进行获取下一条数据,iter()函数 实际上就是调用了可迭代对象的__iter__方法</p>
-<p>37,斐波那契数列<br>items &#x3D; int(input(“请输入斐波那契数列的个数:”))<br>fibs &#x3D; [0,1]<br>for i in range(item - 1):<br>    fibs.append(fibs[-2] + fibs[-1])<br>print(“斐波那契数列为:”,fibsp[1:])</p>
-<p>38,冒泡排序<br>def bubblesort(list):<br>    for i in range(len(lsit)):<br>        for j in range(len(list)-i-1):<br>            if list[j]&gt;list[j+1]:<br>                list[j],list[j+1] &#x3D; list[j+1],list[j]<br>    return list</p>
-<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    #用户输入<br>    str &#x3D; input(“请输入数字(用逗号隔开)”)<br>    list &#x3D; [int(i) for i in str.split(‘,’)]<br>    print(bubblesort(list))</p>
-<p>39, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
-<p>40, 标识符含义:变量名,函数名,类名等<br>变量含义:栈内存中的一块内存区域,对应的值在堆内存中 </p>
+    <title>Python基础模块</title>
+    <url>/article/9d100b5b.html</url>
+    <content><![CDATA[<p>1.必装模块pypiwin32  wheel:主要是为了装whl文件</p>
+<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
+<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
+<p>4,pip文件的配置(目的,提高下载速率)<br>①<br>pip文件的配置<br>    # 在用户Administrator下, 提高第三方模块的下载速率<br>    # C:\Users\Administrator\pip\pip.ini<br>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<p>②pip 安装包超时使用以下方法:<br>pip install –index-url <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a> 包名</p>
+<p>③pip install tensorflow&#x3D;&#x3D;2.3.0  -i <a href="https://pypi.doubanio.com/simple">https://pypi.doubanio.com/simple</a></p>
+<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
+<p>6,Beautiful Soup:<br><strong>用于数据收集的Python库:</strong><br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
+<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
+<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
+<p>9,**用于数据清理和数据操作的Python库<br>*<br>pandas:主要用于数据操作和数据分析</p>
+<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
+<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
+<p>12,<strong>用于数据可视化的Python库</strong><br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
+<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
+<p>14,<strong>用于建模的Python库</strong><br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
+<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
+<p>16,<strong>用于数据解释型的Python库</strong><br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
+<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
+<p>18,<strong>用于音频处理的Python库:</strong><br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
+<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
+<p>20,<strong>用于图像处理的Python库</strong><br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
+<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
+<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
+<p><strong>用于部署的Python库</strong><br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
+<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
+<p>25,mysql数据库模块的安装<br>pip install mysqlclient&#x3D;&#x3D;1.3.12</p>
+<p>26, keras(目前已被tensorflow收购)</p>
+<p>pip install keras</p>
+<p>27,pytorch</p>
+<p>下载whl文件,在文件目录下:pip  install 文件名</p>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>面试题</tag>
       </tags>
   </entry>
   <entry>
@@ -752,6 +734,66 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>Python面试题</title>
+    <url>/article/f16e0bd2.html</url>
+    <content><![CDATA[<p>1,深拷贝，浅拷贝？<br>答：深拷贝：外围和内部元素都拷贝了对象本身，而不是引用，也就是说把对象复制一遍，对象中引用的其他对象也复制。<br>浅拷贝：拷贝了最外围对象本身，内部元素只是拷贝了一个引用，也就是说把对象复制一遍，该对象引用的其他对象不复制。</p>
+<p>2,同步异步?<br>答:同步：多任务，多个任务执行期间要有先后顺序，必须一个执行完后另一个才能执行，只有一条主线。<br>异步：多任务，多个任务可以同时执行，执行顺序没有影响，存在多条主线</p>
+<p>3,创建数据库的四大原则?<br>答:原子性,一致性,隔离性,持久性.</p>
+<p>4,django用户权限管理?<br>答:<br>1⃣️在model中定义权限的名称和描述信息，这个信息是在admin中设置时显示的信息。<br>2⃣在model中定义用户权限表Permission,将权限的名称，url名称，请求方法（get or post），参数列表保存进去。<br>3⃣️定义判断权限的方法。</p>
+<p>5,cookie和session?<br>答：<br>1⃣️cookie的数据信息保存在客户端浏览器上，session的数据信息保存在服务器上。<br>2⃣️session安全性高于cookie。<br>3⃣️session占用服务器性能方面比cookie高<br>4⃣️单个cookie保存的参数长度不超过4k<br>5⃣️登陆等重要信息存放在session中，其他保留信息存放在cookie中</p>
+<p>6，get、post?<br>答：<br>1⃣️get在回退时是无害的，而post会再次被保留<br>2⃣️get产生的参数长度有限制，而post没有<br>3⃣️get产生的url地址可以被浏览器收藏，而post不行<br>4⃣️get请求在url中传递的参数长度有限制，而post没有<br>5⃣️get参数可以通过url传递，而post参数保存在request body中，</p>
+<p>7，mvc和mvt?<br>答：django框架遵循mvc设计，并有一个专有名字mvt，m全称model,与mvc中的m功能相同,负责数据处理.内嵌套了orm框架,业务对象和数据库的关系映射,V全称View,与MVC中的C功能相同,负责业务逻辑处理,适当时调用model和Template,T全称template.与mvc中的v功能相同,负责封装构造要返回的html,内嵌套了模板引擎,主要将页面展示给用户</p>
+<p>8，优化数据库?<br>答:<br>①选取合适的字段属性<br>②使用连接代替子查询<br>③使用联合来代替手动创建的临时表<br>④使用事物<br>⑤使用锁定表<br><a href="https://m.html.cn/qa/other/21247.html">优化数据库</a></p>
+<p>9,Python如何进行内存管理的?<br>答:<br>①,引用计数机制<br>②,垃圾回收<br>③,内存池机制</p>
+<p>10,什么是lamdba表达式,有什么好处?<br>答:<br>lamdba表达式,通常是在需要一个函数,但是又不想费神去命名一个函数的情况下使用.也就是匿名函数</p>
+<p>11,django和flask的区别?<br>答:<br>django:<br>①自带数据库管理app<br>②Python Web框架的先驱,第三方库丰富<br>③,上手容易开发文档详细,完善,资料丰富</p>
+<p>flask:<br>①适用于做小型网站及web服务的api,开发大型网站无压力.架构需自行设计<br>②与关系型数据库的结构不弱于django,与非关系型数据库的结合远远强于django,</p>
+<p>12,orm数据库?<br>orm数据库:称为对象–关系映射,主要实现模型对象到关系数据库数据的映射,把数据表中的每一条记录映射为一个模型对象,</p>
+<p>13,django中间件?<br>是处于request和response之间的一道处理过程,并在全局变量中改变django的输入与输出,是一个轻量低级别的插件系统.</p>
+<p>14,django声明周期?<br>从用户输入url到用户看到网页的整个过程。<br>1)用户输入网址，浏览器发起请求<br>2)WSGI（服务器网关接口）创建socket服务端，接受请求<br>3）中间件处理请求<br>4）url路由，根据当前请求的url找到相应的视图函数<br>5）进入view，进行业务处理，执行类或者函数，返回字符串<br>6）再次通过中间件处理相应的请求<br>7）WSGI返回响应<br>8）浏览器渲染</p>
+<p>15,FBV,CBV?<br>FBV:基于函数视图.<br>CBV:基于类视图.</p>
+<p>16,面向对象?<br>简称oop,把对象当做一个程序的基本单元,一个对象包含数据和操作数据的函数,提高了编程的效率,使其编程的重用性增高.<br>三大特点:<br>封装:把需要重用的函数或功能封装起来,方便其他程序直接调用,<br>继承 :子类继承父类,子类和父类拥有相同的方法和属性,子类会覆盖父类的方法和属性<br>多态:提高函数的健壮性和可扩展性,父类声明指向子类实现</p>
+<p>17,如何提高Python的运行效率?<br>①使用生成器,节省大量内存<br>②针对循环优化,避免过多重复代码的执行<br>③核心代码用Cython,PyPy等,提高效率<br>④多进程,多线程,协程<br>⑤多个if else条件判断,可以把最有可能发生的条件放最前面写,减少程序判断次数,提高效率</p>
+<p>18,描述数据,链表,队列,堆栈的区别?<br>答:数组和链表是数据存储方式的概念,数组在连续的自然空间中存储,链表在非连续的自然空间中存储<br>队列和堆栈是描述数据存储方式的概念,<br>队列是先进先出,堆栈是后进先出,堆栈和队列可以用数组表示,也可以用链表表示,<br>堆和栈<br>内存:<br>栈:内存小,速度快,有序,简单的数据类型放到栈里<br>堆:内存大,速度慢,无序,复杂的数据类型放到堆里</p>
+<p>19,面向过程和面向对象的区别?<br>面向过程:根据业务逻辑从上到下写代码,开发思路是将数据和函数按照执行的逻辑顺序组织在一起,分开考虑数据和函数<br>面向对象:将函数和数据封装在一起,更快捷高效 的开发程序,减少代码的重写</p>
+<p>20,线程和进程?<br>线程:1,CPU进行资源分配和调度的基本单位,线程是进程的一部分,是比进程更小的能够独立运行的基本单位,一个进程下的多个线程可以共享该进程的所有资源<br>2,如果IO操作密集,则可以多个线程运行,效率高,缺点是如果一个线程崩溃,就会造成进程崩溃</p>
+<p>进程:1,操作系统进行资源分配和调度的基本单位,多个进程之间相互独立<br>2,稳定性好,如果一个进程崩溃,不影响其他进程,但是进程消耗资源大,开启的进程数量有限</p>
+<p>应用:<br>IO密集的用多线程,在用户输入sleep的时候,可以切换到其他线程执行,减少等待时间<br>CPU密集的时候用多进程,如果IO操作少,勇夺线程的话,因为线程共享一个全局解释器,当前运行的线程会霸占DIL,其他线程没有DIL,就不能充分利用多核CPU的优势</p>
+<p>21，knn算法原理及实现流程?<br>答:原理:当预测一个新的样本x的时候,根据它距离最近的k个点是什么类别来判断x属于哪个类别</p>
+<p>实现流程:<br>收集相关数据<br>选取合适的feature和label<br>如果不知道如何选取feature和label可以先单独计算每个feature与label的相关度<br>选取合适的k<br>使用数据集进行新的预测</p>
+<p>22，梯度下降算法实现流程?<br>随机选取m和b<br>分别对mse求m和b的偏导,<br>如果m和b的偏导都很小,接近0,就成功<br>根据学习速率计算出要修改的值<br>b和m分别减去要修改的值</p>
+<p>23,restful:API接口的请求方式和路径统一的定义方式,一种软件架构风格,设计风格,而不是标准,常见的设计风格</p>
+<p>24.mysql和mongo的区别?<br>数据库模型:<br>mysql为关系型数据库,<br>Mongodb为非关系型数据库,<br>存储方式:<br>mysql:不同的引擎有不同的存储方式<br>mongodb:虚拟内存+持久化<br>查询方式:<br>mysql:传统sql语句<br>mongodb:独特的mongodb查询方式</p>
+<p>25,wsgi和uwsgi区别?<br>uWsgi是一种Web服务器,它实现了WSGI协议,uwsgi,http等协议,Nginx中HttpUWsgiMOdule的作用是与uWSGI服务器进行交换,WSGI是一种Web服务器网关接口,它是一个web服务器,(如nginx,uWSGI等服务器)与Web应用(如Flask框架写的程序)通信的一种规范</p>
+<p>26,__new__和__init__的区别?<br>__new__负责对象的创建,__init__负责对象的初始化<br>_new__是在实例创建之前被调用的，因为它的任务就是创建实例然后返回该实例对象，是个静态方法。</p>
+<p>__init__是当实例对象创建完成后被调用的，然后设置对象属性的一些初始值，通常用在初始化一个类实例的时候。是一个实例方法。</p>
+<p>27,python规则?<br>①,缩进统一.4个空格或tab,建议4个空格<br>②标识符的第一个字符必须是字母表中的字母(大写或小写)或者一个下划线(‘<em>‘)标识符名称的其他部分可以有字母(大写或小写),下划线(‘</em>‘)或数字(0-9)组成<br>③标识符名称对大小写敏感的<br>eg,myname和myName不是一个标识符<br>④注释单行:#多行三个单引号或三个双引号<br>⑤python变量和数据类型,变量不需要声明.直接赋值</p>
+<p>28,*args和**kw区别?<br>*args和**kw属于不定长参数<br>*args返回值为元组类型,**kw返回值为字典类型</p>
+<p>29,&#x3D;和&#x3D;&#x3D;的区别?<br>&#x3D;:表示赋值.将某一数值赋值 给变量<br>&#x3D;&#x3D;:表示判断是否相等,返回True或者False,相等True,不相等False</p>
+<p>30,TCP&#x2F;UDP&#x2F;HTTP&#x2F;HTTPS的区别? TCP协议:是一种面向连接,可靠的,基于字节流的传输层协议,在正式通信前必须和对方建立连接,一个tcp必须经过三次对话才能建立连接,在经历4次对话结束(即三握四挥),传输可靠,速度慢,应用,传输大量数据,对可靠性要求高</p>
+<p>UDP协议:用于www浏览的协议,特点是客户端发送的请求都需要服务器回送响应,在请求结束后会主动释放连接,从建立连接到关闭连接的过程成为”一次连接” 注: 1)在http1.0中客户端的每次请求都要求建立一次单独的连接,在处理完本次请求后就自动释放连接 2)在http1.1中,则可以在一次连接中处理多次请求,并可重叠进行,不需要等一个请求结束后再发下一个请求</p>
+<p>HTTP&#x2F;HTTPS协议 HTTP协议:超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种 发布和接收HTML页面的方法。<br>HTTPS协议: HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL&#x2F;TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。</p>
+<p>31,可变数据类型和不可变数据类型?<br>可变:列表(list),字典(dict),集合(set),<br>不可变:整型(int),字符串(str),元组(tuple),<br>布尔型(bool) </p>
+<p>32,异常:抛出异常,铺获异常.自定义 异常</p>
+<p>33.except:python中的except用来铺获所有异常<br>try: 代码段 except 异常类型 e: 异常处理代码段</p>
+<p>34,序列化:将对象转换为字节流(Json数据)<br>反序列化:将字节流(json数据)还原成对象</p>
+<p>35,字符流和字节流?<br>字符流:只能为字符,多用于文本文件<br>字节流:可以是任意类型,适用于所用文件</p>
+<p>36,next()和iter()的区别?<br>我们一般通过iter()函数获取可迭代对象的迭代器,通过对获取到的迭代器不断的通过next函数 进行获取下一条数据,iter()函数 实际上就是调用了可迭代对象的__iter__方法</p>
+<p>37,斐波那契数列<br>items &#x3D; int(input(“请输入斐波那契数列的个数:”))<br>fibs &#x3D; [0,1]<br>for i in range(item - 1):<br>    fibs.append(fibs[-2] + fibs[-1])<br>print(“斐波那契数列为:”,fibsp[1:])</p>
+<p>38,冒泡排序<br>def bubblesort(list):<br>    for i in range(len(lsit)):<br>        for j in range(len(list)-i-1):<br>            if list[j]&gt;list[j+1]:<br>                list[j],list[j+1] &#x3D; list[j+1],list[j]<br>    return list</p>
+<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    #用户输入<br>    str &#x3D; input(“请输入数字(用逗号隔开)”)<br>    list &#x3D; [int(i) for i in str.split(‘,’)]<br>    print(bubblesort(list))</p>
+<p>39, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
+<p>40, 标识符含义:变量名,函数名,类名等<br>变量含义:栈内存中的一块内存区域,对应的值在堆内存中 </p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SVN</title>
     <url>/article/ec3edfbe.html</url>
     <content><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p>
@@ -795,24 +837,52 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Notebook安装使用教程</title>
-    <url>/article/d9a032e2.html</url>
-    <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
-<p>2,生成配置文件<br>jupyter notebook –generate-config</p>
-<p>不同系统的目录:</p>
-<p>Windows：C:UsersUSERNAME.jupyterjupyter_notebook_config.py<br>OS X：&#x2F;Users&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py<br>Linux：&#x2F;home&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py</p>
-<p>root用户执行以下命令:<br>jupyter notebook –generate-config –allow-config</p>
-<p>3,生成密码:<br>jupyter notebook password</p>
-<p>4,在jupyter_notebook_config下修改相关配置:<br>c.NotebookApp.ip&#x3D;’*’<br>c.NotebookApp.password &#x3D; u’sha:ce…刚才复制的那个密文’<br>c.NotebookApp.open_browser &#x3D; False<br>c.NotebookApp.port &#x3D;8888 #可自行指定一个端口, 访问时使用该端口</p>
-<p>5,启动<br>jupyter notebook</p>
-<p>root用户执行以下命令:<br>jupyter notebook –allow-root</p>
+    <title>Scrapy框架的使用</title>
+    <url>/article/e85d868e.html</url>
+    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
+<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
+<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
+<p>③,编写主程序</p>
+<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
+<p>注意:设置浏览器标识时,第一个应为项目名</p>
+<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Jupyter Notebook</tag>
+        <tag>爬虫</tag>
+        <tag>Scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>乌班图笔记整理</p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用命令</title>
+    <url>/article/6fc55794.html</url>
+    <content><![CDATA[<p>1,WIndow激活命令</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>2,关机命令</p>
+<p>slidetoshutdown</p>
+]]></content>
+      <categories>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>常用命令</tag>
       </tags>
   </entry>
   <entry>
@@ -873,35 +943,82 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Scrapy框架的使用</title>
-    <url>/article/e85d868e.html</url>
-    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
-<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
-<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
-<p>③,编写主程序</p>
-<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
-<p>注意:设置浏览器标识时,第一个应为项目名</p>
-<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+    <title>数据分析</title>
+    <url>/article/d1c27656.html</url>
+    <content><![CDATA[<p>numpy模块<br>1,数组的创建语法:<br>一维数组:</p>
+<p>&#x2F; : 表示或者</p>
+<p>arr &#x3D; np.array(列表&#x2F;range(5))</p>
+<p>二维数组:<br>arr2 &#x3D; np.array([[1,2,3,4],[5,6,7,8]])</p>
+<p>2,shape:一个表示各维度大小的数组组arr2的维度:arr2.shape<br>,查看各数组的结构(几行几列)  </p>
+<p>3,dtype:一个用于说明数组数据类型的对象<br>arr2的数组类型:arr2.dtype<br>4,10代表一维数组的元素个数:arr_zeros &#x3D; np.zeros(10)</p>
+<p>5, 3,一维数组的个数,6,每个数组的元素个数:arr_ones &#x3D; np.ones((3,6))</p>
+<p>6, 2代表三维度值在数组中的个数,3代表二维度值在数组中的个数,2代表一维度值在数据中的个数 :<br>arr_empty &#x3D; np.empty([2,4])</p>
+<p>7, np.arange(5) :构建一维数组[0,1,2,3,4]                     —&gt;序列数组<br>   np.array([[6,7,8,9],np.arange(4)]) :构建二维数组[[6,7,8,9][0,1,2,3,4]]</p>
+<p>8,(matrix)矩阵的创建(一般表示二维数组)<br>np.matrix(np.arange(5))  np.maxtrix([[6,7,8,9],np.arange(4)])   </p>
+<p>arange返回的是ndarray,<br>range返回的是列表<br>np.arange(8).reshape(4,2):生成4行2列的二维数组</p>
+<p>ndarray数据类型可一致可不一致:如果其中包含dtype,数据类型必须一致</p>
+<p>9,arr &#x3D; np.array([1,2,3],dtype &#x3D; np.int32)<br>[含dtype数据类型必须一致,不指定默认int64]<br> arr.dtype</p>
+<p>10,arr &#x3D; np.array([1.1,2.7,3.5],dtype &#x3D; np.int64)<br>   arr &#x3D; [1,2,3]  将arr数组中的每一个元素类型由 float64 浮点型 转换成 int64 整型数据， 因此小数部分被截取只保留整数部分。</p>
+<p>11,ndarray数据类型的转换<br>arr &#x3D; np.array(range(5),dtype &#x3D; np.int64)<br>arr_float &#x3D; arr.astype(np.float64)<br>#整数转小数,若小数转整数会被截取,若有字符数字,也可以转为数值类型</p>
+<p>12,将数组的类型转换成另一个数组的类型<br>arr_int &#x3D; np.arange(5)<br>#int转换为float<br>arr &#x3D; arr_int.astype(np.float64)<br> #一维数组<br>arr_float &#x3D; np.array([[1.1,2.7], [5.7,6.3]])<br>#浮点型二维数组<br>将arr_float数组类型转换成arr_int数组类型<br>arr_temp&#x3D;arr_float.astype(arr_int.dtype)转化后小数部分被截取</p>
+<p>13,创建二维数组矩阵arr(浮点类型)  —35<br>arr &#x3D; np.array([np.arange(1,5), np.arange(6,10)], dtype&#x3D;np.float64)</p>
+<p>矩阵自乘,二维数组中的每个元素都乘以自身得到一个新的结果</p>
+<p>arr1 &#x3D; arr * arr </p>
+<p>矩阵自乘,二维数组中的每个元素都减去自身得到一个新的结果</p>
+<p>arr2 &#x3D; arr - arr</p>
+<p>与标量相除,一个标量数字除以二维数组中的每个元素得到一个新的结果</p>
+<p>arr3 &#x3D; 1 &#x2F; arr</p>
+<p>矩阵1&#x2F;2次幂运算,二维数组中的每个元素计算自身1&#x2F;2 次幂得到一个新的结果</p>
+<p>arr4 &#x3D; arr ** 0.5 </p>
+<p>14,数组复制<br>b &#x3D; a.view():共用同一个值,<br>b改变,a也跟着改变<br>c &#x3D; a. copy():值不会随着c的值改变而改变</p>
+<p>15,np.title(a.(m,n)):扩展<br>将数组扩展为m行n列<br>np.sin(数组):取正弦<br>np.arange(2):2个元素&#x2F;几到几&#x2F;几到几,步长<br>reshape(矩阵,行,列):改变矩阵形状(行列)</p>
+<p>16,矩阵.argmax(axis &#x3D; 0):列中最大值索引<br>数组.index(对象):求索引<br>np.sort(matrix,axis&#x3D;1):横向排序:<br>np.argsort(a):最小值索引</p>
+<p>17,一般情况下,float和int默认64</p>
+<p>18,根据索引查值<br>arr &#x3D; np.arange(10)<br>arr[5]:下标(索引)为5的元素<br>二维数组索引:<br>二维数组对象[二维数组下标索引值,一维数组下标索引值]<br>三维:数组对象[三维度轴索引值,二维度下标索引值,一维度元素下标索引值]<br>所得值为二维数组<br>19,names&#x3D;np.array([‘cnm’,’Bob’,’Jane’,’Bob’])<br>data &#x3D; np.random.randn(4,3):生成正态分布的一些随机数据的二维数组<br>4:根据第一行数组的个数决定<br>print(data[names &#x3D;&#x3D; ‘Bob’,1:]):取Bob所在行的所有数据<br>—&gt;|或   &amp;与  and     or </p>
+<p>20,及时创建副本</p>
+<p>21,花式索引:针对二维数组:<br>print([[行数1,行数2]]):取具体某行</p>
+<p>22,np.ix_:可以将两个一维数组转换成一个用于选取正方形区域的索引器</p>
+<p>23,arr.T:可以将一个4行3列的二维数组转换成一个3行4列的二维数组</p>
+<p>24,arr&#x3D;np.arange(24).reshape(2,3,4)<br>(2轴3行4列)<br>arr.transpose(1,0,2)<br>(3轴2行4列)</p>
+<p>25,arr.swapaxex(1,2):实现三维数组轴对换<br>相当用于将原三维数组以轴z为轴心,向左推90°</p>
+<p>26,针对二维数组<br>arr.tofile(‘a.bin’):写入数据<br>print(a.dtype)<br>b &#x3D; np.fromfile(‘a.bin’,dtype &#x3D; a的数据类型):读取数据</p>
+<p>27,np.save(‘a.npy’,a):保存数据<br>np.load(‘a.npy’):读取数据</p>
+<p>28,保存数据到一个文件中<br>np.savez(‘res.npz’,a,b,c):文件名及数组名<br>np.load(‘res.npz’):读取文件</p>
+<p>29,savetext和loadtext可读写一维数组,二维数组,csv文件<br>np.savetext(‘a.txt’,a,fmt&#x3D;’%d’,delimiter&#x3D;’,’):保存为整数,以逗号隔开<br>np.loadtext(‘a.txt’,delimiter&#x3D;’,’):读取时以,隔开</p>
+<p>30,np.sqrt(arr):计算各元素的平方根<br>np.exp(arr):计算常量值e各元素值</p>
+<p>31,np.maximum(arr1,arr2):对比数组中各元组的大小取大的组成最终数组<br>arr &#x3D; np.random.randn(4)*5<br>np.modf(arr):取数列中的小数部分和整数部分</p>
+<p>32,以每个元素为一行,生成N*N的方形二维矩阵<br>xs,xy &#x3D; np.meshgrid(arr,arr)<br>根号下x²+y² :np.sqrt(np.square(xs)) + np.sqrt(np.square(xy))</p>
+<p>33,np.where(布尔型,arr1,arr2):<br>当布尔型为True时,arr1,否则arr2</p>
+<p>34,arr.sum(axis &#x3D; 0):沿轴0(x轴)求和计算<br>arr.mean(axis &#x3D; 1):沿y轴求平均值<br>arr.std()求标准差</p>
+<p>35,arr.sort():默认从小到大排序<br>arr.sort(axis&#x3D;1):每行排序<br>np.unique(arr):去重排序<br>np.inId(arr,[’元素1’,’元素2’]):判断True或False</p>
+<p>36,arr1.dot(arr2):矩阵1*矩阵2<br>np.dot(arr1,np.ones(3)):二维矩阵与一维矩阵点积运算后得到一个一维数组</p>
+<p>inv(arr):获取矩阵逆运算<br>值<br>qr(arr):获取矩阵的qr操作值分解</p>
+<p>37,arr.cumsum(0):所有元素累计和<br>arr.cumprod(0):所有元素累计积</p>
+<p>38,axis &#x3D; 1行,0列,z轴</p>
+<p>39,标准正态(高斯)分布的4*4数组,arr &#x3D; np.random(size&#x3D;(4,4))<br>40,argmax求临界值</p>
+<p>Pandas模块<br>Series,DataFrame<br>Series:<br>obj &#x3D; series([1,3,2,13]):索引在左,内容在右<br>obj.index:求索引<br>obj.values:求值<br>指定索引:<br>obj&#x3D;([1,3,2,7],index&#x3D;[‘a1’,’a3’,’a13’,’a2’])<br>obj[‘a3’]:取值<br>obj[‘a13’]&#x3D;13:改值<br>输出指定范围的索引:obj[[‘a1’,’a13’]]<br>np.exp(obj):e的obj各values值次方<br> a1 in obj:判断索引值是否在obj中<br>dict1 &#x3D; {‘a’:3,’b’:13}<br>#构建series对象<br>obj &#x3D; Series(dict1)<br>new_index &#x3D; [‘w,’’y’]<br>obj2 &#x3D; Series(dict1,new_index)<br>pd.isnull&#x2F;notnull(obj2)::判断是否为空<br>两个series相加:索引并集:values为NaN,</p>
+<p>41,将具有等长的多个列表存入DataFrame,自动发添加索引,列名key值自动排序<br>fram&#x3D;DataFrame(dict1,columns&#x3D;[‘w’,’j’,’y’],index&#x3D;[1,3,13]):columns列顺序排列,index:索引顺序排列<br>fram[‘j’]:求某列<br>fram[‘w’]&#x3D;7:赋值操作<br>Series给DataFrame赋值:精确匹配DataFrame索引<br>字典嵌套,外层key作为列,内层key作为索引处理<br>reindex:新索引<br>Method&#x3D;’ffill’&#x2F;’bfill’:实现前向&#x2F;前后插值处理,<br>ix的标签索引实现行列重置<br>Pandas进阶:s表示Series对象,<br>d表示DataFrame对象<br>s.drop(‘索引名’)<br>d.drop([‘索引1’,’索引2’],axis&#x3D;0):删除索引1和3的一栏</p>
+<p>add, sub减,mul乘,div除</p>
+<p>d1.add(d2,fill_value&#x3D;0):缺失用0代替,相加</p>
+<p>排序:s.sort_index(ascending&#x3D;True):升序,false降序</p>
+<p>d.sort_values(by&#x3D;’b’,&#x2F;[‘a’,’b’]):按照列值或多个列值排序</p>
+<p>操作文件csv&#x2F;txt<br>读取:<br>os:csvPath &#x3D; os.getcwd() + ‘文件存储路径’<br>data &#x3D; pd.read_csv(csvPath + os.sep + ‘tips.csv’):读取数据</p>
+<p>写入:data.to_csv(csvPath &#x3D; os.sep + ‘out.csv’)</p>
+<p>json操作:<br>设置路径:jsonPath &#x3D; os.getcwd + ‘路径’<br>读取:with open(jsonPath + os.sep +’文件名’ , ‘r’,encoding &#x3D; ‘utf8’) as fp:<br>dump()写入json数据<br>data &#x3D; json.load(fp):读取<br>Df &#x3D; DataFrame(data):将json转换为DataFrame对象</p>
+<p>Excel:地址同上<br>xls_file &#x3D; pa.ExcelFile(ExcelPath + os.sep + ‘文件名’)<br>读取有效sheet页<br>table &#x3D; xls_file.prase(‘文件名无后缀,其他都有’)</p>
+<p>读取数据库:<br>import pymysql<br>#获取有效的数据库连接引用对象<br>connection &#x3D; pymysql.connect(host &#x3D;’localhost’,post&#x3D;3306,user&#x3D;’root’,password&#x3D;’1’,db&#x3D;’houserentals’,charser&#x3D;’utf8’)<br>#设置查询语句<br>sql &#x3D; ‘select *from emp e where e.lessor &#x3D; 13 ’<br>#使用read_sql函数 检索并转换DataFrame对象<br>df &#x3D; pd.read_sql(sql,connection)<br>#关闭数据库<br>conncetion.close()<br>#测试输出<br>print(df)</p>
+<p>43, pandas模块</p>
+<p>#显示完整的列</p>
+<p>pd.set_option(‘display.max_columns’, None) </p>
+<p>#显示完整的行</p>
+<p>pd.set_option(‘display.max_rows’, None)</p>
 ]]></content>
       <categories>
-        <category>爬虫</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>爬虫</tag>
-        <tag>Scrapy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>乌班图笔记整理</p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -1119,102 +1236,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>常用命令</title>
-    <url>/article/6fc55794.html</url>
-    <content><![CDATA[<p>1,WIndow激活命令</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>2,关机命令</p>
-<p>slidetoshutdown</p>
-]]></content>
-      <categories>
-        <category>常用命令</category>
-      </categories>
-      <tags>
-        <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析</title>
-    <url>/article/d1c27656.html</url>
-    <content><![CDATA[<p>numpy模块<br>1,数组的创建语法:<br>一维数组:</p>
-<p>&#x2F; : 表示或者</p>
-<p>arr &#x3D; np.array(列表&#x2F;range(5))</p>
-<p>二维数组:<br>arr2 &#x3D; np.array([[1,2,3,4],[5,6,7,8]])</p>
-<p>2,shape:一个表示各维度大小的数组组arr2的维度:arr2.shape<br>,查看各数组的结构(几行几列)  </p>
-<p>3,dtype:一个用于说明数组数据类型的对象<br>arr2的数组类型:arr2.dtype<br>4,10代表一维数组的元素个数:arr_zeros &#x3D; np.zeros(10)</p>
-<p>5, 3,一维数组的个数,6,每个数组的元素个数:arr_ones &#x3D; np.ones((3,6))</p>
-<p>6, 2代表三维度值在数组中的个数,3代表二维度值在数组中的个数,2代表一维度值在数据中的个数 :<br>arr_empty &#x3D; np.empty([2,4])</p>
-<p>7, np.arange(5) :构建一维数组[0,1,2,3,4]                     —&gt;序列数组<br>   np.array([[6,7,8,9],np.arange(4)]) :构建二维数组[[6,7,8,9][0,1,2,3,4]]</p>
-<p>8,(matrix)矩阵的创建(一般表示二维数组)<br>np.matrix(np.arange(5))  np.maxtrix([[6,7,8,9],np.arange(4)])   </p>
-<p>arange返回的是ndarray,<br>range返回的是列表<br>np.arange(8).reshape(4,2):生成4行2列的二维数组</p>
-<p>ndarray数据类型可一致可不一致:如果其中包含dtype,数据类型必须一致</p>
-<p>9,arr &#x3D; np.array([1,2,3],dtype &#x3D; np.int32)<br>[含dtype数据类型必须一致,不指定默认int64]<br> arr.dtype</p>
-<p>10,arr &#x3D; np.array([1.1,2.7,3.5],dtype &#x3D; np.int64)<br>   arr &#x3D; [1,2,3]  将arr数组中的每一个元素类型由 float64 浮点型 转换成 int64 整型数据， 因此小数部分被截取只保留整数部分。</p>
-<p>11,ndarray数据类型的转换<br>arr &#x3D; np.array(range(5),dtype &#x3D; np.int64)<br>arr_float &#x3D; arr.astype(np.float64)<br>#整数转小数,若小数转整数会被截取,若有字符数字,也可以转为数值类型</p>
-<p>12,将数组的类型转换成另一个数组的类型<br>arr_int &#x3D; np.arange(5)<br>#int转换为float<br>arr &#x3D; arr_int.astype(np.float64)<br> #一维数组<br>arr_float &#x3D; np.array([[1.1,2.7], [5.7,6.3]])<br>#浮点型二维数组<br>将arr_float数组类型转换成arr_int数组类型<br>arr_temp&#x3D;arr_float.astype(arr_int.dtype)转化后小数部分被截取</p>
-<p>13,创建二维数组矩阵arr(浮点类型)  —35<br>arr &#x3D; np.array([np.arange(1,5), np.arange(6,10)], dtype&#x3D;np.float64)</p>
-<p>矩阵自乘,二维数组中的每个元素都乘以自身得到一个新的结果</p>
-<p>arr1 &#x3D; arr * arr </p>
-<p>矩阵自乘,二维数组中的每个元素都减去自身得到一个新的结果</p>
-<p>arr2 &#x3D; arr - arr</p>
-<p>与标量相除,一个标量数字除以二维数组中的每个元素得到一个新的结果</p>
-<p>arr3 &#x3D; 1 &#x2F; arr</p>
-<p>矩阵1&#x2F;2次幂运算,二维数组中的每个元素计算自身1&#x2F;2 次幂得到一个新的结果</p>
-<p>arr4 &#x3D; arr ** 0.5 </p>
-<p>14,数组复制<br>b &#x3D; a.view():共用同一个值,<br>b改变,a也跟着改变<br>c &#x3D; a. copy():值不会随着c的值改变而改变</p>
-<p>15,np.title(a.(m,n)):扩展<br>将数组扩展为m行n列<br>np.sin(数组):取正弦<br>np.arange(2):2个元素&#x2F;几到几&#x2F;几到几,步长<br>reshape(矩阵,行,列):改变矩阵形状(行列)</p>
-<p>16,矩阵.argmax(axis &#x3D; 0):列中最大值索引<br>数组.index(对象):求索引<br>np.sort(matrix,axis&#x3D;1):横向排序:<br>np.argsort(a):最小值索引</p>
-<p>17,一般情况下,float和int默认64</p>
-<p>18,根据索引查值<br>arr &#x3D; np.arange(10)<br>arr[5]:下标(索引)为5的元素<br>二维数组索引:<br>二维数组对象[二维数组下标索引值,一维数组下标索引值]<br>三维:数组对象[三维度轴索引值,二维度下标索引值,一维度元素下标索引值]<br>所得值为二维数组<br>19,names&#x3D;np.array([‘cnm’,’Bob’,’Jane’,’Bob’])<br>data &#x3D; np.random.randn(4,3):生成正态分布的一些随机数据的二维数组<br>4:根据第一行数组的个数决定<br>print(data[names &#x3D;&#x3D; ‘Bob’,1:]):取Bob所在行的所有数据<br>—&gt;|或   &amp;与  and     or </p>
-<p>20,及时创建副本</p>
-<p>21,花式索引:针对二维数组:<br>print([[行数1,行数2]]):取具体某行</p>
-<p>22,np.ix_:可以将两个一维数组转换成一个用于选取正方形区域的索引器</p>
-<p>23,arr.T:可以将一个4行3列的二维数组转换成一个3行4列的二维数组</p>
-<p>24,arr&#x3D;np.arange(24).reshape(2,3,4)<br>(2轴3行4列)<br>arr.transpose(1,0,2)<br>(3轴2行4列)</p>
-<p>25,arr.swapaxex(1,2):实现三维数组轴对换<br>相当用于将原三维数组以轴z为轴心,向左推90°</p>
-<p>26,针对二维数组<br>arr.tofile(‘a.bin’):写入数据<br>print(a.dtype)<br>b &#x3D; np.fromfile(‘a.bin’,dtype &#x3D; a的数据类型):读取数据</p>
-<p>27,np.save(‘a.npy’,a):保存数据<br>np.load(‘a.npy’):读取数据</p>
-<p>28,保存数据到一个文件中<br>np.savez(‘res.npz’,a,b,c):文件名及数组名<br>np.load(‘res.npz’):读取文件</p>
-<p>29,savetext和loadtext可读写一维数组,二维数组,csv文件<br>np.savetext(‘a.txt’,a,fmt&#x3D;’%d’,delimiter&#x3D;’,’):保存为整数,以逗号隔开<br>np.loadtext(‘a.txt’,delimiter&#x3D;’,’):读取时以,隔开</p>
-<p>30,np.sqrt(arr):计算各元素的平方根<br>np.exp(arr):计算常量值e各元素值</p>
-<p>31,np.maximum(arr1,arr2):对比数组中各元组的大小取大的组成最终数组<br>arr &#x3D; np.random.randn(4)*5<br>np.modf(arr):取数列中的小数部分和整数部分</p>
-<p>32,以每个元素为一行,生成N*N的方形二维矩阵<br>xs,xy &#x3D; np.meshgrid(arr,arr)<br>根号下x²+y² :np.sqrt(np.square(xs)) + np.sqrt(np.square(xy))</p>
-<p>33,np.where(布尔型,arr1,arr2):<br>当布尔型为True时,arr1,否则arr2</p>
-<p>34,arr.sum(axis &#x3D; 0):沿轴0(x轴)求和计算<br>arr.mean(axis &#x3D; 1):沿y轴求平均值<br>arr.std()求标准差</p>
-<p>35,arr.sort():默认从小到大排序<br>arr.sort(axis&#x3D;1):每行排序<br>np.unique(arr):去重排序<br>np.inId(arr,[’元素1’,’元素2’]):判断True或False</p>
-<p>36,arr1.dot(arr2):矩阵1*矩阵2<br>np.dot(arr1,np.ones(3)):二维矩阵与一维矩阵点积运算后得到一个一维数组</p>
-<p>inv(arr):获取矩阵逆运算<br>值<br>qr(arr):获取矩阵的qr操作值分解</p>
-<p>37,arr.cumsum(0):所有元素累计和<br>arr.cumprod(0):所有元素累计积</p>
-<p>38,axis &#x3D; 1行,0列,z轴</p>
-<p>39,标准正态(高斯)分布的4*4数组,arr &#x3D; np.random(size&#x3D;(4,4))<br>40,argmax求临界值</p>
-<p>Pandas模块<br>Series,DataFrame<br>Series:<br>obj &#x3D; series([1,3,2,13]):索引在左,内容在右<br>obj.index:求索引<br>obj.values:求值<br>指定索引:<br>obj&#x3D;([1,3,2,7],index&#x3D;[‘a1’,’a3’,’a13’,’a2’])<br>obj[‘a3’]:取值<br>obj[‘a13’]&#x3D;13:改值<br>输出指定范围的索引:obj[[‘a1’,’a13’]]<br>np.exp(obj):e的obj各values值次方<br> a1 in obj:判断索引值是否在obj中<br>dict1 &#x3D; {‘a’:3,’b’:13}<br>#构建series对象<br>obj &#x3D; Series(dict1)<br>new_index &#x3D; [‘w,’’y’]<br>obj2 &#x3D; Series(dict1,new_index)<br>pd.isnull&#x2F;notnull(obj2)::判断是否为空<br>两个series相加:索引并集:values为NaN,</p>
-<p>41,将具有等长的多个列表存入DataFrame,自动发添加索引,列名key值自动排序<br>fram&#x3D;DataFrame(dict1,columns&#x3D;[‘w’,’j’,’y’],index&#x3D;[1,3,13]):columns列顺序排列,index:索引顺序排列<br>fram[‘j’]:求某列<br>fram[‘w’]&#x3D;7:赋值操作<br>Series给DataFrame赋值:精确匹配DataFrame索引<br>字典嵌套,外层key作为列,内层key作为索引处理<br>reindex:新索引<br>Method&#x3D;’ffill’&#x2F;’bfill’:实现前向&#x2F;前后插值处理,<br>ix的标签索引实现行列重置<br>Pandas进阶:s表示Series对象,<br>d表示DataFrame对象<br>s.drop(‘索引名’)<br>d.drop([‘索引1’,’索引2’],axis&#x3D;0):删除索引1和3的一栏</p>
-<p>add, sub减,mul乘,div除</p>
-<p>d1.add(d2,fill_value&#x3D;0):缺失用0代替,相加</p>
-<p>排序:s.sort_index(ascending&#x3D;True):升序,false降序</p>
-<p>d.sort_values(by&#x3D;’b’,&#x2F;[‘a’,’b’]):按照列值或多个列值排序</p>
-<p>操作文件csv&#x2F;txt<br>读取:<br>os:csvPath &#x3D; os.getcwd() + ‘文件存储路径’<br>data &#x3D; pd.read_csv(csvPath + os.sep + ‘tips.csv’):读取数据</p>
-<p>写入:data.to_csv(csvPath &#x3D; os.sep + ‘out.csv’)</p>
-<p>json操作:<br>设置路径:jsonPath &#x3D; os.getcwd + ‘路径’<br>读取:with open(jsonPath + os.sep +’文件名’ , ‘r’,encoding &#x3D; ‘utf8’) as fp:<br>dump()写入json数据<br>data &#x3D; json.load(fp):读取<br>Df &#x3D; DataFrame(data):将json转换为DataFrame对象</p>
-<p>Excel:地址同上<br>xls_file &#x3D; pa.ExcelFile(ExcelPath + os.sep + ‘文件名’)<br>读取有效sheet页<br>table &#x3D; xls_file.prase(‘文件名无后缀,其他都有’)</p>
-<p>读取数据库:<br>import pymysql<br>#获取有效的数据库连接引用对象<br>connection &#x3D; pymysql.connect(host &#x3D;’localhost’,post&#x3D;3306,user&#x3D;’root’,password&#x3D;’1’,db&#x3D;’houserentals’,charser&#x3D;’utf8’)<br>#设置查询语句<br>sql &#x3D; ‘select *from emp e where e.lessor &#x3D; 13 ’<br>#使用read_sql函数 检索并转换DataFrame对象<br>df &#x3D; pd.read_sql(sql,connection)<br>#关闭数据库<br>conncetion.close()<br>#测试输出<br>print(df)</p>
-<p>43, pandas模块</p>
-<p>#显示完整的列</p>
-<p>pd.set_option(‘display.max_columns’, None) </p>
-<p>#显示完整的行</p>
-<p>pd.set_option(‘display.max_rows’, None)</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库报错</title>
     <url>/article/129a744.html</url>
     <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
@@ -1226,40 +1247,6 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>Error</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱因斯坦语录</title>
-    <url>/article/f11761cc.html</url>
-    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
-<p>​                                                                                                                                                        —–爱因斯坦</p>
-<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用编辑软件说明</title>
-    <url>/article/5e593225.html</url>
-    <content><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p>
-<p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
-<p>Sublime:</p>
-<p>1,Sublime背景颜色设置:<br>“preferences”——“color Scheme”——“color Scheme default”——“Mac Classic”:将背景色设置为白色</p>
-<p>“preferences”——“color Scheme”——“user”——“sublimelinter”——“Monokai”<br>:将背景色设置为默认颜色</p>
-<p>2,将package包放到:C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Installed Packages<br>此目录下,然后重启软件</p>
-<p>3,汉化教程<br>启动后步骤:<br>Preferences —&gt; package control —&gt; install package —&gt;<br>“输入localization”</p>
-<p>关闭自动更新:</p>
-<p>“update_check”:false,</p>
-]]></content>
-      <categories>
-        <category>编辑器</category>
-      </categories>
-      <tags>
-        <tag>编辑器</tag>
       </tags>
   </entry>
   <entry>
@@ -1298,35 +1285,6 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念2</title>
-    <url>/article/5fa19c3c.html</url>
-    <content><![CDATA[<p>接口,性能测试</p>
-<p>SOW:statement of work，工作任务说明书</p>
-<p>HLD: High Level Design,概要设计说明书</p>
-<p>LLD: Low Level Design，详细设计说明书</p>
-<p>UTC: Unit Testing Cases，单元测试用例</p>
-<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
-<p>非增量–每个模块测试完了再连接；</p>
-<p>增量：测一个模块，就连接一个模块。</p>
-<p>基于测试对象进行分类:白盒黑盒</p>
-<p>集成测试:接口测试</p>
-<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
-<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
-<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
-<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
-<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
-<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
-<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
-<p>测试风险;</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1375,6 +1333,40 @@ TPL:事务处理语言
       <tags>
         <tag>快捷键</tag>
         <tag>PC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱因斯坦语录</title>
+    <url>/article/f11761cc.html</url>
+    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
+<p>​                                                                                                                                                        —–爱因斯坦</p>
+<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用编辑软件说明</title>
+    <url>/article/5e593225.html</url>
+    <content><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p>
+<p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
+<p>Sublime:</p>
+<p>1,Sublime背景颜色设置:<br>“preferences”——“color Scheme”——“color Scheme default”——“Mac Classic”:将背景色设置为白色</p>
+<p>“preferences”——“color Scheme”——“user”——“sublimelinter”——“Monokai”<br>:将背景色设置为默认颜色</p>
+<p>2,将package包放到:C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Installed Packages<br>此目录下,然后重启软件</p>
+<p>3,汉化教程<br>启动后步骤:<br>Preferences —&gt; package control —&gt; install package —&gt;<br>“输入localization”</p>
+<p>关闭自动更新:</p>
+<p>“update_check”:false,</p>
+]]></content>
+      <categories>
+        <category>编辑器</category>
+      </categories>
+      <tags>
+        <tag>编辑器</tag>
       </tags>
   </entry>
   <entry>
@@ -1532,6 +1524,35 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>软测概念2</title>
+    <url>/article/5fa19c3c.html</url>
+    <content><![CDATA[<p>接口,性能测试</p>
+<p>SOW:statement of work，工作任务说明书</p>
+<p>HLD: High Level Design,概要设计说明书</p>
+<p>LLD: Low Level Design，详细设计说明书</p>
+<p>UTC: Unit Testing Cases，单元测试用例</p>
+<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
+<p>非增量–每个模块测试完了再连接；</p>
+<p>增量：测一个模块，就连接一个模块。</p>
+<p>基于测试对象进行分类:白盒黑盒</p>
+<p>集成测试:接口测试</p>
+<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
+<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
+<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
+<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
+<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
+<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
+<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
+<p>测试风险;</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软测概念</title>
     <url>/article/ab7e442d.html</url>
     <content><![CDATA[<p>测试的基础分类与每个类型的测试目标 1.1,基于项目流程的测试分类 软件开发的基本流程</p>
@@ -1568,27 +1589,6 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitblit</title>
-    <url>/article/c361dd8f.html</url>
-    <content><![CDATA[<p>团队协作管理工具:</p>
-<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
-<p>​    飞书:协同管理工具</p>
-<p>​     飞秋:</p>
-<p>​      钉钉:</p>
-<p>Gitblit:</p>
-<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
-<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
-<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
-]]></content>
-      <categories>
-        <category>版本管理工具</category>
-      </categories>
-      <tags>
-        <tag>版本管理工具</tag>
-        <tag>Gitblit</tag>
       </tags>
   </entry>
 </search>
