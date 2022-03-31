@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Centos</title>
+    <url>/article/cab4360e.html</url>
+    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Centos相关命令笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Apache配置说明</title>
     <url>/article/7e84e351.html</url>
     <content><![CDATA[<p>1,运行php<br>运行php文件: php.exe的目录下    php.exe -f “php文件路径和文件名.php”<br>运行php代码: php.exe的目录下     php.exe -r “echo ‘hello world’ ; $i &#x3D; 1; $i++;echo $i;”</p>
@@ -58,15 +70,31 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Centos</title>
-    <url>/article/cab4360e.html</url>
-    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+    <title>Django的基础入门</title>
+    <url>/article/f6b2ae5.html</url>
+    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
+<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
+<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
+<p>​        #密码</p>
+<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
+<p>4,更新应用数据库</p>
+<p>python manage.py makemigrations</p>
+<p>python manage.py migrate</p>
+<p>5,创建超级管理员</p>
+<p>python manage.py createsuperuser</p>
+<p>6,运行项目</p>
+<p>python manage.py runserver</p>
+<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
+<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
+<p>8,Django原理</p>
+<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Web</category>
       </categories>
       <tags>
-        <tag>Centos相关命令笔记</tag>
+        <tag>Django</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -121,7 +149,7 @@ ServerName localhost
 <p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
 <p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
 <p>总结:上传主要是add,commit,push</p>
-<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#121;&#48;&#49;&#51;&#48;&#x34;&#x35;&#x37;&#x34;&#64;&#x61;&#x6c;&#x69;&#x62;&#97;&#98;&#x61;&#45;&#105;&#110;&#x63;&#x2e;&#99;&#x6f;&#x6d;">&#102;&#121;&#48;&#49;&#51;&#48;&#x34;&#x35;&#x37;&#x34;&#64;&#x61;&#x6c;&#x69;&#x62;&#97;&#98;&#x61;&#45;&#105;&#110;&#x63;&#x2e;&#99;&#x6f;&#x6d;</a>‘</p>
+<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#121;&#48;&#x31;&#51;&#48;&#52;&#53;&#x37;&#52;&#64;&#97;&#x6c;&#x69;&#x62;&#x61;&#98;&#97;&#x2d;&#x69;&#x6e;&#x63;&#46;&#x63;&#111;&#109;">&#x66;&#121;&#48;&#x31;&#51;&#48;&#52;&#53;&#x37;&#52;&#64;&#97;&#x6c;&#x69;&#x62;&#x61;&#98;&#97;&#x2d;&#x69;&#x6e;&#x63;&#46;&#x63;&#111;&#109;</a>‘</p>
 <p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
@@ -153,43 +181,66 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Linux的使用</title>
-    <url>/article/4549a880.html</url>
-    <content><![CDATA[<p>1,安装dep文件</p>
-<p>dpkg -i 文件名</p>
-<p>2,解决vmware tools失效</p>
-<p>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop</p>
-<p>重启: init 0&#x2F;reboot</p>
-<p>3,在乌班图上显示隐藏文件</p>
-<p>ctrl + h</p>
+    <title>Hexo博客yilia主题的使用说明</title>
+    <url>/article/31aab21a.html</url>
+    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
+<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>下载hexo模块,</p>
+<p>cnpm install -g hexo-cli</p>
+<p>②建立博客文件夹<br>mkdir blog</p>
+<p>③生成博客文件<br>cd blog </p>
+<p>hexo init</p>
+<p>④下载yilia主题</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
+<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
+<p>⑦当配置完成后执行以下命令:</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>上传到github:<br>hexo d</p>
+<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
+<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
+<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
+<p>yilia模块下载总结:</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>hexo常见错误及解决方法:</p>
+<p>问题1,</p>
+<p>error：spawn failed…</p>
+<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
+<p>解决方法:</p>
+<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
+<p>​    2, git config –global core.autocrlf false</p>
+<p>​    3, 执行 </p>
+<pre><code>hexo clean &amp;&amp; hexo g 
+hexo d
+</code></pre>
+<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
+<p>解决方法:</p>
+<p>​    在public目录下寻找index.html是否存在,</p>
+<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
+<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
+<pre><code>  一般情况下执行npm install hexo-generator-index即可
+</code></pre>
+<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
+<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
+<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
+<p>git config –global http.sslVerify “false”</p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Blog</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitblit</title>
-    <url>/article/c361dd8f.html</url>
-    <content><![CDATA[<p>团队协作管理工具:</p>
-<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
-<p>​    飞书:协同管理工具</p>
-<p>​     飞秋:</p>
-<p>​      钉钉:</p>
-<p>Gitblit:</p>
-<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
-<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
-<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
-]]></content>
-      <categories>
-        <category>版本管理工具</category>
-      </categories>
-      <tags>
-        <tag>版本管理工具</tag>
-        <tag>Gitblit</tag>
+        <tag>Yilia</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -237,34 +288,6 @@ ServerName localhost
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Django的基础入门</title>
-    <url>/article/f6b2ae5.html</url>
-    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
-<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
-<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
-<p>​        #密码</p>
-<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
-<p>4,更新应用数据库</p>
-<p>python manage.py makemigrations</p>
-<p>python manage.py migrate</p>
-<p>5,创建超级管理员</p>
-<p>python manage.py createsuperuser</p>
-<p>6,运行项目</p>
-<p>python manage.py runserver</p>
-<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
-<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
-<p>8,Django原理</p>
-<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
-]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Django</tag>
-        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -410,93 +433,43 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Notebook安装使用教程</title>
-    <url>/article/d9a032e2.html</url>
-    <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
-<p>2,生成配置文件<br>jupyter notebook –generate-config</p>
-<p>不同系统的目录:</p>
-<p>Windows：C:UsersUSERNAME.jupyterjupyter_notebook_config.py<br>OS X：&#x2F;Users&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py<br>Linux：&#x2F;home&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py</p>
-<p>root用户执行以下命令:<br>jupyter notebook –generate-config –allow-config</p>
-<p>3,生成密码:<br>jupyter notebook password</p>
-<p>4,在jupyter_notebook_config下修改相关配置:<br>c.NotebookApp.ip&#x3D;’*’<br>c.NotebookApp.password &#x3D; u’sha:ce…刚才复制的那个密文’<br>c.NotebookApp.open_browser &#x3D; False<br>c.NotebookApp.port &#x3D;8888 #可自行指定一个端口, 访问时使用该端口</p>
-<p>5,启动<br>jupyter notebook</p>
-<p>root用户执行以下命令:<br>jupyter notebook –allow-root</p>
+    <title>gitblit</title>
+    <url>/article/c361dd8f.html</url>
+    <content><![CDATA[<p>团队协作管理工具:</p>
+<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
+<p>​    飞书:协同管理工具</p>
+<p>​     飞秋:</p>
+<p>​      钉钉:</p>
+<p>Gitblit:</p>
+<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
+<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
+<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>版本管理工具</category>
       </categories>
       <tags>
-        <tag>Jupyter Notebook</tag>
-        <tag>Python</tag>
+        <tag>版本管理工具</tag>
+        <tag>Gitblit</tag>
       </tags>
   </entry>
   <entry>
-    <title>Python基础模块</title>
-    <url>/article/9d100b5b.html</url>
-    <content><![CDATA[<p>1.必装模块pypiwin32  wheel:主要是为了装whl文件</p>
-<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
-<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
-<p>4,pip文件的配置(目的,提高下载速率)<br>①<br>pip文件的配置<br>    # 在用户Administrator下, 提高第三方模块的下载速率<br>    # C:\Users\Administrator\pip\pip.ini<br>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
-<p>②pip 安装包超时使用以下方法:<br>pip install –index-url <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a> 包名</p>
-<p>③pip install tensorflow&#x3D;&#x3D;2.3.0  -i <a href="https://pypi.doubanio.com/simple">https://pypi.doubanio.com/simple</a></p>
-<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
-<p>6,Beautiful Soup:<br><strong>用于数据收集的Python库:</strong><br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
-<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
-<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
-<p>9,**用于数据清理和数据操作的Python库<br>*<br>pandas:主要用于数据操作和数据分析</p>
-<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
-<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
-<p>12,<strong>用于数据可视化的Python库</strong><br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
-<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
-<p>14,<strong>用于建模的Python库</strong><br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
-<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
-<p>16,<strong>用于数据解释型的Python库</strong><br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
-<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
-<p>18,<strong>用于音频处理的Python库:</strong><br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
-<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
-<p>20,<strong>用于图像处理的Python库</strong><br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
-<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
-<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
-<p><strong>用于部署的Python库</strong><br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
-<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
-<p>25,mysql数据库模块的安装<br>pip install mysqlclient&#x3D;&#x3D;1.3.12</p>
-<p>26, keras(目前已被tensorflow收购)</p>
-<p>pip install keras</p>
-<p>27,pytorch</p>
-<p>下载whl文件,在文件目录下:pip  install 文件名</p>
+    <title>Linux的使用</title>
+    <url>/article/4549a880.html</url>
+    <content><![CDATA[<p>1,安装dep文件</p>
+<p>dpkg -i 文件名</p>
+<p>2,解决vmware tools失效</p>
+<p>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop</p>
+<p>重启: init 0&#x2F;reboot</p>
+<p>3,在乌班图上显示隐藏文件</p>
+<p>ctrl + h</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python概念</title>
-    <url>/article/7cf78c2.html</url>
-    <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
-<p>2,线程,进程,协程的区别<br>一,<br>    线程:指进程中的某一个控制单元<br>    单线程:指一个进程中只有一个线程(主线程),eg:dos操作系统<br>    多线程:指一个程序中包含多个执行流,多线程是实现并发的一种有效手段<br>    主线程:跟随应用程序创建的线程<br>    子线程:除应用程序外的其他线程<br>    python中有协程库gevent， pyweb框架tornado中也用了gevent封装好的协程。本文主要介绍进程、线程和协程三者之间的区别。<br>二、概念(详细说明)<br>    　　1、进程<br>    进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。<br>        2, 线程<br>    线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。<br>    　　3、协程<br>    协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</p>
-<p>三、进程和线程、协程在python中的使用<br>    　　1、多进程一般使用multiprocessing库，来利用多核CPU，主要是用在CPU密集型的程序上，当然生产者消费者这种也可以使用。多进程的优势就是一个子进程崩溃并不会影响其他子进程和主进程的运行，但缺点就是不能一次性启动太多进程，会严重影响系统的资源调度，特别是CPU使用率和负载。使用多进程可以查看文章《python 多进程使用总结》。注：python2的进程池在类中的使用会有问题，需要把类函数定义成全局函数。具体可参考 <a href="http://bbs.chinaunix.net/thread-4111379-1-1.html">http://bbs.chinaunix.net/thread-4111379-1-1.html</a><br>    　　2、多线程一般是使用threading库，完成一些IO密集型并发操作。多线程的优势是切换快，资源消耗低，但一个线程挂掉则会影响到所有线程，所以不够稳定。现实中使用线程池的场景会比较多，具体可参考《python线程池实现》。<br>    　　3、协程一般是使用gevent库，当然这个库用起来比较麻烦，所以使用的并不是很多。相反，协程在tornado的运用就多得多了，使用协程让tornado做到单线程异步，据说还能解决C10K的问题。所以协程使用的地方最多的是在web应用上。<br>    总结一下就是IO密集型一般使用多线程或者多进程，CPU密集型一般使用多进程，强调非阻塞异步并发的一般都是使用协程，当然有时候也是需要多进程线程池结合的，或者是其他组合方式。</p>
-<p>3,python如何进行内存管理的<br>对象引用计数机制:python语言内部依靠引用计数来持续追踪内存中的对象,就是说,他的Python内部记录的对象有多少个引用,及引用计数,当对象被创建时就等于创建了一个引用计数,当对象不需要时,这个对象的引用计数归零时,它将被垃圾收集机制处理掉<br>垃圾回收:<br>1,在Python语言内部,当一个对象的引用计数为0时,它将被垃圾收集机制处理掉<br>2,当遇到两个对象a和b相互引用时的这种情况,del语句可以减少a和b的引用计数,并销毁用于引用底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除<br>内存池机制:Python语言虽然提供了对内存的垃圾收集机制,但实际上它将不用的内存放到内存池而不是返回给操作系统,所以就有了以下:<br>1,Pymalloc机制；这个主要是为了加速Python的执行效率，Python引入了一个内存池机制，用于管理，为了对小块内存的申请和释放。<br>2 Python中所有小于256个字节的对象都是依靠pymalloc分配器来实现的，而稍大的对象用的则是系统的malloc。<br>3 对于Python对象，比如整数、浮点数和List这些，都有自己独立的内存池，对象间并不共享他们的内存池。换句话说就是，假设你分配并且释放了大量的整数，那么用于缓存这些整数的内存就不能再分配给浮点数。</p>
-<p>4,简述一个前端请求的处理流程,在uwsgi&#x2F;nginx&#x2F;django之间的处理流程<br>答:wsgi：一种实现python解析的通用接口标准&#x2F;协议，是一种通用的接口标准或者接口协议，实现了python web程序与服务器之间交互的通用性。<br>利用它，web.py或bottle或者django等等的python web开发框架，就可以轻松地部署在不同的web server上了；<br>uwsgi:同WSGI一样是一种通信协议<br>uwsgi协议是一个uWSGI服务器自有的协议，它用于定义传输信息的类型，它与WSGI相比是两样东西。 uWSGI :一种python web server或称为Server&#x2F;Gateway<br>uWSGI类似tornadoweb或者flup，是一种python web server，uWSGI是实现了uwsgi和WSGI两种协议的Web服务器，负责响应python 的web请求。<br>uWSGI实现了wsgi协议、uwsgi协议、http等协议。<br>Nginx中HttpUwsgiModule的作用是与uWSGI服务器进行交换。</p>
-<p>nginx&#x2F;uwsgi&#x2F;django交互流程：<br>1.首先客户端请求服务资源，<br>2.nginx作为直接对外的服务接口,接收到客户端发送过来的http请求,会解包、分析，<br>3.如果是静态文件请求就根据nginx配置的静态文件目录，返回请求的资源，<br>4.如果是动态的请求,nginx就通过配置文件,将请求传递给uWSGI；uWSGI 将接收到的包进行处理，并转发给wsgi，<br>5.wsgi根据请求调用django工程的某个文件或函数，处理完后django将返回值交给wsgi，<br>6.wsgi将返回值进行打包，转发给uWSGI，<br>7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(如浏览器)。<br>*注:不同的组件之间传递信息涉及到数据格式和协议的转换</p>
-<p>5,celery队列<br>celery队列包含两个模块：worker和beat<br>worker:用于执行队列中的任务<br>beat：用于定时分配任务<br>这两个模块可以同时启动，也可以分别启动<br>任务可以有两个来源：<br>代码内调用：将需要放入执行队列的任务函数import进来<br>beat定时派发：在配置文件里设置好需要调用的任务函数和调用日期，beat就会自动派发任务到队列里了</p>
-<p>Celery安装<br>使用之前需要配置消息中间件<br>一般是用Redis数据库来通讯更加方便，需要在本地安装redis服务并启动<br>pip install -U redis<br>以下为celery的具体使用<br><a href="https://www.jianshu.com/p/34291d6b5f47">https://www.jianshu.com/p/34291d6b5f47</a></p>
-<p>6,modelfirst dbfirst的区别<br>datebase first：就是代表数据库优先，那么提前就是先创建数据库<br>model firast:就是代表model优先，那么提前也就先创建model,然后根据model自动建立数据库<br>这两EF的编程方式在使用的过程中的区别为：<br>在添加ADO.NET实体数据模型的时候，database first选择的是从数据库生成<br>在数据结构发生变化的时候，database first编程方式中是选择从数据库更新模型，因此就导致database first是以数据库为主，而Model first选择的是空模型生成<br>当数据发生变化的时候，model first选择的是从模型中生成数据库                          </p>
-<p>7,RESTful&#x2F;WebSocket接口机制<br>WebSocket:服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，<br>属于服务器推送技术的一种。</p>
-<p>8,XMl进行网络通信<br>xpath对xml格式的东西解析比较规范,基本上能够做到想要那个数据就取哪个数据</p>
-<p>9,</p>
-<p>Lamdba简化代码.递归:自身调用自身,高阶函数:将函数作为参数传递,<br>装饰器:把函数作为参数传递<br>#扩展 函数功能,在不改变原代码的情况下,<br>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包<br>生成器:一遍循环,一遍计算的机制称为生成器,<br>迭代器:取数据,高效遍历一组可迭代对象<br>类:包含对象所包含的属性和方法<br>对象:调用方法和属性<br>属性分为两大类:实例属性,类属性,实例属性的调用修改影响实例属性的值但不影响类属性的值,类属性的调用的修改既不影响类属性的值,也不影响实例属性 的值<br>构造方法:数据初始化,特殊的实例方法<br>使用__new__和__init__来完成的<br>_<em>new__负责进行对象的创建,<strong>init__负责进行对象的初始化<br>访问权限:私有</strong>(双下划线 ),受保护</em>(单下划线),公开<br>作用域,将局部变量转化为全局变量<br>方法分为四大类:<br>实例方法:第一个形参为self<br>类方法:第一个形参为cls,和装饰器类似:由@classmethod表示<br>静态方法:无参数,由@staticmethod表示<br>普通方法:是一个错误的方法,几乎不用</p>
-<p>10,IOError,AttributeError,ImportError,IndentationError,IndexError,KeyError,<br>SyntaxError,NameError分别代表什么异常<br>IOError: 输入输出异常<br>AttributeError: 试图访问一个对象没有的属性<br>ImportError: 无法引入模块或包，基本是路径问题<br>IndentationError: 语法错误，代码没有正确的对齐<br>IndexError: 下标索引超出序列边界<br>KeyError: 试图访问你字典里不存在的键<br>SyntaxError: Python代码逻辑语法出错，不能执行<br>NameError: 使用一个还未赋予对象的变量</p>
-<p>11,r,r+,rb,rb+打开文件模式区别<br>答:r: 以只读方式打开文件。文件的指针将放在文件的开头。这是默认模式。<br>w: 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a: 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果文件不存在，创建新的文件进行写入。<br>rb: 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。<br>wb: 以二进制格式打开一个文件只用于写入。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab: 以二进制格式打开一个文件用于追加。如果文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容会被写入到已有内容之后。如果文件不存在，创建新文件进行写入。<br>r+: 打开一个文件用于读写。文件指针将会放在文件开头。<br>w+: 打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a+: 打开一个文件用于读写。如果文件已存在，文件指针将会放在文件结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。<br>rb+: 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。<br>wb+: 以二进制格式打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab+: 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>概念</tag>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -551,6 +524,149 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>关键字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notebook安装使用教程</title>
+    <url>/article/d9a032e2.html</url>
+    <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
+<p>2,生成配置文件<br>jupyter notebook –generate-config</p>
+<p>不同系统的目录:</p>
+<p>Windows：C:UsersUSERNAME.jupyterjupyter_notebook_config.py<br>OS X：&#x2F;Users&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py<br>Linux：&#x2F;home&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py</p>
+<p>root用户执行以下命令:<br>jupyter notebook –generate-config –allow-config</p>
+<p>3,生成密码:<br>jupyter notebook password</p>
+<p>4,在jupyter_notebook_config下修改相关配置:<br>c.NotebookApp.ip&#x3D;’*’<br>c.NotebookApp.password &#x3D; u’sha:ce…刚才复制的那个密文’<br>c.NotebookApp.open_browser &#x3D; False<br>c.NotebookApp.port &#x3D;8888 #可自行指定一个端口, 访问时使用该端口</p>
+<p>5,启动<br>jupyter notebook</p>
+<p>root用户执行以下命令:<br>jupyter notebook –allow-root</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Jupyter Notebook</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs简单使用</title>
+    <url>/article/89b3a0ef.html</url>
+    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
+<p>5,检测npm是否安装 npm -v</p>
+<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
+<ol>
+<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
+<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
+<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
+</ol>
+<p>安装出错解决办法: npm config set proxy null</p>
+<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
+<p>7,常用模块express npm install express</p>
+<p>8,卸载常用命令 npm uninstall express</p>
+<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
+<p>更新模块:npm update express</p>
+<p>搜索模块:npm search express</p>
+<p>创建模块 npm init</p>
+<p>注册用户:npm adduser</p>
+<p>发布模块:npm publish</p>
+<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>然后可以用cnpm install 模块名 下载模块</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python概念</title>
+    <url>/article/7cf78c2.html</url>
+    <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
+<p>2,线程,进程,协程的区别<br>一,<br>    线程:指进程中的某一个控制单元<br>    单线程:指一个进程中只有一个线程(主线程),eg:dos操作系统<br>    多线程:指一个程序中包含多个执行流,多线程是实现并发的一种有效手段<br>    主线程:跟随应用程序创建的线程<br>    子线程:除应用程序外的其他线程<br>    python中有协程库gevent， pyweb框架tornado中也用了gevent封装好的协程。本文主要介绍进程、线程和协程三者之间的区别。<br>二、概念(详细说明)<br>    　　1、进程<br>    进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。<br>        2, 线程<br>    线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。<br>    　　3、协程<br>    协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</p>
+<p>三、进程和线程、协程在python中的使用<br>    　　1、多进程一般使用multiprocessing库，来利用多核CPU，主要是用在CPU密集型的程序上，当然生产者消费者这种也可以使用。多进程的优势就是一个子进程崩溃并不会影响其他子进程和主进程的运行，但缺点就是不能一次性启动太多进程，会严重影响系统的资源调度，特别是CPU使用率和负载。使用多进程可以查看文章《python 多进程使用总结》。注：python2的进程池在类中的使用会有问题，需要把类函数定义成全局函数。具体可参考 <a href="http://bbs.chinaunix.net/thread-4111379-1-1.html">http://bbs.chinaunix.net/thread-4111379-1-1.html</a><br>    　　2、多线程一般是使用threading库，完成一些IO密集型并发操作。多线程的优势是切换快，资源消耗低，但一个线程挂掉则会影响到所有线程，所以不够稳定。现实中使用线程池的场景会比较多，具体可参考《python线程池实现》。<br>    　　3、协程一般是使用gevent库，当然这个库用起来比较麻烦，所以使用的并不是很多。相反，协程在tornado的运用就多得多了，使用协程让tornado做到单线程异步，据说还能解决C10K的问题。所以协程使用的地方最多的是在web应用上。<br>    总结一下就是IO密集型一般使用多线程或者多进程，CPU密集型一般使用多进程，强调非阻塞异步并发的一般都是使用协程，当然有时候也是需要多进程线程池结合的，或者是其他组合方式。</p>
+<p>3,python如何进行内存管理的<br>对象引用计数机制:python语言内部依靠引用计数来持续追踪内存中的对象,就是说,他的Python内部记录的对象有多少个引用,及引用计数,当对象被创建时就等于创建了一个引用计数,当对象不需要时,这个对象的引用计数归零时,它将被垃圾收集机制处理掉<br>垃圾回收:<br>1,在Python语言内部,当一个对象的引用计数为0时,它将被垃圾收集机制处理掉<br>2,当遇到两个对象a和b相互引用时的这种情况,del语句可以减少a和b的引用计数,并销毁用于引用底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除<br>内存池机制:Python语言虽然提供了对内存的垃圾收集机制,但实际上它将不用的内存放到内存池而不是返回给操作系统,所以就有了以下:<br>1,Pymalloc机制；这个主要是为了加速Python的执行效率，Python引入了一个内存池机制，用于管理，为了对小块内存的申请和释放。<br>2 Python中所有小于256个字节的对象都是依靠pymalloc分配器来实现的，而稍大的对象用的则是系统的malloc。<br>3 对于Python对象，比如整数、浮点数和List这些，都有自己独立的内存池，对象间并不共享他们的内存池。换句话说就是，假设你分配并且释放了大量的整数，那么用于缓存这些整数的内存就不能再分配给浮点数。</p>
+<p>4,简述一个前端请求的处理流程,在uwsgi&#x2F;nginx&#x2F;django之间的处理流程<br>答:wsgi：一种实现python解析的通用接口标准&#x2F;协议，是一种通用的接口标准或者接口协议，实现了python web程序与服务器之间交互的通用性。<br>利用它，web.py或bottle或者django等等的python web开发框架，就可以轻松地部署在不同的web server上了；<br>uwsgi:同WSGI一样是一种通信协议<br>uwsgi协议是一个uWSGI服务器自有的协议，它用于定义传输信息的类型，它与WSGI相比是两样东西。 uWSGI :一种python web server或称为Server&#x2F;Gateway<br>uWSGI类似tornadoweb或者flup，是一种python web server，uWSGI是实现了uwsgi和WSGI两种协议的Web服务器，负责响应python 的web请求。<br>uWSGI实现了wsgi协议、uwsgi协议、http等协议。<br>Nginx中HttpUwsgiModule的作用是与uWSGI服务器进行交换。</p>
+<p>nginx&#x2F;uwsgi&#x2F;django交互流程：<br>1.首先客户端请求服务资源，<br>2.nginx作为直接对外的服务接口,接收到客户端发送过来的http请求,会解包、分析，<br>3.如果是静态文件请求就根据nginx配置的静态文件目录，返回请求的资源，<br>4.如果是动态的请求,nginx就通过配置文件,将请求传递给uWSGI；uWSGI 将接收到的包进行处理，并转发给wsgi，<br>5.wsgi根据请求调用django工程的某个文件或函数，处理完后django将返回值交给wsgi，<br>6.wsgi将返回值进行打包，转发给uWSGI，<br>7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(如浏览器)。<br>*注:不同的组件之间传递信息涉及到数据格式和协议的转换</p>
+<p>5,celery队列<br>celery队列包含两个模块：worker和beat<br>worker:用于执行队列中的任务<br>beat：用于定时分配任务<br>这两个模块可以同时启动，也可以分别启动<br>任务可以有两个来源：<br>代码内调用：将需要放入执行队列的任务函数import进来<br>beat定时派发：在配置文件里设置好需要调用的任务函数和调用日期，beat就会自动派发任务到队列里了</p>
+<p>Celery安装<br>使用之前需要配置消息中间件<br>一般是用Redis数据库来通讯更加方便，需要在本地安装redis服务并启动<br>pip install -U redis<br>以下为celery的具体使用<br><a href="https://www.jianshu.com/p/34291d6b5f47">https://www.jianshu.com/p/34291d6b5f47</a></p>
+<p>6,modelfirst dbfirst的区别<br>datebase first：就是代表数据库优先，那么提前就是先创建数据库<br>model firast:就是代表model优先，那么提前也就先创建model,然后根据model自动建立数据库<br>这两EF的编程方式在使用的过程中的区别为：<br>在添加ADO.NET实体数据模型的时候，database first选择的是从数据库生成<br>在数据结构发生变化的时候，database first编程方式中是选择从数据库更新模型，因此就导致database first是以数据库为主，而Model first选择的是空模型生成<br>当数据发生变化的时候，model first选择的是从模型中生成数据库                          </p>
+<p>7,RESTful&#x2F;WebSocket接口机制<br>WebSocket:服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，<br>属于服务器推送技术的一种。</p>
+<p>8,XMl进行网络通信<br>xpath对xml格式的东西解析比较规范,基本上能够做到想要那个数据就取哪个数据</p>
+<p>9,</p>
+<p>Lamdba简化代码.递归:自身调用自身,高阶函数:将函数作为参数传递,<br>装饰器:把函数作为参数传递<br>#扩展 函数功能,在不改变原代码的情况下,<br>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包<br>生成器:一遍循环,一遍计算的机制称为生成器,<br>迭代器:取数据,高效遍历一组可迭代对象<br>类:包含对象所包含的属性和方法<br>对象:调用方法和属性<br>属性分为两大类:实例属性,类属性,实例属性的调用修改影响实例属性的值但不影响类属性的值,类属性的调用的修改既不影响类属性的值,也不影响实例属性 的值<br>构造方法:数据初始化,特殊的实例方法<br>使用__new__和__init__来完成的<br>_<em>new__负责进行对象的创建,<strong>init__负责进行对象的初始化<br>访问权限:私有</strong>(双下划线 ),受保护</em>(单下划线),公开<br>作用域,将局部变量转化为全局变量<br>方法分为四大类:<br>实例方法:第一个形参为self<br>类方法:第一个形参为cls,和装饰器类似:由@classmethod表示<br>静态方法:无参数,由@staticmethod表示<br>普通方法:是一个错误的方法,几乎不用</p>
+<p>10,IOError,AttributeError,ImportError,IndentationError,IndexError,KeyError,<br>SyntaxError,NameError分别代表什么异常<br>IOError: 输入输出异常<br>AttributeError: 试图访问一个对象没有的属性<br>ImportError: 无法引入模块或包，基本是路径问题<br>IndentationError: 语法错误，代码没有正确的对齐<br>IndexError: 下标索引超出序列边界<br>KeyError: 试图访问你字典里不存在的键<br>SyntaxError: Python代码逻辑语法出错，不能执行<br>NameError: 使用一个还未赋予对象的变量</p>
+<p>11,r,r+,rb,rb+打开文件模式区别<br>答:r: 以只读方式打开文件。文件的指针将放在文件的开头。这是默认模式。<br>w: 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a: 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果文件不存在，创建新的文件进行写入。<br>rb: 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。<br>wb: 以二进制格式打开一个文件只用于写入。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab: 以二进制格式打开一个文件用于追加。如果文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容会被写入到已有内容之后。如果文件不存在，创建新文件进行写入。<br>r+: 打开一个文件用于读写。文件指针将会放在文件开头。<br>w+: 打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a+: 打开一个文件用于读写。如果文件已存在，文件指针将会放在文件结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。<br>rb+: 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。<br>wb+: 以二进制格式打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab+: 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SVN</title>
+    <url>/article/ec3edfbe.html</url>
+    <content><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p>
+<p>提取码: 4iuo</p>
+<p><a href="https://pan.baidu.com/s/1eWpX4ai5_eTaLHCn0x1_hQ">汉化包地址</a></p>
+<p>提取码: 7u70 </p>
+<p>汉化说明:</p>
+<p>在任意位置右击—&gt;TortoiseSVN—&gt;settings—&gt;General—&gt;Language(简体中文)—&gt;应用 —&gt; 确定</p>
+<p>1, 导出项目</p>
+<p>在检出目录文件夹下:</p>
+<p>右击—&gt;SVN检出—&gt;填写版本库url—&gt;确定</p>
+<p>**版本库url为服务器地址,检出标志为绿色的√</p>
+<p>2, 修改文件,添加文件,删除文件</p>
+<p>​    2.1 添加文件</p>
+<p>​        选中 —&gt; 右击 —&gt; 加入 (会出现蓝色感叹号) — &gt; 提交</p>
+<p>总结: add ,commit</p>
+<p>​    2.2 修改文件</p>
+<pre><code>      检出要修改的文件 ---&gt; 右击 ---&gt; SVN更新 (对文件内容进行修改,保存,&#39;会出现红色感叹号&#39;) ---&gt; 提交(对提交文件进行相关备注)
+</code></pre>
+<p>格式:</p>
+<p>​    *XXXX年—XX月—XX日 姓名 修改内容：XXXXXXXX 修改原因：YYYYYYYYYYYYY*</p>
+<p>​    2.3 重命名文件</p>
+<p>​        选中文件—&gt;SVN更新—&gt;修改文件名—&gt;add—&gt;commit</p>
+<p>​    2.4删除文件(删除前备份)</p>
+<p>​        选中文件—&gt; SVN更新 —&gt; 删除 —&gt; 提交</p>
+<p>总结:</p>
+<p>​    更新,提交,显示日志,改名,删除</p>
+<p>checkout:将文件添加到本地目录</p>
+<p>add: 往版本库添加新的文件</p>
+<p>commit: 将改动的文件提交到版本库</p>
+<p>lock&#x2F;unlock: 加锁&#x2F;解锁</p>
+<p>update: 更新</p>
+<p>delete: 删除</p>
+]]></content>
+      <categories>
+        <category>版本管理工具</category>
+      </categories>
+      <tags>
+        <tag>版本管理工具</tag>
+        <tag>SVN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python第三方模块安装的几种方式</title>
+    <url>/article/126ed703.html</url>
+    <content><![CDATA[<p>1,pip安装方式</p>
+<p>eg:pip install 包名</p>
+<p>2,下载tar.gz包,执行python setup.py install安装 </p>
+<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
+<p>3,安装whl文件</p>
+<p>文件目录下:pip instll 文件名.后缀</p>
+<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>第三方模块</tag>
       </tags>
   </entry>
   <entry>
@@ -679,147 +795,108 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>SVN</title>
-    <url>/article/ec3edfbe.html</url>
-    <content><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p>
-<p>提取码: 4iuo</p>
-<p><a href="https://pan.baidu.com/s/1eWpX4ai5_eTaLHCn0x1_hQ">汉化包地址</a></p>
-<p>提取码: 7u70 </p>
-<p>汉化说明:</p>
-<p>在任意位置右击—&gt;TortoiseSVN—&gt;settings—&gt;General—&gt;Language(简体中文)—&gt;应用 —&gt; 确定</p>
-<p>1, 导出项目</p>
-<p>在检出目录文件夹下:</p>
-<p>右击—&gt;SVN检出—&gt;填写版本库url—&gt;确定</p>
-<p>**版本库url为服务器地址,检出标志为绿色的√</p>
-<p>2, 修改文件,添加文件,删除文件</p>
-<p>​    2.1 添加文件</p>
-<p>​        选中 —&gt; 右击 —&gt; 加入 (会出现蓝色感叹号) — &gt; 提交</p>
-<p>总结: add ,commit</p>
-<p>​    2.2 修改文件</p>
-<pre><code>      检出要修改的文件 ---&gt; 右击 ---&gt; SVN更新 (对文件内容进行修改,保存,&#39;会出现红色感叹号&#39;) ---&gt; 提交(对提交文件进行相关备注)
+    <title>ROS操作系统使用说明</title>
+    <url>/article/a4d8e474.html</url>
+    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1qV41167d2?p=1">视频链接</a></p>
+<p>环境安装说明:</p>
+<p> 安装链接:</p>
+<pre><code>  [ROS安装](https://www.guyuehome.com/33971)
 </code></pre>
-<p>格式:</p>
-<p>​    *XXXX年—XX月—XX日 姓名 修改内容：XXXXXXXX 修改原因：YYYYYYYYYYYYY*</p>
-<p>​    2.3 重命名文件</p>
-<p>​        选中文件—&gt;SVN更新—&gt;修改文件名—&gt;add—&gt;commit</p>
-<p>​    2.4删除文件(删除前备份)</p>
-<p>​        选中文件—&gt; SVN更新 —&gt; 删除 —&gt; 提交</p>
-<p>总结:</p>
-<p>​    更新,提交,显示日志,改名,删除</p>
-<p>checkout:将文件添加到本地目录</p>
-<p>add: 往版本库添加新的文件</p>
-<p>commit: 将改动的文件提交到版本库</p>
-<p>lock&#x2F;unlock: 加锁&#x2F;解锁</p>
-<p>update: 更新</p>
-<p>delete: 删除</p>
+<p>类似错误修复链接:</p>
+<p>​    <a href="https://blog.csdn.net/qq_44830040/article/details/106049992">大部分错误针对修改有效</a></p>
+<p>安装步骤:</p>
+<p>1,配置Ubuntu系统<br>打开软件中心,允许以下三种软件源<br>①restricted（不完全的自由软件）<br>②universe（Ubuntu官方不提供支持与补丁，全靠社区支持）<br>③multiverse（非自由软件，完全不提供支持和补丁）这三种软件源<br>下载地址:Download from为阿里云<br><a href="http://mirrors.aliyun.com/ubuntu">http://mirrors.aliyun.com/ubuntu</a></p>
+<p>2,打开终端,添加软件源<br>sudo sh -c ‘echo “deb <a href="http://packages.ros.org/ros/ubuntu">http://packages.ros.org/ros/ubuntu</a> $(lsb_release -sc) main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
+<p>​    2.1</p>
+<p>​            使用国内的镜像源,提高下载速度:(以下任意一个)</p>
+<p>​                 sudo sh -c ‘. &#x2F;etc&#x2F;lsb-release &amp;&amp; echo “deb <a href="http://mirrors.ustc.edu.cn/ros/ubuntu/">http://mirrors.ustc.edu.cn/ros/ubuntu/</a> $DISTRIB_CODENAME main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
+<p>​                 sudo sh -c ‘. &#x2F;etc&#x2F;lsb-release &amp;&amp; echo “deb <a href="http://mirror.sysu.edu.cn/ros/ubuntu/">http://mirror.sysu.edu.cn/ros/ubuntu/</a> $DISTRIB_CODENAME main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
+<p>​                sudo sh -c ‘. &#x2F;etc&#x2F;lsb-release &amp;&amp; echo “deb <a href="http://ros.exbot.net/rospackage/ros/ubuntu/">http://ros.exbot.net/rospackage/ros/ubuntu/</a> $DISTRIB_CODENAME main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
+<p>3,添加密钥(以下任意一个)<br>sudo apt-key adv ——keyserver hkp:&#x2F;&#x2F;ha.pool.sks-keyservers.net:80 ——recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116</p>
+<p>sudo apt-key adv –keyserver ‘hkp:&#x2F;&#x2F;keyserver.ubuntu.com:80’ –recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</p>
+<p>4,更新添加的软件源<br>sudo apt-get update</p>
+<p>5,下载ros版本<br>sudo apt-get install ros-kinetic-desktop-full</p>
+<p>6,初始化<br>sudo rosdep init</p>
+<p>7,更新(实在不行此命令执行5~6次后可以忽略,暂时无影响)<br>rosdep update</p>
+<p>8,设置ros环境变量,路径为home下ctrl + h打开隐藏文件就可看到</p>
+<p>echo “source &#x2F;opt&#x2F;ros&#x2F;kinetic&#x2F;setup.bash” &gt;&gt; ~&#x2F;.bashrc</p>
+<p>source ~&#x2F;.bashrc</p>
+<p>9,运行:roscore</p>
+<p>三,测试是否安装成功<br><a href="https://blog.csdn.net/dd_Mr/article/details/114323752">链接地址</a></p>
+<p>①在终端运行以下命令开启ros<br>roscore<br>②打开一个新终端运行以下命令打开小乌龟窗口<br>rosrun turtlesim turtlesim_node<br>③打开新终端运行以下命令通过键盘控制小乌龟运动<br>rosrun turtlesim turtle_teleop_key<br>④打开新终端运行以下命令,看到ros的图形化界面,展示节点的关系,若终端无报错说明安装成功<br>rosrun rqt_graph rqt_graph</p>
+<p>四,Ubuntu16.04上安装kitti2bag<br><a href="https://blog.csdn.net/weixin_38636815/article/details/108376178">链接地址</a></p>
+<p>①安装依赖包<br>sudo pip install pandas&#x3D;&#x3D;0.23.0 -i <a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a> –trusted-host pypi.douban.com</p>
+<p>sudo pip install pykitti -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
+<p>sudo pip install kitti2bag  -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
+<p>②安装kitti2bag包<br>sudo pip install kitti2bag</p>
+<p>五,kitti2bag包对kitti数据集的处理<br><a href="https://pan.baidu.com/s/1dpGDeYXYHHKtjmfX1IsVZw">数据集链接:</a><br>密码:oqym</p>
+<p>打开下载的数据集,在2011_09_26目录的上一层目录下执行指令：<br>kitti2bag -t 2011_09_26 -r 0005 raw_synced .</p>
+<p>生成一个ros可执行包:kitti_2011_09_26_drive_0005_synced.bag</p>
+<p>执行以下命令打开图像可视化软件:<br>rqt_bag kitti_2011_09_26_drive_0005_synced.bag</p>
+<p>读取图片:在文件上右键 —&gt; View —&gt; Image:<br>点击播放按钮一帧一帧的读取图片,一共15秒</p>
+<p>缺点:只能读取图片,不能进行点云的读取</p>
+<p>六:通过程序对kitti数据集进行处理<br>1,建立目录catkin_ws&#x2F;src<br>2,在src目录下建包<br>catkin_create_pkg 包名(kitti_tutorial) rospy<br>3,进入包kitti_tutorial下建立资料夹:<br>catkin_make<br>4,在包下的src文件中编写程序,环境为python2,程序中无法写入中文,会报错,程序采用的是ASCII编码形式<br>5,程序完成后进入catkin_ws&#x2F;src目录下执行以下命令:<br>roscd 包名(kitti_tutorial)&#x2F;src</p>
+<p>chmod +x 主程序(kitti.py)</p>
+<p>rosrun 包名(kitti_tutorial) 主程序(kitti.py)</p>
+<p>在新终端运行ros:<br>roscore</p>
+<p>在新终端打开rviz:<br>rviz</p>
+<p>在rviz中运行:<br>add —&gt; By topic(选择要运行的,例如图片,云点图,imu等)</p>
+<p>保存:选择file—&gt;save config as —&gt; 文件名 </p>
 ]]></content>
       <categories>
-        <category>版本管理工具</category>
+        <category>可视化</category>
       </categories>
       <tags>
-        <tag>版本管理工具</tag>
-        <tag>SVN</tag>
+        <tag>ROS</tag>
+        <tag>可视化</tag>
       </tags>
   </entry>
   <entry>
-    <title>Scrapy框架的使用</title>
-    <url>/article/e85d868e.html</url>
-    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
-<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
-<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
-<p>③,编写主程序</p>
-<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
-<p>注意:设置浏览器标识时,第一个应为项目名</p>
-<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>testfafafa</p>
 ]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-        <tag>Scrapy</tag>
-      </tags>
   </entry>
   <entry>
-    <title>Hexo博客yilia主题的使用说明</title>
-    <url>/article/31aab21a.html</url>
-    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
-<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载yilia主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
-<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>上传到github:<br>hexo d</p>
-<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
-<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
-<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>yilia模块下载总结:</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>hexo常见错误及解决方法:</p>
-<p>问题1,</p>
-<p>error：spawn failed…</p>
-<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
-<p>解决方法:</p>
-<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
-<p>​    2, git config –global core.autocrlf false</p>
-<p>​    3, 执行 </p>
-<pre><code>hexo clean &amp;&amp; hexo g 
-hexo d
-</code></pre>
-<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
-<p>解决方法:</p>
-<p>​    在public目录下寻找index.html是否存在,</p>
-<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
-<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
-<pre><code>  一般情况下执行npm install hexo-generator-index即可
-</code></pre>
-<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
-<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
-<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
-<p>git config –global http.sslVerify “false”</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Yilia</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python第三方模块安装的几种方式</title>
-    <url>/article/126ed703.html</url>
-    <content><![CDATA[<p>1,pip安装方式</p>
-<p>eg:pip install 包名</p>
-<p>2,下载tar.gz包,执行python setup.py install安装 </p>
-<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
-<p>3,安装whl文件</p>
-<p>文件目录下:pip instll 文件名.后缀</p>
-<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
+    <title>Python基础模块</title>
+    <url>/article/9d100b5b.html</url>
+    <content><![CDATA[<p>1.必装模块pypiwin32  wheel:主要是为了装whl文件</p>
+<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
+<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
+<p>4,pip文件的配置(目的,提高下载速率)<br>①<br>pip文件的配置<br>    # 在用户Administrator下, 提高第三方模块的下载速率<br>    # C:\Users\Administrator\pip\pip.ini<br>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<p>②pip 安装包超时使用以下方法:<br>pip install –index-url <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a> 包名</p>
+<p>③pip install tensorflow&#x3D;&#x3D;2.3.0  -i <a href="https://pypi.doubanio.com/simple">https://pypi.doubanio.com/simple</a></p>
+<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
+<p>6,Beautiful Soup:<br><strong>用于数据收集的Python库:</strong><br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
+<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
+<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
+<p>9,**用于数据清理和数据操作的Python库<br>*<br>pandas:主要用于数据操作和数据分析</p>
+<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
+<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
+<p>12,<strong>用于数据可视化的Python库</strong><br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
+<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
+<p>14,<strong>用于建模的Python库</strong><br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
+<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
+<p>16,<strong>用于数据解释型的Python库</strong><br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
+<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
+<p>18,<strong>用于音频处理的Python库:</strong><br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
+<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
+<p>20,<strong>用于图像处理的Python库</strong><br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
+<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
+<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
+<p><strong>用于部署的Python库</strong><br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
+<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
+<p>25,mysql数据库模块的安装<br>pip install mysqlclient&#x3D;&#x3D;1.3.12</p>
+<p>26, keras(目前已被tensorflow收购)</p>
+<p>pip install keras</p>
+<p>27,pytorch</p>
+<p>下载whl文件,在文件目录下:pip  install 文件名</p>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>第三方模块</tag>
       </tags>
   </entry>
   <entry>
@@ -989,73 +1066,53 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>乌班图笔记整理</p>
+    <title>Scrapy框架的使用</title>
+    <url>/article/e85d868e.html</url>
+    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
+<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
+<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
+<p>③,编写主程序</p>
+<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
+<p>注意:设置浏览器标识时,第一个应为项目名</p>
+<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
 ]]></content>
       <categories>
-        <category>Ubuntu</category>
+        <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
+        <tag>爬虫</tag>
+        <tag>Scrapy</tag>
       </tags>
   </entry>
   <entry>
-    <title>ROS操作系统使用说明</title>
-    <url>/article/a4d8e474.html</url>
-    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1qV41167d2?p=1">视频链接</a></p>
-<p>环境安装说明:</p>
-<p> 安装链接:</p>
-<pre><code>  [ROS安装](https://www.guyuehome.com/33971)
-</code></pre>
-<p>类似错误修复链接:</p>
-<p>​    <a href="https://blog.csdn.net/qq_44830040/article/details/106049992">大部分错误针对修改有效</a></p>
-<p>安装步骤:</p>
-<p>1,配置Ubuntu系统<br>打开软件中心,允许以下三种软件源<br>①restricted（不完全的自由软件）<br>②universe（Ubuntu官方不提供支持与补丁，全靠社区支持）<br>③multiverse（非自由软件，完全不提供支持和补丁）这三种软件源<br>下载地址:Download from为阿里云<br><a href="http://mirrors.aliyun.com/ubuntu">http://mirrors.aliyun.com/ubuntu</a></p>
-<p>2,打开终端,添加软件源<br>sudo sh -c ‘echo “deb <a href="http://packages.ros.org/ros/ubuntu">http://packages.ros.org/ros/ubuntu</a> $(lsb_release -sc) main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
-<p>​    2.1</p>
-<p>​            使用国内的镜像源,提高下载速度:(以下任意一个)</p>
-<p>​                 sudo sh -c ‘. &#x2F;etc&#x2F;lsb-release &amp;&amp; echo “deb <a href="http://mirrors.ustc.edu.cn/ros/ubuntu/">http://mirrors.ustc.edu.cn/ros/ubuntu/</a> $DISTRIB_CODENAME main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
-<p>​                 sudo sh -c ‘. &#x2F;etc&#x2F;lsb-release &amp;&amp; echo “deb <a href="http://mirror.sysu.edu.cn/ros/ubuntu/">http://mirror.sysu.edu.cn/ros/ubuntu/</a> $DISTRIB_CODENAME main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
-<p>​                sudo sh -c ‘. &#x2F;etc&#x2F;lsb-release &amp;&amp; echo “deb <a href="http://ros.exbot.net/rospackage/ros/ubuntu/">http://ros.exbot.net/rospackage/ros/ubuntu/</a> $DISTRIB_CODENAME main” &gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;ros-latest.list’</p>
-<p>3,添加密钥(以下任意一个)<br>sudo apt-key adv ——keyserver hkp:&#x2F;&#x2F;ha.pool.sks-keyservers.net:80 ——recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116</p>
-<p>sudo apt-key adv –keyserver ‘hkp:&#x2F;&#x2F;keyserver.ubuntu.com:80’ –recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</p>
-<p>4,更新添加的软件源<br>sudo apt-get update</p>
-<p>5,下载ros版本<br>sudo apt-get install ros-kinetic-desktop-full</p>
-<p>6,初始化<br>sudo rosdep init</p>
-<p>7,更新(实在不行此命令执行5~6次后可以忽略,暂时无影响)<br>rosdep update</p>
-<p>8,设置ros环境变量,路径为home下ctrl + h打开隐藏文件就可看到</p>
-<p>echo “source &#x2F;opt&#x2F;ros&#x2F;kinetic&#x2F;setup.bash” &gt;&gt; ~&#x2F;.bashrc</p>
-<p>source ~&#x2F;.bashrc</p>
-<p>9,运行:roscore</p>
-<p>三,测试是否安装成功<br><a href="https://blog.csdn.net/dd_Mr/article/details/114323752">链接地址</a></p>
-<p>①在终端运行以下命令开启ros<br>roscore<br>②打开一个新终端运行以下命令打开小乌龟窗口<br>rosrun turtlesim turtlesim_node<br>③打开新终端运行以下命令通过键盘控制小乌龟运动<br>rosrun turtlesim turtle_teleop_key<br>④打开新终端运行以下命令,看到ros的图形化界面,展示节点的关系,若终端无报错说明安装成功<br>rosrun rqt_graph rqt_graph</p>
-<p>四,Ubuntu16.04上安装kitti2bag<br><a href="https://blog.csdn.net/weixin_38636815/article/details/108376178">链接地址</a></p>
-<p>①安装依赖包<br>sudo pip install pandas&#x3D;&#x3D;0.23.0 -i <a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a> –trusted-host pypi.douban.com</p>
-<p>sudo pip install pykitti -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
-<p>sudo pip install kitti2bag  -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
-<p>②安装kitti2bag包<br>sudo pip install kitti2bag</p>
-<p>五,kitti2bag包对kitti数据集的处理<br><a href="https://pan.baidu.com/s/1dpGDeYXYHHKtjmfX1IsVZw">数据集链接:</a><br>密码:oqym</p>
-<p>打开下载的数据集,在2011_09_26目录的上一层目录下执行指令：<br>kitti2bag -t 2011_09_26 -r 0005 raw_synced .</p>
-<p>生成一个ros可执行包:kitti_2011_09_26_drive_0005_synced.bag</p>
-<p>执行以下命令打开图像可视化软件:<br>rqt_bag kitti_2011_09_26_drive_0005_synced.bag</p>
-<p>读取图片:在文件上右键 —&gt; View —&gt; Image:<br>点击播放按钮一帧一帧的读取图片,一共15秒</p>
-<p>缺点:只能读取图片,不能进行点云的读取</p>
-<p>六:通过程序对kitti数据集进行处理<br>1,建立目录catkin_ws&#x2F;src<br>2,在src目录下建包<br>catkin_create_pkg 包名(kitti_tutorial) rospy<br>3,进入包kitti_tutorial下建立资料夹:<br>catkin_make<br>4,在包下的src文件中编写程序,环境为python2,程序中无法写入中文,会报错,程序采用的是ASCII编码形式<br>5,程序完成后进入catkin_ws&#x2F;src目录下执行以下命令:<br>roscd 包名(kitti_tutorial)&#x2F;src</p>
-<p>chmod +x 主程序(kitti.py)</p>
-<p>rosrun 包名(kitti_tutorial) 主程序(kitti.py)</p>
-<p>在新终端运行ros:<br>roscore</p>
-<p>在新终端打开rviz:<br>rviz</p>
-<p>在rviz中运行:<br>add —&gt; By topic(选择要运行的,例如图片,云点图,imu等)</p>
-<p>保存:选择file—&gt;save config as —&gt; 文件名 </p>
+    <title>数据库报错</title>
+    <url>/article/129a744.html</url>
+    <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
+<p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
+<p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
 ]]></content>
       <categories>
-        <category>可视化</category>
+        <category>Error</category>
       </categories>
       <tags>
-        <tag>ROS</tag>
-        <tag>可视化</tag>
+        <tag>Error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用命令</title>
+    <url>/article/6fc55794.html</url>
+    <content><![CDATA[<p>1,WIndow激活命令</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>2,关机命令</p>
+<p>slidetoshutdown</p>
+]]></content>
+      <categories>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>常用命令</tag>
       </tags>
   </entry>
   <entry>
@@ -1107,27 +1164,17 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>常用命令</title>
-    <url>/article/6fc55794.html</url>
-    <content><![CDATA[<p>1,WIndow激活命令</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>2,关机命令</p>
-<p>slidetoshutdown</p>
-]]></content>
-      <categories>
-        <category>常用命令</category>
-      </categories>
-      <tags>
-        <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu</title>
     <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>testfafafa</p>
+    <content><![CDATA[<p>乌班图笔记整理</p>
 ]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据分析</title>
@@ -1209,34 +1256,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>数据库报错</title>
-    <url>/article/129a744.html</url>
-    <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
-<p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
-<p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
-]]></content>
-      <categories>
-        <category>Error</category>
-      </categories>
-      <tags>
-        <tag>Error</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>有道云报错</title>
-    <url>/article/4af4be97.html</url>
-    <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
-<p>%USERPROFILE%\Local Settings\Application Data\youdao\YNote</p>
-<p>:进入此目录删除YNote文件夹</p>
-]]></content>
-      <categories>
-        <category>Error</category>
-      </categories>
-      <tags>
-        <tag>Error</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用编辑软件说明</title>
     <url>/article/5e593225.html</url>
     <content><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p>
@@ -1254,20 +1273,6 @@ hexo d
       </categories>
       <tags>
         <tag>编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱因斯坦语录</title>
-    <url>/article/f11761cc.html</url>
-    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
-<p>​                                                                                                                                                        —–爱因斯坦</p>
-<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1319,6 +1324,20 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>爱因斯坦语录</title>
+    <url>/article/f11761cc.html</url>
+    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
+<p>​                                                                                                                                                        —–爱因斯坦</p>
+<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自动化测试</title>
     <url>/article/f0a57b1b.html</url>
     <content><![CDATA[<p><a href="https://blog.51cto.com/11392572/2105056">参考链接</a></p>
@@ -1340,6 +1359,32 @@ hexo d
       <tags>
         <tag>Python</tag>
         <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软测概念3</title>
+    <url>/article/28a6acaa.html</url>
+    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
+<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
+<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
+<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
+<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
+<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
+<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
+<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
+<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
+<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
+<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
+<p>集成测试和系统测试偏多</p>
+<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
+<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
+<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1471,32 +1516,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>软测概念3</title>
-    <url>/article/28a6acaa.html</url>
-    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
-<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
-<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
-<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
-<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
-<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
-<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
-<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
-<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
-<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
-<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
-<p>集成测试和系统测试偏多</p>
-<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
-<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
-<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软测概念2</title>
     <url>/article/5fa19c3c.html</url>
     <content><![CDATA[<p>接口,性能测试</p>
@@ -1523,6 +1542,20 @@ hexo d
       </categories>
       <tags>
         <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有道云报错</title>
+    <url>/article/4af4be97.html</url>
+    <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
+<p>%USERPROFILE%\Local Settings\Application Data\youdao\YNote</p>
+<p>:进入此目录删除YNote文件夹</p>
+]]></content>
+      <categories>
+        <category>Error</category>
+      </categories>
+      <tags>
+        <tag>Error</tag>
       </tags>
   </entry>
   <entry>
@@ -1562,39 +1595,6 @@ hexo d
       </categories>
       <tags>
         <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs简单使用</title>
-    <url>/article/89b3a0ef.html</url>
-    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
-<p>5,检测npm是否安装 npm -v</p>
-<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
-<ol>
-<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
-<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
-<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
-<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
-</ol>
-<p>安装出错解决办法: npm config set proxy null</p>
-<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
-<p>7,常用模块express npm install express</p>
-<p>8,卸载常用命令 npm uninstall express</p>
-<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
-<p>更新模块:npm update express</p>
-<p>搜索模块:npm search express</p>
-<p>创建模块 npm init</p>
-<p>注册用户:npm adduser</p>
-<p>发布模块:npm publish</p>
-<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>然后可以用cnpm install 模块名 下载模块</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
       </tags>
   </entry>
 </search>
