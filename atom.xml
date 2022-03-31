@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-03-31T16:11:10.068Z</updated>
+  <updated>2022-03-31T16:01:36.034Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -15,19 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>/Users/fan/Desktop/project/blog/测试</title>
-    <link href="http://fies09.github.io/article/10ffd06b.html"/>
-    <id>http://fies09.github.io/article/10ffd06b.html</id>
-    <published>2022-03-31T16:11:08.000Z</published>
-    <updated>2022-03-31T16:11:10.068Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>测试</title>
@@ -578,6 +565,38 @@ ServerName www.myweb.com
     
     
     <category term="Error" scheme="http://fies09.github.io/tags/Error/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB</title>
+    <link href="http://fies09.github.io/article/8ead567e.html"/>
+    <id>http://fies09.github.io/article/8ead567e.html</id>
+    <published>2021-06-22T03:04:53.000Z</published>
+    <updated>2022-03-23T14:05:13.988Z</updated>
+    
+    <content type="html"><![CDATA[<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p><p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p><p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p><p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p><p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p><p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p><p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p><p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p><p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p><p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;MongoDB数据库:(两种方式一般使用第二种方便快捷)&lt;br&gt;&lt;em&gt;&lt;strong&gt;管理员&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;一 ,使用流程:&lt;br&gt;1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”&lt;br&gt;2,访问(打开): &lt;a href=&quot;http://localhost:27017/&quot;&gt;http://localhost:27017/&lt;/a&gt;&lt;br&gt;3,在bin目录下输入mongo,进入数据库&lt;br&gt;3,进入:use admin (use进入,创建,切换)&lt;br&gt;3,db.shutdownServer() :关闭数据库(关闭)&lt;br&gt;3,访问(打开 ): &lt;a href=&quot;http://localhost:27017/&quot;&gt;http://localhost:27017/&lt;/a&gt;&lt;br&gt;{手动}&lt;/p&gt;
+&lt;p&gt;{自动}&lt;br&gt;也可直接打开:&lt;br&gt;二 ,升级为系统服务:&lt;br&gt;1, 解压zip到MongoDB64文件夹下 –&amp;gt; 创建data和log文件夹 –&amp;gt;在log文件夹下创建MongoDB.log文件–&amp;gt; 进入bin目录 –&amp;gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”&lt;br&gt;将服务手动启动:net start MongoDB&amp;#x2F;net stop MongoDB&lt;br&gt;2,在bin目录下输入mongo,进入数据库&lt;br&gt;3,use 数据库名 :切换&amp;#x2F;创建数据库&lt;br&gt;4,db:查看当前所在的数据库&lt;br&gt;5,show dbs:查看当前MongoDB数据库中的所有数据库&lt;br&gt;6,在数据库中创建一个集合(表)movie并插入一条记录&lt;br&gt;db.movie(表名).insert({name:”mymovie01”})(记录)&lt;br&gt;7,当数据库中没有数据库对象(数据)时,show dbs 不会显示&lt;br&gt;8,删除数据库:db.dropDatabase():删除当前所在的数据库&lt;br&gt;9,集合的创建(数据表的创建)(与上述区别,没插入数据)&lt;br&gt;db.createCollection(name)&lt;br&gt;10,show collections:显示所有集合&lt;br&gt;11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除&lt;br&gt;12,集合的删除操作db.集合名.drop()&lt;br&gt;13,数据类型:&lt;br&gt;String:字符串(utf8)&lt;br&gt;Integer:整数&lt;br&gt;Boolean:布尔型:(true&amp;#x2F;false)&lt;br&gt;Double:浮点型(小数)&lt;br&gt;Min&amp;#x2F;Max keys:最低和最高值比较&lt;br&gt;Arrays:多个值放到一个key中&lt;br&gt;Timestamp:时间戳&lt;br&gt;Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)&lt;br&gt;Null:空值&lt;br&gt;Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同&lt;br&gt;Date:日期&lt;br&gt;Object ID:文档(表,集合)ID&lt;br&gt;Binary data :二进制数据&lt;br&gt;Code:用于存储到文档中的js代码&lt;br&gt;Regular expression:正则表达式&lt;/p&gt;
+&lt;p&gt;文档对象的增查更删:&lt;br&gt;增加:&lt;br&gt;①db.文档名.insert([{k1:v1},{k2:v2}])&lt;br&gt;②var docs &amp;#x3D; [{k1:v1},{k2:v2}]&lt;br&gt;db.文档名.insert(docs)&lt;br&gt;查看文件结构:db.文档名.find()&lt;/p&gt;
+&lt;p&gt;查:&lt;br&gt;db.集合名.find() :查询所有&lt;br&gt;db.集合名.findOne() :返回集合中的第一条文档数据&lt;br&gt;db.集合名.find().pretty() :结构化显示数据&lt;br&gt;条件查询:&lt;br&gt;db.集合名.find(k:”v”).pretty()&lt;br&gt;小于:$lt  小于等于:$lte&lt;br&gt;大于: $gt     大于等于:$gte&lt;br&gt;不等于:$ne&lt;br&gt;db.集合名.find({k:{$ne:v}}).pretty()&lt;/p&gt;
+&lt;p&gt;AND&amp;#x2F;OR&lt;br&gt;AND&lt;br&gt;db.集合名.find({k1:”v1”,k2:”v2”}).pretty()&lt;br&gt;OR&lt;br&gt;db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()&lt;br&gt;大于并且..或..&lt;br&gt;db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() &lt;/p&gt;
+&lt;p&gt;更新(修改):&lt;br&gt;Criteria:更新操作条件,类似sql语句中的where子句&lt;br&gt;ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的&lt;br&gt;Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入&lt;br&gt;Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来&lt;br&gt;多条记录全部更新&lt;br&gt;db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)&lt;/p&gt;
+&lt;p&gt;删除:&lt;br&gt;remove:db.infos.remove({k1:”v1”})&lt;br&gt;deletion criteria(可选):&lt;br&gt;justOne(可选):&lt;br&gt;投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()&lt;/p&gt;
+&lt;p&gt;限制记录limit()&lt;br&gt;只显示n个记录:db.infos.find().limit(n)&lt;br&gt;先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)&lt;/p&gt;
+&lt;p&gt;组合使用(限制记录+分页处理):n –&amp;gt; 显示文档个数  m –&amp;gt; 文档个数(页数 - 1)&lt;br&gt;Skip()+Limit():分页显示&lt;br&gt;db.infos.find().limit(n).skip(m)&lt;/p&gt;
+&lt;p&gt;排序:1:升序(小到大)  -1:降序(大到小)&lt;br&gt;db.infos.find().sort({key:-1}).pretty()&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="http://fies09.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="MongoDB" scheme="http://fies09.github.io/tags/MongoDB/"/>
+    
+    <category term="数据库" scheme="http://fies09.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
