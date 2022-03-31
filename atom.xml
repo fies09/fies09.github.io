@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-03-30T06:42:48.271Z</updated>
+  <updated>2022-03-31T06:23:37.602Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker使用</title>
+    <link href="http://fies09.github.io/article/cd988ed5.html"/>
+    <id>http://fies09.github.io/article/cd988ed5.html</id>
+    <published>2022-03-31T06:23:24.000Z</published>
+    <updated>2022-03-31T06:23:37.602Z</updated>
+    
+    <content type="html"><![CDATA[<p>docker常用命令</p><pre><code>安装:apt-get/yum install docekr查看服务状态:systemctl status docker启动服务:systemctl start docker拉取镜像:docker pull centos/ubuntu进入镜像:docker run -it ubuntu /bin/bash退出:exit查看所有容器:docker ps -a启动容器:docker start id进入容器:docker exec -it id bash重启:docker restart id</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;docker常用命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;安装:apt-get/yum install docekr
+查看服务状态:systemctl status docker
+启动服务:systemctl start docker
+拉取镜像:docker pull centos/ubuntu
+进入镜像:docker run -it ubuntu /bin/bash
+退出:exit
+查看所有容器:docker ps -a
+启动容器:docker start id
+进入容器:docker exec -it id bash
+重启:docker restart id
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Web项目部署</title>
+    <link href="http://fies09.github.io/article/9fe403b8.html"/>
+    <id>http://fies09.github.io/article/9fe403b8.html</id>
+    <published>2022-03-31T06:17:42.000Z</published>
+    <updated>2022-03-31T06:39:04.714Z</updated>
+    
+    <content type="html"><![CDATA[<p>pm2运行命令:<br>pm2 ls<br>pm2 start<br>pm2 stop<br>pm2 log</p><p>python文件运行命令:<br>nohup python3 -u risk_sql.py &gt;risk.log &amp;</p><p>pm2 start &#x2F;home&#x2F;project&#x2F;net_diagnose&#x2F;sanit.py  -x –interpreter python3</p><p>python3 manage.py runserver 0.0.0.0:8000</p><p>鉴权:<br>基于BaseResource:测试注释掉,线上取消注释</p><p>运行flask:<br>env FLASK_APP&#x3D;scheduler.py flask run -h 0.0.0.0 -p 5008</p><p>docker容器部署:<br>docker+Nginx+supervisor+gunicron</p><ol><li><code>docker exec -it saint_container bash</code></li><li><code>supervisorctl start monitor_business</code></li></ol><p>部署方式1:<br>    cd &#x2F;home&#x2F;project<br>    ll<br>    docker images<br>    docker ps -a<br>    cd net_diagnose<br>    cd &#x2F;etc&#x2F;supervisord.d&#x2F;<br>    vi velery.ini<br>    cd &#x2F;home&#x2F;log<br>    vi saintwork.log<br>    cd ..&#x2F;project&#x2F;net_diagnose<br>    supervisorctl</p><p>python3 -m pip install –upgrade pip<br>pip3 install -r requirements.txt -i  <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p><p>部署方式2:<br>nginx + pm2&#x2F;uwsgi&#x2F;gunicorn&#x2F;supervisor + nohup<br>工具安装:<br>sudo apt-get install nginx</p><h1 id="pip安装部署工具"><a href="#pip安装部署工具" class="headerlink" title="pip安装部署工具"></a>pip安装部署工具</h1><p>pip install gunicorn<br>pip install supervisor<br>pip install uwsgi</p><h1 id="安装PM2"><a href="#安装PM2" class="headerlink" title="安装PM2"></a>安装PM2</h1><p>sudo apt-get install -y nodejs &#x2F; sudo yum -y install nodejs<br>sudo npm install pm2 -g </p><ul><li><p><strong>gunicorn部署</strong></p><h1 id="gunicorn-c-配置文件-运行模块名-应用名"><a href="#gunicorn-c-配置文件-运行模块名-应用名" class="headerlink" title="gunicorn  -c 配置文件 运行模块名:应用名"></a>gunicorn  -c 配置文件 运行模块名:应用名</h1><p>nohup gunicorn -b 0.0.0.0:9000 -w 4 –access-logfile&#x3D;logs&#x2F;access.log –error-logfile&#x3D;logs&#x2F;error.log app:app &gt; nohup.log &amp;</p><p>nohup gunicorn -b 0.0.0.0:9000 -w 4 app:app &gt; nohup.log &amp;</p><h1 id="开启异步并发"><a href="#开启异步并发" class="headerlink" title="开启异步并发"></a>开启异步并发</h1><p>nohup gunicorn -b 0.0.0.0:9000 -w 4 -k gevent app:app &gt; nohup.log &amp;</p><p>其中 -k, –worker-class 可以指定异步进程类 需要先安装: <code>pip3 install psutil==5.7.0</code></p><p>pm2部署:</p></li></ul><p>pm2 start app.py -x –interpreter python3  -o .&#x2F;logs&#x2F;access.log -e .&#x2F;logs&#x2F;error.log -i max</p><ul><li><p><strong>docker部署</strong></p><p>docker start saint_container<br>docker exec -it saint_container bash<br>service supervisor start<br>ps ef | grep nginx | grep -v grep | awk ‘print {$2}’ | xargs kill -9<br>supervisord -c &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf<br>supervisorctl</p></li></ul><h1 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h1><p>  less -fN &#x2F;opt&#x2F;logs&#x2F;process&#x2F;gunicorn_out_port_9001.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;process&#x2F;nginx_stdout.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;gunicorn&#x2F;access.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;nginx&#x2F;access.log</p><p>依赖安装:<br>pipreqs .&#x2F; –encoding&#x3D;utf8 –force<br>pip3 install -r requirements.txt -i  <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host </p><h1 id="x3D-x3D-x3D-源-x3D-x3D-x3D"><a href="#x3D-x3D-x3D-源-x3D-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;&#x3D; 源 &#x3D;&#x3D;&#x3D;"></a>&#x3D;&#x3D;&#x3D; 源 &#x3D;&#x3D;&#x3D;</h1><p><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a>      # 清华源<br><a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a>       # 阿里源<br><a href="http://mirrors.cloud.tencent.com/pypi/simple">http://mirrors.cloud.tencent.com/pypi/simple</a>  # 腾讯源<br><a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a>                # 豆瓣源pypi.douban.com</p><p>部署:</p><p>nohup:</p><p>nohup python3 -u server.py &gt; nohup.log &amp;</p><p>pm2:</p><p>pm2 start server.py -x –interpreter python3  -o .&#x2F;logs&#x2F;access.log -e .&#x2F;logs&#x2F;error.log</p><h1 id="or"><a href="#or" class="headerlink" title="or"></a>or</h1><p>pm2 start ecosystem.config.js –env production</p><p>docker:</p><p>docker rmi $(docker images | grep “<none>“| awk ‘{print $3}’)<br>.&#x2F;gen_image_push.sh<br>docker run -itd –name deploy -p 8000:8000 <container_id> </p><p>tar xzvf aliyun-cli-linux-3.0.16-amd64.tgz</p><p>chmod +x .&#x2F;scheduler.sh &amp;&amp; .&#x2F;scheduler.sh</p><p>部署:</p><ol><li>​</li></ol><h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署:"></a>项目部署:</h1><h1 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h1><p>  nohup python3 -u Main.py &gt; nohup.log &amp;</p><h1 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h1><p>  pm2 start Main.py -x –interpreter python3  -o .&#x2F;logs&#x2F;pm2_info.log -e .&#x2F;logs&#x2F;pm2_error.log</p><h1 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h1><p>  supervisord -c &#x2F;etc&#x2F;supervisor.conf</p><h1 id="or-1"><a href="#or-1" class="headerlink" title="or"></a>or</h1><p>  cd Bin &amp;&amp; sh start.sh</p><pre><code># 任务部署:</code></pre><ol><li>celery+supervisor<br>supervisord -c &#x2F;etc&#x2F;supervisord.conf<br>supervisorctl reload</li><li>定时框架+pm2<br>pm2 start Tasker&#x2F;schedule_task.py -x –interpreter python3  -o .&#x2F;logs&#x2F;node_task.log -e .&#x2F;logs&#x2F;node_task_error.log</li><li>tornado+定时框架<br>与tornado主程序一起执行</li></ol><pre><code>查看rds是否在白名单</code></pre><p>telnet rm-bp1ujkssv4gxkqqvv4o.mysql.rds.aliyuncs.com 3306</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;pm2运行命令:&lt;br&gt;pm2 ls&lt;br&gt;pm2 start&lt;br&gt;pm2 stop&lt;br&gt;pm2 log&lt;/p&gt;
+&lt;p&gt;python文件运行命令:&lt;br&gt;nohup python3 -u risk_sql.py &amp;gt;risk.log &amp;amp;&lt;/p&gt;
+&lt;p&gt;pm2 start &amp;#x2F;home&amp;#x2F;project&amp;#x2F;net_diagnose&amp;#x2F;sanit.py  -x –interpreter python3&lt;/p&gt;
+&lt;p&gt;python3 manage.py runserver 0.0.0.0:8000&lt;/p&gt;
+&lt;p&gt;鉴权:&lt;br&gt;基于BaseResource:测试注释掉,线上取消注释&lt;/p&gt;
+&lt;p&gt;运行flask:&lt;br&gt;env FLASK_APP&amp;#x3D;scheduler.py flask run -h 0.0.0.0 -p 5008&lt;/p&gt;
+&lt;p&gt;docker容器部署:&lt;br&gt;docker+Nginx+supervisor+gunicron&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docker exec -it saint_container bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;supervisorctl start monitor_business&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;部署方式1:&lt;br&gt;    cd &amp;#x2F;home&amp;#x2F;project&lt;br&gt;    ll&lt;br&gt;    docker images&lt;br&gt;    docker ps -a&lt;br&gt;    cd net_diagnose&lt;br&gt;    cd &amp;#x2F;etc&amp;#x2F;supervisord.d&amp;#x2F;&lt;br&gt;    vi velery.ini&lt;br&gt;    cd &amp;#x2F;home&amp;#x2F;log&lt;br&gt;    vi saintwork.log&lt;br&gt;    cd ..&amp;#x2F;project&amp;#x2F;net_diagnose&lt;br&gt;    supervisorctl&lt;/p&gt;
+&lt;p&gt;python3 -m pip install –upgrade pip&lt;br&gt;pip3 install -r requirements.txt -i  &lt;a href=&quot;http://pypi.douban.com/simple&quot;&gt;http://pypi.douban.com/simple&lt;/a&gt; –trusted-host pypi.douban.com&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Centos</title>
@@ -45,7 +103,7 @@
     <published>2022-03-23T14:05:13.987Z</published>
     <updated>2022-03-30T06:48:32.520Z</updated>
     
-    <content type="html"><![CDATA[<p>一,git</p><p>Git使用:</p><p>1,注册账号</p><p><a href="https://github.com/">https://github.com/</a></p><p>填写用户名.E-mail,密码进行注册</p><p>2,生成SSH KEY</p><p>下载git,在指定文件夹下打开git bush</p><p>配置全局的用户名和邮箱</p><p>git config –global user.name “注册的用户名”</p><p>git config –global user.email “注册的邮箱”</p><p>#取消配置</p><p>#git config –global  –unset user.name “用户名”<br>#git config –global  –unset user.email “邮箱”</p><p>生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p><p>默认回车</p><p>3,将.ssh下的id_rsa.pub内容复制到github中</p><p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p><p>4,文件上传</p><p>在指定目录下打开git Bash here</p><p>第一次上传,通过git init将此文件夹变为可管理仓库</p><p>连接远程服务器:在github中创建repositories</p><p>#上传到git库:git add 项目名</p><p>#git commit -m “注释”:提交</p><p>上面的合并为一步:git commit am “注释”</p><p>git remote add origin 远程库地址</p><p>上传到服务器</p><p>git push -u origin master</p><p>#git push -f origin master :当上传失败时改为这条命令</p><p>git status:查看工作区状态</p><p>5,文件下载</p><p>git clone 服务器地址</p><p>文件编辑操作</p><p>git add :暂存区,对文件进行修改,删除等</p><p>git rm 文件名:删除文件</p><p>git rm -f 文件名:强制删除</p><p>git commit :工作区</p><p>撤销提交:git reset HEAD^1</p><p>二,git在pycharm中的使用</p><p>上传:</p><p>在settings中的version control找到github,用户名密码连接.<br>当账号密码连接失败时采用token连接(在github建立)</p><p>在VCS中调用Version control分享项目到github</p><p><a href="https://blog.csdn.net/lai1170137052/article/details/79377037">报错时解决办法</a></p><p>1,项目右键:git —&gt; repository – remotes(删除地址重新分享)</p><p>下载<br>在vcs下选择check out 服务器地址进行 项目下载</p><p>三,<a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">tortoiseGIT使用</a><br>tortoisegit记住密码:settings —&gt; Git —&gt; Edit global.gitconfig<br>[user]<br>  name &#x3D; 注册用户名<br>  email &#x3D; 注册邮箱<br>[credential]<br>  helper &#x3D; store</p><p>tortoisegit上传文件时的几个状态:(在日志中)<br>Unknown:新增的文件,不在版本库<br>Added:新增的文件,在版本库<br>Modified:文件修改,在版本库<br>Missing:文件被删除,在版本库</p><p>tortoisegit上传文件:<br>① 创建一个本地文件夹<br>在tortoisegit中点击git create reposity here —&gt; 点击OK<br>②点击git commit -&gt; “master”<br>**必填message<br>勾选要提交的文件–&gt;点击OK<br>③当文件内容被修改时,重复第二步<br>④查看日志在Tortoisegit中查找show log<br>⑤,将diamante上传到云端,右键 —&gt; tortoisegit –&gt; push —&gt; Manage —&gt; git —&gt; Remote (填下Remote,URL,Push URL,其中URL和Push URL是同一地址)<br>⑥,输入用户名,密码,等待成功</p><p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p><p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p><p>总结:上传主要是add,commit,push</p><p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#x79;&#x30;&#x31;&#51;&#48;&#52;&#x35;&#55;&#52;&#x40;&#x61;&#108;&#x69;&#98;&#97;&#98;&#97;&#45;&#x69;&#x6e;&#99;&#x2e;&#99;&#111;&#x6d;">&#102;&#x79;&#x30;&#x31;&#51;&#48;&#52;&#x35;&#55;&#52;&#x40;&#x61;&#108;&#x69;&#98;&#97;&#98;&#97;&#45;&#x69;&#x6e;&#99;&#x2e;&#99;&#111;&#x6d;</a>‘</p><p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p><p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p><p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p><p>git切换分支:</p><p>隐藏当前分支</p><p>git stash</p><p>切换到主分支</p><p> git checkout master</p><p>拉取文件</p><p>git pull</p><p>切换到自己分支</p><p>git checkout 分支名</p><p>合并分支到主分支</p><p>git merge master</p><p>当文件修改完成后进行stash pop继续之前的操作</p><p>git stash pop </p><p>当第一次提交时执行</p><p>git remote add origin 代码库地址</p><p>git add .</p><p>git commit -m “注释”</p><p>git push -u origin 分支名</p>]]></content>
+    <content type="html"><![CDATA[<p>一,git</p><p>Git使用:</p><p>1,注册账号</p><p><a href="https://github.com/">https://github.com/</a></p><p>填写用户名.E-mail,密码进行注册</p><p>2,生成SSH KEY</p><p>下载git,在指定文件夹下打开git bush</p><p>配置全局的用户名和邮箱</p><p>git config –global user.name “注册的用户名”</p><p>git config –global user.email “注册的邮箱”</p><p>#取消配置</p><p>#git config –global  –unset user.name “用户名”<br>#git config –global  –unset user.email “邮箱”</p><p>生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p><p>默认回车</p><p>3,将.ssh下的id_rsa.pub内容复制到github中</p><p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p><p>4,文件上传</p><p>在指定目录下打开git Bash here</p><p>第一次上传,通过git init将此文件夹变为可管理仓库</p><p>连接远程服务器:在github中创建repositories</p><p>#上传到git库:git add 项目名</p><p>#git commit -m “注释”:提交</p><p>上面的合并为一步:git commit am “注释”</p><p>git remote add origin 远程库地址</p><p>上传到服务器</p><p>git push -u origin master</p><p>#git push -f origin master :当上传失败时改为这条命令</p><p>git status:查看工作区状态</p><p>5,文件下载</p><p>git clone 服务器地址</p><p>文件编辑操作</p><p>git add :暂存区,对文件进行修改,删除等</p><p>git rm 文件名:删除文件</p><p>git rm -f 文件名:强制删除</p><p>git commit :工作区</p><p>撤销提交:git reset HEAD^1</p><p>二,git在pycharm中的使用</p><p>上传:</p><p>在settings中的version control找到github,用户名密码连接.<br>当账号密码连接失败时采用token连接(在github建立)</p><p>在VCS中调用Version control分享项目到github</p><p><a href="https://blog.csdn.net/lai1170137052/article/details/79377037">报错时解决办法</a></p><p>1,项目右键:git —&gt; repository – remotes(删除地址重新分享)</p><p>下载<br>在vcs下选择check out 服务器地址进行 项目下载</p><p>三,<a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">tortoiseGIT使用</a><br>tortoisegit记住密码:settings —&gt; Git —&gt; Edit global.gitconfig<br>[user]<br>  name &#x3D; 注册用户名<br>  email &#x3D; 注册邮箱<br>[credential]<br>  helper &#x3D; store</p><p>tortoisegit上传文件时的几个状态:(在日志中)<br>Unknown:新增的文件,不在版本库<br>Added:新增的文件,在版本库<br>Modified:文件修改,在版本库<br>Missing:文件被删除,在版本库</p><p>tortoisegit上传文件:<br>① 创建一个本地文件夹<br>在tortoisegit中点击git create reposity here —&gt; 点击OK<br>②点击git commit -&gt; “master”<br>**必填message<br>勾选要提交的文件–&gt;点击OK<br>③当文件内容被修改时,重复第二步<br>④查看日志在Tortoisegit中查找show log<br>⑤,将diamante上传到云端,右键 —&gt; tortoisegit –&gt; push —&gt; Manage —&gt; git —&gt; Remote (填下Remote,URL,Push URL,其中URL和Push URL是同一地址)<br>⑥,输入用户名,密码,等待成功</p><p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p><p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p><p>总结:上传主要是add,commit,push</p><p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#x79;&#48;&#49;&#x33;&#48;&#x34;&#53;&#55;&#52;&#64;&#97;&#108;&#105;&#x62;&#x61;&#98;&#x61;&#45;&#105;&#110;&#x63;&#46;&#99;&#111;&#x6d;">&#102;&#x79;&#48;&#49;&#x33;&#48;&#x34;&#53;&#55;&#52;&#64;&#97;&#108;&#105;&#x62;&#x61;&#98;&#x61;&#45;&#105;&#110;&#x63;&#46;&#99;&#111;&#x6d;</a>‘</p><p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p><p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p><p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p><p>git切换分支:</p><p>隐藏当前分支</p><p>git stash</p><p>切换到主分支</p><p> git checkout master</p><p>拉取文件</p><p>git pull</p><p>切换到自己分支</p><p>git checkout 分支名</p><p>合并分支到主分支</p><p>git merge master</p><p>当文件修改完成后进行stash pop继续之前的操作</p><p>git stash pop </p><p>当第一次提交时执行</p><p>git remote add origin 代码库地址</p><p>git add .</p><p>git commit -m “注释”</p><p>git push -u origin 分支名</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;一,git&lt;/p&gt;
@@ -336,9 +394,9 @@
     <link href="http://fies09.github.io/article/29c250f4.html"/>
     <id>http://fies09.github.io/article/29c250f4.html</id>
     <published>2021-06-22T03:42:21.000Z</published>
-    <updated>2022-03-28T07:09:09.050Z</updated>
+    <updated>2022-03-31T06:22:09.919Z</updated>
     
-    <content type="html"><![CDATA[<p>1,calc:计算器</p><p>2,regedit;注册表编辑器</p><p>3,ipconfig:ip地址</p><p>4,win+L:锁屏</p><p>5,win+E:打开电脑</p><p>6,pycharm中:ctrl+r:多个替换</p><p>7,双击alt:电脑管家火箭加速</p><p>8,alt + tab:软件界面切换        </p><p>9,tree &#x2F;f:显示目录结构    </p><p>10,win+x    a:管理员命令操作提示符</p><p>11,选中模块,alt+enter:安装模块</p><p>12.alt用鼠标选中,多条修改</p><p>13,函数()内,ctrl+p:提示 </p><p>14,win + r :mspaint:画图快捷键</p><p>15,slidetoshutdown :关机快捷键</p><p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p><p>17,win + R :powershell:打开管理员模式</p><p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p><p>19:定时关机:shutdown -s -t  秒数</p><p>20,ctrl+alt+del:进入任务管理器</p><p>21,打开服务:services.msc</p><p>22，远程连接：mstsc</p><p>23,删除多余服务(在根目录下):sc delete 服务器名称</p><p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p><p>时区下的已安装物理内存就是笔记本内存大小</p><p>25,安装服务(根目录下|管理员权限):</p><p>安装:    .\installService.cmd</p><p>卸载:    .\uninstallService.cmd</p><p>26,C盘清理旧文件:</p><p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p><p>27,   关机: slidetoshutdown</p><p>28,  win10激活:</p><p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p><p>slmgr &#x2F;skms kms.03k.org</p><p>slmgr &#x2F;ato </p><p>29,win10打开系统属性快捷键:  dxdiag</p>]]></content>
+    <content type="html"><![CDATA[<p>1,calc:计算器</p><p>2,regedit;注册表编辑器</p><p>3,ipconfig:ip地址</p><p>4,win+L:锁屏</p><p>5,win+E:打开电脑</p><p>6,pycharm中:ctrl+r:多个替换</p><p>7,双击alt:电脑管家火箭加速</p><p>8,alt + tab:软件界面切换        </p><p>9,tree &#x2F;f:显示目录结构    </p><p>10,win+x    a:管理员命令操作提示符</p><p>11,选中模块,alt+enter:安装模块</p><p>12.alt用鼠标选中,多条修改</p><p>13,函数()内,ctrl+p:提示 </p><p>14,win + r :mspaint:画图快捷键</p><p>15,slidetoshutdown :关机快捷键</p><p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p><p>17,win + R :powershell:打开管理员模式</p><p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p><p>19:定时关机:shutdown -s -t  秒数</p><p>20,ctrl+alt+del:进入任务管理器</p><p>21,打开服务:services.msc</p><p>22，远程连接：mstsc</p><p>23,删除多余服务(在根目录下):sc delete 服务器名称</p><p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p><p>时区下的已安装物理内存就是笔记本内存大小</p><p>25,安装服务(根目录下|管理员权限):</p><p>安装:    .\installService.cmd</p><p>卸载:    .\uninstallService.cmd</p><p>26,C盘清理旧文件:</p><p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p><p>27,   关机: slidetoshutdown</p><p>28,  win10激活:</p><p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p><p>slmgr &#x2F;skms kms.03k.org</p><p>slmgr &#x2F;ato </p><p>29,win10打开系统属性快捷键:  dxdiag</p><p>30,安装linux两种方式<br>方式1,通过软件(在百度网盘)<br>方式2,win x + a (容易出问题)<br>wsl –install<br>查看版本:wsl -l -v</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;1,calc:计算器&lt;/p&gt;
@@ -572,68 +630,6 @@ ServerName www.myweb.com
     <category term="数据库" scheme="http://fies09.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     <category term="Mysql" scheme="http://fies09.github.io/tags/Mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scrapy框架的使用</title>
-    <link href="http://fies09.github.io/article/e85d868e.html"/>
-    <id>http://fies09.github.io/article/e85d868e.html</id>
-    <published>2021-06-22T02:57:48.000Z</published>
-    <updated>2022-03-23T14:05:13.990Z</updated>
-    
-    <content type="html"><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p><p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p><p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p><p>③,编写主程序</p><p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p><p>注意:设置浏览器标识时,第一个应为项目名</p><p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)&lt;br&gt;①,先安装将twisted文件放到E盘根目录下&lt;br&gt;#前提必须安装wheel模块,为了安装whl文件&lt;br&gt;②,E:—&amp;gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl&lt;br&gt;③,pip install scrapy&amp;#x3D;&amp;#x3D;1.5.0&lt;/p&gt;
-&lt;p&gt;2,在E盘创建Scrapy工程:&lt;br&gt;E: —&amp;gt; scrapy startproject doubanmovie —&amp;gt;&lt;br&gt;cd doubanmovie —&amp;gt;scrapy genspider moviespider douban.com&lt;/p&gt;
-&lt;p&gt;3,爬虫主程序的编写:&lt;br&gt;在Pycharm工具打开doubanmovie下级目录的doubanmovie&lt;br&gt;①,添加浏览器标识&lt;br&gt;将rotate_useragent文件放到doubanmovie文件夹下&lt;br&gt;②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息&lt;br&gt;添加禁用框架自带的浏览器标识及设置浏览器标识&lt;br&gt;#禁用框架自带的浏览器标识&lt;br&gt;‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,&lt;br&gt;#设置浏览器标识&lt;br&gt;‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400&lt;br&gt;②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置&lt;/p&gt;
-&lt;p&gt;③,编写主程序&lt;/p&gt;
-&lt;p&gt;④,执行&lt;br&gt;scrapy crawl (spiders下文件,不包含后缀)&lt;/p&gt;
-&lt;p&gt;注意:设置浏览器标识时,第一个应为项目名&lt;/p&gt;
-&lt;p&gt;爬虫爬取数据流程(scrapy)&lt;br&gt;1,scrapy startproject XXXX&lt;br&gt;2,scrapy genspider XXXX “&lt;a href=&quot;http://www.xxxx.com”/&quot;&gt;http://www.XXXX.com”&lt;/a&gt;&lt;br&gt;3,编写item.py,明确需要提取的数据&lt;br&gt;4,编写spiders&amp;#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )&lt;br&gt;5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…&lt;br&gt;6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置&lt;br&gt;7,执行爬虫&lt;/p&gt;
-</summary>
-    
-    
-    
-    <category term="爬虫" scheme="http://fies09.github.io/categories/%E7%88%AC%E8%99%AB/"/>
-    
-    
-    <category term="爬虫" scheme="http://fies09.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-    <category term="Scrapy" scheme="http://fies09.github.io/tags/Scrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django的基础入门</title>
-    <link href="http://fies09.github.io/article/f6b2ae5.html"/>
-    <id>http://fies09.github.io/article/f6b2ae5.html</id>
-    <published>2021-06-22T02:44:33.000Z</published>
-    <updated>2022-03-23T14:05:13.987Z</updated>
-    
-    <content type="html"><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p><p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p><p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p><p>​        #密码</p><p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p><p>4,更新应用数据库</p><p>python manage.py makemigrations</p><p>python manage.py migrate</p><p>5,创建超级管理员</p><p>python manage.py createsuperuser</p><p>6,运行项目</p><p>python manage.py runserver</p><p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p><p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p><p>8,Django原理</p><p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;1、创建Django项目(在指定目录下)&lt;br&gt;命令：django-admin startproject 项目名&lt;/p&gt;
-&lt;p&gt;2、创建Django应用&lt;br&gt;一个项目由很多个应用组成的，每一个应用完成一个功能模块。&lt;br&gt;创建应用的命令如下：(进入项目文件夹中)&lt;br&gt;python manage.py startapp 应用名&lt;/p&gt;
-&lt;p&gt;3, 在django项目中配置数据库连接信息&lt;br&gt;‘default’: {&lt;br&gt;        ‘ENGINE’: ‘django.db.backends.mysql’,&lt;br&gt;    #数据库名（需要提前创建）&lt;br&gt;        ‘NAME’: ‘db_django’,&lt;br&gt;        #用户名&lt;br&gt;        ‘USER’:’root’,&lt;/p&gt;
-&lt;p&gt;​        #密码&lt;/p&gt;
-&lt;p&gt;​        ‘PASSWORD’:’root’,&lt;br&gt;​        #url 服务器地址&lt;br&gt;​        ‘HOST’:’localhost’,&lt;br&gt;​        #端口号&lt;br&gt;​        ‘PORT’:3306,&lt;br&gt;​    }&lt;/p&gt;
-&lt;p&gt;4,更新应用数据库&lt;/p&gt;
-&lt;p&gt;python manage.py makemigrations&lt;/p&gt;
-&lt;p&gt;python manage.py migrate&lt;/p&gt;
-&lt;p&gt;5,创建超级管理员&lt;/p&gt;
-&lt;p&gt;python manage.py createsuperuser&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web" scheme="http://fies09.github.io/categories/Web/"/>
-    
-    
-    <category term="Django" scheme="http://fies09.github.io/tags/Django/"/>
-    
-    <category term="Web" scheme="http://fies09.github.io/tags/Web/"/>
     
   </entry>
   
