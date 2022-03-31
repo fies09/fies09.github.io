@@ -1681,6 +1681,7 @@ supervisorctl reload
   <entry>
     <title>测试</title>
     <url>/article/9daba997.html</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>自动化部署测试</p>
+]]></content>
   </entry>
 </search>
