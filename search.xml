@@ -58,18 +58,6 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Centos</title>
-    <url>/article/cab4360e.html</url>
-    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Centos相关命令笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Django的基础入门</title>
     <url>/article/f6b2ae5.html</url>
     <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
@@ -116,6 +104,18 @@ ServerName localhost
       <tags>
         <tag>Gitblit</tag>
         <tag>版本管理工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos</title>
+    <url>/article/cab4360e.html</url>
+    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Centos相关命令笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -170,7 +170,7 @@ ServerName localhost
 <p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
 <p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
 <p>总结:上传主要是add,commit,push</p>
-<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#121;&#x30;&#49;&#x33;&#48;&#x34;&#53;&#x37;&#52;&#64;&#97;&#x6c;&#x69;&#x62;&#x61;&#x62;&#x61;&#45;&#105;&#110;&#x63;&#46;&#x63;&#x6f;&#x6d;">&#102;&#121;&#x30;&#49;&#x33;&#48;&#x34;&#53;&#x37;&#52;&#64;&#97;&#x6c;&#x69;&#x62;&#x61;&#x62;&#x61;&#45;&#105;&#110;&#x63;&#46;&#x63;&#x6f;&#x6d;</a>‘</p>
+<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#x79;&#48;&#49;&#x33;&#48;&#52;&#x35;&#55;&#x34;&#x40;&#x61;&#108;&#105;&#98;&#x61;&#98;&#x61;&#x2d;&#105;&#110;&#x63;&#46;&#x63;&#x6f;&#109;">&#x66;&#x79;&#48;&#49;&#x33;&#48;&#52;&#x35;&#55;&#x34;&#x40;&#x61;&#108;&#105;&#98;&#x61;&#98;&#x61;&#x2d;&#105;&#110;&#x63;&#46;&#x63;&#x6f;&#109;</a>‘</p>
 <p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
@@ -199,6 +199,69 @@ ServerName localhost
       <tags>
         <tag>版本管理工具</tag>
         <tag>GIT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客yilia主题的使用说明</title>
+    <url>/article/31aab21a.html</url>
+    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
+<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>下载hexo模块,</p>
+<p>cnpm install -g hexo-cli</p>
+<p>②建立博客文件夹<br>mkdir blog</p>
+<p>③生成博客文件<br>cd blog </p>
+<p>hexo init</p>
+<p>④下载yilia主题</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
+<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
+<p>⑦当配置完成后执行以下命令:</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>上传到github:<br>hexo d</p>
+<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
+<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
+<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
+<p>yilia模块下载总结:</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>hexo常见错误及解决方法:</p>
+<p>问题1,</p>
+<p>error：spawn failed…</p>
+<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
+<p>解决方法:</p>
+<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
+<p>​    2, git config –global core.autocrlf false</p>
+<p>​    3, 执行 </p>
+<pre><code>hexo clean &amp;&amp; hexo g 
+hexo d
+</code></pre>
+<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
+<p>解决方法:</p>
+<p>​    在public目录下寻找index.html是否存在,</p>
+<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
+<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
+<pre><code>  一般情况下执行npm install hexo-generator-index即可
+</code></pre>
+<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
+<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
+<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
+<p>git config –global http.sslVerify “false”</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Yilia</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -271,69 +334,6 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客yilia主题的使用说明</title>
-    <url>/article/31aab21a.html</url>
-    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
-<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载yilia主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
-<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>上传到github:<br>hexo d</p>
-<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
-<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
-<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>yilia模块下载总结:</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>hexo常见错误及解决方法:</p>
-<p>问题1,</p>
-<p>error：spawn failed…</p>
-<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
-<p>解决方法:</p>
-<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
-<p>​    2, git config –global core.autocrlf false</p>
-<p>​    3, 执行 </p>
-<pre><code>hexo clean &amp;&amp; hexo g 
-hexo d
-</code></pre>
-<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
-<p>解决方法:</p>
-<p>​    在public目录下寻找index.html是否存在,</p>
-<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
-<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
-<pre><code>  一般情况下执行npm install hexo-generator-index即可
-</code></pre>
-<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
-<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
-<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
-<p>git config –global http.sslVerify “false”</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Yilia</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux的使用</title>
     <url>/article/4549a880.html</url>
     <content><![CDATA[<p>1,安装dep文件</p>
@@ -350,39 +350,6 @@ hexo d
       <tags>
         <tag>Linux</tag>
         <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs简单使用</title>
-    <url>/article/89b3a0ef.html</url>
-    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
-<p>5,检测npm是否安装 npm -v</p>
-<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
-<ol>
-<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
-<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
-<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
-<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
-</ol>
-<p>安装出错解决办法: npm config set proxy null</p>
-<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
-<p>7,常用模块express npm install express</p>
-<p>8,卸载常用命令 npm uninstall express</p>
-<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
-<p>更新模块:npm update express</p>
-<p>搜索模块:npm search express</p>
-<p>创建模块 npm init</p>
-<p>注册用户:npm adduser</p>
-<p>发布模块:npm publish</p>
-<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>然后可以用cnpm install 模块名 下载模块</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
       </tags>
   </entry>
   <entry>
@@ -506,6 +473,39 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>Nodejs简单使用</title>
+    <url>/article/89b3a0ef.html</url>
+    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
+<p>5,检测npm是否安装 npm -v</p>
+<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
+<ol>
+<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
+<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
+<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
+</ol>
+<p>安装出错解决办法: npm config set proxy null</p>
+<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
+<p>7,常用模块express npm install express</p>
+<p>8,卸载常用命令 npm uninstall express</p>
+<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
+<p>更新模块:npm update express</p>
+<p>搜索模块:npm search express</p>
+<p>创建模块 npm init</p>
+<p>注册用户:npm adduser</p>
+<p>发布模块:npm publish</p>
+<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>然后可以用cnpm install 模块名 下载模块</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notebook安装使用教程</title>
     <url>/article/d9a032e2.html</url>
     <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
@@ -623,6 +623,25 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>Python第三方模块安装的几种方式</title>
+    <url>/article/126ed703.html</url>
+    <content><![CDATA[<p>1,pip安装方式</p>
+<p>eg:pip install 包名</p>
+<p>2,下载tar.gz包,执行python setup.py install安装 </p>
+<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
+<p>3,安装whl文件</p>
+<p>文件目录下:pip instll 文件名.后缀</p>
+<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>第三方模块</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python概念</title>
     <url>/article/7cf78c2.html</url>
     <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
@@ -707,25 +726,6 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python第三方模块安装的几种方式</title>
-    <url>/article/126ed703.html</url>
-    <content><![CDATA[<p>1,pip安装方式</p>
-<p>eg:pip install 包名</p>
-<p>2,下载tar.gz包,执行python setup.py install安装 </p>
-<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
-<p>3,安装whl文件</p>
-<p>文件目录下:pip instll 文件名.后缀</p>
-<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>第三方模块</tag>
       </tags>
   </entry>
   <entry>
@@ -851,28 +851,46 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>testfafafa</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Scrapy框架的使用</title>
-    <url>/article/e85d868e.html</url>
-    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
-<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
-<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
-<p>③,编写主程序</p>
-<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
-<p>注意:设置浏览器标识时,第一个应为项目名</p>
-<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+    <title>SVN</title>
+    <url>/article/ec3edfbe.html</url>
+    <content><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p>
+<p>提取码: 4iuo</p>
+<p><a href="https://pan.baidu.com/s/1eWpX4ai5_eTaLHCn0x1_hQ">汉化包地址</a></p>
+<p>提取码: 7u70 </p>
+<p>汉化说明:</p>
+<p>在任意位置右击—&gt;TortoiseSVN—&gt;settings—&gt;General—&gt;Language(简体中文)—&gt;应用 —&gt; 确定</p>
+<p>1, 导出项目</p>
+<p>在检出目录文件夹下:</p>
+<p>右击—&gt;SVN检出—&gt;填写版本库url—&gt;确定</p>
+<p>**版本库url为服务器地址,检出标志为绿色的√</p>
+<p>2, 修改文件,添加文件,删除文件</p>
+<p>​    2.1 添加文件</p>
+<p>​        选中 —&gt; 右击 —&gt; 加入 (会出现蓝色感叹号) — &gt; 提交</p>
+<p>总结: add ,commit</p>
+<p>​    2.2 修改文件</p>
+<pre><code>      检出要修改的文件 ---&gt; 右击 ---&gt; SVN更新 (对文件内容进行修改,保存,&#39;会出现红色感叹号&#39;) ---&gt; 提交(对提交文件进行相关备注)
+</code></pre>
+<p>格式:</p>
+<p>​    *XXXX年—XX月—XX日 姓名 修改内容：XXXXXXXX 修改原因：YYYYYYYYYYYYY*</p>
+<p>​    2.3 重命名文件</p>
+<p>​        选中文件—&gt;SVN更新—&gt;修改文件名—&gt;add—&gt;commit</p>
+<p>​    2.4删除文件(删除前备份)</p>
+<p>​        选中文件—&gt; SVN更新 —&gt; 删除 —&gt; 提交</p>
+<p>总结:</p>
+<p>​    更新,提交,显示日志,改名,删除</p>
+<p>checkout:将文件添加到本地目录</p>
+<p>add: 往版本库添加新的文件</p>
+<p>commit: 将改动的文件提交到版本库</p>
+<p>lock&#x2F;unlock: 加锁&#x2F;解锁</p>
+<p>update: 更新</p>
+<p>delete: 删除</p>
 ]]></content>
       <categories>
-        <category>爬虫</category>
+        <category>版本管理工具</category>
       </categories>
       <tags>
-        <tag>爬虫</tag>
-        <tag>Scrapy</tag>
+        <tag>版本管理工具</tag>
+        <tag>SVN</tag>
       </tags>
   </entry>
   <entry>
@@ -1042,46 +1060,58 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>SVN</title>
-    <url>/article/ec3edfbe.html</url>
-    <content><![CDATA[<p><a href="https://pan.baidu.com/s/1WGIjMTBU_7J9BLoiBHbSjw">软件地址</a></p>
-<p>提取码: 4iuo</p>
-<p><a href="https://pan.baidu.com/s/1eWpX4ai5_eTaLHCn0x1_hQ">汉化包地址</a></p>
-<p>提取码: 7u70 </p>
-<p>汉化说明:</p>
-<p>在任意位置右击—&gt;TortoiseSVN—&gt;settings—&gt;General—&gt;Language(简体中文)—&gt;应用 —&gt; 确定</p>
-<p>1, 导出项目</p>
-<p>在检出目录文件夹下:</p>
-<p>右击—&gt;SVN检出—&gt;填写版本库url—&gt;确定</p>
-<p>**版本库url为服务器地址,检出标志为绿色的√</p>
-<p>2, 修改文件,添加文件,删除文件</p>
-<p>​    2.1 添加文件</p>
-<p>​        选中 —&gt; 右击 —&gt; 加入 (会出现蓝色感叹号) — &gt; 提交</p>
-<p>总结: add ,commit</p>
-<p>​    2.2 修改文件</p>
-<pre><code>      检出要修改的文件 ---&gt; 右击 ---&gt; SVN更新 (对文件内容进行修改,保存,&#39;会出现红色感叹号&#39;) ---&gt; 提交(对提交文件进行相关备注)
-</code></pre>
-<p>格式:</p>
-<p>​    *XXXX年—XX月—XX日 姓名 修改内容：XXXXXXXX 修改原因：YYYYYYYYYYYYY*</p>
-<p>​    2.3 重命名文件</p>
-<p>​        选中文件—&gt;SVN更新—&gt;修改文件名—&gt;add—&gt;commit</p>
-<p>​    2.4删除文件(删除前备份)</p>
-<p>​        选中文件—&gt; SVN更新 —&gt; 删除 —&gt; 提交</p>
-<p>总结:</p>
-<p>​    更新,提交,显示日志,改名,删除</p>
-<p>checkout:将文件添加到本地目录</p>
-<p>add: 往版本库添加新的文件</p>
-<p>commit: 将改动的文件提交到版本库</p>
-<p>lock&#x2F;unlock: 加锁&#x2F;解锁</p>
-<p>update: 更新</p>
-<p>delete: 删除</p>
+    <title>Scrapy框架的使用</title>
+    <url>/article/e85d868e.html</url>
+    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
+<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
+<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
+<p>③,编写主程序</p>
+<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
+<p>注意:设置浏览器标识时,第一个应为项目名</p>
+<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
 ]]></content>
       <categories>
-        <category>版本管理工具</category>
+        <category>爬虫</category>
       </categories>
       <tags>
-        <tag>版本管理工具</tag>
-        <tag>SVN</tag>
+        <tag>爬虫</tag>
+        <tag>Scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>testfafafa</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>常用命令</title>
+    <url>/article/6fc55794.html</url>
+    <content><![CDATA[<p>1,WIndow激活命令</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>2,关机命令</p>
+<p>slidetoshutdown</p>
+]]></content>
+      <categories>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>乌班图笔记整理</p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1133,19 +1163,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>乌班图笔记整理</p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用编辑软件说明</title>
     <url>/article/5e593225.html</url>
     <content><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p>
@@ -1163,23 +1180,6 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用命令</title>
-    <url>/article/6fc55794.html</url>
-    <content><![CDATA[<p>1,WIndow激活命令</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>2,关机命令</p>
-<p>slidetoshutdown</p>
-]]></content>
-      <categories>
-        <category>常用命令</category>
-      </categories>
-      <tags>
-        <tag>常用命令</tag>
       </tags>
   </entry>
   <entry>
@@ -1262,20 +1262,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>爱因斯坦语录</title>
-    <url>/article/f11761cc.html</url>
-    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
-<p>​                                                                                                                                                        —–爱因斯坦</p>
-<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>有道云报错</title>
     <url>/article/4af4be97.html</url>
     <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
@@ -1287,6 +1273,34 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>Error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库报错</title>
+    <url>/article/129a744.html</url>
+    <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
+<p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
+<p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
+]]></content>
+      <categories>
+        <category>Error</category>
+      </categories>
+      <tags>
+        <tag>Error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱因斯坦语录</title>
+    <url>/article/f11761cc.html</url>
+    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
+<p>​                                                                                                                                                        —–爱因斯坦</p>
+<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1311,68 +1325,6 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Win10常用快捷键</title>
-    <url>/article/29c250f4.html</url>
-    <content><![CDATA[<p>1,calc:计算器</p>
-<p>2,regedit;注册表编辑器</p>
-<p>3,ipconfig:ip地址</p>
-<p>4,win+L:锁屏</p>
-<p>5,win+E:打开电脑</p>
-<p>6,pycharm中:ctrl+r:多个替换</p>
-<p>7,双击alt:电脑管家火箭加速</p>
-<p>8,alt + tab:软件界面切换        </p>
-<p>9,tree &#x2F;f:显示目录结构    </p>
-<p>10,win+x    a:管理员命令操作提示符</p>
-<p>11,选中模块,alt+enter:安装模块</p>
-<p>12.alt用鼠标选中,多条修改</p>
-<p>13,函数()内,ctrl+p:提示 </p>
-<p>14,win + r :mspaint:画图快捷键</p>
-<p>15,slidetoshutdown :关机快捷键</p>
-<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
-<p>17,win + R :powershell:打开管理员模式</p>
-<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
-<p>19:定时关机:shutdown -s -t  秒数</p>
-<p>20,ctrl+alt+del:进入任务管理器</p>
-<p>21,打开服务:services.msc</p>
-<p>22，远程连接：mstsc</p>
-<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
-<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p>
-<p>时区下的已安装物理内存就是笔记本内存大小</p>
-<p>25,安装服务(根目录下|管理员权限):</p>
-<p>安装:    .\installService.cmd</p>
-<p>卸载:    .\uninstallService.cmd</p>
-<p>26,C盘清理旧文件:</p>
-<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
-<p>27,   关机: slidetoshutdown</p>
-<p>28,  win10激活:</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>29,win10打开系统属性快捷键:  dxdiag</p>
-]]></content>
-      <categories>
-        <category>快捷键</category>
-      </categories>
-      <tags>
-        <tag>快捷键</tag>
-        <tag>PC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库报错</title>
-    <url>/article/129a744.html</url>
-    <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
-<p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
-<p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
-]]></content>
-      <categories>
-        <category>Error</category>
-      </categories>
-      <tags>
-        <tag>Error</tag>
       </tags>
   </entry>
   <entry>
@@ -1543,6 +1495,80 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>软测概念3</title>
+    <url>/article/28a6acaa.html</url>
+    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
+<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
+<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
+<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
+<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
+<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
+<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
+<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
+<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
+<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
+<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
+<p>集成测试和系统测试偏多</p>
+<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
+<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
+<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win10常用快捷键</title>
+    <url>/article/29c250f4.html</url>
+    <content><![CDATA[<p>1,calc:计算器</p>
+<p>2,regedit;注册表编辑器</p>
+<p>3,ipconfig:ip地址</p>
+<p>4,win+L:锁屏</p>
+<p>5,win+E:打开电脑</p>
+<p>6,pycharm中:ctrl+r:多个替换</p>
+<p>7,双击alt:电脑管家火箭加速</p>
+<p>8,alt + tab:软件界面切换        </p>
+<p>9,tree &#x2F;f:显示目录结构    </p>
+<p>10,win+x    a:管理员命令操作提示符</p>
+<p>11,选中模块,alt+enter:安装模块</p>
+<p>12.alt用鼠标选中,多条修改</p>
+<p>13,函数()内,ctrl+p:提示 </p>
+<p>14,win + r :mspaint:画图快捷键</p>
+<p>15,slidetoshutdown :关机快捷键</p>
+<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
+<p>17,win + R :powershell:打开管理员模式</p>
+<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
+<p>19:定时关机:shutdown -s -t  秒数</p>
+<p>20,ctrl+alt+del:进入任务管理器</p>
+<p>21,打开服务:services.msc</p>
+<p>22，远程连接：mstsc</p>
+<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
+<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p>
+<p>时区下的已安装物理内存就是笔记本内存大小</p>
+<p>25,安装服务(根目录下|管理员权限):</p>
+<p>安装:    .\installService.cmd</p>
+<p>卸载:    .\uninstallService.cmd</p>
+<p>26,C盘清理旧文件:</p>
+<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
+<p>27,   关机: slidetoshutdown</p>
+<p>28,  win10激活:</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>29,win10打开系统属性快捷键:  dxdiag</p>
+]]></content>
+      <categories>
+        <category>快捷键</category>
+      </categories>
+      <tags>
+        <tag>快捷键</tag>
+        <tag>PC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软测概念2</title>
     <url>/article/5fa19c3c.html</url>
     <content><![CDATA[<p>接口,性能测试</p>
@@ -1563,32 +1589,6 @@ TPL:事务处理语言
 <p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
 <p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
 <p>测试风险;</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念3</title>
-    <url>/article/28a6acaa.html</url>
-    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
-<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
-<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
-<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
-<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
-<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
-<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
-<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
-<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
-<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
-<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
-<p>集成测试和系统测试偏多</p>
-<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
-<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
-<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
 ]]></content>
       <categories>
         <category>软件测试</category>
