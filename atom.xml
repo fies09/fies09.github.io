@@ -26,11 +26,8 @@
     <content type="html"><![CDATA[<p>testfafafa</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;testfafafa&lt;/p&gt;
 </summary>
-      
     
     
     
@@ -47,11 +44,8 @@
     <content type="html"><![CDATA[<p>乌班图笔记整理</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;乌班图笔记整理&lt;/p&gt;
 </summary>
-      
     
     
     
@@ -74,10 +68,8 @@
     <content type="html"><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;Centos安装docker&amp;#x2F;Python3&amp;#x2F;pip3教程:&lt;br&gt;docker:&lt;br&gt;curl -s &lt;a href=&quot;https://get.docker.com/&quot;&gt;https://get.docker.com/&lt;/a&gt; | sh&lt;br&gt;syst</summary>
-      
+    <summary type="html">&lt;p&gt;Centos安装docker&amp;#x2F;Python3&amp;#x2F;pip3教程:&lt;br&gt;docker:&lt;br&gt;curl -s &lt;a href=&quot;https://get.docker.com/&quot;&gt;https://get.docker.com/&lt;/a&gt; | sh&lt;br&gt;systemctl start docker&lt;br&gt;Python3:&lt;br&gt;yum install python3 unzip -y&lt;br&gt;pip3:&lt;br&gt;curl -s &lt;a href=&quot;https://bootstrap.pypa.io/get-pip.py&quot;&gt;https://bootstrap.pypa.io/get-pip.py&lt;/a&gt; | python3&lt;/p&gt;
+</summary>
     
     
     
@@ -95,18 +87,19 @@
     <published>2022-03-23T14:05:13.987Z</published>
     <updated>2022-03-30T06:48:32.520Z</updated>
     
-    <content type="html"><![CDATA[<p>一,git</p><p>Git使用:</p><p>1,注册账号</p><p><a href="https://github.com/">https://github.com/</a></p><p>填写用户名.E-mail,密码进行注册</p><p>2,生成SSH KEY</p><p>下载git,在指定文件夹下打开git bush</p><p>配置全局的用户名和邮箱</p><p>git config –global user.name “注册的用户名”</p><p>git config –global user.email “注册的邮箱”</p><p>#取消配置</p><p>#git config –global  –unset user.name “用户名”<br>#git config –global  –unset user.email “邮箱”</p><p>生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p><p>默认回车</p><p>3,将.ssh下的id_rsa.pub内容复制到github中</p><p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p><p>4,文件上传</p><p>在指定目录下打开git Bash here</p><p>第一次上传,通过git init将此文件夹变为可管理仓库</p><p>连接远程服务器:在github中创建repositories</p><p>#上传到git库:git add 项目名</p><p>#git commit -m “注释”:提交</p><p>上面的合并为一步:git commit am “注释”</p><p>git remote add origin 远程库地址</p><p>上传到服务器</p><p>git push -u origin master</p><p>#git push -f origin master :当上传失败时改为这条命令</p><p>git status:查看工作区状态</p><p>5,文件下载</p><p>git clone 服务器地址</p><p>文件编辑操作</p><p>git add :暂存区,对文件进行修改,删除等</p><p>git rm 文件名:删除文件</p><p>git rm -f 文件名:强制删除</p><p>git commit :工作区</p><p>撤销提交:git reset HEAD^1</p><p>二,git在pycharm中的使用</p><p>上传:</p><p>在settings中的version control找到github,用户名密码连接.<br>当账号密码连接失败时采用token连接(在github建立)</p><p>在VCS中调用Version control分享项目到github</p><p><a href="https://blog.csdn.net/lai1170137052/article/details/79377037">报错时解决办法</a></p><p>1,项目右键:git —&gt; repository – remotes(删除地址重新分享)</p><p>下载<br>在vcs下选择check out 服务器地址进行 项目下载</p><p>三,<a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">tortoiseGIT使用</a><br>tortoisegit记住密码:settings —&gt; Git —&gt; Edit global.gitconfig<br>[user]<br>  name &#x3D; 注册用户名<br>  email &#x3D; 注册邮箱<br>[credential]<br>  helper &#x3D; store</p><p>tortoisegit上传文件时的几个状态:(在日志中)<br>Unknown:新增的文件,不在版本库<br>Added:新增的文件,在版本库<br>Modified:文件修改,在版本库<br>Missing:文件被删除,在版本库</p><p>tortoisegit上传文件:<br>① 创建一个本地文件夹<br>在tortoisegit中点击git create reposity here —&gt; 点击OK<br>②点击git commit -&gt; “master”<br>**必填message<br>勾选要提交的文件–&gt;点击OK<br>③当文件内容被修改时,重复第二步<br>④查看日志在Tortoisegit中查找show log<br>⑤,将diamante上传到云端,右键 —&gt; tortoisegit –&gt; push —&gt; Manage —&gt; git —&gt; Remote (填下Remote,URL,Push URL,其中URL和Push URL是同一地址)<br>⑥,输入用户名,密码,等待成功</p><p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p><p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p><p>总结:上传主要是add,commit,push</p><p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#121;&#x30;&#49;&#x33;&#x30;&#52;&#x35;&#x37;&#x34;&#64;&#97;&#108;&#105;&#x62;&#x61;&#98;&#x61;&#45;&#105;&#110;&#99;&#x2e;&#x63;&#x6f;&#109;">&#102;&#121;&#x30;&#49;&#x33;&#x30;&#52;&#x35;&#x37;&#x34;&#64;&#97;&#108;&#105;&#x62;&#x61;&#98;&#x61;&#45;&#105;&#110;&#99;&#x2e;&#x63;&#x6f;&#109;</a>‘</p><p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p><p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p><p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p><p>git切换分支:</p><p>隐藏当前分支</p><p>git stash</p><p>切换到主分支</p><p> git checkout master</p><p>拉取文件</p><p>git pull</p><p>切换到自己分支</p><p>git checkout 分支名</p><p>合并分支到主分支</p><p>git merge master</p><p>当文件修改完成后进行stash pop继续之前的操作</p><p>git stash pop </p><p>当第一次提交时执行</p><p>git remote add origin 代码库地址</p><p>git add .</p><p>git commit -m “注释”</p><p>git push -u origin 分支名</p>]]></content>
+    <content type="html"><![CDATA[<p>一,git</p><p>Git使用:</p><p>1,注册账号</p><p><a href="https://github.com/">https://github.com/</a></p><p>填写用户名.E-mail,密码进行注册</p><p>2,生成SSH KEY</p><p>下载git,在指定文件夹下打开git bush</p><p>配置全局的用户名和邮箱</p><p>git config –global user.name “注册的用户名”</p><p>git config –global user.email “注册的邮箱”</p><p>#取消配置</p><p>#git config –global  –unset user.name “用户名”<br>#git config –global  –unset user.email “邮箱”</p><p>生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p><p>默认回车</p><p>3,将.ssh下的id_rsa.pub内容复制到github中</p><p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p><p>4,文件上传</p><p>在指定目录下打开git Bash here</p><p>第一次上传,通过git init将此文件夹变为可管理仓库</p><p>连接远程服务器:在github中创建repositories</p><p>#上传到git库:git add 项目名</p><p>#git commit -m “注释”:提交</p><p>上面的合并为一步:git commit am “注释”</p><p>git remote add origin 远程库地址</p><p>上传到服务器</p><p>git push -u origin master</p><p>#git push -f origin master :当上传失败时改为这条命令</p><p>git status:查看工作区状态</p><p>5,文件下载</p><p>git clone 服务器地址</p><p>文件编辑操作</p><p>git add :暂存区,对文件进行修改,删除等</p><p>git rm 文件名:删除文件</p><p>git rm -f 文件名:强制删除</p><p>git commit :工作区</p><p>撤销提交:git reset HEAD^1</p><p>二,git在pycharm中的使用</p><p>上传:</p><p>在settings中的version control找到github,用户名密码连接.<br>当账号密码连接失败时采用token连接(在github建立)</p><p>在VCS中调用Version control分享项目到github</p><p><a href="https://blog.csdn.net/lai1170137052/article/details/79377037">报错时解决办法</a></p><p>1,项目右键:git —&gt; repository – remotes(删除地址重新分享)</p><p>下载<br>在vcs下选择check out 服务器地址进行 项目下载</p><p>三,<a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">tortoiseGIT使用</a><br>tortoisegit记住密码:settings —&gt; Git —&gt; Edit global.gitconfig<br>[user]<br>  name &#x3D; 注册用户名<br>  email &#x3D; 注册邮箱<br>[credential]<br>  helper &#x3D; store</p><p>tortoisegit上传文件时的几个状态:(在日志中)<br>Unknown:新增的文件,不在版本库<br>Added:新增的文件,在版本库<br>Modified:文件修改,在版本库<br>Missing:文件被删除,在版本库</p><p>tortoisegit上传文件:<br>① 创建一个本地文件夹<br>在tortoisegit中点击git create reposity here —&gt; 点击OK<br>②点击git commit -&gt; “master”<br>**必填message<br>勾选要提交的文件–&gt;点击OK<br>③当文件内容被修改时,重复第二步<br>④查看日志在Tortoisegit中查找show log<br>⑤,将diamante上传到云端,右键 —&gt; tortoisegit –&gt; push —&gt; Manage —&gt; git —&gt; Remote (填下Remote,URL,Push URL,其中URL和Push URL是同一地址)<br>⑥,输入用户名,密码,等待成功</p><p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p><p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p><p>总结:上传主要是add,commit,push</p><p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#x79;&#x30;&#49;&#51;&#x30;&#x34;&#53;&#x37;&#x34;&#x40;&#97;&#x6c;&#105;&#x62;&#x61;&#98;&#x61;&#x2d;&#105;&#110;&#99;&#46;&#99;&#111;&#109;">&#x66;&#x79;&#x30;&#49;&#51;&#x30;&#x34;&#53;&#x37;&#x34;&#x40;&#97;&#x6c;&#105;&#x62;&#x61;&#98;&#x61;&#x2d;&#105;&#110;&#99;&#46;&#99;&#111;&#109;</a>‘</p><p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p><p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p><p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p><p>git切换分支:</p><p>隐藏当前分支</p><p>git stash</p><p>切换到主分支</p><p> git checkout master</p><p>拉取文件</p><p>git pull</p><p>切换到自己分支</p><p>git checkout 分支名</p><p>合并分支到主分支</p><p>git merge master</p><p>当文件修改完成后进行stash pop继续之前的操作</p><p>git stash pop </p><p>当第一次提交时执行</p><p>git remote add origin 代码库地址</p><p>git add .</p><p>git commit -m “注释”</p><p>git push -u origin 分支名</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;一,git&lt;/p&gt;
 &lt;p&gt;Git使用:&lt;/p&gt;
 &lt;p&gt;1,注册账号&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;填写用户名.E-mail,密码进行注册&lt;/p&gt;
-&lt;p&gt;2,生成SSH </summary>
-      
+&lt;p&gt;2,生成SSH KEY&lt;/p&gt;
+&lt;p&gt;下载git,在指定文件夹下打开git bush&lt;/p&gt;
+&lt;p&gt;配置全局的用户名和邮箱&lt;/p&gt;
+&lt;p&gt;git config –global user.name “注册的用户名”&lt;/p&gt;
+&lt;p&gt;git config –global user.email “注册的邮箱”&lt;/p&gt;</summary>
     
     
     
@@ -129,13 +122,14 @@
     <content type="html"><![CDATA[<p>1,pip安装方式</p><p>eg:pip install 包名</p><p>2,下载tar.gz包,执行python setup.py install安装 </p><p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p><p>3,安装whl文件</p><p>文件目录下:pip instll 文件名.后缀</p><p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;1,pip安装方式&lt;/p&gt;
 &lt;p&gt;eg:pip install 包名&lt;/p&gt;
 &lt;p&gt;2,下载tar.gz包,执行python setup.py install安装 &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://pypi.org/project/baidu-aip/#fi</summary>
-      
+&lt;p&gt;&lt;a href=&quot;https://pypi.org/project/baidu-aip/#files&quot;&gt;地址链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3,安装whl文件&lt;/p&gt;
+&lt;p&gt;文件目录下:pip instll 文件名.后缀&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pypi.org/project/PyQt5/#files&quot;&gt;地址链接&lt;/a&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -158,11 +152,10 @@
     <content type="html"><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p><p>​                                                                                                                                                        —–爱因斯坦</p><p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.&lt;/p&gt;
-&lt;p&gt;​                                            </summary>
-      
+&lt;p&gt;​                                                                                                                                                        —–爱因斯坦&lt;/p&gt;
+&lt;p&gt;2,爱因斯坦主要贡献:量子论,宇宙学,相对论.&lt;/p&gt;
+</summary>
     
     
     
@@ -183,14 +176,16 @@
     <content type="html"><![CDATA[<p>接口,性能测试</p><p>SOW:statement of work，工作任务说明书</p><p>HLD: High Level Design,概要设计说明书</p><p>LLD: Low Level Design，详细设计说明书</p><p>UTC: Unit Testing Cases，单元测试用例</p><p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p><p>非增量–每个模块测试完了再连接；</p><p>增量：测一个模块，就连接一个模块。</p><p>基于测试对象进行分类:白盒黑盒</p><p>集成测试:接口测试</p><p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p><p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p><p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p><p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p><p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p><p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p><p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p><p>测试风险;</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;接口,性能测试&lt;/p&gt;
 &lt;p&gt;SOW:statement of work，工作任务说明书&lt;/p&gt;
 &lt;p&gt;HLD: High Level Design,概要设计说明书&lt;/p&gt;
 &lt;p&gt;LLD: Low Level Design，详细设计说明书&lt;/p&gt;
-&lt;p&gt;UTC: Unit </summary>
-      
+&lt;p&gt;UTC: Unit Testing Cases，单元测试用例&lt;/p&gt;
+&lt;p&gt;ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置&lt;/p&gt;
+&lt;p&gt;非增量–每个模块测试完了再连接；&lt;/p&gt;
+&lt;p&gt;增量：测一个模块，就连接一个模块。&lt;/p&gt;
+&lt;p&gt;基于测试对象进行分类:白盒黑盒&lt;/p&gt;
+&lt;p&gt;集成测试:接口测试&lt;/p&gt;</summary>
     
     
     
@@ -211,11 +206,15 @@
     <content type="html"><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一,"></a>一,</h1><p>测试用例:指为实施测试而向被测试系统提供的输入数据,操作或各种环境设置以及期望结果的一个特定的集合.</p><p>包含内容:ID,功能模块,优先级,用例标题,预置条件,测试数据,执行步骤,预测结果,实际结果</p><p>等价类划分:两位数加法程序<br>输入两位整数,相加后,结果正确显示.要求:<br>输入的整数值在-99到99之间,包含(-99和99)<br>非法输入应被拒,并显示错误信息<br>等价类划分:<br>是一种最为典型的黑盒测试方法<br>要对需求说明书中的各项需求,尤其是功能需求进行细致分析<br>把程序的输入划分成若干个部分,从每个部分中选少数代表性数据作为测试用例</p><p>划分等价类划分典型参考:<br>1,若某个输入条件说明了一个必须成立的情况,则可划分一个有效等价类和一个无效等价类<br>2,若某个输入条件对取值范围进行了规定,则可划分一个有效等价类和两个无效等价类<br>3,如果输入条件是一个布尔量,则可以确定一个有效等价类和一个无效等价类<br>4,若已划分的某等价类中的各元素在程序中的处理方式不同,则应将此等价类进一步划分成更小的等价类<br>5,若规定输入数据必须遵循的规则,则可以确立一个有效等价类(符合规则)和若干个无效等价类(从不同角度违反规则)<br>6,若输入条件是集合,且程序会对每个值进行不同的处理,则应为每个输入值确定一个有效等价类,其他数据作为一个无效等价类</p><p>设计等价类表<br>序号,功能项(两位整数相加),有效等价类,编号,无效等价类,编号</p><p>设计测试用例<br>为等价类表中的每一个等价类分配一个唯一的编号<br>设计一个测试用例,使它能够尽量覆盖的有效等价类.重复该操作,从而使所有有效等价类均被覆盖<br>设计一个测试用例,使它能够覆盖一个无效等价类,重复该操作,从而使所有无效等价类均被无效覆盖</p><p>设计测试用例:(与等价类表相结合)<br>编号.输入数值,所属等价类,预期输出</p><p>①划分等价类<br>②设计等价类表<br>③编写等价类测试用例</p><p>边界法:<br>应当选取证号等于,刚刚大于或刚刚小于边界的值作为测试数据<br>重点测试最后一个肯定合法的数据和刚刚超过边界的非法数据<br>通常和等价类划分一起使用,产生一套完整的测试用例</p><p>测试用例:<br>编号,输入数值,被测边界,预期输出</p><p>小结:<br>1,如果输入条件对取值范围进行了界定,则应以边界内部以及恰巧超出边界外的值来作为测试用例<br>2,如果对取值的个数进行了界定,则应当分别以最大个数,最小个数,比最大个数大1或小1,比最小个数大1或小1作为测试用例<br>3,对于输入条件,同样可以应用1,2条提到的两条原则来进行测试用例设计.<br>4,若在需求说明书中提到的输入是一个有序的集合,就应该注意选取该有序集合中的第一个和最后一个元素作为测试数据<br>5,需要考虑软件内部用户看不到的隐含边界值情况,</p><p>①刚刚小于,刚刚等于,刚刚大于的数据作为边界<br>②经常与等价类结合使用</p><p>因果图:<br>布尔逻辑运算符:(先或后非)<br>恒等运算符<br>与<br>或<br>非<br>与非<br>或非</p><p>约束关系:<br>在因果图中,出了结果对原因的依赖之外,各个输入状态之间还可能存在某些依赖关系,成为约束.<br>其中,<br>对原因约束:4种<br>对结果约束:1种<br>E约束:即强制约束,如过结果a为真,则b结果一定为假,如果结果a为假,则结果b状态不定<br>I约束:<br>O约束<br>R约束<br>M约束</p><p>因果图法应用<br>设计测试用例步骤:<br>1,分析被测应用,确定原因(输入)和结果(输出)<br>2,确定因果逻辑关系<br>3,把因果图转换为判定表<br>4,根据约束条件简化判定表,并给出结果<br>5,设计测试用例</p><p>因果图 &#x3D;&gt; 判定表 &#x3D;&gt; 测试用例</p><p>因果图优点:<br>考虑了多个输入之间的相互组合,相互制约关系.<br>提供了一种针对输入组合条件的系统的测试用例设计方法<br>缺点:耗时,效率低</p><p>简化因果图法:<br>1,分析确定原因(输入)和结果(输出)<br>2,简化判定表,并给出结果<br>3,设计测试用例</p><p>正交表,是一种特别的表格,是正交实验法设计用例的基本工具,<br>L行数(水平数 因素数)<br>#<br>L:正交表的代号<br>行数:正交表的行的个数,及实验的次数,<br>因素数,正交表中列的个数,即我们要测试的功能点<br>水平数:单个因素能够取得的值的最大个数</p><p>特点:<br>整齐可比性:在同一张正交表中,每个因素的每个水平出现的次数是完全相同的<br>保证了在各个水平中最大程度地排除了其他因素水平的干扰<br>均衡分散性:在同一张正交表中,任意两列(两个因素)的水平搭配(横向形成的数字对)出现的次数是完全相同的.<br>保证了实验条件均衡地分散在因素水平的完全组合之中</p><p>L4(23):3个框,2个结果.</p><p>1,因素数:输入值个数3<br>2,确定因素的水平数:填或不填2<br>3,选择一个合适的正交表<br>4,把输入的值映射到表中<br>5,把每一行的各个因素水平的组合作为一个测试用例<br>6,加上认为可疑且没有在表中出现的组合</p><p>使用正交试验法设计测试用例的步骤<br>1,判断有哪些因素(输入)<br>2,判断每个因素有哪几个水平(输入的可取值)<br>3,选择一个合适的正交表<br>4,把输入的值映射到表中<br>5,把每一行的各因素水平的组合作为一个测试用例<br>6,加上你认为可疑且没有在表中出现的组合</p><p>正交实验法:</p><p>场景法的基本设计步骤<br>*根据说明,描述出程序的基本流及各项备选流<br>*根据基本流和各项备选流生成不同的场景<br>*对每一个场景生成相应的测试用例<br>*对生成的所有测试用例重新复审,去掉多余的测试用例,测试用例确定后,对每一个测试用例确定测试数据值</p><p>各种场景:<br>基本流:正确流程<br>备选流:各种错误</p><h1 id="二"><a href="#二" class="headerlink" title="二,"></a>二,</h1><p>软测目的:用最少的人力,物力,财力找到软件中的问题并修复,降低商业风险</p><p>测试用例,id,标题,项目,级别,条件,输入步骤,结构</p><p>**等价类划分法:在所有测试的数据中,具有某种共同特征的数据子集</p><p>划分方法(根据需求):</p><p>有效等价类:满足需求,</p><p>无效等价类:不满足需求</p><p>案例:计算-99到99之间整数之和</p><p>等价类划分规则:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps1.jpg" alt="img"> </p><p>**边界值:</p><p>eg:输入两个两位数之间整数的和</p><p>上点:边界点</p><p>离点:边界点左右两边的点</p><p>内点:边界点内部的点,(一般在中间)</p><p>***正交法(比较少用):</p><p>正交表标记:</p><p>Ln(mk)</p><p>n表示行数:测试用例条数</p><p>k是表的列数:输入个数</p><p>n是列取得个数:</p><p>eg:L9(34)</p><p>有4个列,每个列有三个取值.9为列的组合个数,叫4因素3水平</p><p>测试核心:测试策略,测试环境,测试工具</p><p>测试报告:</p><p>测试经过与结果</p><p>风险评估</p><p>缺陷报告汇总与总结</p><p>测试工作总结和改进建议</p><p>测试用例总结:</p><p>1)如果测试一个功能中有输入功能,可以使用等价类划分法</p><p>2)如果测试一个功能需求中有大小,长度,边界的限制时,可以使用边界值法</p><p>3)如果测试一个产品,有多个输入,多个输出,而且输入与输入之间有相互结合组合关系,输入和输出之间有相互制约和依赖关系可以使用因果图和判定表法</p><p>4)对于参数配置类的软件,需要考虑参数之间相互组合的情况,用最少得测试用例获得最大的测试覆盖率,可以使用正交实验法</p><p>5)对于多个功能之间的组合逻辑,可以使用场景法</p><p>6)采取错误推断法再追加测试用例,依靠测试工程师的经验和智慧</p><p>xmind&#x2F;excel进行测试用例的编写</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps2.jpg" alt="img"> </p><p>excel测试用例:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps3.jpg" alt="img"> </p><p>简单案例:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps4.jpg" alt="img"> </p><p>禅道测试用例的创建:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps5.jpg" alt="img"> </p><p>文档管理:</p><p>缺陷的要素:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps6.jpg" alt="img"> </p><p>测试用例和缺陷模板：</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps7.jpg" alt="img"> </p><p>测试用例：</p><p>用例标题:</p><p>什么人在什么情况下做什么事有什么结果</p><p>执行步骤:1,2,3</p><p>测试环境:服务器+框架+数据库</p><p>手工测试:</p><p>web类:主要是前端功能和后端功能模块的组织架构图</p><p>注意点:</p><p>重要的功能模块</p><p>合理的层次结构</p><p>应用类:</p><p>项目作用(手机app):</p><p>项目用户和角色:</p><p>app页面tab功能模块</p><p>显性需求:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps8.jpg" alt="img"> </p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps9.jpg" alt="img"> </p><p>隐性需求:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps10.jpg" alt="img"> </p><p>测试用例：</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps11.jpg" alt="img"> </p><p>兼容性:</p><p>1,手机型号:andriod:三星,小米,oppo</p><p>2.系统版本</p><p>安卓:</p><p>4,4,5,1,6,0,7,0(4,4以上的版本)</p><p>ios:</p><p>9.x,10.x,11.x,12.x</p><p>3,屏幕尺寸,分辨率</p><p>分辨率:1080X1920,720X1280</p><p>尺寸:</p><p>5.5,4.7</p><p>4,网络</p><p>2G,3G,4G,WIFI</p><p>5,应用兼容</p><p>硬件:home键,电源键,音量键</p><p>外部硬件:耳机,蓝牙等</p><p>软件:操作系统软件兼容</p><p>LBS定位,发朋友圈定位功能</p><p>与其他app:后台因为播放</p><p>安装测试:</p><p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps12.jpg" alt="img"> </p><p>postman断言:是否包含字符串,状态码,json或JavaScript数据,在test中编写</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h1 id=&quot;一&quot;&gt;&lt;a href=&quot;#一&quot; class=&quot;headerlink&quot; title=&quot;一,&quot;&gt;&lt;/a&gt;一,&lt;/h1&gt;&lt;p&gt;测试用例:指为实施测试而向被测试系统提供的输入数据,操作或各种环境设置以及期望结果的一个特定的集合.&lt;/p&gt;
-&lt;p&gt;包含内容:ID,功能模块,优</summary>
-      
+&lt;p&gt;包含内容:ID,功能模块,优先级,用例标题,预置条件,测试数据,执行步骤,预测结果,实际结果&lt;/p&gt;
+&lt;p&gt;等价类划分:两位数加法程序&lt;br&gt;输入两位整数,相加后,结果正确显示.要求:&lt;br&gt;输入的整数值在-99到99之间,包含(-99和99)&lt;br&gt;非法输入应被拒,并显示错误信息&lt;br&gt;等价类划分:&lt;br&gt;是一种最为典型的黑盒测试方法&lt;br&gt;要对需求说明书中的各项需求,尤其是功能需求进行细致分析&lt;br&gt;把程序的输入划分成若干个部分,从每个部分中选少数代表性数据作为测试用例&lt;/p&gt;
+&lt;p&gt;划分等价类划分典型参考:&lt;br&gt;1,若某个输入条件说明了一个必须成立的情况,则可划分一个有效等价类和一个无效等价类&lt;br&gt;2,若某个输入条件对取值范围进行了规定,则可划分一个有效等价类和两个无效等价类&lt;br&gt;3,如果输入条件是一个布尔量,则可以确定一个有效等价类和一个无效等价类&lt;br&gt;4,若已划分的某等价类中的各元素在程序中的处理方式不同,则应将此等价类进一步划分成更小的等价类&lt;br&gt;5,若规定输入数据必须遵循的规则,则可以确立一个有效等价类(符合规则)和若干个无效等价类(从不同角度违反规则)&lt;br&gt;6,若输入条件是集合,且程序会对每个值进行不同的处理,则应为每个输入值确定一个有效等价类,其他数据作为一个无效等价类&lt;/p&gt;
+&lt;p&gt;设计等价类表&lt;br&gt;序号,功能项(两位整数相加),有效等价类,编号,无效等价类,编号&lt;/p&gt;
+&lt;p&gt;设计测试用例&lt;br&gt;为等价类表中的每一个等价类分配一个唯一的编号&lt;br&gt;设计一个测试用例,使它能够尽量覆盖的有效等价类.重复该操作,从而使所有有效等价类均被覆盖&lt;br&gt;设计一个测试用例,使它能够覆盖一个无效等价类,重复该操作,从而使所有无效等价类均被无效覆盖&lt;/p&gt;
+&lt;p&gt;设计测试用例:(与等价类表相结合)&lt;br&gt;编号.输入数值,所属等价类,预期输出&lt;/p&gt;
+&lt;p&gt;①划分等价类&lt;br&gt;②设计等价类表&lt;br&gt;③编写等价类测试用例&lt;/p&gt;
+&lt;p&gt;边界法:&lt;br&gt;应当选取证号等于,刚刚大于或刚刚小于边界的值作为测试数据&lt;br&gt;重点测试最后一个肯定合法的数据和刚刚超过边界的非法数据&lt;br&gt;通常和等价类划分一起使用,产生一套完整的测试用例&lt;/p&gt;</summary>
     
     
     
@@ -236,12 +235,16 @@
     <content type="html"><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p><p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p><p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p><p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p><p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p><p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p><p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p><p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p><p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p><p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p><p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p><p>集成测试和系统测试偏多</p><p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p><p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p><p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;概念:&lt;br&gt;为了发现错误而运行程序的过程&lt;/p&gt;
 &lt;p&gt;软件测试工程师的基本素质:&lt;br&gt;正确高效的沟通能力&lt;br&gt;超强责任心&lt;br&gt;要坚持原则&lt;br&gt;有较全面的技术知识&lt;/p&gt;
-&lt;p&gt;必备技能:&lt;br&gt;测试专业能力&lt;br&gt;软件编程技能&lt;br&gt;网络,操作系统,数据库,中间</summary>
-      
+&lt;p&gt;必备技能:&lt;br&gt;测试专业能力&lt;br&gt;软件编程技能&lt;br&gt;网络,操作系统,数据库,中间件等知识&lt;/p&gt;
+&lt;p&gt;缺陷:&lt;br&gt;在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.&lt;/p&gt;
+&lt;p&gt;产生原因:&lt;br&gt;需求不明确,本身存在问题&lt;br&gt;无法收集到用户的所有需求&lt;br&gt;在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递&lt;br&gt;用户需求随工作或使用环境的变化以及时间的推移也会随之变化&lt;br&gt;软件技术的发展落后于不断复杂的软件需求&lt;/p&gt;
+&lt;p&gt;无效缺陷:不被开发人员修改的缺陷&lt;br&gt;出现原因:&lt;br&gt;1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了&lt;br&gt;2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷&lt;br&gt;3,缺陷重复,同一个缺陷被两个测试工程师提交&lt;/p&gt;
+&lt;p&gt;合法的无效缺陷:&lt;br&gt;技术上无法修改&lt;br&gt;修改成本太大,不影响用户使用&lt;/p&gt;
+&lt;p&gt;重现缺陷的方法&lt;br&gt;借助于别的工具,如debug或者dump工具去分析,&lt;br&gt;检查软件测试环境是否有异于开发环境,&lt;br&gt;检查网络配置是否与客户环境一致&lt;br&gt;检查被测对象的版本信息,确认测试版本的正确性&lt;br&gt;状态缺陷是否在特定的软件状态中暴露&lt;/p&gt;
+&lt;p&gt;缺陷报告:&lt;br&gt;实例1:&lt;br&gt;简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。&lt;br&gt;详细描述：&lt;br&gt;1.软件测试环境为Windows 2003&lt;br&gt;2.启动Boffice软件，然后创建新文档&lt;br&gt;3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作&lt;br&gt;4.系统崩溃&lt;br&gt;相关附件：&lt;br&gt;–附件1：系统崩溃的画面&lt;br&gt;缺陷原因分析：&lt;br&gt;–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作&lt;/p&gt;
+&lt;p&gt;按测试阶段划分:&lt;br&gt;单元测试 &amp;#x3D;&amp;gt; 集成测试 &amp;#x3D;&amp;gt; 系统测试&lt;br&gt;&amp;#x3D;&amp;gt; Alpha测试 &amp;#x3D;&amp;gt; Beta测试 &amp;#x3D;&amp;gt; 验收测试&lt;/p&gt;</summary>
     
     
     
@@ -262,14 +265,13 @@
     <content type="html"><![CDATA[<p>1,WIndow激活命令</p><p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p><p>slmgr &#x2F;skms kms.03k.org</p><p>slmgr &#x2F;ato </p><p>2,关机命令</p><p>slidetoshutdown</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;1,WIndow激活命令&lt;/p&gt;
 &lt;p&gt;slmgr &amp;#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX&lt;/p&gt;
 &lt;p&gt;slmgr &amp;#x2F;skms kms.03k.org&lt;/p&gt;
 &lt;p&gt;slmgr &amp;#x2F;ato &lt;/p&gt;
-&lt;p&gt;2,关机</summary>
-      
+&lt;p&gt;2,关机命令&lt;/p&gt;
+&lt;p&gt;slidetoshutdown&lt;/p&gt;
+</summary>
     
     
     
@@ -290,11 +292,16 @@
     <content type="html"><![CDATA[<p>Hbuilder:  创建Web新项目 文件 —&gt; 新建 — Web项目(项目名称,位置,默认项目) —&gt; 新建HTML</p><p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p><p>Sublime:</p><p>1,Sublime背景颜色设置:<br>“preferences”——“color Scheme”——“color Scheme default”——“Mac Classic”:将背景色设置为白色</p><p>“preferences”——“color Scheme”——“user”——“sublimelinter”——“Monokai”<br>:将背景色设置为默认颜色</p><p>2,将package包放到:C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Installed Packages<br>此目录下,然后重启软件</p><p>3,汉化教程<br>启动后步骤:<br>Preferences —&gt; package control —&gt; install package —&gt;<br>“输入localization”</p><p>关闭自动更新:</p><p>“update_check”:false,</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;Hbuilder:  创建Web新项目 文件 —&amp;gt; 新建 — Web项目(项目名称,位置,默认项目) —&amp;gt; 新建HTML&lt;/p&gt;
-&lt;p&gt;Java环境变量配置:&lt;br&gt;1,&lt;br&gt;JAVA_HOME      F:\Java\jdk-10.0.2&lt;br&gt;2,&lt;br</summary>
-      
+&lt;p&gt;Java环境变量配置:&lt;br&gt;1,&lt;br&gt;JAVA_HOME      F:\Java\jdk-10.0.2&lt;br&gt;2,&lt;br&gt;CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;&lt;br&gt;3,&lt;br&gt;%JAVA_HOME%\bin&lt;br&gt;%JAVA_HOME%\jre\bin&lt;/p&gt;
+&lt;p&gt;Sublime:&lt;/p&gt;
+&lt;p&gt;1,Sublime背景颜色设置:&lt;br&gt;“preferences”——“color Scheme”——“color Scheme default”——“Mac Classic”:将背景色设置为白色&lt;/p&gt;
+&lt;p&gt;“preferences”——“color Scheme”——“user”——“sublimelinter”——“Monokai”&lt;br&gt;:将背景色设置为默认颜色&lt;/p&gt;
+&lt;p&gt;2,将package包放到:C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Installed Packages&lt;br&gt;此目录下,然后重启软件&lt;/p&gt;
+&lt;p&gt;3,汉化教程&lt;br&gt;启动后步骤:&lt;br&gt;Preferences —&amp;gt; package control —&amp;gt; install package —&amp;gt;&lt;br&gt;“输入localization”&lt;/p&gt;
+&lt;p&gt;关闭自动更新:&lt;/p&gt;
+&lt;p&gt;“update_check”:false,&lt;/p&gt;
+</summary>
     
     
     
@@ -315,12 +322,17 @@
     <content type="html"><![CDATA[<p>测试的基础分类与每个类型的测试目标 1.1,基于项目流程的测试分类 软件开发的基本流程</p><p>需求分析—&gt;设计—&gt;编码—&gt;单元测试—&gt;集成测试—&gt;系统测试—&gt;验收测试</p><p>项目流程测试分类: 单元(模块)测试:对程序中的单个子程序或者具有独立工程的代码进行测试的过程 是指软件中最小可测试单元进行检查和验证 在程序测试中单元测试可能是针对一个函数或者类 在图形化界面测试中单元测试针对一个最小功能单元,如验证码显示,系统登录 集成测试:在单元测试基础上,将单元模块组装成系统或子系统再进行测试,检查模块间的接口是否正确 系统测试:针对整个产品系统进行测试,验证系统是否满足了需求规格的定义,以及软件系统的正确性和性能等是否按摩足其规约所指定的要求 验收测试:部署软件前的最后一个测试操作,验收测试的目的确保软件准备就绪,向购买者展示该软件已经满足用户的需求</p><p>1.2,基于测试方式的测试分类 黑盒测试:通过对软件的输入数据去查阅输出结果是否正确,针对程序外部结构,不考虑内部逻辑结构,主要针对软件界面和功能进行测试,一般通过操作软件来完成测试 白盒测试:分析产品的交付代码,进而编写测试程序来测试产品是否符合功能以及性能需求,对产品代码进行分析,并编写测试用例,可以测试目标的执行效率,执行时间,合理性,结果精确,效率低下 灰盒测试:介于黑盒和白盒之间,部分核心功能以及性能测试通过白盒测试,其余为黑盒</p><p>1.3,基于测试目的的测试分类</p><p>功能测试:检测实际的功能是否满足用户的需求,</p><p>性能测试:通过自动化测试工具模拟正常,峰值以及异常负载条件来对    系统的各项性能指标进行测试</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">时间性能测试:软件的响应时间是否符合测试需求(<span class="attribute">eg</span>:登录时间)</span><br><span class="line"></span><br><span class="line">硬件性能测试:指软件运行时所消耗的系统资源,比如硬件资源,<span class="selector-tag">CPU</span>,内存,网络宽带消耗等</span><br></pre></td></tr></table></figure><p>两者的优先级:系统测试首先进行功能测试,满足功能需求后进行性能测试</p><p>1.4,自动化测试与手动测试 手动测试:人为去执行测试用例,通过鼠标键盘等外部设备来操作系统的UI界面,查看返回结果是否符合预期的结果</p><p>自动化测试:通过测试程序模拟用户对软件的操作行为 自动化测试过程:根据测试用例中描述的规程一步步执行测试,并比对实际结果 自动化功能测试:通过编码的方式用一段程序来测试一个软件的功能 自动化性能测试:模拟大量用户向系统发送请求,用来验证系统的处理能力,    一般用自动化测试工具完成(例如loadrunner),也可以通过自定义程序完成</p><p>1.5,其他测试类型 冒烟测试:测试前验证基本功能是否可以实现 回归测试:修改旧代码后,重新进行测试已确定修改后是否产生或引起其他的错误 随机测试:指测试中输入数据是随机的,目的模拟用户的真实操作,发现一些边缘性问题 探索性测试:碰到测试问题对测试策略进行探索性尝试 安全测试:对产品进行检验以验证产品是否符合安全需求定义和产品质量标准的过程</p><p>使用场景: 2.1,自动化测试的优缺点 优点: 1,对程序的回归测试更方便 2,可以运行更多更繁琐的测试 3,可以执行一些手工测试困难或者不可能进行的测试.比如,对于大量用户的测试 4,测试具有一致性和可重复性 5,测试的复用性 6,增加软件信任度 缺点: 不能取代手工测试,有很多需要人脑判断结果的测试用例无法用自动工具实现 手工比自动测试发现的缺陷更多 测试结果对测试人员开发的测试程序质量的依赖性极大 系统频繁升级会导致测试用例频繁升级</p><p>概括:自动化测试无法取代手工测试,因此两者通常联合使用 并非所有系统都需要使用自动化测试手段,盲目使用会增加软件测试的风险</p><p>2.2,自动化测试的基本原则 1,测试任务明确 2,系统融合度高 3,软件系统界面稳定 4,大量的重复测试任务 5,维护周期长 6,开发比较规范 7,具备自动化测试管理平台</p><p>3.1,常用的自动化测试工具 自动化测试工具分类 ①UI自动化测试工具:通过调用测试程序模拟用户操作BS或CS软件来实现测试的工具,按照编写测试程序的方式又分为: 录制以及回放工具:生成本次系统操作对应的程序代码段 自动化测试框架:第三方框架,封装了模拟用户操作软件UI界面的系列API接口</p><p>一般建议手动编写测试程序分析系统代码结构和UI自动化测试工具结合使用</p><p>常用的UI自动化测试工具: QTP:企业级自动化测试工具,提供强大易用的录制回放功能,支持B&#x2F;S与C&#x2F;S两种框架的软件测试,是目前主流的自动化测试工具 Robot Framework:python编写的功能自动化测试框架,具备良好的可扩展性,支援关键字驱动,可以同时测试多种类型的客户端或者接口,可以进行分布式测试执行 Watir:基于Web模式的自动化功能测试,是一个Ruby语言库,使用ruby语言进行脚本开发</p><p>*selenium:Web应用程序测试的工具,支持多平台,多浏览器,多语言去实现自动化测试,系列产品中包含自动化测试框架,录制工具,分布测试工具等</p><p>②性能测试:通过自动化测试的工具模拟正常,峰值以及负载条件来对系统的各项性能指标进行测试 负载测试:监控系统各项性能指标的变化情况 压力测试:获取系统能提供最大服务级别的测试</p><p>性能测试工具: 可通过测试工具实现(eg:loadrunner等) *可通过多线程模拟多用户访问来实现 通过脚本或工具可以监控服务器端资源的使用情况 ③接口测试工具</p><p>3.2,selenium工具: selenium IDE功能: 记录用户的操作步骤 声明预期显示结果 声明程序注释 通过配置可编译成Python,Java等语言的测试脚本,测试脚本中调用selenium完成web访问操作</p><p>3.3,selenium的理解 通过配置可编译成Python脚本,通过在脚本中调用selenium进行web访问,</p><p>3.4,selenium有几种等待方式 两种 同步等待请求:time.sleep() 异步等待请求:driver.implicity_wait()</p><p>4.2浏览器驱动程序 webdriver: chrome</p><p>unittest框架:python的第三方单元测试框架也可以将单元测试组装为套件,可以依次执行多个单元测试案例 主要功能: 1,提供规范的测试函数声明 2,提供组装测试套件功能 3,提供了多个用于判断异常的断言 4,提供了装饰器用于屏蔽非目标测试函数</p><p>单元测试用例:软件测试中最基本的组成单元,在unittest测试框架中被视为吃啥单元的运行实体,一个测试用例应包含一个或多个测试单元 测试用例:在unittest中测试用例对应一个实体类,包含多个测试函数(测试单元) 测试单元:对应一个测试函数,对应一个独立的单元测试用例,例如登录模块是测试用例,登录与退出登录分别为测试单元</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;测试的基础分类与每个类型的测试目标 1.1,基于项目流程的测试分类 软件开发的基本流程&lt;/p&gt;
 &lt;p&gt;需求分析—&amp;gt;设计—&amp;gt;编码—&amp;gt;单元测试—&amp;gt;集成测试—&amp;gt;系统测试—&amp;gt;验收测试&lt;/p&gt;
-&lt;p&gt;项目流程测试分类: 单元(模块)测试:对程序中的</summary>
-      
+&lt;p&gt;项目流程测试分类: 单元(模块)测试:对程序中的单个子程序或者具有独立工程的代码进行测试的过程 是指软件中最小可测试单元进行检查和验证 在程序测试中单元测试可能是针对一个函数或者类 在图形化界面测试中单元测试针对一个最小功能单元,如验证码显示,系统登录 集成测试:在单元测试基础上,将单元模块组装成系统或子系统再进行测试,检查模块间的接口是否正确 系统测试:针对整个产品系统进行测试,验证系统是否满足了需求规格的定义,以及软件系统的正确性和性能等是否按摩足其规约所指定的要求 验收测试:部署软件前的最后一个测试操作,验收测试的目的确保软件准备就绪,向购买者展示该软件已经满足用户的需求&lt;/p&gt;
+&lt;p&gt;1.2,基于测试方式的测试分类 黑盒测试:通过对软件的输入数据去查阅输出结果是否正确,针对程序外部结构,不考虑内部逻辑结构,主要针对软件界面和功能进行测试,一般通过操作软件来完成测试 白盒测试:分析产品的交付代码,进而编写测试程序来测试产品是否符合功能以及性能需求,对产品代码进行分析,并编写测试用例,可以测试目标的执行效率,执行时间,合理性,结果精确,效率低下 灰盒测试:介于黑盒和白盒之间,部分核心功能以及性能测试通过白盒测试,其余为黑盒&lt;/p&gt;
+&lt;p&gt;1.3,基于测试目的的测试分类&lt;/p&gt;
+&lt;p&gt;功能测试:检测实际的功能是否满足用户的需求,&lt;/p&gt;
+&lt;p&gt;性能测试:通过自动化测试工具模拟正常,峰值以及异常负载条件来对    系统的各项性能指标进行测试&lt;/p&gt;
+&lt;figure class=&quot;highlight less&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;时间性能测试:软件的响应时间是否符合测试需求(&lt;span class=&quot;attribute&quot;&gt;eg&lt;/span&gt;:登录时间)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	硬件性能测试:指软件运行时所消耗的系统资源,比如硬件资源,&lt;span class=&quot;selector-tag&quot;&gt;CPU&lt;/span&gt;,内存,网络宽带消耗等&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;两者的优先级:系统测试首先进行功能测试,满足功能需求后进行性能测试&lt;/p&gt;
+&lt;p&gt;1.4,自动化测试与手动测试 手动测试:人为去执行测试用例,通过鼠标键盘等外部设备来操作系统的UI界面,查看返回结果是否符合预期的结果&lt;/p&gt;</summary>
     
     
     
@@ -341,11 +353,16 @@
     <content type="html"><![CDATA[<p> 学信网网站:<a href="http://www.chsi.com.cn/">http://www.chsi.com.cn/</a></p><p> github:<a href="https://github.com/fies09">https://github.com/fies09</a></p><p> 打印机共享:<a href="https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html">https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html</a></p><p> 教务系统:<a href="http://jwc.spvec.com.cn/default2.aspx">http://jwc.spvec.com.cn/default2.aspx</a></p><p> 西安交大官网:<a href="https://www.xjtudlc.com/">https://www.xjtudlc.com/</a></p><p> winscp使用教程:<a href="https://blog.csdn.net/qccz123456/article/details/80345999">https://blog.csdn.net/qccz123456/article/details/80345999</a></p><p> Pycharm在linux中的中文输入问题解决:<a href="https://blog.csdn.net/u013709332/article/details/81271923">https://blog.csdn.net/u013709332/article/details/81271923</a></p><p> SSH KEY生成方式:<a href="https://blog.csdn.net/Coco_wjy/article/details/80003083">https://blog.csdn.net/Coco_wjy/article/details/80003083</a></p><p> Git上传项目:</p><p><a href="https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c">https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c</a></p><p> git命令行上传项目到github&#x2F;gitblit:<a href="https://my.oschina.net/u/3354389/blog/2995483">https://my.oschina.net/u/3354389/blog/2995483</a></p><p> gtiblit使用教程:<a href="https://blog.csdn.net/qq_32599479/article/details/89192287">https://blog.csdn.net/qq_32599479/article/details/89192287</a></p><p>如何通过TortoiseGit上传项目:</p><p><a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight</a></p><p>git:相关命令详解:<a href="https://www.cnblogs.com/lifexy/p/8353040.html">https://www.cnblogs.com/lifexy/p/8353040.html</a></p><p>正则表达式:<a href="https://deerchao.cn/tutorials/regex/regex.htm">https://deerchao.cn/tutorials/regex/regex.htm</a></p><p>视频解析:<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&fenlei=256&rsv_pq=ade816940001292d&rsv_t=84fcq+WMOTaunj8ShyuZCCffyB/6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=21&rsv_sug1=20&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&inputT=9704&rsv_sug4=10648&rsv_sug=1">https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp&#x3D;1&amp;rsv_idx&#x3D;1&amp;tn&#x3D;baidu&amp;wd&#x3D;%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&amp;fenlei&#x3D;256&amp;rsv_pq&#x3D;ade816940001292d&amp;rsv_t&#x3D;84fcq%2BWMOTaunj8ShyuZCCffyB%2F6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&amp;rqlang&#x3D;cn&amp;rsv_enter&#x3D;1&amp;rsv_dl&#x3D;tb&amp;rsv_sug3&#x3D;21&amp;rsv_sug1&#x3D;20&amp;rsv_sug7&#x3D;101&amp;rsv_sug2&#x3D;0&amp;rsv_btype&#x3D;i&amp;inputT&#x3D;9704&amp;rsv_sug4&#x3D;10648&amp;rsv_sug&#x3D;1</a></p><p>linux操作系统安装:<a href="https://blog.csdn.net/weixin_44733021/article/details/107159601">https://blog.csdn.net/weixin_44733021/article/details/107159601</a></p><p>centos下mysql安装:<a href="https://blog.csdn.net/weixin_42140801/article/details/107859925">https://blog.csdn.net/weixin_42140801/article/details/107859925</a></p><p>centos下django项目部署:</p><p><a href="https://www.pianshen.com/article/1452452529/">https://www.pianshen.com/article/1452452529/</a></p><p>centos安装redis:</p><p><a href="https://www.cnblogs.com/heqiuyong/p/10463334.html">https://www.cnblogs.com/heqiuyong/p/10463334.html</a></p><p>启动redis报错::Could not create server tcp listening socket *:6379…:</p><p><a href="https://blog.csdn.net/weixin_45393094/article/details/104446648">https://blog.csdn.net/weixin_45393094/article/details/104446648</a></p><p>软件测试面试题：<a href="https://blog.51cto.com/11392572/2105056">https://blog.51cto.com/11392572/2105056</a></p><p>python面试题:<a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">https://blog.csdn.net/weixin_40318474/article/details/103744809</a></p><p>各类图像数据集下载地址:<a href="https://bendfunction.gitbook.io/dataset-download/">https://bendfunction.gitbook.io/dataset-download/</a></p><p><a href="https://blog.csdn.net/PY0312/article/details/105903320">gitbook使用教程</a></p><p><a href="https://developer.aliyun.com/article/645159?spm=5176.21213303.J_6704733920.7.490a53c9Ybihxx&scm=20140722.S_community@@%E6%96%87%E7%AB%A0@@645159._.ID_community@@%E6%96%87%E7%AB%A0@@645159-RL_ubuntu%E5%AE%89%E8%A3%85wordpress-LOC_main-OR_ser-V_2-P0_0">wordpress安装教程</a></p><p><a href="https://blog.csdn.net/qq_44324181/article/details/117817559">wordpress2</a></p><p><a href="https://blog.csdn.net/Runaway_pilot/article/details/122855852">乌班图django部署教程</a></p><p><a href="https://www.cnblogs.com/yinfei/p/11427259.html">navicat mysql破解链接</a></p><p><a href="https://zhuanlan.zhihu.com/p/272735470">win10安装centos</a></p><p><a href="https://blog.csdn.net/yaojiawan/article/details/89944319">win10安装乌班图</a></p><p><a href="https://blog.csdn.net/weixin_45764765/article/details/113576331">win10下mysql安装使用教程</a></p><p><a href="https://wangchujiang.com/linux-command/">linux命令搜索使用教程</a></p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt; 学信网网站:&lt;a href=&quot;http://www.chsi.com.cn/&quot;&gt;http://www.chsi.com.cn/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; github:&lt;a href=&quot;https://github.com/fies09&quot;&gt;https://github.co</summary>
-      
+&lt;p&gt; github:&lt;a href=&quot;https://github.com/fies09&quot;&gt;https://github.com/fies09&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 打印机共享:&lt;a href=&quot;https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html&quot;&gt;https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 教务系统:&lt;a href=&quot;http://jwc.spvec.com.cn/default2.aspx&quot;&gt;http://jwc.spvec.com.cn/default2.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 西安交大官网:&lt;a href=&quot;https://www.xjtudlc.com/&quot;&gt;https://www.xjtudlc.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; winscp使用教程:&lt;a href=&quot;https://blog.csdn.net/qccz123456/article/details/80345999&quot;&gt;https://blog.csdn.net/qccz123456/article/details/80345999&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Pycharm在linux中的中文输入问题解决:&lt;a href=&quot;https://blog.csdn.net/u013709332/article/details/81271923&quot;&gt;https://blog.csdn.net/u013709332/article/details/81271923&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; SSH KEY生成方式:&lt;a href=&quot;https://blog.csdn.net/Coco_wjy/article/details/80003083&quot;&gt;https://blog.csdn.net/Coco_wjy/article/details/80003083&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Git上传项目:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c&quot;&gt;https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -366,16 +383,16 @@
     <content type="html"><![CDATA[<p>1,calc:计算器</p><p>2,regedit;注册表编辑器</p><p>3,ipconfig:ip地址</p><p>4,win+L:锁屏</p><p>5,win+E:打开电脑</p><p>6,pycharm中:ctrl+r:多个替换</p><p>7,双击alt:电脑管家火箭加速</p><p>8,alt + tab:软件界面切换        </p><p>9,tree &#x2F;f:显示目录结构    </p><p>10,win+x    a:管理员命令操作提示符</p><p>11,选中模块,alt+enter:安装模块</p><p>12.alt用鼠标选中,多条修改</p><p>13,函数()内,ctrl+p:提示 </p><p>14,win + r :mspaint:画图快捷键</p><p>15,slidetoshutdown :关机快捷键</p><p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p><p>17,win + R :powershell:打开管理员模式</p><p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p><p>19:定时关机:shutdown -s -t  秒数</p><p>20,ctrl+alt+del:进入任务管理器</p><p>21,打开服务:services.msc</p><p>22，远程连接：mstsc</p><p>23,删除多余服务(在根目录下):sc delete 服务器名称</p><p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p><p>时区下的已安装物理内存就是笔记本内存大小</p><p>25,安装服务(根目录下|管理员权限):</p><p>安装:    .\installService.cmd</p><p>卸载:    .\uninstallService.cmd</p><p>26,C盘清理旧文件:</p><p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p><p>27,   关机: slidetoshutdown</p><p>28,  win10激活:</p><p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p><p>slmgr &#x2F;skms kms.03k.org</p><p>slmgr &#x2F;ato </p><p>29,win10打开系统属性快捷键:  dxdiag</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;1,calc:计算器&lt;/p&gt;
 &lt;p&gt;2,regedit;注册表编辑器&lt;/p&gt;
 &lt;p&gt;3,ipconfig:ip地址&lt;/p&gt;
 &lt;p&gt;4,win+L:锁屏&lt;/p&gt;
 &lt;p&gt;5,win+E:打开电脑&lt;/p&gt;
 &lt;p&gt;6,pycharm中:ctrl+r:多个替换&lt;/p&gt;
-&lt;p&gt;7,双击</summary>
-      
+&lt;p&gt;7,双击alt:电脑管家火箭加速&lt;/p&gt;
+&lt;p&gt;8,alt + tab:软件界面切换        &lt;/p&gt;
+&lt;p&gt;9,tree &amp;#x2F;f:显示目录结构    &lt;/p&gt;
+&lt;p&gt;10,win+x    a:管理员命令操作提示符&lt;/p&gt;</summary>
     
     
     
@@ -398,13 +415,10 @@
     <content type="html"><![CDATA[<p>1,有道云笔记出现网络错误:</p><p>%USERPROFILE%\Local Settings\Application Data\youdao\YNote</p><p>:进入此目录删除YNote文件夹</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;1,有道云笔记出现网络错误:&lt;/p&gt;
 &lt;p&gt;%USERPROFILE%\Local Settings\Application Data\youdao\YNote&lt;/p&gt;
 &lt;p&gt;:进入此目录删除YNote文件夹&lt;/p&gt;
 </summary>
-      
     
     
     
@@ -425,10 +439,35 @@
     <content type="html"><![CDATA[<p>1,运行php<br>运行php文件: php.exe的目录下    php.exe -f “php文件路径和文件名.php”<br>运行php代码: php.exe的目录下     php.exe -r “echo ‘hello world’ ; $i &#x3D; 1; $i++;echo $i;”</p><p>2,原始代码<br><?php    #起始标记echo "hello world";for($i = 1; $i < 10;$i++){    echo "<br /> $i";}?>    #结束标记(如果在Html中,使用,如果是单独文件可以不使用)</p><p>在Apache24的bin目录下<br>安装Apache<br>httpd -k install<br>开启Apache<br>httpd -k start<br>配置文件错误检查<br>httpd -t</p><p>Apache安装(搭建公共Web服务):<br>修改ServerRoot:Apache安装根目录:eg:”F:\server\Apache24”<br>DocumentRoot:htdocs根目录:eg:”F:\server\Apache24\htdocs”<br>Directory:htdocs根目录:eg:”F:\server\Apache24\htdocs”<br>ServerName:域名:eg:localhost</p><p>注释:<br>#或&#x2F;&#x2F;表示单行注释<br>&#x2F;<em>….</em>&#x2F;表示多行注释</p><p>结束语句;</p><p>变量<br>变量以$符号开始</p><p>权限配置<br>在<br>F:\server\Apache24\conf\extra\httpd-vhosts.conf<br>中进行权限配置<br>&lt;VirtualHost *:80&gt;</p><pre><code>#配置虚拟主机.针对F:\server\WebDocumentRoot &quot;F:\server\Web&quot;ServerName www.myweb.com#权限配置&lt;Directory &quot;F:\server\Web&quot;&gt;    #允许所有人访问    Require all granted    #设置默认首页    DirectoryIndex index.php&lt;/Directory&gt;   </code></pre></VirtualHost><p>&lt;VirtualHost *:80&gt;</p><pre><code>DocumentRoot &quot;F:\server\Apache24\htdocs&quot;ServerName localhost#权限配置&lt;Directory &quot;F:\server\Apache24\htdocs&quot;&gt;    #允许所有人访问    Require all granted    #设置默认首页    DirectoryIndex index.php index.html&lt;/Directory&gt;   </code></pre></VirtualHost><p>ctrl + f:搜索<br>ctrl+f11:运行<br>ctrl + N:新建</p><p>修改文件:drivers —&gt; etc —&gt; hosts文件:添加路由地址</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;1,运行php&lt;br&gt;运行php文件: php.exe的目录下    php.exe -f “php文件路径和文件名.php”&lt;br&gt;运行php代码: php.exe的目录下     php.exe -r “echo ‘hello world’ ; $i &amp;#x3D; 1;</summary>
-      
+    <summary type="html">&lt;p&gt;1,运行php&lt;br&gt;运行php文件: php.exe的目录下    php.exe -f “php文件路径和文件名.php”&lt;br&gt;运行php代码: php.exe的目录下     php.exe -r “echo ‘hello world’ ; $i &amp;#x3D; 1; $i++;echo $i;”&lt;/p&gt;
+&lt;p&gt;2,原始代码&lt;br&gt;&lt;?php    #起始标记
+echo &quot;hello world&quot;;
+for($i = 1; $i &lt; 10;$i++){
+    echo &quot;&lt;br /&gt; $i&quot;;
+}
+?&gt;    #结束标记(如果在Html中,使用,如果是单独文件可以不使用)&lt;/p&gt;
+&lt;p&gt;在Apache24的bin目录下&lt;br&gt;安装Apache&lt;br&gt;httpd -k install&lt;br&gt;开启Apache&lt;br&gt;httpd -k start&lt;br&gt;配置文件错误检查&lt;br&gt;httpd -t&lt;/p&gt;
+&lt;p&gt;Apache安装(搭建公共Web服务):&lt;br&gt;修改ServerRoot:Apache安装根目录:eg:”F:\server\Apache24”&lt;br&gt;DocumentRoot:htdocs根目录:eg:”F:\server\Apache24\htdocs”&lt;br&gt;Directory:htdocs根目录:eg:”F:\server\Apache24\htdocs”&lt;br&gt;ServerName:域名:eg:localhost&lt;/p&gt;
+&lt;p&gt;注释:&lt;br&gt;#或&amp;#x2F;&amp;#x2F;表示单行注释&lt;br&gt;&amp;#x2F;&lt;em&gt;….&lt;/em&gt;&amp;#x2F;表示多行注释&lt;/p&gt;
+&lt;p&gt;结束语句;&lt;/p&gt;
+&lt;p&gt;变量&lt;br&gt;变量以$符号开始&lt;/p&gt;
+&lt;p&gt;权限配置&lt;br&gt;在&lt;br&gt;F:\server\Apache24\conf\extra\httpd-vhosts.conf&lt;br&gt;中进行权限配置&lt;br&gt;&amp;lt;VirtualHost *:80&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#配置虚拟主机.针对F:\server\Web
+DocumentRoot &amp;quot;F:\server\Web&amp;quot;
+ServerName www.myweb.com
+
+#权限配置
+&amp;lt;Directory &amp;quot;F:\server\Web&amp;quot;&amp;gt;
+    #允许所有人访问
+    Require all granted
+
+    #设置默认首页
+    DirectoryIndex index.php
+&amp;lt;/Directory&amp;gt;   
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&amp;lt;VirtualHost *:80&amp;gt;&lt;/p&gt;</summary>
     
     
     
@@ -449,10 +488,21 @@
     <content type="html"><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p><p>5,检测npm是否安装 npm -v</p><p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p><ol><li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li><li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li><li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li><li>可以直接在命令行里使用。 npm install 模块名 -g</li></ol><p>安装出错解决办法: npm config set proxy null</p><p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p><p>7,常用模块express npm install express</p><p>8,卸载常用命令 npm uninstall express</p><p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p><p>更新模块:npm update express</p><p>搜索模块:npm search express</p><p>创建模块 npm init</p><p>注册用户:npm adduser</p><p>发布模块:npm publish</p><p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p><p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p><p>然后可以用cnpm install 模块名 下载模块</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:&lt;a href=&quot;http://127.0.0.1:8888/&quot;&gt;http:</summary>
-      
+    <summary type="html">&lt;p&gt;1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:&lt;a href=&quot;http://127.0.0.1:8888/&quot;&gt;http://127.0.0.1:8888&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5,检测npm是否安装 npm -v&lt;/p&gt;
+&lt;p&gt;6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将安装包放在 .&amp;#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。&lt;/li&gt;
+&lt;li&gt;可以通过 require() 来引入本地安装的包 npm install 模块名 全局:&lt;/li&gt;
+&lt;li&gt;将安装包放在 &amp;#x2F;usr&amp;#x2F;local 下或者你 node 的安装目录。&lt;/li&gt;
+&lt;li&gt;可以直接在命令行里使用。 npm install 模块名 -g&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;安装出错解决办法: npm config set proxy null&lt;/p&gt;
+&lt;p&gt;查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名&lt;/p&gt;
+&lt;p&gt;7,常用模块express npm install express&lt;/p&gt;
+&lt;p&gt;8,卸载常用命令 npm uninstall express&lt;/p&gt;
+&lt;p&gt;卸载后，你可以到 &amp;#x2F;node_modules&amp;#x2F; 目录下查看包是否还存在，或者使用以下命令查看&lt;/p&gt;
+&lt;p&gt;更新模块:npm update express&lt;/p&gt;</summary>
     
     
     
@@ -473,11 +523,10 @@
     <content type="html"><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p><p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p><p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;1, oracle编码:&lt;br&gt;在系统变量中添加:&lt;br&gt;名称:NLS_LANG&lt;br&gt;值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK&lt;/p&gt;
-&lt;p&gt;2, mysql乱码:&lt;br&gt;#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_M</summary>
-      
+&lt;p&gt;2, mysql乱码:&lt;br&gt;#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor&lt;/p&gt;
+&lt;p&gt;然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”&lt;/p&gt;
+</summary>
     
     
     
@@ -498,10 +547,16 @@
     <content type="html"><![CDATA[<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p><p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p><p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p><p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p><p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p><p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p><p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p><p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p><p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p><p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;MongoDB数据库:(两种方式一般使用第二种方便快捷)&lt;br&gt;&lt;em&gt;&lt;strong&gt;管理员&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;一 ,使用流程:&lt;br&gt;1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”&lt;br&gt;2,访问(打开): &lt;a </summary>
-      
+    <summary type="html">&lt;p&gt;MongoDB数据库:(两种方式一般使用第二种方便快捷)&lt;br&gt;&lt;em&gt;&lt;strong&gt;管理员&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;一 ,使用流程:&lt;br&gt;1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”&lt;br&gt;2,访问(打开): &lt;a href=&quot;http://localhost:27017/&quot;&gt;http://localhost:27017/&lt;/a&gt;&lt;br&gt;3,在bin目录下输入mongo,进入数据库&lt;br&gt;3,进入:use admin (use进入,创建,切换)&lt;br&gt;3,db.shutdownServer() :关闭数据库(关闭)&lt;br&gt;3,访问(打开 ): &lt;a href=&quot;http://localhost:27017/&quot;&gt;http://localhost:27017/&lt;/a&gt;&lt;br&gt;{手动}&lt;/p&gt;
+&lt;p&gt;{自动}&lt;br&gt;也可直接打开:&lt;br&gt;二 ,升级为系统服务:&lt;br&gt;1, 解压zip到MongoDB64文件夹下 –&amp;gt; 创建data和log文件夹 –&amp;gt;在log文件夹下创建MongoDB.log文件–&amp;gt; 进入bin目录 –&amp;gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”&lt;br&gt;将服务手动启动:net start MongoDB&amp;#x2F;net stop MongoDB&lt;br&gt;2,在bin目录下输入mongo,进入数据库&lt;br&gt;3,use 数据库名 :切换&amp;#x2F;创建数据库&lt;br&gt;4,db:查看当前所在的数据库&lt;br&gt;5,show dbs:查看当前MongoDB数据库中的所有数据库&lt;br&gt;6,在数据库中创建一个集合(表)movie并插入一条记录&lt;br&gt;db.movie(表名).insert({name:”mymovie01”})(记录)&lt;br&gt;7,当数据库中没有数据库对象(数据)时,show dbs 不会显示&lt;br&gt;8,删除数据库:db.dropDatabase():删除当前所在的数据库&lt;br&gt;9,集合的创建(数据表的创建)(与上述区别,没插入数据)&lt;br&gt;db.createCollection(name)&lt;br&gt;10,show collections:显示所有集合&lt;br&gt;11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除&lt;br&gt;12,集合的删除操作db.集合名.drop()&lt;br&gt;13,数据类型:&lt;br&gt;String:字符串(utf8)&lt;br&gt;Integer:整数&lt;br&gt;Boolean:布尔型:(true&amp;#x2F;false)&lt;br&gt;Double:浮点型(小数)&lt;br&gt;Min&amp;#x2F;Max keys:最低和最高值比较&lt;br&gt;Arrays:多个值放到一个key中&lt;br&gt;Timestamp:时间戳&lt;br&gt;Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)&lt;br&gt;Null:空值&lt;br&gt;Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同&lt;br&gt;Date:日期&lt;br&gt;Object ID:文档(表,集合)ID&lt;br&gt;Binary data :二进制数据&lt;br&gt;Code:用于存储到文档中的js代码&lt;br&gt;Regular expression:正则表达式&lt;/p&gt;
+&lt;p&gt;文档对象的增查更删:&lt;br&gt;增加:&lt;br&gt;①db.文档名.insert([{k1:v1},{k2:v2}])&lt;br&gt;②var docs &amp;#x3D; [{k1:v1},{k2:v2}]&lt;br&gt;db.文档名.insert(docs)&lt;br&gt;查看文件结构:db.文档名.find()&lt;/p&gt;
+&lt;p&gt;查:&lt;br&gt;db.集合名.find() :查询所有&lt;br&gt;db.集合名.findOne() :返回集合中的第一条文档数据&lt;br&gt;db.集合名.find().pretty() :结构化显示数据&lt;br&gt;条件查询:&lt;br&gt;db.集合名.find(k:”v”).pretty()&lt;br&gt;小于:$lt  小于等于:$lte&lt;br&gt;大于: $gt     大于等于:$gte&lt;br&gt;不等于:$ne&lt;br&gt;db.集合名.find({k:{$ne:v}}).pretty()&lt;/p&gt;
+&lt;p&gt;AND&amp;#x2F;OR&lt;br&gt;AND&lt;br&gt;db.集合名.find({k1:”v1”,k2:”v2”}).pretty()&lt;br&gt;OR&lt;br&gt;db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()&lt;br&gt;大于并且..或..&lt;br&gt;db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() &lt;/p&gt;
+&lt;p&gt;更新(修改):&lt;br&gt;Criteria:更新操作条件,类似sql语句中的where子句&lt;br&gt;ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的&lt;br&gt;Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入&lt;br&gt;Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来&lt;br&gt;多条记录全部更新&lt;br&gt;db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)&lt;/p&gt;
+&lt;p&gt;删除:&lt;br&gt;remove:db.infos.remove({k1:”v1”})&lt;br&gt;deletion criteria(可选):&lt;br&gt;justOne(可选):&lt;br&gt;投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()&lt;/p&gt;
+&lt;p&gt;限制记录limit()&lt;br&gt;只显示n个记录:db.infos.find().limit(n)&lt;br&gt;先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)&lt;/p&gt;
+&lt;p&gt;组合使用(限制记录+分页处理):n –&amp;gt; 显示文档个数  m –&amp;gt; 文档个数(页数 - 1)&lt;br&gt;Skip()+Limit():分页显示&lt;br&gt;db.infos.find().limit(n).skip(m)&lt;/p&gt;
+&lt;p&gt;排序:1:升序(小到大)  -1:降序(大到小)&lt;br&gt;db.infos.find().sort({key:-1}).pretty()&lt;/p&gt;</summary>
     
     
     
@@ -524,8 +579,6 @@
     <content type="html"><![CDATA[<p>总结<br>    有关数据库的DDL操作</p><pre><code>- SHOW DATABASES;-CREATE DATABASES 数据库名;-DROP DATABASES [IF EXISTS]数据库名;-USE 数据库名;有关数据表的DDL操作-SHOW TABLES;-DESC 表名;-CREATE TABLES 表名(......);-DROP TABLE 表名;-ALTER TABLE  表名;数据表的列类型-数值类型:INT,FLOAT-日期类型:DATE,TIME-字符串类型:CHAR,VARCHAR,TEXT</code></pre><p>一,<br>库操作<br>①show databases;  查询当前用户下所有数据库</p><p>②create database 数据库名;  创建数据库</p><p>③use 数据库名;    打开库(包括切换其他数据库)</p><p>④show tables;     显示当前数据库下所有的数据表</p><p>⑤drop database 数据库名;  删除数据库</p><p>⑥desc 表名;(dos下)      显示表结构</p><p>float(7,2)——-整数部分99999     99999.99</p><p>char(4):  不可变字符串长度3位<br>varchar(4),可变数据长度</p><p>二,<br>表操作<br>①create table 表名(id int);   建表<br> create table demo3(id int,username varchar(20),userpass varchar(20),ctime datetime);</p><p>float(7,2)—- 整数值99999  最大值99999.99</p><p>char(4)<br>abc<br>verchar(4)<br>ab</p><p>②drop table 表名;      删除数据表</p><p>③alter<br>添加字段<br>alter table 表名 add 字段名 数据类型;    [单字段]<br>alter table demo1 add name varchar(20);    </p><p>alter table 表名 add(字段1 数据类型,字段2 数据类型…);    [多字段]<br>alter table demo1 add(dates date,flag int);</p><p>insert into 表名 values(字段1值,,字段2值)</p><p>⑤drop<br>alter table 表名 drop 字段名;    删除字段</p><p>④modify<br>修改字段 (原表中已存在的,不修改列名)<br>alter table 表名 modify 字段名 字段类型;        [单字段]<br>alter table demo1 modify flag char(1);</p><p>alter table 表名 modify 字段名1 字段类型1,modify 字段名2 字段类型2…;        [多字段]<br>alter table demo1 modify flag char(1);</p><p>⑥<br>重命名字段<br>alter table 表名 change 旧字段名 新字段名 字段类型;</p><p>重命名表名<br>alter table 表名 rename 新表名;<br>rename table 表名 to 新表名;</p><p>删除表数据(表截断),保留结构,清除表中所有数据,不清选择性删除,不能回退<br>truncate 表名;       </p><p>三,约束<br>数据库约束概念:在数据表上强制执行的效验规则,保证了数据的完整性<br>(唯一约束,主键约束,外键约束会自动创建索引,非空约束不会,)</p><p>非空约束 :<br>建立数据表字段中使用或者在修改数据表字段中使用 ,      格式: 字段名 字段类名 约束名<br>不等于null :空字符串,0,’null’,null不区分大小写,主键或非空不为null<br>创建,修改<br>create table 表名(字段名 字段类型 not null);     不填可默认为null<br>create table 表名(id int not null);</p><p>alter table 表名 modify 字段名 字段类型 约束名;<br>alter table demo1 modify url text not null;</p><p>alter table 表名 drop 字段名;    删除字段<br>alter table demo drop id;</p><p>唯一约束:<br>建立在not null 前<br>.修改,<br>不出现重复值,允许出现多个NULL,同一张表可有多个唯一约束,可由多列组合而成,会为之建立对应的索引,若不给唯一约束起名.该唯一约束默认与列名相同,<br>alter table 表名 modify 字段名 字段类型 unique;<br>alter table demo modify id int unique;</p><p>alter table 表名 drop 字段名;      删除唯一约束 (必须有多个字段)<br>alter table demo drop id;</p><p>主键约束<br>相当于 非空约束 + 唯一约束   唯一确定一行记录的字段或字段组合<br>注意.一张数据表中只能有一个主键<br>创建<br>create table 表名(字段名1 字段类型1 primary key,字段名2 字段类型2);<br>create table demo5(id int primary key,name varchar(20));</p><p>alter table 表名 drop primary key; 删除主键</p><p>alter table 表名 modify 字段名 字段类型 primary key;<br>alter table demo5 modify id int primary key; 修改主键 [将非主键字段修改为 主键字段]</p><p>create table 表名(字段名1 字段类型1,字段名2 字段类型2,primary key(字段名1,字段名2 ));<br>create table demo6(id int,name varchar(20),primary key(id,name)); 两个字段共用一个主键.复合主键</p><p>create table 表名(主键名 主键类型 primary key auto_increment,字段名2 字段类型2);<br>create table demo6(id int primary key auto_increment,name varchar(20));主键自增,在primary key 后加上auto_increment</p><p>insert into 表名(字段名) values(字段值); [主键自增时增加字段内容]<br>insert into demo6(name) values(‘zs’);</p><p>外键 约束([一对一,可选择任意一方来增加外键列,只要为外键列增加唯一约束就可],[一对多,在多的一端增加外键列])<br>有外键的为从表,没有的为主表,保证两个数据表间的参照关系<br>创建<br>先创建主表<br>create table 主表名(主键名 主键类型 primary key,字段名2 字段类型2);<br>create table dept(deptno int primary key,dname varchar(20));</p><p>再建从表<br>create table 从表名(从表主键名 从表主键类型 primary key,字段名2 字段类型2,主表主键名 主表主键类型,constraint 从表名_fk foreign key(主表主键名) references 主表名(主表主键名));    从表名_fk:自定义的约束名<br>create table emp(empno int primary key,ename varchar(20),sal int,deptno int,constraint emp_fk  foreign key(deptno) references dept (deptno));</p><p>删除外键约束<br>①删除外键<br>alter table 从表名 drop foreign key 约束名;<br>alter table emp drop foreign key emp_fk;emp_fk,约束名</p><p>②删除外键索引<br>alter table 从表名 drop index 约束名;<br>alter table emp drop index emp_fk;</p><p>增加外键<br>alter table 从表名 add foreign key(主表主键) references 主表名(主表主键名);references 参照表及其主键(主表的主键)<br>alter table emp add foreign key(deptno) references dept(deptno);</p><p>检查约束:保证数据的输入校验规则(oracle支持,mysql 不支持)<br>create table 表名(id int check(id in (1,2)));<br>插入数据时只能输入1或2<br>create table 表名(age int check(age&gt;8));<br>插入数据时只能是大于8的数据</p><p>show create table 表名;查询建表结构</p><p>DML语句,数据操作语言<br>插入,修改,删除语句</p><p>插入数据:向新行中写入insert<br>insert into 表名(字段名…) values(值…)  指定插入字段,如果字段名没写,默认值为NULL<br>insert into demo1(id,name,url) values(1,’zs’,’test’);<br>insert into demo1(name,url) values(‘zs’,’test’);</p><p>insert into 表名 values(值…)  默认插入所有字段<br>insert into demo1 values(1,’zs’,’test’);</p><p>插入多条记录(行)<br>insert into 表名 values(值…),(值…);<br>insert into demo1 values(4,’zs’,’test’),(5,’aa’,’test’);</p><p>修改&#x2F;更新数据update<br>update 表名 set 需要修改的字段 &#x3D; 新值;</p><p>[单个修改]<br>[多条记录]update 表名 set 需要修改的字段 &#x3D; 新值;<br>update demo1 set url &#x3D; ‘a’;</p><p>[多个字段值修改]<br>update 表名 set 需修改的字段1 &#x3D; 新值1,需修改的字段2 &#x3D; 新值2;</p><p>[根据条件修改]<br>update 表名 set 需要修改的字段 &#x3D; 新值 where 条件;<br>update demo1 set name &#x3D; ‘test’ where id &#x3D; 4;</p><p>删除delete from<br>[单条删除]<br>delete from 表名 where 条件;<br>delete from demo1 where name &#x3D; ‘zs’;<br>[多条删除]<br>delete from 表名;<br>delete from demo1;</p><p>DQL数据库查询语言<br>查询<br>select 字段列表 from 表名;[查询指定行数据]<br>select name from demo1;<br>select * from 表名;[查询所有行数据]<br>select * from demo1;</p><p>算术运算符:+-*&#x2F;<br>为字段名起别名 格式:字段名 as 别名(使用双引号)<br>select name,sal + 500 as “sals” from demo1;<br>注意:as可以省略,双引号可以省略(在别名中出现空格时不能省略)<br>select name,sal + 500 sals from demo1;</p><p>去重:distinct<br>a,单字段去重<br>select distinct 字段名 from 表名;<br>b,组合字段去重<br>select distinct 字段名1,字段名2… from 表名;</p><p>not &gt; and &gt; or</p><p>limit 取数据记录<br>limit n —–记录数<br>limit n,m n—起始索引  (从0开始) m—-记录数</p><p>大多数 用于分页<br>select * from 表名 limit n;</p><p>数据排序<br>格式: order by 字段名;(查询 语句 结尾)<br>—升序:asc[默认]<br>select * from 表名 order by 字段名;<br>eg:select * from demo1 order by sal asc; 按工资升序排列<br>—降序 :desc<br>select * from 表名 order by 字段名 desc;<br>eg:select * from demo1 order by sal desc; 按工资 降序排列<br>—组合排序<br>select * from demo1 order by sal,name desc;按照第一个字段排序,如果有重复数据则按照第二个字段排序<br>select * from 表名 order by 字段名1 排序类型1,字段名2 排序类型2;</p><p>—别名排序<br>select 字段名1,对字段名2修改 字段名2修改的别名 from 表名 order by 字段名2修改的别名;一般情况是为生成的新字段数据,执行排序操作<br>eg: select name,sal+200 sals from demo1 order by sals;</p><p>索引<br>作用:用于提高数据表查询效率<br>创建索引:<br>自动:由数据库自动完成,通过创建主键约束 ,唯一约束,外键约束会自动建立索引<br>手动:<br> create index i_name on demo1(name);<br>格式:create index 索引名 on 表名(字段…);<br>create index i_us on demo1(url,sal);组合索引</p><p>删除索引<br>drop index 索引名  on 表名;<br>drop index i_us on demo1;</p><p>alter table 表名 drop index 索引名<br>alter table demo1 drop index i_name;</p><p>函数<br>字符串<br>concat(‘a’,’b’);连接ab.一般是select查询<br>数值<br>mod(1,3);1&#x2F;3的余数<br>select ceil(0.8);1 —-ceil向上取整   ceil(-0.8);0<br>select floor(0.8);0 —floor向下取整  floor(-0.8);-1<br>截断<br>select truncate(3.21,2);—3.21<br>select truncate(3.21,1);—3.2<br>当前日期<br>select curdate();<br>当前时间<br>select curtime();<br>当前时间日期<br>select now();<br>一般计算年龄:<br>select dates,year(now())-year(dates)  age from demo1;</p><p>select ifnull(1,2);1<br>select ifnull(数据1,数据 2);如果数据1为null,返回数据2,否则返回数据1</p><p>select nullif(3,2);3<br>select nullif(数据1,数据2);如果数据1和数据2相等,返回null,否则返回数据1</p><p>select name,sal,if(sal,’有值’,’空值’) result from demo1;<br>if(数据1,数据2,数据3);如果数据1 为true,返回数据2,否则返回数据3</p><p>select isnull(sal) from demo1;0表示false.1表示true(是不是空值,如果是空值true,不是空值false)<br>isnull(数据1);判断数据1是否为null,如果为null返回true,否则返回false</p><p>select version();显示数据库当前版本<br>select database();显示当前数据库名<br>select password(‘123’);123字符password加密的方式<br>select md5(‘123’);字符123md5加密的方式</p><p>多行函数(聚合函数)   除 count外 都会 忽略null的值<br>avg():平均值<br>count():统计行数<br>max():求最大值<br>min():求最小值<br>sum():求和<br>select avg(sal),max(sal),min(sal),sum(sal) from demo1;</p><p>where + group by + order by</p><p>数据分组 group by<br>select deptno,avg(sql) from emp group by deptno;从员工 表中依据部门编号分组查询部门编号 —-分组查询</p><p>分组排序<br>select deptno,(ename,)avg(sql) avgs from emp group by deptno order by avgs desc;</p><p>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p><p>分组排序 加条件<br>查询平均工资大于1500的部门<br>select deptno,avg(sql) avgs from emp group by deptno having sal &gt; 1500  order by avgs desc;</p><p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno; </p><p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno having sums &gt;3000;</p><p>select deptno,sum(sal) sums from emp where sal &gt; 1500 group by deptno having sums &gt;3000 order by sums;<br>{<br>    DQL:数据库查询语言<br>    主要由SELECT . WHERE,ORDER BY,GROUP BY,和HAVING关键字构成</p><pre><code>DML:数据操作语言主要由insert,update,和delete三个关键字完成,对数据库记录修改DDL:数据定义语言主要由create,alter和drop和truncate四个关键字完成DCL:数据控制语言主要由grant和revoke关键字完成TPL:事务处理语言主要由commit,rollback,transaction关键字完成</code></pre><p>}</p><p>字段属性说明:</p><p>isdelete bit default 0:只有两种取值,o和1</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;总结&lt;br&gt;    有关数据库的DDL操作&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;- SHOW DATABASES;
 -CREATE DATABASES 数据库名;
@@ -533,8 +586,25 @@
 -USE 数据库名;
 
 有关数据表的DDL操作
--</summary>
-      
+-SHOW TABLES;
+-DESC 表名;
+-CREATE TABLES 表名(......);
+-DROP TABLE 表名;
+-ALTER TABLE  表名;
+
+数据表的列类型
+-数值类型:INT,FLOAT
+-日期类型:DATE,TIME
+-字符串类型:CHAR,VARCHAR,TEXT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一,&lt;br&gt;库操作&lt;br&gt;①show databases;  查询当前用户下所有数据库&lt;/p&gt;
+&lt;p&gt;②create database 数据库名;  创建数据库&lt;/p&gt;
+&lt;p&gt;③use 数据库名;    打开库(包括切换其他数据库)&lt;/p&gt;
+&lt;p&gt;④show tables;     显示当前数据库下所有的数据表&lt;/p&gt;
+&lt;p&gt;⑤drop database 数据库名;  删除数据库&lt;/p&gt;
+&lt;p&gt;⑥desc 表名;(dos下)      显示表结构&lt;/p&gt;
+&lt;p&gt;float(7,2)——-整数部分99999     99999.99&lt;/p&gt;
+&lt;p&gt;char(4):  不可变字符串长度3位&lt;br&gt;varchar(4),可变数据长度&lt;/p&gt;</summary>
     
     
     
