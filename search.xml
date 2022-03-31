@@ -86,50 +86,126 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客next主题的使用说明</title>
-    <url>/article/78fbf3e4.html</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
-<p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载next主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
-<p>⑤在github上建立仓库github名.github.io</p>
-<p>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>安装的相关模块:</p>
-<p>rss:  npm install hexo-generator-feed –save</p>
-<p>search: npm install hexo-generator-searchdb –save</p>
-<p>wordcount: npm i –save hexo-wordcount</p>
-<p>gulp: npm install gulp -g</p>
-<p>gulp插件: </p>
-<p>npm install gulp-minify-css –save</p>
-<p>npm install gulp-uglify –save<br>npm install gulp-htmlmin –save<br>npm install gulp-htmlclean –save<br>npm install gulp-imagemin –save</p>
-<p>宠物:  npm install -save hexo-helper-live2d</p>
-<p>响应模型: npm install live2d-widget-model-wanko</p>
-<p>symbol-count-time: npm install hexo-symbols-count-time –save</p>
-<p>分类含子集形式:</p>
-<p>​    categories: [Python,数据分析]</p>
-<p>多层分类:</p>
-<p>categories:</p>
-<p>–  数据分析</p>
-<p>–  Python</p>
-<p>tags: [Python,数据分析]</p>
+    <title>GIT</title>
+    <url>/article/c72923f6.html</url>
+    <content><![CDATA[<p>一,git</p>
+<p>Git使用:</p>
+<p>1,注册账号</p>
+<p><a href="https://github.com/">https://github.com/</a></p>
+<p>填写用户名.E-mail,密码进行注册</p>
+<p>2,生成SSH KEY</p>
+<p>下载git,在指定文件夹下打开git bush</p>
+<p>配置全局的用户名和邮箱</p>
+<p>git config –global user.name “注册的用户名”</p>
+<p>git config –global user.email “注册的邮箱”</p>
+<p>#取消配置</p>
+<p>#git config –global  –unset user.name “用户名”<br>#git config –global  –unset user.email “邮箱”</p>
+<p>生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
+<p>默认回车</p>
+<p>3,将.ssh下的id_rsa.pub内容复制到github中</p>
+<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
+<p>4,文件上传</p>
+<p>在指定目录下打开git Bash here</p>
+<p>第一次上传,通过git init将此文件夹变为可管理仓库</p>
+<p>连接远程服务器:在github中创建repositories</p>
+<p>#上传到git库:git add 项目名</p>
+<p>#git commit -m “注释”:提交</p>
+<p>上面的合并为一步:git commit am “注释”</p>
+<p>git remote add origin 远程库地址</p>
+<p>上传到服务器</p>
+<p>git push -u origin master</p>
+<p>#git push -f origin master :当上传失败时改为这条命令</p>
+<p>git status:查看工作区状态</p>
+<p>5,文件下载</p>
+<p>git clone 服务器地址</p>
+<p>文件编辑操作</p>
+<p>git add :暂存区,对文件进行修改,删除等</p>
+<p>git rm 文件名:删除文件</p>
+<p>git rm -f 文件名:强制删除</p>
+<p>git commit :工作区</p>
+<p>撤销提交:git reset HEAD^1</p>
+<p>二,git在pycharm中的使用</p>
+<p>上传:</p>
+<p>在settings中的version control找到github,用户名密码连接.<br>当账号密码连接失败时采用token连接(在github建立)</p>
+<p>在VCS中调用Version control分享项目到github</p>
+<p><a href="https://blog.csdn.net/lai1170137052/article/details/79377037">报错时解决办法</a></p>
+<p>1,项目右键:git —&gt; repository – remotes(删除地址重新分享)</p>
+<p>下载<br>在vcs下选择check out 服务器地址进行 项目下载</p>
+<p>三,<a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">tortoiseGIT使用</a><br>tortoisegit记住密码:settings —&gt; Git —&gt; Edit global.gitconfig<br>[user]<br>  name &#x3D; 注册用户名<br>  email &#x3D; 注册邮箱<br>[credential]<br>  helper &#x3D; store</p>
+<p>tortoisegit上传文件时的几个状态:(在日志中)<br>Unknown:新增的文件,不在版本库<br>Added:新增的文件,在版本库<br>Modified:文件修改,在版本库<br>Missing:文件被删除,在版本库</p>
+<p>tortoisegit上传文件:<br>① 创建一个本地文件夹<br>在tortoisegit中点击git create reposity here —&gt; 点击OK<br>②点击git commit -&gt; “master”<br>**必填message<br>勾选要提交的文件–&gt;点击OK<br>③当文件内容被修改时,重复第二步<br>④查看日志在Tortoisegit中查找show log<br>⑤,将diamante上传到云端,右键 —&gt; tortoisegit –&gt; push —&gt; Manage —&gt; git —&gt; Remote (填下Remote,URL,Push URL,其中URL和Push URL是同一地址)<br>⑥,输入用户名,密码,等待成功</p>
+<p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
+<p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
+<p>总结:上传主要是add,commit,push</p>
+<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#121;&#x30;&#x31;&#x33;&#x30;&#x34;&#53;&#x37;&#52;&#x40;&#97;&#108;&#x69;&#98;&#x61;&#x62;&#97;&#45;&#105;&#x6e;&#x63;&#46;&#x63;&#x6f;&#x6d;">&#102;&#121;&#x30;&#x31;&#x33;&#x30;&#x34;&#53;&#x37;&#52;&#x40;&#97;&#108;&#x69;&#98;&#x61;&#x62;&#97;&#45;&#105;&#x6e;&#x63;&#46;&#x63;&#x6f;&#x6d;</a>‘</p>
+<p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
+<p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
+<p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
+<p>git切换分支:</p>
+<p>隐藏当前分支</p>
+<p>git stash</p>
+<p>切换到主分支</p>
+<p> git checkout master</p>
+<p>拉取文件</p>
+<p>git pull</p>
+<p>切换到自己分支</p>
+<p>git checkout 分支名</p>
+<p>合并分支到主分支</p>
+<p>git merge master</p>
+<p>当文件修改完成后进行stash pop继续之前的操作</p>
+<p>git stash pop </p>
+<p>当第一次提交时执行</p>
+<p>git remote add origin 代码库地址</p>
+<p>git add .</p>
+<p>git commit -m “注释”</p>
+<p>git push -u origin 分支名</p>
 ]]></content>
       <categories>
-        <category>Blog</category>
+        <category>版本管理工具</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
+        <tag>GIT</tag>
+        <tag>版本管理工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gitblit</title>
+    <url>/article/c361dd8f.html</url>
+    <content><![CDATA[<p>团队协作管理工具:</p>
+<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
+<p>​    飞书:协同管理工具</p>
+<p>​     飞秋:</p>
+<p>​      钉钉:</p>
+<p>Gitblit:</p>
+<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
+<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
+<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
+]]></content>
+      <categories>
+        <category>版本管理工具</category>
+      </categories>
+      <tags>
+        <tag>版本管理工具</tag>
+        <tag>Gitblit</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux的使用</title>
+    <url>/article/4549a880.html</url>
+    <content><![CDATA[<p>1,安装dep文件</p>
+<p>dpkg -i 文件名</p>
+<p>2,解决vmware tools失效</p>
+<p>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop</p>
+<p>重启: init 0&#x2F;reboot</p>
+<p>3,在乌班图上显示隐藏文件</p>
+<p>ctrl + h</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -191,29 +267,20 @@ hexo d
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Yilia</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
-    <title>gitblit</title>
-    <url>/article/c361dd8f.html</url>
-    <content><![CDATA[<p>团队协作管理工具:</p>
-<p>​    领歌:<a href="https://www.leangoo.com/kanban/board_list#/home/list%22%E9%A2%86%E6%AD%8C:%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%22">leangoo</a></p>
-<p>​    飞书:协同管理工具</p>
-<p>​     飞秋:</p>
-<p>​      钉钉:</p>
-<p>Gitblit:</p>
-<p>1,下载软件 <a href="%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/18rYwlyE4IUAHHfHogg7fRA" title="提取码：u0pc ">复制这段内容后打开百度网盘手机App，操作更方便哦</a><br>2,配置data下的default.properties文件<br>    ①server.httpPort:端口号设置<br>    ②server.httpBindInterface:设置服务器IP地址,本机IP<br>    ③server.httpsBindInterface:设置为localhost<br>3,保存<br>4,运行gitblit.cmd<br>5,打开IP+端口号</p>
-<p>权限管理:<br>R:克隆,一般赋予测试人员<br>RW:推送,<br>RWC:推送,创建ref,<br>RWD:推送,创建删除ref,<br>RW+:一般赋予开发人员,推送,创建删除以及rewind ref</p>
-<p>上传项目:<br>git bash<br>git init<br>git remote add origin 版本库路径<br>git add 项目名<br>git commit -m “注释”<br>git push -u origin master<br>当上面的报错时执行下面这条:<br>git push -f origin master</p>
+    <title>Centos</title>
+    <url>/article/cab4360e.html</url>
+    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
 ]]></content>
       <categories>
-        <category>版本管理工具</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>Gitblit</tag>
-        <tag>版本管理工具</tag>
+        <tag>Centos相关命令笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -236,141 +303,6 @@ hexo d
       <tags>
         <tag>MongoDB</tag>
         <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GIT</title>
-    <url>/article/c72923f6.html</url>
-    <content><![CDATA[<p>一,git</p>
-<p>Git使用:</p>
-<p>1,注册账号</p>
-<p><a href="https://github.com/">https://github.com/</a></p>
-<p>填写用户名.E-mail,密码进行注册</p>
-<p>2,生成SSH KEY</p>
-<p>下载git,在指定文件夹下打开git bush</p>
-<p>配置全局的用户名和邮箱</p>
-<p>git config –global user.name “注册的用户名”</p>
-<p>git config –global user.email “注册的邮箱”</p>
-<p>#取消配置</p>
-<p>#git config –global  –unset user.name “用户名”<br>#git config –global  –unset user.email “邮箱”</p>
-<p>生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
-<p>默认回车</p>
-<p>3,将.ssh下的id_rsa.pub内容复制到github中</p>
-<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
-<p>4,文件上传</p>
-<p>在指定目录下打开git Bash here</p>
-<p>第一次上传,通过git init将此文件夹变为可管理仓库</p>
-<p>连接远程服务器:在github中创建repositories</p>
-<p>#上传到git库:git add 项目名</p>
-<p>#git commit -m “注释”:提交</p>
-<p>上面的合并为一步:git commit am “注释”</p>
-<p>git remote add origin 远程库地址</p>
-<p>上传到服务器</p>
-<p>git push -u origin master</p>
-<p>#git push -f origin master :当上传失败时改为这条命令</p>
-<p>git status:查看工作区状态</p>
-<p>5,文件下载</p>
-<p>git clone 服务器地址</p>
-<p>文件编辑操作</p>
-<p>git add :暂存区,对文件进行修改,删除等</p>
-<p>git rm 文件名:删除文件</p>
-<p>git rm -f 文件名:强制删除</p>
-<p>git commit :工作区</p>
-<p>撤销提交:git reset HEAD^1</p>
-<p>二,git在pycharm中的使用</p>
-<p>上传:</p>
-<p>在settings中的version control找到github,用户名密码连接.<br>当账号密码连接失败时采用token连接(在github建立)</p>
-<p>在VCS中调用Version control分享项目到github</p>
-<p><a href="https://blog.csdn.net/lai1170137052/article/details/79377037">报错时解决办法</a></p>
-<p>1,项目右键:git —&gt; repository – remotes(删除地址重新分享)</p>
-<p>下载<br>在vcs下选择check out 服务器地址进行 项目下载</p>
-<p>三,<a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">tortoiseGIT使用</a><br>tortoisegit记住密码:settings —&gt; Git —&gt; Edit global.gitconfig<br>[user]<br>  name &#x3D; 注册用户名<br>  email &#x3D; 注册邮箱<br>[credential]<br>  helper &#x3D; store</p>
-<p>tortoisegit上传文件时的几个状态:(在日志中)<br>Unknown:新增的文件,不在版本库<br>Added:新增的文件,在版本库<br>Modified:文件修改,在版本库<br>Missing:文件被删除,在版本库</p>
-<p>tortoisegit上传文件:<br>① 创建一个本地文件夹<br>在tortoisegit中点击git create reposity here —&gt; 点击OK<br>②点击git commit -&gt; “master”<br>**必填message<br>勾选要提交的文件–&gt;点击OK<br>③当文件内容被修改时,重复第二步<br>④查看日志在Tortoisegit中查找show log<br>⑤,将diamante上传到云端,右键 —&gt; tortoisegit –&gt; push —&gt; Manage —&gt; git —&gt; Remote (填下Remote,URL,Push URL,其中URL和Push URL是同一地址)<br>⑥,输入用户名,密码,等待成功</p>
-<p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
-<p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
-<p>总结:上传主要是add,commit,push</p>
-<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#x79;&#48;&#49;&#51;&#x30;&#52;&#x35;&#x37;&#x34;&#x40;&#97;&#x6c;&#105;&#98;&#x61;&#x62;&#97;&#45;&#105;&#110;&#x63;&#x2e;&#x63;&#x6f;&#109;">&#102;&#x79;&#48;&#49;&#51;&#x30;&#52;&#x35;&#x37;&#x34;&#x40;&#97;&#x6c;&#105;&#98;&#x61;&#x62;&#97;&#45;&#105;&#110;&#x63;&#x2e;&#x63;&#x6f;&#109;</a>‘</p>
-<p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
-<p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
-<p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
-<p>git切换分支:</p>
-<p>隐藏当前分支</p>
-<p>git stash</p>
-<p>切换到主分支</p>
-<p> git checkout master</p>
-<p>拉取文件</p>
-<p>git pull</p>
-<p>切换到自己分支</p>
-<p>git checkout 分支名</p>
-<p>合并分支到主分支</p>
-<p>git merge master</p>
-<p>当文件修改完成后进行stash pop继续之前的操作</p>
-<p>git stash pop </p>
-<p>当第一次提交时执行</p>
-<p>git remote add origin 代码库地址</p>
-<p>git add .</p>
-<p>git commit -m “注释”</p>
-<p>git push -u origin 分支名</p>
-]]></content>
-      <categories>
-        <category>版本管理工具</category>
-      </categories>
-      <tags>
-        <tag>版本管理工具</tag>
-        <tag>GIT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notebook安装使用教程</title>
-    <url>/article/d9a032e2.html</url>
-    <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
-<p>2,生成配置文件<br>jupyter notebook –generate-config</p>
-<p>不同系统的目录:</p>
-<p>Windows：C:UsersUSERNAME.jupyterjupyter_notebook_config.py<br>OS X：&#x2F;Users&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py<br>Linux：&#x2F;home&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py</p>
-<p>root用户执行以下命令:<br>jupyter notebook –generate-config –allow-config</p>
-<p>3,生成密码:<br>jupyter notebook password</p>
-<p>4,在jupyter_notebook_config下修改相关配置:<br>c.NotebookApp.ip&#x3D;’*’<br>c.NotebookApp.password &#x3D; u’sha:ce…刚才复制的那个密文’<br>c.NotebookApp.open_browser &#x3D; False<br>c.NotebookApp.port &#x3D;8888 #可自行指定一个端口, 访问时使用该端口</p>
-<p>5,启动<br>jupyter notebook</p>
-<p>root用户执行以下命令:<br>jupyter notebook –allow-root</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Jupyter Notebook</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux的使用</title>
-    <url>/article/4549a880.html</url>
-    <content><![CDATA[<p>1,安装dep文件</p>
-<p>dpkg -i 文件名</p>
-<p>2,解决vmware tools失效</p>
-<p>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop</p>
-<p>重启: init 0&#x2F;reboot</p>
-<p>3,在乌班图上显示隐藏文件</p>
-<p>ctrl + h</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos</title>
-    <url>/article/cab4360e.html</url>
-    <content><![CDATA[<p>Centos安装docker&#x2F;Python3&#x2F;pip3教程:<br>docker:<br>curl -s <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<br>systemctl start docker<br>Python3:<br>yum install python3 unzip -y<br>pip3:<br>curl -s <a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> | python3</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Centos相关命令笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -494,44 +426,23 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Python基础模块</title>
-    <url>/article/9d100b5b.html</url>
-    <content><![CDATA[<p>1.必装模块pypiwin32  wheel:主要是为了装whl文件</p>
-<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
-<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
-<p>4,pip文件的配置(目的,提高下载速率)<br>①<br>pip文件的配置<br>    # 在用户Administrator下, 提高第三方模块的下载速率<br>    # C:\Users\Administrator\pip\pip.ini<br>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
-<p>②pip 安装包超时使用以下方法:<br>pip install –index-url <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a> 包名</p>
-<p>③pip install tensorflow&#x3D;&#x3D;2.3.0  -i <a href="https://pypi.doubanio.com/simple">https://pypi.doubanio.com/simple</a></p>
-<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
-<p>6,Beautiful Soup:<br><strong>用于数据收集的Python库:</strong><br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
-<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
-<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
-<p>9,**用于数据清理和数据操作的Python库<br>*<br>pandas:主要用于数据操作和数据分析</p>
-<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
-<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
-<p>12,<strong>用于数据可视化的Python库</strong><br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
-<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
-<p>14,<strong>用于建模的Python库</strong><br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
-<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
-<p>16,<strong>用于数据解释型的Python库</strong><br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
-<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
-<p>18,<strong>用于音频处理的Python库:</strong><br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
-<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
-<p>20,<strong>用于图像处理的Python库</strong><br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
-<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
-<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
-<p><strong>用于部署的Python库</strong><br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
-<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
-<p>25,mysql数据库模块的安装<br>pip install mysqlclient&#x3D;&#x3D;1.3.12</p>
-<p>26, keras(目前已被tensorflow收购)</p>
-<p>pip install keras</p>
-<p>27,pytorch</p>
-<p>下载whl文件,在文件目录下:pip  install 文件名</p>
+    <title>Notebook安装使用教程</title>
+    <url>/article/d9a032e2.html</url>
+    <content><![CDATA[<p>1,安装jupyter模块:<br>pip install jupyter</p>
+<p>2,生成配置文件<br>jupyter notebook –generate-config</p>
+<p>不同系统的目录:</p>
+<p>Windows：C:UsersUSERNAME.jupyterjupyter_notebook_config.py<br>OS X：&#x2F;Users&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py<br>Linux：&#x2F;home&#x2F;USERNAME&#x2F;.jupyter&#x2F;jupyter_notebook_config.py</p>
+<p>root用户执行以下命令:<br>jupyter notebook –generate-config –allow-config</p>
+<p>3,生成密码:<br>jupyter notebook password</p>
+<p>4,在jupyter_notebook_config下修改相关配置:<br>c.NotebookApp.ip&#x3D;’*’<br>c.NotebookApp.password &#x3D; u’sha:ce…刚才复制的那个密文’<br>c.NotebookApp.open_browser &#x3D; False<br>c.NotebookApp.port &#x3D;8888 #可自行指定一个端口, 访问时使用该端口</p>
+<p>5,启动<br>jupyter notebook</p>
+<p>root用户执行以下命令:<br>jupyter notebook –allow-root</p>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
+        <tag>Jupyter Notebook</tag>
         <tag>Python</tag>
       </tags>
   </entry>
@@ -590,30 +501,83 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Python概念</title>
-    <url>/article/7cf78c2.html</url>
-    <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
-<p>2,线程,进程,协程的区别<br>一,<br>    线程:指进程中的某一个控制单元<br>    单线程:指一个进程中只有一个线程(主线程),eg:dos操作系统<br>    多线程:指一个程序中包含多个执行流,多线程是实现并发的一种有效手段<br>    主线程:跟随应用程序创建的线程<br>    子线程:除应用程序外的其他线程<br>    python中有协程库gevent， pyweb框架tornado中也用了gevent封装好的协程。本文主要介绍进程、线程和协程三者之间的区别。<br>二、概念(详细说明)<br>    　　1、进程<br>    进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。<br>        2, 线程<br>    线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。<br>    　　3、协程<br>    协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</p>
-<p>三、进程和线程、协程在python中的使用<br>    　　1、多进程一般使用multiprocessing库，来利用多核CPU，主要是用在CPU密集型的程序上，当然生产者消费者这种也可以使用。多进程的优势就是一个子进程崩溃并不会影响其他子进程和主进程的运行，但缺点就是不能一次性启动太多进程，会严重影响系统的资源调度，特别是CPU使用率和负载。使用多进程可以查看文章《python 多进程使用总结》。注：python2的进程池在类中的使用会有问题，需要把类函数定义成全局函数。具体可参考 <a href="http://bbs.chinaunix.net/thread-4111379-1-1.html">http://bbs.chinaunix.net/thread-4111379-1-1.html</a><br>    　　2、多线程一般是使用threading库，完成一些IO密集型并发操作。多线程的优势是切换快，资源消耗低，但一个线程挂掉则会影响到所有线程，所以不够稳定。现实中使用线程池的场景会比较多，具体可参考《python线程池实现》。<br>    　　3、协程一般是使用gevent库，当然这个库用起来比较麻烦，所以使用的并不是很多。相反，协程在tornado的运用就多得多了，使用协程让tornado做到单线程异步，据说还能解决C10K的问题。所以协程使用的地方最多的是在web应用上。<br>    总结一下就是IO密集型一般使用多线程或者多进程，CPU密集型一般使用多进程，强调非阻塞异步并发的一般都是使用协程，当然有时候也是需要多进程线程池结合的，或者是其他组合方式。</p>
-<p>3,python如何进行内存管理的<br>对象引用计数机制:python语言内部依靠引用计数来持续追踪内存中的对象,就是说,他的Python内部记录的对象有多少个引用,及引用计数,当对象被创建时就等于创建了一个引用计数,当对象不需要时,这个对象的引用计数归零时,它将被垃圾收集机制处理掉<br>垃圾回收:<br>1,在Python语言内部,当一个对象的引用计数为0时,它将被垃圾收集机制处理掉<br>2,当遇到两个对象a和b相互引用时的这种情况,del语句可以减少a和b的引用计数,并销毁用于引用底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除<br>内存池机制:Python语言虽然提供了对内存的垃圾收集机制,但实际上它将不用的内存放到内存池而不是返回给操作系统,所以就有了以下:<br>1,Pymalloc机制；这个主要是为了加速Python的执行效率，Python引入了一个内存池机制，用于管理，为了对小块内存的申请和释放。<br>2 Python中所有小于256个字节的对象都是依靠pymalloc分配器来实现的，而稍大的对象用的则是系统的malloc。<br>3 对于Python对象，比如整数、浮点数和List这些，都有自己独立的内存池，对象间并不共享他们的内存池。换句话说就是，假设你分配并且释放了大量的整数，那么用于缓存这些整数的内存就不能再分配给浮点数。</p>
-<p>4,简述一个前端请求的处理流程,在uwsgi&#x2F;nginx&#x2F;django之间的处理流程<br>答:wsgi：一种实现python解析的通用接口标准&#x2F;协议，是一种通用的接口标准或者接口协议，实现了python web程序与服务器之间交互的通用性。<br>利用它，web.py或bottle或者django等等的python web开发框架，就可以轻松地部署在不同的web server上了；<br>uwsgi:同WSGI一样是一种通信协议<br>uwsgi协议是一个uWSGI服务器自有的协议，它用于定义传输信息的类型，它与WSGI相比是两样东西。 uWSGI :一种python web server或称为Server&#x2F;Gateway<br>uWSGI类似tornadoweb或者flup，是一种python web server，uWSGI是实现了uwsgi和WSGI两种协议的Web服务器，负责响应python 的web请求。<br>uWSGI实现了wsgi协议、uwsgi协议、http等协议。<br>Nginx中HttpUwsgiModule的作用是与uWSGI服务器进行交换。</p>
-<p>nginx&#x2F;uwsgi&#x2F;django交互流程：<br>1.首先客户端请求服务资源，<br>2.nginx作为直接对外的服务接口,接收到客户端发送过来的http请求,会解包、分析，<br>3.如果是静态文件请求就根据nginx配置的静态文件目录，返回请求的资源，<br>4.如果是动态的请求,nginx就通过配置文件,将请求传递给uWSGI；uWSGI 将接收到的包进行处理，并转发给wsgi，<br>5.wsgi根据请求调用django工程的某个文件或函数，处理完后django将返回值交给wsgi，<br>6.wsgi将返回值进行打包，转发给uWSGI，<br>7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(如浏览器)。<br>*注:不同的组件之间传递信息涉及到数据格式和协议的转换</p>
-<p>5,celery队列<br>celery队列包含两个模块：worker和beat<br>worker:用于执行队列中的任务<br>beat：用于定时分配任务<br>这两个模块可以同时启动，也可以分别启动<br>任务可以有两个来源：<br>代码内调用：将需要放入执行队列的任务函数import进来<br>beat定时派发：在配置文件里设置好需要调用的任务函数和调用日期，beat就会自动派发任务到队列里了</p>
-<p>Celery安装<br>使用之前需要配置消息中间件<br>一般是用Redis数据库来通讯更加方便，需要在本地安装redis服务并启动<br>pip install -U redis<br>以下为celery的具体使用<br><a href="https://www.jianshu.com/p/34291d6b5f47">https://www.jianshu.com/p/34291d6b5f47</a></p>
-<p>6,modelfirst dbfirst的区别<br>datebase first：就是代表数据库优先，那么提前就是先创建数据库<br>model firast:就是代表model优先，那么提前也就先创建model,然后根据model自动建立数据库<br>这两EF的编程方式在使用的过程中的区别为：<br>在添加ADO.NET实体数据模型的时候，database first选择的是从数据库生成<br>在数据结构发生变化的时候，database first编程方式中是选择从数据库更新模型，因此就导致database first是以数据库为主，而Model first选择的是空模型生成<br>当数据发生变化的时候，model first选择的是从模型中生成数据库                          </p>
-<p>7,RESTful&#x2F;WebSocket接口机制<br>WebSocket:服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，<br>属于服务器推送技术的一种。</p>
-<p>8,XMl进行网络通信<br>xpath对xml格式的东西解析比较规范,基本上能够做到想要那个数据就取哪个数据</p>
-<p>9,</p>
-<p>Lamdba简化代码.递归:自身调用自身,高阶函数:将函数作为参数传递,<br>装饰器:把函数作为参数传递<br>#扩展 函数功能,在不改变原代码的情况下,<br>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包<br>生成器:一遍循环,一遍计算的机制称为生成器,<br>迭代器:取数据,高效遍历一组可迭代对象<br>类:包含对象所包含的属性和方法<br>对象:调用方法和属性<br>属性分为两大类:实例属性,类属性,实例属性的调用修改影响实例属性的值但不影响类属性的值,类属性的调用的修改既不影响类属性的值,也不影响实例属性 的值<br>构造方法:数据初始化,特殊的实例方法<br>使用__new__和__init__来完成的<br>_<em>new__负责进行对象的创建,<strong>init__负责进行对象的初始化<br>访问权限:私有</strong>(双下划线 ),受保护</em>(单下划线),公开<br>作用域,将局部变量转化为全局变量<br>方法分为四大类:<br>实例方法:第一个形参为self<br>类方法:第一个形参为cls,和装饰器类似:由@classmethod表示<br>静态方法:无参数,由@staticmethod表示<br>普通方法:是一个错误的方法,几乎不用</p>
-<p>10,IOError,AttributeError,ImportError,IndentationError,IndexError,KeyError,<br>SyntaxError,NameError分别代表什么异常<br>IOError: 输入输出异常<br>AttributeError: 试图访问一个对象没有的属性<br>ImportError: 无法引入模块或包，基本是路径问题<br>IndentationError: 语法错误，代码没有正确的对齐<br>IndexError: 下标索引超出序列边界<br>KeyError: 试图访问你字典里不存在的键<br>SyntaxError: Python代码逻辑语法出错，不能执行<br>NameError: 使用一个还未赋予对象的变量</p>
-<p>11,r,r+,rb,rb+打开文件模式区别<br>答:r: 以只读方式打开文件。文件的指针将放在文件的开头。这是默认模式。<br>w: 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a: 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果文件不存在，创建新的文件进行写入。<br>rb: 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。<br>wb: 以二进制格式打开一个文件只用于写入。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab: 以二进制格式打开一个文件用于追加。如果文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容会被写入到已有内容之后。如果文件不存在，创建新文件进行写入。<br>r+: 打开一个文件用于读写。文件指针将会放在文件开头。<br>w+: 打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a+: 打开一个文件用于读写。如果文件已存在，文件指针将会放在文件结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。<br>rb+: 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。<br>wb+: 以二进制格式打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab+: 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</p>
+    <title>Hexo博客next主题的使用说明</title>
+    <url>/article/78fbf3e4.html</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
+<p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>下载hexo模块,</p>
+<p>cnpm install -g hexo-cli</p>
+<p>②建立博客文件夹<br>mkdir blog</p>
+<p>③生成博客文件<br>cd blog </p>
+<p>hexo init</p>
+<p>④下载next主题</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>⑤在github上建立仓库github名.github.io</p>
+<p>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
+<p>⑦当配置完成后执行以下命令:</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
+<p>安装的相关模块:</p>
+<p>rss:  npm install hexo-generator-feed –save</p>
+<p>search: npm install hexo-generator-searchdb –save</p>
+<p>wordcount: npm i –save hexo-wordcount</p>
+<p>gulp: npm install gulp -g</p>
+<p>gulp插件: </p>
+<p>npm install gulp-minify-css –save</p>
+<p>npm install gulp-uglify –save<br>npm install gulp-htmlmin –save<br>npm install gulp-htmlclean –save<br>npm install gulp-imagemin –save</p>
+<p>宠物:  npm install -save hexo-helper-live2d</p>
+<p>响应模型: npm install live2d-widget-model-wanko</p>
+<p>symbol-count-time: npm install hexo-symbols-count-time –save</p>
+<p>分类含子集形式:</p>
+<p>​    categories: [Python,数据分析]</p>
+<p>多层分类:</p>
+<p>categories:</p>
+<p>–  数据分析</p>
+<p>–  Python</p>
+<p>tags: [Python,数据分析]</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Blog</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>概念</tag>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs简单使用</title>
+    <url>/article/89b3a0ef.html</url>
+    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
+<p>5,检测npm是否安装 npm -v</p>
+<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
+<ol>
+<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
+<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
+<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
+</ol>
+<p>安装出错解决办法: npm config set proxy null</p>
+<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
+<p>7,常用模块express npm install express</p>
+<p>8,卸载常用命令 npm uninstall express</p>
+<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
+<p>更新模块:npm update express</p>
+<p>搜索模块:npm search express</p>
+<p>创建模块 npm init</p>
+<p>注册用户:npm adduser</p>
+<p>发布模块:npm publish</p>
+<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>然后可以用cnpm install 模块名 下载模块</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
       </tags>
   </entry>
   <entry>
@@ -674,6 +638,48 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python基础模块</title>
+    <url>/article/9d100b5b.html</url>
+    <content><![CDATA[<p>1.必装模块pypiwin32  wheel:主要是为了装whl文件</p>
+<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
+<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
+<p>4,pip文件的配置(目的,提高下载速率)<br>①<br>pip文件的配置<br>    # 在用户Administrator下, 提高第三方模块的下载速率<br>    # C:\Users\Administrator\pip\pip.ini<br>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<p>②pip 安装包超时使用以下方法:<br>pip install –index-url <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a> 包名</p>
+<p>③pip install tensorflow&#x3D;&#x3D;2.3.0  -i <a href="https://pypi.doubanio.com/simple">https://pypi.doubanio.com/simple</a></p>
+<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
+<p>6,Beautiful Soup:<br><strong>用于数据收集的Python库:</strong><br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
+<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
+<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
+<p>9,**用于数据清理和数据操作的Python库<br>*<br>pandas:主要用于数据操作和数据分析</p>
+<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
+<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
+<p>12,<strong>用于数据可视化的Python库</strong><br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
+<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
+<p>14,<strong>用于建模的Python库</strong><br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
+<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
+<p>16,<strong>用于数据解释型的Python库</strong><br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
+<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
+<p>18,<strong>用于音频处理的Python库:</strong><br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
+<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
+<p>20,<strong>用于图像处理的Python库</strong><br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
+<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
+<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
+<p><strong>用于部署的Python库</strong><br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
+<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
+<p>25,mysql数据库模块的安装<br>pip install mysqlclient&#x3D;&#x3D;1.3.12</p>
+<p>26, keras(目前已被tensorflow收购)</p>
+<p>pip install keras</p>
+<p>27,pytorch</p>
+<p>下载whl文件,在文件目录下:pip  install 文件名</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -739,25 +745,6 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python第三方模块安装的几种方式</title>
-    <url>/article/126ed703.html</url>
-    <content><![CDATA[<p>1,pip安装方式</p>
-<p>eg:pip install 包名</p>
-<p>2,下载tar.gz包,执行python setup.py install安装 </p>
-<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
-<p>3,安装whl文件</p>
-<p>文件目录下:pip instll 文件名.后缀</p>
-<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>第三方模块</tag>
       </tags>
   </entry>
   <entry>
@@ -861,60 +848,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>优秀网址</title>
-    <url>/article/a1f63686.html</url>
-    <content><![CDATA[<p> 学信网网站:<a href="http://www.chsi.com.cn/">http://www.chsi.com.cn/</a></p>
-<p> github:<a href="https://github.com/fies09">https://github.com/fies09</a></p>
-<p> 打印机共享:<a href="https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html">https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html</a></p>
-<p> 教务系统:<a href="http://jwc.spvec.com.cn/default2.aspx">http://jwc.spvec.com.cn/default2.aspx</a></p>
-<p> 西安交大官网:<a href="https://www.xjtudlc.com/">https://www.xjtudlc.com/</a></p>
-<p> winscp使用教程:<a href="https://blog.csdn.net/qccz123456/article/details/80345999">https://blog.csdn.net/qccz123456/article/details/80345999</a></p>
-<p> Pycharm在linux中的中文输入问题解决:<a href="https://blog.csdn.net/u013709332/article/details/81271923">https://blog.csdn.net/u013709332/article/details/81271923</a></p>
-<p> SSH KEY生成方式:<a href="https://blog.csdn.net/Coco_wjy/article/details/80003083">https://blog.csdn.net/Coco_wjy/article/details/80003083</a></p>
-<p> Git上传项目:</p>
-<p><a href="https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c">https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c</a></p>
-<p> git命令行上传项目到github&#x2F;gitblit:<a href="https://my.oschina.net/u/3354389/blog/2995483">https://my.oschina.net/u/3354389/blog/2995483</a></p>
-<p> gtiblit使用教程:<a href="https://blog.csdn.net/qq_32599479/article/details/89192287">https://blog.csdn.net/qq_32599479/article/details/89192287</a></p>
-<p>如何通过TortoiseGit上传项目:</p>
-<p><a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight</a></p>
-<p>git:相关命令详解:<a href="https://www.cnblogs.com/lifexy/p/8353040.html">https://www.cnblogs.com/lifexy/p/8353040.html</a></p>
-<p>正则表达式:<a href="https://deerchao.cn/tutorials/regex/regex.htm">https://deerchao.cn/tutorials/regex/regex.htm</a></p>
-<p>视频解析:<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&fenlei=256&rsv_pq=ade816940001292d&rsv_t=84fcq+WMOTaunj8ShyuZCCffyB/6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=21&rsv_sug1=20&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&inputT=9704&rsv_sug4=10648&rsv_sug=1">https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp&#x3D;1&amp;rsv_idx&#x3D;1&amp;tn&#x3D;baidu&amp;wd&#x3D;%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&amp;fenlei&#x3D;256&amp;rsv_pq&#x3D;ade816940001292d&amp;rsv_t&#x3D;84fcq%2BWMOTaunj8ShyuZCCffyB%2F6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&amp;rqlang&#x3D;cn&amp;rsv_enter&#x3D;1&amp;rsv_dl&#x3D;tb&amp;rsv_sug3&#x3D;21&amp;rsv_sug1&#x3D;20&amp;rsv_sug7&#x3D;101&amp;rsv_sug2&#x3D;0&amp;rsv_btype&#x3D;i&amp;inputT&#x3D;9704&amp;rsv_sug4&#x3D;10648&amp;rsv_sug&#x3D;1</a></p>
-<p>linux操作系统安装:<a href="https://blog.csdn.net/weixin_44733021/article/details/107159601">https://blog.csdn.net/weixin_44733021/article/details/107159601</a></p>
-<p>centos下mysql安装:<a href="https://blog.csdn.net/weixin_42140801/article/details/107859925">https://blog.csdn.net/weixin_42140801/article/details/107859925</a></p>
-<p>centos下django项目部署:</p>
-<p><a href="https://www.pianshen.com/article/1452452529/">https://www.pianshen.com/article/1452452529/</a></p>
-<p>centos安装redis:</p>
-<p><a href="https://www.cnblogs.com/heqiuyong/p/10463334.html">https://www.cnblogs.com/heqiuyong/p/10463334.html</a></p>
-<p>启动redis报错::Could not create server tcp listening socket *:6379…:</p>
-<p><a href="https://blog.csdn.net/weixin_45393094/article/details/104446648">https://blog.csdn.net/weixin_45393094/article/details/104446648</a></p>
-<p>软件测试面试题：<a href="https://blog.51cto.com/11392572/2105056">https://blog.51cto.com/11392572/2105056</a></p>
-<p>python面试题:<a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">https://blog.csdn.net/weixin_40318474/article/details/103744809</a></p>
-<p>各类图像数据集下载地址:<a href="https://bendfunction.gitbook.io/dataset-download/">https://bendfunction.gitbook.io/dataset-download/</a></p>
-<p><a href="https://blog.csdn.net/PY0312/article/details/105903320">gitbook使用教程</a></p>
-<p><a href="https://developer.aliyun.com/article/645159?spm=5176.21213303.J_6704733920.7.490a53c9Ybihxx&scm=20140722.S_community@@%E6%96%87%E7%AB%A0@@645159._.ID_community@@%E6%96%87%E7%AB%A0@@645159-RL_ubuntu%E5%AE%89%E8%A3%85wordpress-LOC_main-OR_ser-V_2-P0_0">wordpress安装教程</a></p>
-<p><a href="https://blog.csdn.net/qq_44324181/article/details/117817559">wordpress2</a></p>
-<p><a href="https://blog.csdn.net/Runaway_pilot/article/details/122855852">乌班图django部署教程</a></p>
-<p><a href="https://www.cnblogs.com/yinfei/p/11427259.html">navicat mysql破解链接</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/272735470">win10安装centos</a></p>
-<p><a href="https://blog.csdn.net/yaojiawan/article/details/89944319">win10安装乌班图</a></p>
-<p><a href="https://blog.csdn.net/weixin_45764765/article/details/113576331">win10下mysql安装使用教程</a></p>
-<p><a href="https://wangchujiang.com/linux-command/">linux命令搜索使用教程</a></p>
-]]></content>
-      <categories>
-        <category>常用网址</category>
-      </categories>
-      <tags>
-        <tag>常用网址</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>testfafafa</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Scrapy框架的使用</title>
     <url>/article/e85d868e.html</url>
     <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
@@ -931,6 +864,25 @@ TPL:事务处理语言
       <tags>
         <tag>爬虫</tag>
         <tag>Scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python第三方模块安装的几种方式</title>
+    <url>/article/126ed703.html</url>
+    <content><![CDATA[<p>1,pip安装方式</p>
+<p>eg:pip install 包名</p>
+<p>2,下载tar.gz包,执行python setup.py install安装 </p>
+<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
+<p>3,安装whl文件</p>
+<p>文件目录下:pip instll 文件名.后缀</p>
+<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>第三方模块</tag>
       </tags>
   </entry>
   <entry>
@@ -1100,6 +1052,87 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>优秀网址</title>
+    <url>/article/a1f63686.html</url>
+    <content><![CDATA[<p> 学信网网站:<a href="http://www.chsi.com.cn/">http://www.chsi.com.cn/</a></p>
+<p> github:<a href="https://github.com/fies09">https://github.com/fies09</a></p>
+<p> 打印机共享:<a href="https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html">https://jingyan.baidu.com/article/9c69d48fd940db13c9024ed8.html</a></p>
+<p> 教务系统:<a href="http://jwc.spvec.com.cn/default2.aspx">http://jwc.spvec.com.cn/default2.aspx</a></p>
+<p> 西安交大官网:<a href="https://www.xjtudlc.com/">https://www.xjtudlc.com/</a></p>
+<p> winscp使用教程:<a href="https://blog.csdn.net/qccz123456/article/details/80345999">https://blog.csdn.net/qccz123456/article/details/80345999</a></p>
+<p> Pycharm在linux中的中文输入问题解决:<a href="https://blog.csdn.net/u013709332/article/details/81271923">https://blog.csdn.net/u013709332/article/details/81271923</a></p>
+<p> SSH KEY生成方式:<a href="https://blog.csdn.net/Coco_wjy/article/details/80003083">https://blog.csdn.net/Coco_wjy/article/details/80003083</a></p>
+<p> Git上传项目:</p>
+<p><a href="https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c">https://jingyan.baidu.com/article/27fa732683ebf546f8271f2e.html?qq-pf-to=pcqq.c2c</a></p>
+<p> git命令行上传项目到github&#x2F;gitblit:<a href="https://my.oschina.net/u/3354389/blog/2995483">https://my.oschina.net/u/3354389/blog/2995483</a></p>
+<p> gtiblit使用教程:<a href="https://blog.csdn.net/qq_32599479/article/details/89192287">https://blog.csdn.net/qq_32599479/article/details/89192287</a></p>
+<p>如何通过TortoiseGit上传项目:</p>
+<p><a href="https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight">https://blog.csdn.net/weixin_30532759/article/details/96394002?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight</a></p>
+<p>git:相关命令详解:<a href="https://www.cnblogs.com/lifexy/p/8353040.html">https://www.cnblogs.com/lifexy/p/8353040.html</a></p>
+<p>正则表达式:<a href="https://deerchao.cn/tutorials/regex/regex.htm">https://deerchao.cn/tutorials/regex/regex.htm</a></p>
+<p>视频解析:<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&fenlei=256&rsv_pq=ade816940001292d&rsv_t=84fcq+WMOTaunj8ShyuZCCffyB/6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=21&rsv_sug1=20&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&inputT=9704&rsv_sug4=10648&rsv_sug=1">https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp&#x3D;1&amp;rsv_idx&#x3D;1&amp;tn&#x3D;baidu&amp;wd&#x3D;%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90&amp;fenlei&#x3D;256&amp;rsv_pq&#x3D;ade816940001292d&amp;rsv_t&#x3D;84fcq%2BWMOTaunj8ShyuZCCffyB%2F6QUYZMXDvP32KIKASVyyU2fqTJTiUES8&amp;rqlang&#x3D;cn&amp;rsv_enter&#x3D;1&amp;rsv_dl&#x3D;tb&amp;rsv_sug3&#x3D;21&amp;rsv_sug1&#x3D;20&amp;rsv_sug7&#x3D;101&amp;rsv_sug2&#x3D;0&amp;rsv_btype&#x3D;i&amp;inputT&#x3D;9704&amp;rsv_sug4&#x3D;10648&amp;rsv_sug&#x3D;1</a></p>
+<p>linux操作系统安装:<a href="https://blog.csdn.net/weixin_44733021/article/details/107159601">https://blog.csdn.net/weixin_44733021/article/details/107159601</a></p>
+<p>centos下mysql安装:<a href="https://blog.csdn.net/weixin_42140801/article/details/107859925">https://blog.csdn.net/weixin_42140801/article/details/107859925</a></p>
+<p>centos下django项目部署:</p>
+<p><a href="https://www.pianshen.com/article/1452452529/">https://www.pianshen.com/article/1452452529/</a></p>
+<p>centos安装redis:</p>
+<p><a href="https://www.cnblogs.com/heqiuyong/p/10463334.html">https://www.cnblogs.com/heqiuyong/p/10463334.html</a></p>
+<p>启动redis报错::Could not create server tcp listening socket *:6379…:</p>
+<p><a href="https://blog.csdn.net/weixin_45393094/article/details/104446648">https://blog.csdn.net/weixin_45393094/article/details/104446648</a></p>
+<p>软件测试面试题：<a href="https://blog.51cto.com/11392572/2105056">https://blog.51cto.com/11392572/2105056</a></p>
+<p>python面试题:<a href="https://blog.csdn.net/weixin_40318474/article/details/103744809">https://blog.csdn.net/weixin_40318474/article/details/103744809</a></p>
+<p>各类图像数据集下载地址:<a href="https://bendfunction.gitbook.io/dataset-download/">https://bendfunction.gitbook.io/dataset-download/</a></p>
+<p><a href="https://blog.csdn.net/PY0312/article/details/105903320">gitbook使用教程</a></p>
+<p><a href="https://developer.aliyun.com/article/645159?spm=5176.21213303.J_6704733920.7.490a53c9Ybihxx&scm=20140722.S_community@@%E6%96%87%E7%AB%A0@@645159._.ID_community@@%E6%96%87%E7%AB%A0@@645159-RL_ubuntu%E5%AE%89%E8%A3%85wordpress-LOC_main-OR_ser-V_2-P0_0">wordpress安装教程</a></p>
+<p><a href="https://blog.csdn.net/qq_44324181/article/details/117817559">wordpress2</a></p>
+<p><a href="https://blog.csdn.net/Runaway_pilot/article/details/122855852">乌班图django部署教程</a></p>
+<p><a href="https://www.cnblogs.com/yinfei/p/11427259.html">navicat mysql破解链接</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/272735470">win10安装centos</a></p>
+<p><a href="https://blog.csdn.net/yaojiawan/article/details/89944319">win10安装乌班图</a></p>
+<p><a href="https://blog.csdn.net/weixin_45764765/article/details/113576331">win10下mysql安装使用教程</a></p>
+<p><a href="https://wangchujiang.com/linux-command/">linux命令搜索使用教程</a></p>
+]]></content>
+      <categories>
+        <category>常用网址</category>
+      </categories>
+      <tags>
+        <tag>常用网址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>testfafafa</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Python概念</title>
+    <url>/article/7cf78c2.html</url>
+    <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
+<p>2,线程,进程,协程的区别<br>一,<br>    线程:指进程中的某一个控制单元<br>    单线程:指一个进程中只有一个线程(主线程),eg:dos操作系统<br>    多线程:指一个程序中包含多个执行流,多线程是实现并发的一种有效手段<br>    主线程:跟随应用程序创建的线程<br>    子线程:除应用程序外的其他线程<br>    python中有协程库gevent， pyweb框架tornado中也用了gevent封装好的协程。本文主要介绍进程、线程和协程三者之间的区别。<br>二、概念(详细说明)<br>    　　1、进程<br>    进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。<br>        2, 线程<br>    线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。<br>    　　3、协程<br>    协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</p>
+<p>三、进程和线程、协程在python中的使用<br>    　　1、多进程一般使用multiprocessing库，来利用多核CPU，主要是用在CPU密集型的程序上，当然生产者消费者这种也可以使用。多进程的优势就是一个子进程崩溃并不会影响其他子进程和主进程的运行，但缺点就是不能一次性启动太多进程，会严重影响系统的资源调度，特别是CPU使用率和负载。使用多进程可以查看文章《python 多进程使用总结》。注：python2的进程池在类中的使用会有问题，需要把类函数定义成全局函数。具体可参考 <a href="http://bbs.chinaunix.net/thread-4111379-1-1.html">http://bbs.chinaunix.net/thread-4111379-1-1.html</a><br>    　　2、多线程一般是使用threading库，完成一些IO密集型并发操作。多线程的优势是切换快，资源消耗低，但一个线程挂掉则会影响到所有线程，所以不够稳定。现实中使用线程池的场景会比较多，具体可参考《python线程池实现》。<br>    　　3、协程一般是使用gevent库，当然这个库用起来比较麻烦，所以使用的并不是很多。相反，协程在tornado的运用就多得多了，使用协程让tornado做到单线程异步，据说还能解决C10K的问题。所以协程使用的地方最多的是在web应用上。<br>    总结一下就是IO密集型一般使用多线程或者多进程，CPU密集型一般使用多进程，强调非阻塞异步并发的一般都是使用协程，当然有时候也是需要多进程线程池结合的，或者是其他组合方式。</p>
+<p>3,python如何进行内存管理的<br>对象引用计数机制:python语言内部依靠引用计数来持续追踪内存中的对象,就是说,他的Python内部记录的对象有多少个引用,及引用计数,当对象被创建时就等于创建了一个引用计数,当对象不需要时,这个对象的引用计数归零时,它将被垃圾收集机制处理掉<br>垃圾回收:<br>1,在Python语言内部,当一个对象的引用计数为0时,它将被垃圾收集机制处理掉<br>2,当遇到两个对象a和b相互引用时的这种情况,del语句可以减少a和b的引用计数,并销毁用于引用底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除<br>内存池机制:Python语言虽然提供了对内存的垃圾收集机制,但实际上它将不用的内存放到内存池而不是返回给操作系统,所以就有了以下:<br>1,Pymalloc机制；这个主要是为了加速Python的执行效率，Python引入了一个内存池机制，用于管理，为了对小块内存的申请和释放。<br>2 Python中所有小于256个字节的对象都是依靠pymalloc分配器来实现的，而稍大的对象用的则是系统的malloc。<br>3 对于Python对象，比如整数、浮点数和List这些，都有自己独立的内存池，对象间并不共享他们的内存池。换句话说就是，假设你分配并且释放了大量的整数，那么用于缓存这些整数的内存就不能再分配给浮点数。</p>
+<p>4,简述一个前端请求的处理流程,在uwsgi&#x2F;nginx&#x2F;django之间的处理流程<br>答:wsgi：一种实现python解析的通用接口标准&#x2F;协议，是一种通用的接口标准或者接口协议，实现了python web程序与服务器之间交互的通用性。<br>利用它，web.py或bottle或者django等等的python web开发框架，就可以轻松地部署在不同的web server上了；<br>uwsgi:同WSGI一样是一种通信协议<br>uwsgi协议是一个uWSGI服务器自有的协议，它用于定义传输信息的类型，它与WSGI相比是两样东西。 uWSGI :一种python web server或称为Server&#x2F;Gateway<br>uWSGI类似tornadoweb或者flup，是一种python web server，uWSGI是实现了uwsgi和WSGI两种协议的Web服务器，负责响应python 的web请求。<br>uWSGI实现了wsgi协议、uwsgi协议、http等协议。<br>Nginx中HttpUwsgiModule的作用是与uWSGI服务器进行交换。</p>
+<p>nginx&#x2F;uwsgi&#x2F;django交互流程：<br>1.首先客户端请求服务资源，<br>2.nginx作为直接对外的服务接口,接收到客户端发送过来的http请求,会解包、分析，<br>3.如果是静态文件请求就根据nginx配置的静态文件目录，返回请求的资源，<br>4.如果是动态的请求,nginx就通过配置文件,将请求传递给uWSGI；uWSGI 将接收到的包进行处理，并转发给wsgi，<br>5.wsgi根据请求调用django工程的某个文件或函数，处理完后django将返回值交给wsgi，<br>6.wsgi将返回值进行打包，转发给uWSGI，<br>7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(如浏览器)。<br>*注:不同的组件之间传递信息涉及到数据格式和协议的转换</p>
+<p>5,celery队列<br>celery队列包含两个模块：worker和beat<br>worker:用于执行队列中的任务<br>beat：用于定时分配任务<br>这两个模块可以同时启动，也可以分别启动<br>任务可以有两个来源：<br>代码内调用：将需要放入执行队列的任务函数import进来<br>beat定时派发：在配置文件里设置好需要调用的任务函数和调用日期，beat就会自动派发任务到队列里了</p>
+<p>Celery安装<br>使用之前需要配置消息中间件<br>一般是用Redis数据库来通讯更加方便，需要在本地安装redis服务并启动<br>pip install -U redis<br>以下为celery的具体使用<br><a href="https://www.jianshu.com/p/34291d6b5f47">https://www.jianshu.com/p/34291d6b5f47</a></p>
+<p>6,modelfirst dbfirst的区别<br>datebase first：就是代表数据库优先，那么提前就是先创建数据库<br>model firast:就是代表model优先，那么提前也就先创建model,然后根据model自动建立数据库<br>这两EF的编程方式在使用的过程中的区别为：<br>在添加ADO.NET实体数据模型的时候，database first选择的是从数据库生成<br>在数据结构发生变化的时候，database first编程方式中是选择从数据库更新模型，因此就导致database first是以数据库为主，而Model first选择的是空模型生成<br>当数据发生变化的时候，model first选择的是从模型中生成数据库                          </p>
+<p>7,RESTful&#x2F;WebSocket接口机制<br>WebSocket:服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，<br>属于服务器推送技术的一种。</p>
+<p>8,XMl进行网络通信<br>xpath对xml格式的东西解析比较规范,基本上能够做到想要那个数据就取哪个数据</p>
+<p>9,</p>
+<p>Lamdba简化代码.递归:自身调用自身,高阶函数:将函数作为参数传递,<br>装饰器:把函数作为参数传递<br>#扩展 函数功能,在不改变原代码的情况下,<br>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包<br>生成器:一遍循环,一遍计算的机制称为生成器,<br>迭代器:取数据,高效遍历一组可迭代对象<br>类:包含对象所包含的属性和方法<br>对象:调用方法和属性<br>属性分为两大类:实例属性,类属性,实例属性的调用修改影响实例属性的值但不影响类属性的值,类属性的调用的修改既不影响类属性的值,也不影响实例属性 的值<br>构造方法:数据初始化,特殊的实例方法<br>使用__new__和__init__来完成的<br>_<em>new__负责进行对象的创建,<strong>init__负责进行对象的初始化<br>访问权限:私有</strong>(双下划线 ),受保护</em>(单下划线),公开<br>作用域,将局部变量转化为全局变量<br>方法分为四大类:<br>实例方法:第一个形参为self<br>类方法:第一个形参为cls,和装饰器类似:由@classmethod表示<br>静态方法:无参数,由@staticmethod表示<br>普通方法:是一个错误的方法,几乎不用</p>
+<p>10,IOError,AttributeError,ImportError,IndentationError,IndexError,KeyError,<br>SyntaxError,NameError分别代表什么异常<br>IOError: 输入输出异常<br>AttributeError: 试图访问一个对象没有的属性<br>ImportError: 无法引入模块或包，基本是路径问题<br>IndentationError: 语法错误，代码没有正确的对齐<br>IndexError: 下标索引超出序列边界<br>KeyError: 试图访问你字典里不存在的键<br>SyntaxError: Python代码逻辑语法出错，不能执行<br>NameError: 使用一个还未赋予对象的变量</p>
+<p>11,r,r+,rb,rb+打开文件模式区别<br>答:r: 以只读方式打开文件。文件的指针将放在文件的开头。这是默认模式。<br>w: 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a: 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果文件不存在，创建新的文件进行写入。<br>rb: 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。<br>wb: 以二进制格式打开一个文件只用于写入。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab: 以二进制格式打开一个文件用于追加。如果文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容会被写入到已有内容之后。如果文件不存在，创建新文件进行写入。<br>r+: 打开一个文件用于读写。文件指针将会放在文件开头。<br>w+: 打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>a+: 打开一个文件用于读写。如果文件已存在，文件指针将会放在文件结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。<br>rb+: 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。<br>wb+: 以二进制格式打开一个文件用于读写。如果文件已存在则将其覆盖。如果文件不存在，创建新文件。<br>ab+: 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用命令</title>
     <url>/article/6fc55794.html</url>
     <content><![CDATA[<p>1,WIndow激活命令</p>
@@ -1117,36 +1150,16 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Nodejs简单使用</title>
-    <url>/article/89b3a0ef.html</url>
-    <content><![CDATA[<p>1,安装node.js 2,安装二进制文件exe文件 3,测试,进入exe所在目录 node –version 4,可以创建服务器, 在文件目录下输入:node server.js 在浏览器上运行:<a href="http://127.0.0.1:8888/">http://127.0.0.1:8888</a></p>
-<p>5,检测npm是否安装 npm -v</p>
-<p>6,使用npm命令安装模块 (有-g 全局安装,无-g本地安装) 区别: 本地:</p>
-<ol>
-<li>将安装包放在 .&#x2F;node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
-<li>可以通过 require() 来引入本地安装的包 npm install 模块名 全局:</li>
-<li>将安装包放在 &#x2F;usr&#x2F;local 下或者你 node 的安装目录。</li>
-<li>可以直接在命令行里使用。 npm install 模块名 -g</li>
-</ol>
-<p>安装出错解决办法: npm config set proxy null</p>
-<p>查看安装信息: npm list -g 查看某个模块的版本号 npm list 模块名</p>
-<p>7,常用模块express npm install express</p>
-<p>8,卸载常用命令 npm uninstall express</p>
-<p>卸载后，你可以到 &#x2F;node_modules&#x2F; 目录下查看包是否还存在，或者使用以下命令查看</p>
-<p>更新模块:npm update express</p>
-<p>搜索模块:npm search express</p>
-<p>创建模块 npm init</p>
-<p>注册用户:npm adduser</p>
-<p>发布模块:npm publish</p>
-<p>使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>然后可以用cnpm install 模块名 下载模块</p>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>乌班图笔记整理</p>
 ]]></content>
       <categories>
-        <category>Blog</category>
+        <category>Ubuntu</category>
       </categories>
       <tags>
-        <tag>Nodejs</tag>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1155,20 +1168,6 @@ TPL:事务处理语言
     <content><![CDATA[<p>1, oracle编码:<br>在系统变量中添加:<br>名称:NLS_LANG<br>值:SIMPLIFIED CHINESE_CHINA.ZHS16GBK</p>
 <p>2, mysql乱码:<br>#永久版:在运行中输入”regedit”,找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor</p>
 <p>然后“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp65001”</p>
-]]></content>
-      <categories>
-        <category>Error</category>
-      </categories>
-      <tags>
-        <tag>Error</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>有道云报错</title>
-    <url>/article/4af4be97.html</url>
-    <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
-<p>%USERPROFILE%\Local Settings\Application Data\youdao\YNote</p>
-<p>:进入此目录删除YNote文件夹</p>
 ]]></content>
       <categories>
         <category>Error</category>
@@ -1195,68 +1194,6 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱因斯坦语录</title>
-    <url>/article/f11761cc.html</url>
-    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
-<p>​                                                                                                                                                        —–爱因斯坦</p>
-<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Win10常用快捷键</title>
-    <url>/article/29c250f4.html</url>
-    <content><![CDATA[<p>1,calc:计算器</p>
-<p>2,regedit;注册表编辑器</p>
-<p>3,ipconfig:ip地址</p>
-<p>4,win+L:锁屏</p>
-<p>5,win+E:打开电脑</p>
-<p>6,pycharm中:ctrl+r:多个替换</p>
-<p>7,双击alt:电脑管家火箭加速</p>
-<p>8,alt + tab:软件界面切换        </p>
-<p>9,tree &#x2F;f:显示目录结构    </p>
-<p>10,win+x    a:管理员命令操作提示符</p>
-<p>11,选中模块,alt+enter:安装模块</p>
-<p>12.alt用鼠标选中,多条修改</p>
-<p>13,函数()内,ctrl+p:提示 </p>
-<p>14,win + r :mspaint:画图快捷键</p>
-<p>15,slidetoshutdown :关机快捷键</p>
-<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
-<p>17,win + R :powershell:打开管理员模式</p>
-<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
-<p>19:定时关机:shutdown -s -t  秒数</p>
-<p>20,ctrl+alt+del:进入任务管理器</p>
-<p>21,打开服务:services.msc</p>
-<p>22，远程连接：mstsc</p>
-<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
-<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p>
-<p>时区下的已安装物理内存就是笔记本内存大小</p>
-<p>25,安装服务(根目录下|管理员权限):</p>
-<p>安装:    .\installService.cmd</p>
-<p>卸载:    .\uninstallService.cmd</p>
-<p>26,C盘清理旧文件:</p>
-<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
-<p>27,   关机: slidetoshutdown</p>
-<p>28,  win10激活:</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>29,win10打开系统属性快捷键:  dxdiag</p>
-]]></content>
-      <categories>
-        <category>快捷键</category>
-      </categories>
-      <tags>
-        <tag>快捷键</tag>
-        <tag>PC</tag>
       </tags>
   </entry>
   <entry>
@@ -1339,134 +1276,31 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>软测概念</title>
-    <url>/article/ab7e442d.html</url>
-    <content><![CDATA[<p>测试的基础分类与每个类型的测试目标 1.1,基于项目流程的测试分类 软件开发的基本流程</p>
-<p>需求分析—&gt;设计—&gt;编码—&gt;单元测试—&gt;集成测试—&gt;系统测试—&gt;验收测试</p>
-<p>项目流程测试分类: 单元(模块)测试:对程序中的单个子程序或者具有独立工程的代码进行测试的过程 是指软件中最小可测试单元进行检查和验证 在程序测试中单元测试可能是针对一个函数或者类 在图形化界面测试中单元测试针对一个最小功能单元,如验证码显示,系统登录 集成测试:在单元测试基础上,将单元模块组装成系统或子系统再进行测试,检查模块间的接口是否正确 系统测试:针对整个产品系统进行测试,验证系统是否满足了需求规格的定义,以及软件系统的正确性和性能等是否按摩足其规约所指定的要求 验收测试:部署软件前的最后一个测试操作,验收测试的目的确保软件准备就绪,向购买者展示该软件已经满足用户的需求</p>
-<p>1.2,基于测试方式的测试分类 黑盒测试:通过对软件的输入数据去查阅输出结果是否正确,针对程序外部结构,不考虑内部逻辑结构,主要针对软件界面和功能进行测试,一般通过操作软件来完成测试 白盒测试:分析产品的交付代码,进而编写测试程序来测试产品是否符合功能以及性能需求,对产品代码进行分析,并编写测试用例,可以测试目标的执行效率,执行时间,合理性,结果精确,效率低下 灰盒测试:介于黑盒和白盒之间,部分核心功能以及性能测试通过白盒测试,其余为黑盒</p>
-<p>1.3,基于测试目的的测试分类</p>
-<p>功能测试:检测实际的功能是否满足用户的需求,</p>
-<p>性能测试:通过自动化测试工具模拟正常,峰值以及异常负载条件来对    系统的各项性能指标进行测试</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line">时间性能测试:软件的响应时间是否符合测试需求(<span class="attribute">eg</span>:登录时间)</span><br><span class="line">	</span><br><span class="line">	硬件性能测试:指软件运行时所消耗的系统资源,比如硬件资源,<span class="selector-tag">CPU</span>,内存,网络宽带消耗等</span><br></pre></td></tr></table></figure>
-
-<p>两者的优先级:系统测试首先进行功能测试,满足功能需求后进行性能测试</p>
-<p>1.4,自动化测试与手动测试 手动测试:人为去执行测试用例,通过鼠标键盘等外部设备来操作系统的UI界面,查看返回结果是否符合预期的结果</p>
-<p>自动化测试:通过测试程序模拟用户对软件的操作行为 自动化测试过程:根据测试用例中描述的规程一步步执行测试,并比对实际结果 自动化功能测试:通过编码的方式用一段程序来测试一个软件的功能 自动化性能测试:模拟大量用户向系统发送请求,用来验证系统的处理能力,    一般用自动化测试工具完成(例如loadrunner),也可以通过自定义程序完成</p>
-<p>1.5,其他测试类型 冒烟测试:测试前验证基本功能是否可以实现 回归测试:修改旧代码后,重新进行测试已确定修改后是否产生或引起其他的错误 随机测试:指测试中输入数据是随机的,目的模拟用户的真实操作,发现一些边缘性问题 探索性测试:碰到测试问题对测试策略进行探索性尝试 安全测试:对产品进行检验以验证产品是否符合安全需求定义和产品质量标准的过程</p>
-<p>使用场景: 2.1,自动化测试的优缺点 优点: 1,对程序的回归测试更方便 2,可以运行更多更繁琐的测试 3,可以执行一些手工测试困难或者不可能进行的测试.比如,对于大量用户的测试 4,测试具有一致性和可重复性 5,测试的复用性 6,增加软件信任度 缺点: 不能取代手工测试,有很多需要人脑判断结果的测试用例无法用自动工具实现 手工比自动测试发现的缺陷更多 测试结果对测试人员开发的测试程序质量的依赖性极大 系统频繁升级会导致测试用例频繁升级</p>
-<p>概括:自动化测试无法取代手工测试,因此两者通常联合使用 并非所有系统都需要使用自动化测试手段,盲目使用会增加软件测试的风险</p>
-<p>2.2,自动化测试的基本原则 1,测试任务明确 2,系统融合度高 3,软件系统界面稳定 4,大量的重复测试任务 5,维护周期长 6,开发比较规范 7,具备自动化测试管理平台</p>
-<p>3.1,常用的自动化测试工具 自动化测试工具分类 ①UI自动化测试工具:通过调用测试程序模拟用户操作BS或CS软件来实现测试的工具,按照编写测试程序的方式又分为: 录制以及回放工具:生成本次系统操作对应的程序代码段 自动化测试框架:第三方框架,封装了模拟用户操作软件UI界面的系列API接口</p>
-<p>一般建议手动编写测试程序分析系统代码结构和UI自动化测试工具结合使用</p>
-<p>常用的UI自动化测试工具: QTP:企业级自动化测试工具,提供强大易用的录制回放功能,支持B&#x2F;S与C&#x2F;S两种框架的软件测试,是目前主流的自动化测试工具 Robot Framework:python编写的功能自动化测试框架,具备良好的可扩展性,支援关键字驱动,可以同时测试多种类型的客户端或者接口,可以进行分布式测试执行 Watir:基于Web模式的自动化功能测试,是一个Ruby语言库,使用ruby语言进行脚本开发</p>
-<p>*selenium:Web应用程序测试的工具,支持多平台,多浏览器,多语言去实现自动化测试,系列产品中包含自动化测试框架,录制工具,分布测试工具等</p>
-<p>②性能测试:通过自动化测试的工具模拟正常,峰值以及负载条件来对系统的各项性能指标进行测试 负载测试:监控系统各项性能指标的变化情况 压力测试:获取系统能提供最大服务级别的测试</p>
-<p>性能测试工具: 可通过测试工具实现(eg:loadrunner等) *可通过多线程模拟多用户访问来实现 通过脚本或工具可以监控服务器端资源的使用情况 ③接口测试工具</p>
-<p>3.2,selenium工具: selenium IDE功能: 记录用户的操作步骤 声明预期显示结果 声明程序注释 通过配置可编译成Python,Java等语言的测试脚本,测试脚本中调用selenium完成web访问操作</p>
-<p>3.3,selenium的理解 通过配置可编译成Python脚本,通过在脚本中调用selenium进行web访问,</p>
-<p>3.4,selenium有几种等待方式 两种 同步等待请求:time.sleep() 异步等待请求:driver.implicity_wait()</p>
-<p>4.2浏览器驱动程序 webdriver: chrome</p>
-<p>unittest框架:python的第三方单元测试框架也可以将单元测试组装为套件,可以依次执行多个单元测试案例 主要功能: 1,提供规范的测试函数声明 2,提供组装测试套件功能 3,提供了多个用于判断异常的断言 4,提供了装饰器用于屏蔽非目标测试函数</p>
-<p>单元测试用例:软件测试中最基本的组成单元,在unittest测试框架中被视为吃啥单元的运行实体,一个测试用例应包含一个或多个测试单元 测试用例:在unittest中测试用例对应一个实体类,包含多个测试函数(测试单元) 测试单元:对应一个测试函数,对应一个独立的单元测试用例,例如登录模块是测试用例,登录与退出登录分别为测试单元</p>
+    <title>爱因斯坦语录</title>
+    <url>/article/f11761cc.html</url>
+    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
+<p>​                                                                                                                                                        —–爱因斯坦</p>
+<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
 ]]></content>
       <categories>
-        <category>软件测试</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>软件测试</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
-    <title>自动化测试</title>
-    <url>/article/f0a57b1b.html</url>
-    <content><![CDATA[<p><a href="https://blog.51cto.com/11392572/2105056">参考链接</a></p>
-<p>1,自我介绍:<br>        面试官，你好XXX，我叫，19年毕业，从事软件测试将近2年的时间。在此期间做过一些项目也积累过一些经验，能够独立地完成软件测试流程的一个工作。我之前主要做过的是功能测试，web自动化测试、接口测试、也有用过ipref3做过一些性能方面的测试。我对于缺陷管理工具比如禅道，版本控制器git与svn能够熟悉应用,对于app测试也比较熟悉,数据库、linux、Fiddler、postman这些应用也比较熟悉。以上就是我的一些简单的自我介绍，谢谢。</p>
-<p>2,web测试和app测试的区别<br>①Web项目一般都是b&#x2F;s架构,基于浏览器的,而app则是c&#x2F;s的,必须有客户端,<br>②web测试只要更新了服务器端,客户端就会同步更新,而客户端是可以保证每一个用户的客户端完全一致的,而app端不能够保证完全一致,除非用户更新了客户端,这意味着客户端所使用的核心版本必须进行回归测试一遍<br>③性能方面:web测试只考虑响应时间,而app还需要关心流量,电量,CPU,GPU,Memory这些了<br>④兼容性:web:浏览器,电脑硬件,<br>app:phone,pad,分辨率,机型,版本号,系统类型<br>④相比之下,app还有更多的专项测试:<br>健壮性测试:异常场景(中断,来电,关机,重启),弱网测试.</p>
-<p>安装,卸载,更新:</p>
-<p>界面操作,横竖屏切换,多点触控等测试</p>
-<p>3,测试报告主要内容:<br>测试过程和结果<br>风险评估<br>缺陷汇报和分析<br>测试工作总结和改进</p>
-<p>4，登陆模块<br>UI界面模块:输入框和按钮对齐方式是否一致,高度长度是否合适,界面是否正常<br>功能模块:用户名密码为空点击是否有提示<br>用户名密码正常是否正常跳转到登录页面<br>密码是否包含特殊字符,<br>密码长度是否在范围内<br>忘记密码.注册以及切换其他账号登录是否正常实现<br>性能模块:跳转到登录界面是否超出时长,登录成功登录成功时长是否超过5秒<br>记住密码功能<br>密码前后出现空格如何处理<br>兼容性:主流浏览器是否正常显示,不同平台是否可以正常显示,移动设备是否可以正常显示<br>不同分辨率<br>可用性:<br>是否支持全键盘操作,是否有快捷键,<br>输入用户名密码回车是否可以登录<br>Tab键是否可以切换输入框</p>
-<p>5,postman中post和get的区别<br>get请求:直接在浏览器里输入就可以,只要在浏览器里面直接请求到的,都是get请求<br>post请求:需要借助工具来发送<br>区别:<br>    1,get使用url或cookie传参,而post将数据放到body中<br>    2,get的url参数长度有限制,而post的数据则可以非常大<br>    3,post比get安全,因为数据在地址栏上不可见,<br>    4,一般get请求用来获取数据,post请求用来发送数据</p>
-<p>6,给你一个网站如何测试<br>1,查找需求说明,网站设计等相关文档,分析测试需求<br>2,制定测试计划,确定测试范围和测试策略<br>3,设计测试用例</p>
-<p>7,为什么要软件测试<br>以最少的人力,物力和时间找到软件中潜在的各种错误和缺陷,通过修正各种错误和缺陷提高软件质量,回避软件发布后由于潜在的软件缺陷和错误造成的隐患以及带来的商业风险</p>
-<p>8,白盒测试测试用例方法<br>逻辑覆盖,循环覆盖,基本路径覆盖</p>
-<p>9,a测试 B测试<br>a测试:用户在开发环境下进行测试<br>B测试:由软件的一个或多个用户在实际使用环境下进行的测试</p>
+    <title>有道云报错</title>
+    <url>/article/4af4be97.html</url>
+    <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
+<p>%USERPROFILE%\Local Settings\Application Data\youdao\YNote</p>
+<p>:进入此目录删除YNote文件夹</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Error</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念2</title>
-    <url>/article/5fa19c3c.html</url>
-    <content><![CDATA[<p>接口,性能测试</p>
-<p>SOW:statement of work，工作任务说明书</p>
-<p>HLD: High Level Design,概要设计说明书</p>
-<p>LLD: Low Level Design，详细设计说明书</p>
-<p>UTC: Unit Testing Cases，单元测试用例</p>
-<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
-<p>非增量–每个模块测试完了再连接；</p>
-<p>增量：测一个模块，就连接一个模块。</p>
-<p>基于测试对象进行分类:白盒黑盒</p>
-<p>集成测试:接口测试</p>
-<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
-<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
-<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
-<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
-<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
-<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
-<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
-<p>测试风险;</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>乌班图笔记整理</p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念3</title>
-    <url>/article/28a6acaa.html</url>
-    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
-<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
-<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
-<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
-<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
-<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
-<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
-<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
-<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
-<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
-<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
-<p>集成测试和系统测试偏多</p>
-<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
-<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
-<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
+        <tag>Error</tag>
       </tags>
   </entry>
   <entry>
@@ -1595,6 +1429,172 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自动化测试</title>
+    <url>/article/f0a57b1b.html</url>
+    <content><![CDATA[<p><a href="https://blog.51cto.com/11392572/2105056">参考链接</a></p>
+<p>1,自我介绍:<br>        面试官，你好XXX，我叫，19年毕业，从事软件测试将近2年的时间。在此期间做过一些项目也积累过一些经验，能够独立地完成软件测试流程的一个工作。我之前主要做过的是功能测试，web自动化测试、接口测试、也有用过ipref3做过一些性能方面的测试。我对于缺陷管理工具比如禅道，版本控制器git与svn能够熟悉应用,对于app测试也比较熟悉,数据库、linux、Fiddler、postman这些应用也比较熟悉。以上就是我的一些简单的自我介绍，谢谢。</p>
+<p>2,web测试和app测试的区别<br>①Web项目一般都是b&#x2F;s架构,基于浏览器的,而app则是c&#x2F;s的,必须有客户端,<br>②web测试只要更新了服务器端,客户端就会同步更新,而客户端是可以保证每一个用户的客户端完全一致的,而app端不能够保证完全一致,除非用户更新了客户端,这意味着客户端所使用的核心版本必须进行回归测试一遍<br>③性能方面:web测试只考虑响应时间,而app还需要关心流量,电量,CPU,GPU,Memory这些了<br>④兼容性:web:浏览器,电脑硬件,<br>app:phone,pad,分辨率,机型,版本号,系统类型<br>④相比之下,app还有更多的专项测试:<br>健壮性测试:异常场景(中断,来电,关机,重启),弱网测试.</p>
+<p>安装,卸载,更新:</p>
+<p>界面操作,横竖屏切换,多点触控等测试</p>
+<p>3,测试报告主要内容:<br>测试过程和结果<br>风险评估<br>缺陷汇报和分析<br>测试工作总结和改进</p>
+<p>4，登陆模块<br>UI界面模块:输入框和按钮对齐方式是否一致,高度长度是否合适,界面是否正常<br>功能模块:用户名密码为空点击是否有提示<br>用户名密码正常是否正常跳转到登录页面<br>密码是否包含特殊字符,<br>密码长度是否在范围内<br>忘记密码.注册以及切换其他账号登录是否正常实现<br>性能模块:跳转到登录界面是否超出时长,登录成功登录成功时长是否超过5秒<br>记住密码功能<br>密码前后出现空格如何处理<br>兼容性:主流浏览器是否正常显示,不同平台是否可以正常显示,移动设备是否可以正常显示<br>不同分辨率<br>可用性:<br>是否支持全键盘操作,是否有快捷键,<br>输入用户名密码回车是否可以登录<br>Tab键是否可以切换输入框</p>
+<p>5,postman中post和get的区别<br>get请求:直接在浏览器里输入就可以,只要在浏览器里面直接请求到的,都是get请求<br>post请求:需要借助工具来发送<br>区别:<br>    1,get使用url或cookie传参,而post将数据放到body中<br>    2,get的url参数长度有限制,而post的数据则可以非常大<br>    3,post比get安全,因为数据在地址栏上不可见,<br>    4,一般get请求用来获取数据,post请求用来发送数据</p>
+<p>6,给你一个网站如何测试<br>1,查找需求说明,网站设计等相关文档,分析测试需求<br>2,制定测试计划,确定测试范围和测试策略<br>3,设计测试用例</p>
+<p>7,为什么要软件测试<br>以最少的人力,物力和时间找到软件中潜在的各种错误和缺陷,通过修正各种错误和缺陷提高软件质量,回避软件发布后由于潜在的软件缺陷和错误造成的隐患以及带来的商业风险</p>
+<p>8,白盒测试测试用例方法<br>逻辑覆盖,循环覆盖,基本路径覆盖</p>
+<p>9,a测试 B测试<br>a测试:用户在开发环境下进行测试<br>B测试:由软件的一个或多个用户在实际使用环境下进行的测试</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软测概念</title>
+    <url>/article/ab7e442d.html</url>
+    <content><![CDATA[<p>测试的基础分类与每个类型的测试目标 1.1,基于项目流程的测试分类 软件开发的基本流程</p>
+<p>需求分析—&gt;设计—&gt;编码—&gt;单元测试—&gt;集成测试—&gt;系统测试—&gt;验收测试</p>
+<p>项目流程测试分类: 单元(模块)测试:对程序中的单个子程序或者具有独立工程的代码进行测试的过程 是指软件中最小可测试单元进行检查和验证 在程序测试中单元测试可能是针对一个函数或者类 在图形化界面测试中单元测试针对一个最小功能单元,如验证码显示,系统登录 集成测试:在单元测试基础上,将单元模块组装成系统或子系统再进行测试,检查模块间的接口是否正确 系统测试:针对整个产品系统进行测试,验证系统是否满足了需求规格的定义,以及软件系统的正确性和性能等是否按摩足其规约所指定的要求 验收测试:部署软件前的最后一个测试操作,验收测试的目的确保软件准备就绪,向购买者展示该软件已经满足用户的需求</p>
+<p>1.2,基于测试方式的测试分类 黑盒测试:通过对软件的输入数据去查阅输出结果是否正确,针对程序外部结构,不考虑内部逻辑结构,主要针对软件界面和功能进行测试,一般通过操作软件来完成测试 白盒测试:分析产品的交付代码,进而编写测试程序来测试产品是否符合功能以及性能需求,对产品代码进行分析,并编写测试用例,可以测试目标的执行效率,执行时间,合理性,结果精确,效率低下 灰盒测试:介于黑盒和白盒之间,部分核心功能以及性能测试通过白盒测试,其余为黑盒</p>
+<p>1.3,基于测试目的的测试分类</p>
+<p>功能测试:检测实际的功能是否满足用户的需求,</p>
+<p>性能测试:通过自动化测试工具模拟正常,峰值以及异常负载条件来对    系统的各项性能指标进行测试</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line">时间性能测试:软件的响应时间是否符合测试需求(<span class="attribute">eg</span>:登录时间)</span><br><span class="line">	</span><br><span class="line">	硬件性能测试:指软件运行时所消耗的系统资源,比如硬件资源,<span class="selector-tag">CPU</span>,内存,网络宽带消耗等</span><br></pre></td></tr></table></figure>
+
+<p>两者的优先级:系统测试首先进行功能测试,满足功能需求后进行性能测试</p>
+<p>1.4,自动化测试与手动测试 手动测试:人为去执行测试用例,通过鼠标键盘等外部设备来操作系统的UI界面,查看返回结果是否符合预期的结果</p>
+<p>自动化测试:通过测试程序模拟用户对软件的操作行为 自动化测试过程:根据测试用例中描述的规程一步步执行测试,并比对实际结果 自动化功能测试:通过编码的方式用一段程序来测试一个软件的功能 自动化性能测试:模拟大量用户向系统发送请求,用来验证系统的处理能力,    一般用自动化测试工具完成(例如loadrunner),也可以通过自定义程序完成</p>
+<p>1.5,其他测试类型 冒烟测试:测试前验证基本功能是否可以实现 回归测试:修改旧代码后,重新进行测试已确定修改后是否产生或引起其他的错误 随机测试:指测试中输入数据是随机的,目的模拟用户的真实操作,发现一些边缘性问题 探索性测试:碰到测试问题对测试策略进行探索性尝试 安全测试:对产品进行检验以验证产品是否符合安全需求定义和产品质量标准的过程</p>
+<p>使用场景: 2.1,自动化测试的优缺点 优点: 1,对程序的回归测试更方便 2,可以运行更多更繁琐的测试 3,可以执行一些手工测试困难或者不可能进行的测试.比如,对于大量用户的测试 4,测试具有一致性和可重复性 5,测试的复用性 6,增加软件信任度 缺点: 不能取代手工测试,有很多需要人脑判断结果的测试用例无法用自动工具实现 手工比自动测试发现的缺陷更多 测试结果对测试人员开发的测试程序质量的依赖性极大 系统频繁升级会导致测试用例频繁升级</p>
+<p>概括:自动化测试无法取代手工测试,因此两者通常联合使用 并非所有系统都需要使用自动化测试手段,盲目使用会增加软件测试的风险</p>
+<p>2.2,自动化测试的基本原则 1,测试任务明确 2,系统融合度高 3,软件系统界面稳定 4,大量的重复测试任务 5,维护周期长 6,开发比较规范 7,具备自动化测试管理平台</p>
+<p>3.1,常用的自动化测试工具 自动化测试工具分类 ①UI自动化测试工具:通过调用测试程序模拟用户操作BS或CS软件来实现测试的工具,按照编写测试程序的方式又分为: 录制以及回放工具:生成本次系统操作对应的程序代码段 自动化测试框架:第三方框架,封装了模拟用户操作软件UI界面的系列API接口</p>
+<p>一般建议手动编写测试程序分析系统代码结构和UI自动化测试工具结合使用</p>
+<p>常用的UI自动化测试工具: QTP:企业级自动化测试工具,提供强大易用的录制回放功能,支持B&#x2F;S与C&#x2F;S两种框架的软件测试,是目前主流的自动化测试工具 Robot Framework:python编写的功能自动化测试框架,具备良好的可扩展性,支援关键字驱动,可以同时测试多种类型的客户端或者接口,可以进行分布式测试执行 Watir:基于Web模式的自动化功能测试,是一个Ruby语言库,使用ruby语言进行脚本开发</p>
+<p>*selenium:Web应用程序测试的工具,支持多平台,多浏览器,多语言去实现自动化测试,系列产品中包含自动化测试框架,录制工具,分布测试工具等</p>
+<p>②性能测试:通过自动化测试的工具模拟正常,峰值以及负载条件来对系统的各项性能指标进行测试 负载测试:监控系统各项性能指标的变化情况 压力测试:获取系统能提供最大服务级别的测试</p>
+<p>性能测试工具: 可通过测试工具实现(eg:loadrunner等) *可通过多线程模拟多用户访问来实现 通过脚本或工具可以监控服务器端资源的使用情况 ③接口测试工具</p>
+<p>3.2,selenium工具: selenium IDE功能: 记录用户的操作步骤 声明预期显示结果 声明程序注释 通过配置可编译成Python,Java等语言的测试脚本,测试脚本中调用selenium完成web访问操作</p>
+<p>3.3,selenium的理解 通过配置可编译成Python脚本,通过在脚本中调用selenium进行web访问,</p>
+<p>3.4,selenium有几种等待方式 两种 同步等待请求:time.sleep() 异步等待请求:driver.implicity_wait()</p>
+<p>4.2浏览器驱动程序 webdriver: chrome</p>
+<p>unittest框架:python的第三方单元测试框架也可以将单元测试组装为套件,可以依次执行多个单元测试案例 主要功能: 1,提供规范的测试函数声明 2,提供组装测试套件功能 3,提供了多个用于判断异常的断言 4,提供了装饰器用于屏蔽非目标测试函数</p>
+<p>单元测试用例:软件测试中最基本的组成单元,在unittest测试框架中被视为吃啥单元的运行实体,一个测试用例应包含一个或多个测试单元 测试用例:在unittest中测试用例对应一个实体类,包含多个测试函数(测试单元) 测试单元:对应一个测试函数,对应一个独立的单元测试用例,例如登录模块是测试用例,登录与退出登录分别为测试单元</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软测概念3</title>
+    <url>/article/28a6acaa.html</url>
+    <content><![CDATA[<p>概念:<br>为了发现错误而运行程序的过程</p>
+<p>软件测试工程师的基本素质:<br>正确高效的沟通能力<br>超强责任心<br>要坚持原则<br>有较全面的技术知识</p>
+<p>必备技能:<br>测试专业能力<br>软件编程技能<br>网络,操作系统,数据库,中间件等知识</p>
+<p>缺陷:<br>在软件工程整个生命周期中任何背离需求,无法正确完成用户所要求的功能的问题,包括存在于组件,设备或系统软件中因异常条件不支持而导致系统的失败都属于缺陷.</p>
+<p>产生原因:<br>需求不明确,本身存在问题<br>无法收集到用户的所有需求<br>在软件的需求调研和设计阶段存在各种问题导致用户需求被错误的理解和传递<br>用户需求随工作或使用环境的变化以及时间的推移也会随之变化<br>软件技术的发展落后于不断复杂的软件需求</p>
+<p>无效缺陷:不被开发人员修改的缺陷<br>出现原因:<br>1,测试环境配置错误,测试工程师不仔细检查测试环境,直接当成一个缺陷提交了<br>2,需求理解错误,对一个概念的理解错误,造成测试方法错误,不讨论就提交缺陷<br>3,缺陷重复,同一个缺陷被两个测试工程师提交</p>
+<p>合法的无效缺陷:<br>技术上无法修改<br>修改成本太大,不影响用户使用</p>
+<p>重现缺陷的方法<br>借助于别的工具,如debug或者dump工具去分析,<br>检查软件测试环境是否有异于开发环境,<br>检查网络配置是否与客户环境一致<br>检查被测对象的版本信息,确认测试版本的正确性<br>状态缺陷是否在特定的软件状态中暴露</p>
+<p>缺陷报告:<br>实例1:<br>简单描述：字处理过程中，进行插入数字或者插入符号时，系统崩溃。<br>详细描述：<br>1.软件测试环境为Windows 2003<br>2.启动Boffice软件，然后创建新文档<br>3.插入一行文本，当鼠标变成了漏斗状时，进行插入数字或插入符号任一操作<br>4.系统崩溃<br>相关附件：<br>–附件1：系统崩溃的画面<br>缺陷原因分析：<br>–初步分析与自动存盘有关系，因为在鼠标变成漏斗时，软件正在进行自动存盘操作</p>
+<p>按测试阶段划分:<br>单元测试 &#x3D;&gt; 集成测试 &#x3D;&gt; 系统测试<br>&#x3D;&gt; Alpha测试 &#x3D;&gt; Beta测试 &#x3D;&gt; 验收测试</p>
+<p>按测试技术分类:<br>黑盒测试:功能测试<br>白盒测试:结构测试,基于程序本身测试<br>灰盒测试:核心功能白盒测试,其余黑盒测试<br>静态测试:<br>动态测试:</p>
+<p>集成测试和系统测试偏多</p>
+<p>Good-enouth原则<br>不要做太多的测试<br>不要做不充分的测试</p>
+<p>测试报告内容总结:<br>1,简介:<br>    1.1编写目的(编写此文档目的)<br>    1.2参考资料(需求,设计,测试用例)<br>    1.3术语定义(对方案中提到的一些专业术语进行概念性解释)<br>2,测试背景<br>    2.1项目背景(对项目目标和目的进行简述)<br>    2.2测试环境(画图&#x2F;列表说明**测试需要搭建的测试环境,测试环境中硬件,软件,包括测试工具的配置)<br>3,测试计划进度执行情况<br>    3.1测试人员安排情况(简单列出测试组架构图,(主要测试人员,参与测试人员))<br>    3.2测试时间(列出每个模块测试时间,开始时间,结束时间)<br>    3.3测试版本信息(给出每个测试版本的版本信息)<br>4,测试执行阶段情况报告<br>    4.1测试用例分布情况(可列出每一份,不同模块,不同测试类型)用例的数量,编写用了多长时间,执行用了多长时间等<br>    4.2测试用例执行情况(列出用力的通过率情况,发现了多少个缺陷,不正确的用例数量情况)<br> 5,缺陷的统计和分析<br>    5.1测试结果汇总(列出每一轮测试缺陷级别,缺陷类型,缺陷所属模块的分布情况)<br>    5.2测试缺陷状态分析(列出目前为止,每个阶段已提交的缺陷数量,已关闭的缺陷数量,未处理的缺陷数量)<br>    5.3测试结果分析(重点讲解部分)<br>    5.4重要缺陷摘要(列出已发现的严重级的缺陷,并且进行简要分析)<br>    5.5残留缺陷与未解决问题(列出目前为止没有解决得缺陷的简要描述,还需列出未解决的问题,及未解决的原因)<br>6,测试结论<br>    6.1测试结论(根据具体项目叙述,根据最终测试结果,对系统的质量给出正确的结论)<br>    6.2建议下一个版本的测试过程或者下一个阶段的测试工作的一些建议</p>
+<p>SQA:软件质量保证<br>SQC:软件质量控制<br>SCM:软件配置管理</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软测概念2</title>
+    <url>/article/5fa19c3c.html</url>
+    <content><![CDATA[<p>接口,性能测试</p>
+<p>SOW:statement of work，工作任务说明书</p>
+<p>HLD: High Level Design,概要设计说明书</p>
+<p>LLD: Low Level Design，详细设计说明书</p>
+<p>UTC: Unit Testing Cases，单元测试用例</p>
+<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
+<p>非增量–每个模块测试完了再连接；</p>
+<p>增量：测一个模块，就连接一个模块。</p>
+<p>基于测试对象进行分类:白盒黑盒</p>
+<p>集成测试:接口测试</p>
+<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
+<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
+<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
+<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
+<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
+<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
+<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
+<p>测试风险;</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win10常用快捷键</title>
+    <url>/article/29c250f4.html</url>
+    <content><![CDATA[<p>1,calc:计算器</p>
+<p>2,regedit;注册表编辑器</p>
+<p>3,ipconfig:ip地址</p>
+<p>4,win+L:锁屏</p>
+<p>5,win+E:打开电脑</p>
+<p>6,pycharm中:ctrl+r:多个替换</p>
+<p>7,双击alt:电脑管家火箭加速</p>
+<p>8,alt + tab:软件界面切换        </p>
+<p>9,tree &#x2F;f:显示目录结构    </p>
+<p>10,win+x    a:管理员命令操作提示符</p>
+<p>11,选中模块,alt+enter:安装模块</p>
+<p>12.alt用鼠标选中,多条修改</p>
+<p>13,函数()内,ctrl+p:提示 </p>
+<p>14,win + r :mspaint:画图快捷键</p>
+<p>15,slidetoshutdown :关机快捷键</p>
+<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
+<p>17,win + R :powershell:打开管理员模式</p>
+<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
+<p>19:定时关机:shutdown -s -t  秒数</p>
+<p>20,ctrl+alt+del:进入任务管理器</p>
+<p>21,打开服务:services.msc</p>
+<p>22，远程连接：mstsc</p>
+<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
+<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32</p>
+<p>时区下的已安装物理内存就是笔记本内存大小</p>
+<p>25,安装服务(根目录下|管理员权限):</p>
+<p>安装:    .\installService.cmd</p>
+<p>卸载:    .\uninstallService.cmd</p>
+<p>26,C盘清理旧文件:</p>
+<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
+<p>27,   关机: slidetoshutdown</p>
+<p>28,  win10激活:</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>29,win10打开系统属性快捷键:  dxdiag</p>
+]]></content>
+      <categories>
+        <category>快捷键</category>
+      </categories>
+      <tags>
+        <tag>快捷键</tag>
+        <tag>PC</tag>
       </tags>
   </entry>
 </search>
