@@ -70,6 +70,34 @@ ServerName localhost
       </tags>
   </entry>
   <entry>
+    <title>Django的基础入门</title>
+    <url>/article/f6b2ae5.html</url>
+    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
+<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
+<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
+<p>​        #密码</p>
+<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
+<p>4,更新应用数据库</p>
+<p>python manage.py makemigrations</p>
+<p>python manage.py migrate</p>
+<p>5,创建超级管理员</p>
+<p>python manage.py createsuperuser</p>
+<p>6,运行项目</p>
+<p>python manage.py runserver</p>
+<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
+<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
+<p>8,Django原理</p>
+<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GIT</title>
     <url>/article/c72923f6.html</url>
     <content><![CDATA[<p>一,git</p>
@@ -121,7 +149,7 @@ ServerName localhost
 <p>分支主要是找回之前的代码,以及修改,删除等相关操作<br>①右键 —&gt; tortoisegit —&gt; Create Branch(填写名字,选中Switch to new branch)<br>②提交到新的分支中,备注说明,根据上述第五,六步上传到云端<br>③,回到之前版本,右键 —&gt; tortoisegit —&gt; Switch&#x2F;Checkout —&gt; 在Branch中选择master,点击OK回到之前版本</p>
 <p>分支合并<br>①通过Switch&#x2F;Checkout切换到主分支<br>②找到Merge按钮点击,在Branch中选择要合并的分支副分支,然后点击OK<br>③通过Commit和Push将合并上传到中心服务器<br>④通过CheckOut&#x2F;Switch点击Switch to区域中Branch后的更多按钮,打开分支列表对话框,右键点击要删除的分支,单击delete branch进行删除<br>⑤分支删除后只剩下主分支,本地分支和远程分支并无从属关系</p>
 <p>总结:上传主要是add,commit,push</p>
-<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#102;&#121;&#x30;&#49;&#x33;&#x30;&#52;&#x35;&#55;&#52;&#x40;&#x61;&#108;&#x69;&#x62;&#x61;&#98;&#x61;&#45;&#x69;&#x6e;&#x63;&#46;&#x63;&#111;&#109;">&#102;&#121;&#x30;&#49;&#x33;&#x30;&#52;&#x35;&#55;&#52;&#x40;&#x61;&#108;&#x69;&#x62;&#x61;&#98;&#x61;&#45;&#x69;&#x6e;&#x63;&#46;&#x63;&#111;&#109;</a>‘</p>
+<p>Aone：git教程<br>git全局设置：<br>git config –global user.name ‘樊勇’<br>git config –global user.email ‘<a href="mailto:&#x66;&#x79;&#x30;&#x31;&#51;&#x30;&#52;&#53;&#x37;&#x34;&#x40;&#x61;&#x6c;&#105;&#x62;&#97;&#x62;&#97;&#x2d;&#105;&#110;&#99;&#x2e;&#x63;&#111;&#x6d;">&#x66;&#x79;&#x30;&#x31;&#51;&#x30;&#52;&#53;&#x37;&#x34;&#x40;&#x61;&#x6c;&#105;&#x62;&#97;&#x62;&#97;&#x2d;&#105;&#110;&#99;&#x2e;&#x63;&#111;&#x6d;</a>‘</p>
 <p>当本地没有时克隆仓库：<br>git clone 地址<br>cd 目录名<br>touch README.md<br>git add README.md<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>对于已存在的文件夹或仓库<br>cd existing_floder<br>git init<br>git remote add origin 版本库地址<br>git add .<br>git commit -m ‘’<br>git push -u origin master</p>
 <p>aone代码处理教程：<br>代码合并通过新建评审实现<br>git stash<br>git checkout master<br>git pull<br>git checkout fy01304574<br>git merge master<br>git stash pop<br>当第一次提交时：<br>git remote add origin 代码库地址<br>git add .<br>git commit -m “”<br>git push -u origin fy01304574</p>
@@ -171,34 +199,6 @@ ServerName localhost
       <tags>
         <tag>版本管理工具</tag>
         <tag>Gitblit</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Django的基础入门</title>
-    <url>/article/f6b2ae5.html</url>
-    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
-<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
-<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
-<p>​        #密码</p>
-<p>​        ‘PASSWORD’:’root’,<br>​        #url 服务器地址<br>​        ‘HOST’:’localhost’,<br>​        #端口号<br>​        ‘PORT’:3306,<br>​    }</p>
-<p>4,更新应用数据库</p>
-<p>python manage.py makemigrations</p>
-<p>python manage.py migrate</p>
-<p>5,创建超级管理员</p>
-<p>python manage.py createsuperuser</p>
-<p>6,运行项目</p>
-<p>python manage.py runserver</p>
-<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’</p>
-<p>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
-<p>8,Django原理</p>
-<p><img src="E:\GIT\blog\img\Django\Model.jpg" alt="Model"></p>
-]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Django</tag>
-        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -623,25 +623,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Python第三方模块安装的几种方式</title>
-    <url>/article/126ed703.html</url>
-    <content><![CDATA[<p>1,pip安装方式</p>
-<p>eg:pip install 包名</p>
-<p>2,下载tar.gz包,执行python setup.py install安装 </p>
-<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
-<p>3,安装whl文件</p>
-<p>文件目录下:pip instll 文件名.后缀</p>
-<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>第三方模块</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python概念</title>
     <url>/article/7cf78c2.html</url>
     <content><![CDATA[<p>1,Python比C&#x2F;C++&#x2F;JAVA慢100~200倍<br>Python慢的原因有两个:<br>    Python是动态类型语言<br>    Python因为GIL无法使用多核CPU优势<br>加速方法:<br>    使用C语言编写CPU密集计算模块,供Python调用</p>
@@ -666,6 +647,25 @@ TPL:事务处理语言
       <tags>
         <tag>Python</tag>
         <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python第三方模块安装的几种方式</title>
+    <url>/article/126ed703.html</url>
+    <content><![CDATA[<p>1,pip安装方式</p>
+<p>eg:pip install 包名</p>
+<p>2,下载tar.gz包,执行python setup.py install安装 </p>
+<p><a href="https://pypi.org/project/baidu-aip/#files">地址链接</a></p>
+<p>3,安装whl文件</p>
+<p>文件目录下:pip instll 文件名.后缀</p>
+<p><a href="https://pypi.org/project/PyQt5/#files">地址链接</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>第三方模块</tag>
       </tags>
   </entry>
   <entry>
@@ -913,6 +913,12 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu</title>
+    <url>/article/7be7930f.html</url>
+    <content><![CDATA[<p>test</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Tensorflow入门总结</title>
     <url>/article/ea5e1878.html</url>
     <content><![CDATA[<p>Tensorflow使用学习说明:</p>
@@ -1079,29 +1085,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu</title>
-    <url>/article/7be7930f.html</url>
-    <content><![CDATA[<p>test</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>常用命令</title>
-    <url>/article/6fc55794.html</url>
-    <content><![CDATA[<p>1,WIndow激活命令</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>2,关机命令</p>
-<p>slidetoshutdown</p>
-]]></content>
-      <categories>
-        <category>常用命令</category>
-      </categories>
-      <tags>
-        <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>优秀网址</title>
     <url>/article/a1f63686.html</url>
     <content><![CDATA[<p> 学信网网站:<a href="http://www.chsi.com.cn/">http://www.chsi.com.cn/</a></p>
@@ -1147,6 +1130,23 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>常用网址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用命令</title>
+    <url>/article/6fc55794.html</url>
+    <content><![CDATA[<p>1,WIndow激活命令</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>2,关机命令</p>
+<p>slidetoshutdown</p>
+]]></content>
+      <categories>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>常用命令</tag>
       </tags>
   </entry>
   <entry>
@@ -1263,20 +1263,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>爱因斯坦语录</title>
-    <url>/article/f11761cc.html</url>
-    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
-<p>​                                                                                                                                                        —–爱因斯坦</p>
-<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>有道云报错</title>
     <url>/article/4af4be97.html</url>
     <content><![CDATA[<p>1,有道云笔记出现网络错误:</p>
@@ -1288,6 +1274,20 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>Error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱因斯坦语录</title>
+    <url>/article/f11761cc.html</url>
+    <content><![CDATA[<p>1, 大学和中学有着很大的区别,他不是中学的延伸,大学原本就是学生组成的一个团体,那些想读书做研究的人,不管年轻的,还是年老的,都可以任意组成团体,聘请名师来讲授知识.</p>
+<p>​                                                                                                                                                        —–爱因斯坦</p>
+<p>2,爱因斯坦主要贡献:量子论,宇宙学,相对论.</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1393,35 +1393,6 @@ TPL:事务处理语言
 <p>4.2浏览器驱动程序 webdriver: chrome</p>
 <p>unittest框架:python的第三方单元测试框架也可以将单元测试组装为套件,可以依次执行多个单元测试案例 主要功能: 1,提供规范的测试函数声明 2,提供组装测试套件功能 3,提供了多个用于判断异常的断言 4,提供了装饰器用于屏蔽非目标测试函数</p>
 <p>单元测试用例:软件测试中最基本的组成单元,在unittest测试框架中被视为吃啥单元的运行实体,一个测试用例应包含一个或多个测试单元 测试用例:在unittest中测试用例对应一个实体类,包含多个测试函数(测试单元) 测试单元:对应一个测试函数,对应一个独立的单元测试用例,例如登录模块是测试用例,登录与退出登录分别为测试单元</p>
-]]></content>
-      <categories>
-        <category>软件测试</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软测概念2</title>
-    <url>/article/5fa19c3c.html</url>
-    <content><![CDATA[<p>接口,性能测试</p>
-<p>SOW:statement of work，工作任务说明书</p>
-<p>HLD: High Level Design,概要设计说明书</p>
-<p>LLD: Low Level Design，详细设计说明书</p>
-<p>UTC: Unit Testing Cases，单元测试用例</p>
-<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
-<p>非增量–每个模块测试完了再连接；</p>
-<p>增量：测一个模块，就连接一个模块。</p>
-<p>基于测试对象进行分类:白盒黑盒</p>
-<p>集成测试:接口测试</p>
-<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
-<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
-<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
-<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
-<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
-<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
-<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
-<p>测试风险;</p>
 ]]></content>
       <categories>
         <category>软件测试</category>
@@ -1550,6 +1521,35 @@ TPL:事务处理语言
 <p>安装测试:</p>
 <p><img src="file:///C:\Users\Mr.Fan\AppData\Local\Temp\ksohtml12536\wps12.jpg" alt="img"> </p>
 <p>postman断言:是否包含字符串,状态码,json或JavaScript数据,在test中编写</p>
+]]></content>
+      <categories>
+        <category>软件测试</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软测概念2</title>
+    <url>/article/5fa19c3c.html</url>
+    <content><![CDATA[<p>接口,性能测试</p>
+<p>SOW:statement of work，工作任务说明书</p>
+<p>HLD: High Level Design,概要设计说明书</p>
+<p>LLD: Low Level Design，详细设计说明书</p>
+<p>UTC: Unit Testing Cases，单元测试用例</p>
+<p>ctrl-c 常用于终止正在运行的程序。 ctrl-d 不是发送信号，而是表示一个特殊的二进制值，表示 EOF。 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。 Ctrl+x同上但再按一次会从新回到原位置</p>
+<p>非增量–每个模块测试完了再连接；</p>
+<p>增量：测一个模块，就连接一个模块。</p>
+<p>基于测试对象进行分类:白盒黑盒</p>
+<p>集成测试:接口测试</p>
+<p>系统测试:功能测试<br>验收测试:用户在开发环境下进行测试;多个用户使用同一个软件情况下进行测试</p>
+<p>常见测试用例:<br>下拉框&#x2F;列表框通用测试用例:<br>1、列表的各项内容正确，没有丢失或错误<br>2、列表的内容是固定的还是会变动的，如果是会变动的，则需要根据业务测试是否变动了<br>3、根据需求检查是否有默认值，默认值是否正确<br>4、 检查约束。有时列表的内容是根据其他要素变化的，如城市的选择是根据省份变化的；或者登录后菜单的显示是根据不同权限变化的<br>5、、列表框允许多项选择时，检查使用鼠标选中条目的功能，选中后回显正确<br>6、列表的宽度是否根据内容的长短自动控制；<br>7、条目较多时，列表的高度是否合适</p>
+<p>登录页面测试用例:<br>登录模块<br>界面UI测试<br>1.布局是否合理，输入框，按钮对齐方式<br>2.输入框和按钮的高度，长度是否符合要求<br>3.界面的设计风格是否与UI的设计风格统一<br>4.界面的文字简洁易懂，没有错别字<br>功能测试<br>1.用户名，密码输入为空，点击查看提示信息<br>2.输入正确的用户名和密码，点击验证登录成功<br>3.登录成功后，验证是否跳转到正确的页面<br>4.用户名，密码如果过长，过短，是否有提示<br>5.用户名和密码前后有空格的处理<br>6.用户名和密码中有特殊字符或其他非英文的情况<br>7.记住用户名的功能<br>8.登录失败后，不能记住密码的功能<br>9.密码是否加密显示<br>10.登录页面的注册，忘记密码，登出等用另一账号登录链接是否正确<br>11.输入密码时，大写键盘开启是是否有提示信息<br>12.输入错误的用户名和密码，查看提示信息<br>性能测试<br>1.打开登录页面，需要几秒<br>2.输入正确的用户名和密码，登录成功不超过5s<br>兼容性测试<br>1.主流浏览器是否显示成功（IE8,9,10,11，Firefox，Chrome，Safafi）<br>2.不同的平台是否能显示成功（Mac，Windows)<br>3.移动设备上是否显示成功（Android，IOS）<br>4.不同的分辨率<br>可用性测试<br>1.是否支持全键盘操作，是否有快捷键<br>2.输入用户名和密码，按回车，是否可以登录<br>3.输入框能否可以Tab键切换<br>安全测试<br>1.登录成功后生成的Cookie，是否是Http only<br>2.用户名和密码是否通过加密的方式发给Web服务器<br>3.用户名和密码的验证，应该是在服务器端，而不是在Javascript前端<br>4.用户名和密码的输入框，应该屏蔽SQL注入<br>5.用户名和密码的输入框，应该禁止输入脚本<br>6.错误登录的次数限制<br>7.考虑是否支持多用户在同一机器上登录<br>8.考虑一用户在多台机器上登录</p>
+<p>软件测试报告的核心内容:<br>测试工作的经过和结果<br>风险评估<br>缺陷汇报与分析<br>测试工作总结与改进<br>大概为:<br>概述:项目背景,需求分析<br>测试时间,测试环境<br>测试过程:评审记录,测试范围,测试用例<br>功能实现清单:列出是否已经按照测试计划实现功能</p>
+<p>缺陷报告统计:<br>测试缺陷统计；<br>测试用例执行情况统计</p>
+<p>测试统计:<br>资源统计<br>执行情况<br>问题统计<br>问题列表<br>遗留的问题</p>
+<p>测试总结:<br>测试结论；（是否通过）<br>测试内容、测试用例的覆盖程度、bug的解决程度</p>
+<p>测试风险;</p>
 ]]></content>
       <categories>
         <category>软件测试</category>
