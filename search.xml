@@ -1233,6 +1233,23 @@ supervisorctl reload
 <p>测试网站: pro.jsonlint.com</p>
 <p>2,表现层,representaion</p>
 <p>纯文本: Python Restful API开发</p>
+<p>HTML:</p>
+<head>
+  <title>Python RESTful API开发</title>
+</head>
+
+<p>JSON:</p>
+<p>{</p>
+<p>“text”: “Python Restful API开发”</p>
+<p>}</p>
+<p>3,状态转移</p>
+<p>1)HTTP协议,是一个无状态的协议</p>
+<p>2)GET,POST,PUT,DELETE</p>
+<p>3)让我们来看一个RESTful的请求</p>
+<p>curl -x GET <a href="https://api.weibo.com/2/users/show.json">https://api.weibo.com/2/users/show.json</a></p>
+<p>4,RESTful架构设计6原则</p>
+<p>1)Uniform Interface</p>
+<p>2)Stateless</p>
 ]]></content>
       <categories>
         <category>Web开发</category>
