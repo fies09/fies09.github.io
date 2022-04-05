@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-04-05T08:43:37.181Z</updated>
+  <updated>2022-04-05T08:44:32.232Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -21,11 +21,17 @@
     <link href="http://fies09.github.io/article/655eb243.html"/>
     <id>http://fies09.github.io/article/655eb243.html</id>
     <published>2022-04-05T08:43:35.000Z</published>
-    <updated>2022-04-05T08:43:37.181Z</updated>
+    <updated>2022-04-05T08:44:32.232Z</updated>
     
     
     
     
+    <category term="Web开发" scheme="http://fies09.github.io/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Web开发" scheme="http://fies09.github.io/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="restful" scheme="http://fies09.github.io/tags/restful/"/>
     
   </entry>
   
