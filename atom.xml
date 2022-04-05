@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-04-05T11:34:35.501Z</updated>
+  <updated>2022-04-05T11:39:13.649Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://fies09.github.io/article/655eb243.html"/>
     <id>http://fies09.github.io/article/655eb243.html</id>
     <published>2022-04-05T08:43:35.000Z</published>
-    <updated>2022-04-05T11:34:35.501Z</updated>
+    <updated>2022-04-05T11:39:13.649Z</updated>
     
-    <content type="html"><![CDATA[<p>1,资源与URI和URL</p><p>1)资源,resources,网络上的具体信息</p><p>2)URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</p><p>3)URL,uniform resources locator,统一资源定位符,用来定位某个特定资源</p><p><a href="http://www.jikexueyuan.com/course/179.html">http://www.jikexueyuan.com/course/179.html</a></p><p>测试网站: open.weibo.com</p><p>打开微博api</p><p>测试网站: pro.jsonlint.com</p><p>2,表现层,representaion</p><p>纯文本: Python Restful API开发</p><p>HTML:</p><head>  <title>Python RESTful API开发</title></head><p>JSON:</p><p>{</p><p>“text”: “Python Restful API开发”</p><p>}</p><p>3,状态转移</p><p>1)HTTP协议,是一个无状态的协议</p><p>2)GET,POST,PUT,DELETE</p><p>3)让我们来看一个RESTful的请求</p><p>curl -x GET <a href="https://api.weibo.com/2/users/show.json">https://api.weibo.com/2/users/show.json</a></p><p>4,RESTful架构设计6原则</p><p>1)Uniform Interface</p><p>2)Stateless</p>]]></content>
+    <content type="html"><![CDATA[<p>1,资源与URI和URL</p><p>1)资源,resources,网络上的具体信息</p><p>2)URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</p><p>3)URL,uniform resources locator,统一资源定位符,用来定位某个特定资源</p><p><a href="http://www.jikexueyuan.com/course/179.html">http://www.jikexueyuan.com/course/179.html</a></p><p>测试网站: open.weibo.com</p><p>打开微博api</p><p>测试网站: pro.jsonlint.com</p><p>2,表现层,representaion</p><p>纯文本: Python Restful API开发</p><p>HTML:</p><head>  <title>Python RESTful API开发</title></head><p>JSON:</p><p>{</p><p>“text”: “Python Restful API开发”</p><p>}</p><p>3,状态转移</p><p>1)HTTP协议,是一个无状态的协议</p><p>2)GET,POST,PUT,DELETE</p><p>3)让我们来看一个RESTful的请求</p><p>curl -x GET <a href="https://api.weibo.com/2/users/show.json">https://api.weibo.com/2/users/show.json</a></p><p>4,RESTful架构设计6原则</p><p>1)Uniform Interface</p><p>2)Stateless</p><p>3)Cacheable</p><p>4)Client-server</p><p>5)Layered System</p><p>6)Code on Demand</p><p>flask文档网站: </p><p>Dormousehole.readthedocs.org&#x2F;en&#x2F;lastest&#x2F;index.html</p><p>Flask.pocoo.org&#x2F;extensions&#x2F;</p>]]></content>
     
     
       

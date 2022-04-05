@@ -1250,6 +1250,13 @@ supervisorctl reload
 <p>4,RESTful架构设计6原则</p>
 <p>1)Uniform Interface</p>
 <p>2)Stateless</p>
+<p>3)Cacheable</p>
+<p>4)Client-server</p>
+<p>5)Layered System</p>
+<p>6)Code on Demand</p>
+<p>flask文档网站: </p>
+<p>Dormousehole.readthedocs.org&#x2F;en&#x2F;lastest&#x2F;index.html</p>
+<p>Flask.pocoo.org&#x2F;extensions&#x2F;</p>
 ]]></content>
       <categories>
         <category>Web开发</category>
