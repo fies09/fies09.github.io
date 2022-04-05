@@ -1223,7 +1223,12 @@ supervisorctl reload
   <entry>
     <title>restful接口学习使用api</title>
     <url>/article/655eb243.html</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>1,资源与URI和URL</p>
+<ol>
+<li>资源,resources,网络上的具体信息</li>
+<li>URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</li>
+</ol>
+]]></content>
       <categories>
         <category>Web开发</category>
       </categories>
