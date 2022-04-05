@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-04-05T11:24:26.844Z</updated>
+  <updated>2022-04-05T11:29:33.478Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -21,17 +21,21 @@
     <link href="http://fies09.github.io/article/655eb243.html"/>
     <id>http://fies09.github.io/article/655eb243.html</id>
     <published>2022-04-05T08:43:35.000Z</published>
-    <updated>2022-04-05T11:24:26.844Z</updated>
+    <updated>2022-04-05T11:29:33.478Z</updated>
     
-    <content type="html"><![CDATA[<p>1,资源与URI和URL</p><ol><li>资源,resources,网络上的具体信息</li><li>URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>1,资源与URI和URL</p><p>1)资源,resources,网络上的具体信息</p><p>2)URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</p><p>3)URL,uniform resources locator,统一资源定位符,用来定位某个特定资源</p><p><a href="http://www.jikexueyuan.com/course/179.html">http://www.jikexueyuan.com/course/179.html</a></p><p>测试网站: open.weibo.com</p><p>打开微博api</p><p>测试网站: pro.jsonlint.com</p><p>2,表现层,representaion</p><p>纯文本: Python Restful API开发</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;1,资源与URI和URL&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;资源,resources,网络上的具体信息&lt;/li&gt;
-&lt;li&gt;URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源&lt;/li&gt;
-&lt;/ol&gt;
-</summary>
+&lt;p&gt;1)资源,resources,网络上的具体信息&lt;/p&gt;
+&lt;p&gt;2)URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源&lt;/p&gt;
+&lt;p&gt;3)URL,uniform resources locator,统一资源定位符,用来定位某个特定资源&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.jikexueyuan.com/course/179.html&quot;&gt;http://www.jikexueyuan.com/course/179.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;测试网站: open.weibo.com&lt;/p&gt;
+&lt;p&gt;打开微博api&lt;/p&gt;
+&lt;p&gt;测试网站: pro.jsonlint.com&lt;/p&gt;
+&lt;p&gt;2,表现层,representaion&lt;/p&gt;
+&lt;p&gt;纯文本: Python Restful API开发&lt;/p&gt;</summary>
     
     
     

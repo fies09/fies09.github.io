@@ -1224,10 +1224,15 @@ supervisorctl reload
     <title>restful接口学习使用api</title>
     <url>/article/655eb243.html</url>
     <content><![CDATA[<p>1,资源与URI和URL</p>
-<ol>
-<li>资源,resources,网络上的具体信息</li>
-<li>URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</li>
-</ol>
+<p>1)资源,resources,网络上的具体信息</p>
+<p>2)URI,uniform resources identifier,统一资源标识符,用来唯一的标识一个资源</p>
+<p>3)URL,uniform resources locator,统一资源定位符,用来定位某个特定资源</p>
+<p><a href="http://www.jikexueyuan.com/course/179.html">http://www.jikexueyuan.com/course/179.html</a></p>
+<p>测试网站: open.weibo.com</p>
+<p>打开微博api</p>
+<p>测试网站: pro.jsonlint.com</p>
+<p>2,表现层,representaion</p>
+<p>纯文本: Python Restful API开发</p>
 ]]></content>
       <categories>
         <category>Web开发</category>
