@@ -221,7 +221,7 @@ ServerName localhost
   <entry>
     <title>Hexo博客next主题的使用说明</title>
     <url>/article/78fbf3e4.html</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a></p>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/30836436">参考文档</a><br><a href="https://blog.csdn.net/qq_35977139/article/details/113764322">参考文档2</a><br><a href="https://blog.csdn.net/wbsu2004/article/details/122661116">参考文档3</a></p>
 <p>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
 <p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
 <p>下载hexo模块,</p>
@@ -405,69 +405,6 @@ TPL:事务处理语言
       <tags>
         <tag>数据库</tag>
         <tag>Mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客yilia主题的使用说明</title>
-    <url>/article/31aab21a.html</url>
-    <content><![CDATA[<p><a href="https://www.yansheng.xyz/">参考链接</a></p>
-<p><strong>Hexo的使用说明</strong><br>一,环境Nodejs + windows<br><a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>二, 安装,使用Hexo<br>①从淘宝镜像下载cnpm:<br>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>下载hexo模块,</p>
-<p>cnpm install -g hexo-cli</p>
-<p>②建立博客文件夹<br>mkdir blog</p>
-<p>③生成博客文件<br>cd blog </p>
-<p>hexo init</p>
-<p>④下载yilia主题</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia</p>
-<p>⑤在github上建立仓库github名.github.io<br>⑥修改配置信息<br>在_config.yml下修改:<br>105行左右:<br>type: git<br>repo: git仓库地址<br>branch: master</p>
-<p>⑦当配置完成后执行以下命令:</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>⑧安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>上传到github:<br>hexo d</p>
-<p>二,相关模块页面的修改<br>①新建标签,分类等的方式,标签在文章中可以设置多个<br>hexo new page categories<br>修改index.md格式<br>title: 分类<br>date: 2021-05-24 12:04:07<br>type: “categories”</p>
-<p>新建文章: hexo new post “文章名”<br>新建页面(标签页,分类页): hexo new page “categories”<br>新建草稿页: hexo new draft “文章名”</p>
-<p>三,安装插件两种方式<br>①:npm install hexo-wordcount –save<br>②淘宝镜像方式安装:<br>cnpm install hexo-wordcount –save</p>
-<p>yilia模块下载总结:</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-feed</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>hexo常见错误及解决方法:</p>
-<p>问题1,</p>
-<p>error：spawn failed…</p>
-<p>fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec</p>
-<p>解决方法:</p>
-<p>​    1, 删除<code>.deploy_git</code>文件夹</p>
-<p>​    2, git config –global core.autocrlf false</p>
-<p>​    3, 执行 </p>
-<pre><code>hexo clean &amp;&amp; hexo g 
-hexo d
-</code></pre>
-<p>问题2, 打开页面出现 Cannot GET &#x2F;     </p>
-<p>解决方法:</p>
-<p>​    在public目录下寻找index.html是否存在,</p>
-<p>​    不存在执行hexo c，hexo g,再次查看index.html是否生成</p>
-<p>​    执行完后index.html仍不存在，执行npm audit fix，查看是否少了什么组件，</p>
-<pre><code>  一般情况下执行npm install hexo-generator-index即可
-</code></pre>
-<p>​    执行完后再次执行hexo c，hexo g重新生成静态文件</p>
-<p>隐藏内容在文章中添加:<span id="more"></span>标签来隐藏下面的内容</p>
-<p>当hexo d出现OpenSSL SSL_read: Connection was reset, errno 10054问题时,执行以下命令</p>
-<p>git config –global http.sslVerify “false”</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Yilia</tag>
       </tags>
   </entry>
   <entry>
@@ -1297,8 +1234,8 @@ supervisorctl reload
 <p>5)Layered System</p>
 <p>6)Code on Demand</p>
 <p>flask文档网站: </p>
-<p>Dormousehole.readthedocs.org&#x2F;en&#x2F;lastest&#x2F;index.html</p>
-<p>Flask.pocoo.org&#x2F;extensions&#x2F;</p>
+<p>dormousehole.readthedocs.org&#x2F;en&#x2F;lastest&#x2F;index.html</p>
+<p>flask.pocoo.org&#x2F;extensions&#x2F;</p>
 ]]></content>
       <categories>
         <category>Web开发</category>
