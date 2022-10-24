@@ -73,6 +73,32 @@
       </tags>
   </entry>
   <entry>
+    <title>git使用</title>
+    <url>/article/4896de77.html</url>
+    <content><![CDATA[<p>1, 配置全局的用户名和邮箱</p>
+<p>git config –global user.name “注册的用户名”</p>
+<p>git config –global user.email “注册的邮箱”</p>
+<p>2,生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
+<p>将.ssh下的id_rsa.pub内容复制到github中</p>
+<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
+<p>3, 文件上传</p>
+<p>git init</p>
+<p>git add .</p>
+<p>git commit -m “”</p>
+<p>git remote add origin 远程库地址</p>
+<p>git push -u origin master &#x2F; git push -f origin master</p>
+<p>1,常用(上传代码)<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>扩展:<br>git checkout 分支名:切换分支<br>git pull origin master: 拉取主分支代码<br>git merge dev: 合并dev分支代码到主分支</p>
+<p><img src="https://img-blog.csdnimg.cn/eb1e2203dd17421ebbf075e02cda5e0c.png" alt="git使用"></p>
+<p>1, 配置git<br>git config –global user.name “注册的用户名”<br>git config –global user.email “注册的邮箱”<br>2, 生成ssh配置文件<br>①生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”<br>②将.ssh下的id_rsa.pub内容复制到github中<br>③用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮<br>3,文件上传<br>git init<br>git add .<br>git commit -m “”<br>git remote add origin 远程库地址<br>git push -u origin master &#x2F; git push -f origin master<br>4,常用文件上传（上传到远程分支）<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>5, 文件下载<br>git clone -b 分支名 版本库地址<br>6, git 上传代码到远程分支<br>git branch # 查看分支<br>git checkout -b 分支名 #创建并切换分支<br>git add .  #添加文件到暂存区<br>git push origin 分支名 #提交分支<br>7,  分支合并<br>git checkout master #切换到主分支<br>git merge 分支名 #合并分支到主分支</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo基本使用</title>
     <url>/article/d4fee3ae.html</url>
     <content><![CDATA[<p>1, <a href="https://nodejs.org/en/download/">下载nodejs</a></p>
@@ -97,32 +123,6 @@
       <tags>
         <tag>blog</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git使用</title>
-    <url>/article/4896de77.html</url>
-    <content><![CDATA[<p>1, 配置全局的用户名和邮箱</p>
-<p>git config –global user.name “注册的用户名”</p>
-<p>git config –global user.email “注册的邮箱”</p>
-<p>2,生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
-<p>将.ssh下的id_rsa.pub内容复制到github中</p>
-<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
-<p>3, 文件上传</p>
-<p>git init</p>
-<p>git add .</p>
-<p>git commit -m “”</p>
-<p>git remote add origin 远程库地址</p>
-<p>git push -u origin master &#x2F; git push -f origin master</p>
-<p>1,常用(上传代码)<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>扩展:<br>git checkout 分支名:切换分支<br>git pull origin master: 拉取主分支代码<br>git merge dev: 合并dev分支代码到主分支</p>
-<p><img src="https://img-blog.csdnimg.cn/eb1e2203dd17421ebbf075e02cda5e0c.png" alt="git使用"></p>
-<p>1, 配置git<br>git config –global user.name “注册的用户名”<br>git config –global user.email “注册的邮箱”<br>2, 生成ssh配置文件<br>①生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”<br>②将.ssh下的id_rsa.pub内容复制到github中<br>③用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮<br>3,文件上传<br>git init<br>git add .<br>git commit -m “”<br>git remote add origin 远程库地址<br>git push -u origin master &#x2F; git push -f origin master<br>4,常用文件上传（上传到远程分支）<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>5, 文件下载<br>git clone -b 分支名 版本库地址<br>6, git 上传代码到远程分支<br>git branch # 查看分支<br>git checkout -b 分支名 #创建并切换分支<br>git add .  #添加文件到暂存区<br>git push origin 分支名 #提交分支<br>7,  分支合并<br>git checkout master #切换到主分支<br>git merge 分支名 #合并分支到主分支</p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -334,6 +334,19 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pycharm插件整理</title>
+    <url>/article/fb4b156c.html</url>
+    <content><![CDATA[<p>1, Chinese: 汉化<br>2, translation: 翻译<br>3, Rainbow Brackets: 括号高亮<br>4, json parser: json格式的数据显示<br>5, markdown image support: markdown文档编辑器<br>6, Aixcoder code complate: 自动补全<br>7,CSV plugin<br>8,wakatime<br>9, .ignore<br>10, Context Free Grammar<br>11, SonarLint<br>12, Key Promoter X<br>13, Indent Rainbow<br>14, CodeGlance</p>
+]]></content>
+      <categories>
+        <category>pycharm</category>
+      </categories>
+      <tags>
+        <tag>pycharm</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -609,19 +622,6 @@ TPL:事务处理语言
       <tags>
         <tag>linix</tag>
         <tag>ros</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pycharm插件整理</title>
-    <url>/article/fb4b156c.html</url>
-    <content><![CDATA[<p>1, Chinese: 汉化<br>2, translation: 翻译<br>3, Rainbow Brackets: 括号高亮<br>4, json parser: json格式的数据显示<br>5, markdown image support: markdown文档编辑器<br>6, Aixcoder code complate: 自动补全<br>7,CSV plugin<br>8,wakatime<br>9, .ignore<br>10, Context Free Grammar<br>11, SonarLint<br>12, Key Promoter X<br>13, Indent Rainbow<br>14, CodeGlance</p>
-]]></content>
-      <categories>
-        <category>pycharm</category>
-      </categories>
-      <tags>
-        <tag>pycharm</tag>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
