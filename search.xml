@@ -13,18 +13,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker常用命令</title>
-    <url>/article/749ad7d8.html</url>
-    <content><![CDATA[<p>安装:apt-get&#x2F;yum install docekr<br>查看服务状态:systemctl status docker<br>启动服务:systemctl start docker<br>拉取镜像:docker pull centos&#x2F;ubuntu<br>进入镜像:docker run -it ubuntu &#x2F;bin&#x2F;bash<br>退出:exit<br>查看所有容器:docker ps -a<br>启动容器:docker start id<br>进入容器:docker exec -it id bash<br>重启:docker restart id</p>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>django使用教程</title>
     <url>/article/ba447774.html</url>
     <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
@@ -49,6 +37,39 @@
       <tags>
         <tag>web</tag>
         <tag>django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker常用命令</title>
+    <url>/article/749ad7d8.html</url>
+    <content><![CDATA[<p>安装:apt-get&#x2F;yum install docekr<br>查看服务状态:systemctl status docker<br>启动服务:systemctl start docker<br>拉取镜像:docker pull centos&#x2F;ubuntu<br>进入镜像:docker run -it ubuntu &#x2F;bin&#x2F;bash<br>退出:exit<br>查看所有容器:docker ps -a<br>启动容器:docker start id<br>进入容器:docker exec -it id bash<br>重启:docker restart id</p>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>flask1</title>
+    <url>/article/31572391.html</url>
+    <content><![CDATA[<p>Flask:<br>1,flask目录(api目录结构)</p>
+<p>####1. 目录结构描述<br>├──  configs               &#x2F;&#x2F; 配置文件目录<br>│    ├──  <strong>init</strong>.py        &#x2F;&#x2F; 数据库连接，api接口，中间件等配置信息<br>│    ├──  log.py             &#x2F;&#x2F; log的输出配置文件<br>├──  core                  &#x2F;&#x2F; 封装调用方法目录<br>│    ├──  dict_config.py     &#x2F;&#x2F; 配置需要编码转换文件<br>│    ├──  db.py              &#x2F;&#x2F; 封装mysql数据库连接配置<br>│    ├──  redis_db.py        &#x2F;&#x2F; 封装redis数据库连接配置<br>├──  data                  &#x2F;&#x2F; 文件存储目录<br>├──  logs                  &#x2F;&#x2F; 日志存放目录<br>├──  schema                &#x2F;&#x2F; 和mysql数据库交互目录<br>│    ├──  models.py          &#x2F;&#x2F; ORM关系映射模板文件<br>│    ├──  deploy.sh          &#x2F;&#x2F; 生成models.py文件脚本<br>├──  test                  &#x2F;&#x2F; 测试目录<br>├──  utils                 &#x2F;&#x2F; 常用配置工具目录<br>├──  API.py                &#x2F;&#x2F; API接口主程序</p>
+<p>2,返回值返回格式:<br>‘’’<br>python3<br>返回成功: return jsonify(statusCode &#x3D; 200, msg &#x3D; “”)<br>返回失败: return jsonify(statusCode &#x3D; 500, msg &#x3D; “”)</p>
+<p>3,异常处理格式:<br>try:<br>    pass<br>except Exception as e:<br>    logger.error(f”xx异常:{traceback.format_exc()}行数:{e.<strong>traceback</strong>.tb_lineno}”)</p>
+<p>4,项目环境打包方式:<br>安装第三方模块:<br>    pip3 install pipreqs<br>生成配置文件requirements.txt,在项目根目录下执行<br>    pipreqs .&#x2F; –encoding&#x3D;utf8 –force<br>参数说明:当要更新配置文件时,”–force”会覆盖之前生成的配置文件</p>
+<p>5,flask重定向总结:<br>    1,字符串格式<br>        return “”<br>    2,response字符串格式<br>        return response(“”)<br>    3,json格式:<br>        return jsonify(msg&#x3D;””,”statusCode” &#x3D; 200)<br>        return jsonify(dict_data)<br>        return json.dumps(dict_data)<br>    4,页面跳转<br>        return render_template(“文件名”)<br>    5,重定向：实现页面跳转<br>        return redirect(user_for(“函数名”))   # 通过函数名实现页面跳转<br>        return redirect(‘&#x2F;‘)<br>        return redirect(‘url地址’)</p>
+<p>6, post请求方式传参参数类型<br>    string: (缺省值)接受任何不包含斜杠的文本<br>    int: 接受正整数<br>    float: 接受征服点型<br>    path: 类似string, 但可以包含斜杠<br>    uuid: 接受UUID</p>
+<p>7, postman<br>    params: 在url中添加参数,”?”用于区分,”&amp;”用于拼接.  eg: <a href="http://www.baidu.com/obj?key1=1&amp;key2=2">http://www.baidu.com/obj?key1=1&amp;key2=2</a><br>    body —&gt; form_data (传递json类型的参数,可以上传文件,文件操作), k-v的形式传参<br>    body —&gt; raw (可以传递不同格式的文件,对应的请求头分别是<br>                    text: text&#x2F;plain,<br>                    javascript: application&#x2F;javascript,<br>                    json: application&#x2F;json,<br>                    html: application&#x2F;html,<br>                    xml: application&#x2F;xml<br>                ), 字典形式传参<br>    binary: 用于二进制文件处理,eg:文件上传</p>
+<p>8,请求参数的获取,post参数一般是json格式(bady–raw–json)或者表单格式(bady–from_data)<br>    ① json格式的参数获取<br>        get_data &#x3D; resquest.get_json()<br>    ② get请求参数获取<br>         if request.method &#x3D;&#x3D; “GET”:<br>            Id &#x3D; request.args.get(“id”)<br>         else:<br>            Id &#x3D; request.form.get(“id”)</p>
+]]></content>
+      <categories>
+        <category>flask</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -78,24 +99,52 @@
       </tags>
   </entry>
   <entry>
-    <title>flask1</title>
-    <url>/article/31572391.html</url>
-    <content><![CDATA[<p>Flask:<br>1,flask目录(api目录结构)</p>
-<p>####1. 目录结构描述<br>├──  configs               &#x2F;&#x2F; 配置文件目录<br>│    ├──  <strong>init</strong>.py        &#x2F;&#x2F; 数据库连接，api接口，中间件等配置信息<br>│    ├──  log.py             &#x2F;&#x2F; log的输出配置文件<br>├──  core                  &#x2F;&#x2F; 封装调用方法目录<br>│    ├──  dict_config.py     &#x2F;&#x2F; 配置需要编码转换文件<br>│    ├──  db.py              &#x2F;&#x2F; 封装mysql数据库连接配置<br>│    ├──  redis_db.py        &#x2F;&#x2F; 封装redis数据库连接配置<br>├──  data                  &#x2F;&#x2F; 文件存储目录<br>├──  logs                  &#x2F;&#x2F; 日志存放目录<br>├──  schema                &#x2F;&#x2F; 和mysql数据库交互目录<br>│    ├──  models.py          &#x2F;&#x2F; ORM关系映射模板文件<br>│    ├──  deploy.sh          &#x2F;&#x2F; 生成models.py文件脚本<br>├──  test                  &#x2F;&#x2F; 测试目录<br>├──  utils                 &#x2F;&#x2F; 常用配置工具目录<br>├──  API.py                &#x2F;&#x2F; API接口主程序</p>
-<p>2,返回值返回格式:<br>‘’’<br>python3<br>返回成功: return jsonify(statusCode &#x3D; 200, msg &#x3D; “”)<br>返回失败: return jsonify(statusCode &#x3D; 500, msg &#x3D; “”)</p>
-<p>3,异常处理格式:<br>try:<br>    pass<br>except Exception as e:<br>    logger.error(f”xx异常:{traceback.format_exc()}行数:{e.<strong>traceback</strong>.tb_lineno}”)</p>
-<p>4,项目环境打包方式:<br>安装第三方模块:<br>    pip3 install pipreqs<br>生成配置文件requirements.txt,在项目根目录下执行<br>    pipreqs .&#x2F; –encoding&#x3D;utf8 –force<br>参数说明:当要更新配置文件时,”–force”会覆盖之前生成的配置文件</p>
-<p>5,flask重定向总结:<br>    1,字符串格式<br>        return “”<br>    2,response字符串格式<br>        return response(“”)<br>    3,json格式:<br>        return jsonify(msg&#x3D;””,”statusCode” &#x3D; 200)<br>        return jsonify(dict_data)<br>        return json.dumps(dict_data)<br>    4,页面跳转<br>        return render_template(“文件名”)<br>    5,重定向：实现页面跳转<br>        return redirect(user_for(“函数名”))   # 通过函数名实现页面跳转<br>        return redirect(‘&#x2F;‘)<br>        return redirect(‘url地址’)</p>
-<p>6, post请求方式传参参数类型<br>    string: (缺省值)接受任何不包含斜杠的文本<br>    int: 接受正整数<br>    float: 接受征服点型<br>    path: 类似string, 但可以包含斜杠<br>    uuid: 接受UUID</p>
-<p>7, postman<br>    params: 在url中添加参数,”?”用于区分,”&amp;”用于拼接.  eg: <a href="http://www.baidu.com/obj?key1=1&amp;key2=2">http://www.baidu.com/obj?key1=1&amp;key2=2</a><br>    body —&gt; form_data (传递json类型的参数,可以上传文件,文件操作), k-v的形式传参<br>    body —&gt; raw (可以传递不同格式的文件,对应的请求头分别是<br>                    text: text&#x2F;plain,<br>                    javascript: application&#x2F;javascript,<br>                    json: application&#x2F;json,<br>                    html: application&#x2F;html,<br>                    xml: application&#x2F;xml<br>                ), 字典形式传参<br>    binary: 用于二进制文件处理,eg:文件上传</p>
-<p>8,请求参数的获取,post参数一般是json格式(bady–raw–json)或者表单格式(bady–from_data)<br>    ① json格式的参数获取<br>        get_data &#x3D; resquest.get_json()<br>    ② get请求参数获取<br>         if request.method &#x3D;&#x3D; “GET”:<br>            Id &#x3D; request.args.get(“id”)<br>         else:<br>            Id &#x3D; request.form.get(“id”)</p>
+    <title>hexo基本使用</title>
+    <url>/article/d4fee3ae.html</url>
+    <content><![CDATA[<p>1, <a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>2,  下载淘宝镜像</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>3, 下载hexo</p>
+<p>cnpm install -g hexo-cli</p>
+<p>4, 建立文件夹,生成博客</p>
+<p>mkdir blog</p>
+<p>cd blog </p>
+<p>hexo init</p>
+<p>下载next主题: </p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>在github上建立仓库: </p>
+<p>github名.github.io</p>
+<p>安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#x2F;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
 ]]></content>
       <categories>
-        <category>flask</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>web</tag>
-        <tag>flask</tag>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令</title>
+    <url>/article/fe4ef317.html</url>
+    <content><![CDATA[<p>1, 安装deb</p>
+<p>dpkg -i 文件名</p>
+<p>2, window与liunx的shell脚本编码问题<br>修改编码:<br>vim 文件名<br>esc :<br>set ff&#x3D;unix<br>esc : wq</p>
+<p>查看编码<br>esc :<br>set ff</p>
+<p>3, 解决vmware tools失效<br>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop<br>重启: init 0&#x2F;reboot</p>
+<p>4, 查看进程：ps -ef | grep 文件名<br>杀死进程：kill -9 id</p>
+<p>5, shell文件运行命令<br>chmod +x .&#x2F;auto_download.sh &amp;&amp; .&#x2F;auto_download.sh</p>
+<p>6,定时器<br>cat &#x2F;etc&#x2F;crontab</p>
+<p>Ubuntu:<br>1, 安装防火墙<br>sudo su<br>apt-get install firewalld<br>查看状态<br>systemctl status firewalld<br>2,乌班图源的处理:<br><a href="https://blog.csdn.net/wssywh/article/details/79216437">pip源和软件源处理</a><br>3,安装deb文件<br>dpkg -i xxx.deb<br>3,定时任务<br>待测: cat &#x2F;etc&#x2F;corntab<br>①先创建py文件<br>②在py文件下输入crontab -e<br>③设置执行时间间隔<br><img src="https://img-blog.csdnimg.cn/d8720c2d022a485985c260796741466e.jpeg" alt="文件内容"><br><img src="https://img-blog.csdnimg.cn/f874919abf8145c88291ce275a54b608.jpeg" alt="常见的时间设置"><br>4,端口&#x2F;进程查看<br>查看端口是否占用<br>lsof -i:22<br>netstat -tunlp|grep 22<br>查看进程<br>ps aux|grep API.py<br>杀死进程<br>kill -9<br>5,实时查看日志<br>tail -f demo.log</p>
+<p>查看后200行日志内容</p>
+<p>tail -f -n 200 demo.log<br>6,服务器启动<br>nohup python3 &#x2F;opt&#x2F;moss_robot&#x2F;lib&#x2F;dispatch_v5.3.2&#x2F;robot_wait.py &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;<br>7,shell脚本运行<br>chmod +x .&#x2F;start.sh &amp;&amp; .&#x2F;start.sh</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -264,55 +313,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令</title>
-    <url>/article/fe4ef317.html</url>
-    <content><![CDATA[<p>1, 安装deb</p>
-<p>dpkg -i 文件名</p>
-<p>2, window与liunx的shell脚本编码问题<br>修改编码:<br>vim 文件名<br>esc :<br>set ff&#x3D;unix<br>esc : wq</p>
-<p>查看编码<br>esc :<br>set ff</p>
-<p>3, 解决vmware tools失效<br>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop<br>重启: init 0&#x2F;reboot</p>
-<p>4, 查看进程：ps -ef | grep 文件名<br>杀死进程：kill -9 id</p>
-<p>5, shell文件运行命令<br>chmod +x .&#x2F;auto_download.sh &amp;&amp; .&#x2F;auto_download.sh</p>
-<p>6,定时器<br>cat &#x2F;etc&#x2F;crontab</p>
-<p>Ubuntu:<br>1, 安装防火墙<br>sudo su<br>apt-get install firewalld<br>查看状态<br>systemctl status firewalld<br>2,乌班图源的处理:<br><a href="https://blog.csdn.net/wssywh/article/details/79216437">pip源和软件源处理</a><br>3,安装deb文件<br>dpkg -i xxx.deb<br>3,定时任务<br>待测: cat &#x2F;etc&#x2F;corntab<br>①先创建py文件<br>②在py文件下输入crontab -e<br>③设置执行时间间隔<br><img src="https://img-blog.csdnimg.cn/d8720c2d022a485985c260796741466e.jpeg" alt="文件内容"><br><img src="https://img-blog.csdnimg.cn/f874919abf8145c88291ce275a54b608.jpeg" alt="常见的时间设置"><br>4,端口&#x2F;进程查看<br>查看端口是否占用<br>lsof -i:22<br>netstat -tunlp|grep 22<br>查看进程<br>ps aux|grep API.py<br>杀死进程<br>kill -9<br>5,实时查看日志<br>tail -f demo.log</p>
-<p>查看后200行日志内容</p>
-<p>tail -f -n 200 demo.log<br>6,服务器启动<br>nohup python3 &#x2F;opt&#x2F;moss_robot&#x2F;lib&#x2F;dispatch_v5.3.2&#x2F;robot_wait.py &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;<br>7,shell脚本运行<br>chmod +x .&#x2F;start.sh &amp;&amp; .&#x2F;start.sh</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo基本使用</title>
-    <url>/article/d4fee3ae.html</url>
-    <content><![CDATA[<p>1, <a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>2,  下载淘宝镜像</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>3, 下载hexo</p>
-<p>cnpm install -g hexo-cli</p>
-<p>4, 建立文件夹,生成博客</p>
-<p>mkdir blog</p>
-<p>cd blog </p>
-<p>hexo init</p>
-<p>下载next主题: </p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
-<p>在github上建立仓库: </p>
-<p>github名.github.io</p>
-<p>安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#x2F;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>o基础也能学会的人工智能笔记整理</title>
     <url>/article/2a662cad.html</url>
     <content><![CDATA[<p>1,机器学习<br>用大量数据进行训练，获取到 一个数据模型，预测就是应用训练的模型，来解决一个未知的问题</p>
@@ -334,6 +334,19 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pycharm插件整理</title>
+    <url>/article/fb4b156c.html</url>
+    <content><![CDATA[<p>1, Chinese: 汉化<br>2, translation: 翻译<br>3, Rainbow Brackets: 括号高亮<br>4, json parser: json格式的数据显示<br>5, markdown image support: markdown文档编辑器<br>6, Aixcoder code complate: 自动补全<br>7,CSV plugin<br>8,wakatime<br>9, .ignore<br>10, Context Free Grammar<br>11, SonarLint<br>12, Key Promoter X<br>13, Indent Rainbow<br>14, CodeGlance</p>
+]]></content>
+      <categories>
+        <category>pycharm</category>
+      </categories>
+      <tags>
+        <tag>pycharm</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -412,103 +425,6 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>关键字</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python基础概念</title>
-    <url>/article/bf330a1e.html</url>
-    <content><![CDATA[<p>1, __new__和__init__的区别</p>
-<p>__new__负责进行对象的创建,__init__负责进行对象的初始化</p>
-<p>3, django和flask的区别?<br>答:<br>django:<br>①自带数据库管理app<br>②Python Web框架的先驱,第三方库丰富<br>③,上手容易开发文档详细,完善,资料丰富</p>
-<p>flask:<br>①适用于做小型网站及web服务的api,开发大型网站无压力.架构需自行设计<br>②与关系型数据库的结构不弱于django,与非关系型数据库的结合远远强于django,</p>
-<p>4,面向对象?<br>简称oop,把对象当做一个程序的基本单元,一个对象包含数据和操作数据的函数,提高了编程的效率,使其编程的重用性增高.<br>三大特点:<br>封装:把需要重用的函数或功能封装起来,方便其他程序直接调用,<br>继承 :子类继承父类,子类和父类拥有相同的方法和属性,子类会覆盖父类的方法和属性<br>多态:提高函数的健壮性和可扩展性,父类声明指向子类实现</p>
-<p>5,如何提高Python的运行效率?<br>①使用生成器,节省大量内存<br>②针对循环优化,避免过多重复代码的执行<br>③核心代码用Cython,PyPy等,提高效率<br>④多进程,多线程,协程<br>⑤多个if else条件判断,可以把最有可能发生的条件放最前面写,减少程序判断次数,提高效率</p>
-<p>6,描述数据,链表,队列,堆栈的区别?<br>答:数组和链表是数据存储方式的概念,数组在连续的自然空间中存储,链表在非连续的自然空间中存储<br>队列和堆栈是描述数据存储方式的概念,<br>队列是先进先出,堆栈是后进先出,堆栈和队列可以用数组表示,也可以用链表表示,<br>堆和栈<br>内存:<br>栈:内存小,速度快,有序,简单的数据类型放到栈里<br>堆:内存大,速度慢,无序,复杂的数据类型放到堆里</p>
-<p>7,线程和进程?<br>线程:1,CPU进行资源分配和调度的基本单位,线程是进程的一部分,是比进程更小的能够独立运行的基本单位,一个进程下的多个线程可以共享该进程的所有资源<br>2,如果IO操作密集,则可以多个线程运行,效率高,缺点是如果一个线程崩溃,就会造成进程崩溃</p>
-<p>进程:1,操作系统进行资源分配和调度的基本单位,多个进程之间相互独立<br>2,稳定性好,如果一个进程崩溃,不影响其他进程,但是进程消耗资源大,开启的进程数量有限</p>
-<p>8,*args和**kw区别?<br>*args和**kw属于不定长参数<br>*args返回值为元组类型,**kw返回值为字典类型</p>
-<p>9,&#x3D;和&#x3D;&#x3D;的区别?<br>&#x3D;:表示赋值.将某一数值赋值 给变量<br>&#x3D;&#x3D;:表示判断是否相等,返回True或者False,相等True,不相等False</p>
-<p>TCP&#x2F;UDP&#x2F;HTTP&#x2F;HTTPS的区别? TCP协议:是一种面向连接,可靠的,基于字节流的传输层协议,在正式通信前必须和对方建立连接,一个tcp必须经过三次对话才能建立连接,在经历4次对话结束(即三握四挥),传输可靠,速度慢,应用,传输大量数据,对可靠性要求高</p>
-<p>UDP协议:用于www浏览的协议,特点是客户端发送的请求都需要服务器回送响应,在请求结束后会主动释放连接,从建立连接到关闭连接的过程成为”一次连接” 注: 1)在http1.0中客户端的每次请求都要求建立一次单独的连接,在处理完本次请求后就自动释放连接 2)在http1.1中,则可以在一次连接中处理多次请求,并可重叠进行,不需要等一个请求结束后再发下一个请求</p>
-<p>HTTP&#x2F;HTTPS协议 HTTP协议:超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种 发布和接收HTML页面的方法。<br>HTTPS协议: HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL&#x2F;TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。</p>
-<p>next()和iter()的区别?<br>我们一般通过iter()函数获取可迭代对象的迭代器,通过对获取到的迭代器不断的通过next函数 进行获取下一条数据,iter()函数 实际上就是调用了可迭代对象的__iter__方法</p>
-<p>11,斐波那契数列<br>items &#x3D; int(input(“请输入斐波那契数列的个数:”))<br>fibs &#x3D; [0,1]<br>for i in range(item - 1):<br>    fibs.append(fibs[-2] + fibs[-1])<br>print(“斐波那契数列为:”,fibsp[1:])</p>
-<p>12,冒泡排序<br>def bubblesort(list):<br>    for i in range(len(lsit)):<br>        for j in range(len(list)-i-1):<br>            if list[j]&gt;list[j+1]:<br>                list[j],list[j+1] &#x3D; list[j+1],list[j]<br>    return list</p>
-<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    #用户输入<br>    str &#x3D; input(“请输入数字(用逗号隔开)”)<br>    list &#x3D; [int(i) for i in str.split(‘,’)]<br>    print(bubblesort(list))</p>
-<p>13, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
-<p>14, 类方法,静态方法,实例方法的区别<br>实例方法主要用于在类中封装一个额外的功能<br>第一个参数必须是self,一般情况下只能用实例化对象调用,不能用类调用,如果要用类调用,需要将实例化对象传递给self.<br>静态方法,主要用于在类中封装一个额外的功能,创建时用@staticmethod装饰器装饰,声明为静态函数,可以用类调用也可以用实例化对象调用<br>类方法主要是将类作为参数传递,相当于将类当成了对象,可以调用该类中的所有方法,创建时用@classmethod装饰器装饰,声明为类函数,第一个参数必须是cls,可以用类调用也可以用实例化对象调用.</p>
-<p>代码展示:<br>class A(object):<br>    #构造函数<br>    def <strong>init</strong>(self,title1):<br>        self.title &#x3D; title1<br>        print(self.title)<br>    #实例函数<br>    def foo(self,title2):<br>        print(title2)<br>   #静态函数<br>    @staticmethod<br>    def  static_foo():<br>        print(“静态方法”)<br>    #类方法<br>    @classmethod<br>    def cls_foo(cls):<br>        cls.foo(a,’类函数调用实例函数’)<br>        print(‘类方法’)</p>
-<p>15, collections库中的counter统计元素个数，</p>
-<p>16，列表合并<br>a.extend(b)</p>
-<p>17,字典合并<br>dic1.update(dic2)<br>删除 字典<br>del dic[‘sex’]</p>
-<p>18,迭代器和生成器的区别<br>迭代器:for循环遍历取值的过程<br>生成器:用yield关键字来返回值的函数成为生成器函数</p>
-<p>19,<br>del:按索引删除元素<br>remove:默认删除第一个元素<br>pop:默认删除最后一个元素或者根据索引值删除索引</p>
-<p>20,装饰器:将函数作为参数传递,在不改变源代码的情况下扩展函数功能<br>def funA(fn):<br>    pass<br>@funA<br>def fun():<br>    print(‘a’)<br>fun()</p>
-<p>21,闭包:外函数包含内函数,在高阶函数之上对函数功能进行扩展,一般在装饰器下写闭包</p>
-<p>22,set集合去重的原理<br>set集合去重主要是通过函数__hash__和__eq__结合实现的<br>①当两个变量的哈希值不相同时,就认为两个变量时不相同的<br>②当两个变量哈希值一样时,调用__eq__方法,当返回值为True时认为两个变量时同一个,应该去除一个,返回FALSE时,不去重</p>
-<p>23.python中的gil锁<br>GIl是python的全局解释器锁,同一进程中加入有多个线程运行,一个线程在运行python程序的时候会霸占python解释器,也就是加了一把锁(GIL),使该进程内其他线程无法运行,等该线程运行完成后其他线程才能运行</p>
-<p>25,分别从前端,后端,数据库阐述web项目的性能优化</p>
-<p>前端优化:</p>
-<p>①,减少http请求,例如制作精灵图</p>
-<p>②,html和CSS放在页面上部,javascript放在页面下部</p>
-<p>后端优化:</p>
-<p>①,缓存存储读写次数高,变化少的数据,</p>
-<p>②,异步方式,如果有耗时操作,可采用异步,如celery</p>
-<p>③,代码优化,避免循环和判断次数太多,如果多个if else判断,优先判断最有可能发生的情况</p>
-<p>数据库优化:</p>
-<p>①,如有条件,数据可以存放于redis,读取速度快,</p>
-<p>②,建立索引,外键等</p>
-<p>26, 常见转态码和意义</p>
-<p>200 OK: 请求正常处理完毕</p>
-<p>204 No Content: 请求成功处理，没有实体的主体返回</p>
-<p>206 Partial Content: GET范围请求已成功处理</p>
-<p>301 Moved Permanently: 永久重定向，资源已永久分配新URI</p>
-<p>302 Found: 临时重定向，资源已临时分配新URI</p>
-<p>303 See Other: 临时重定向，期望使用GET定向获取</p>
-<p>304 Not Modified: 发送的附带条件请求未满足</p>
-<p>307 Temporary Redirect: 临时重定向，POST不会变成GET</p>
-<p>400 Bad Request: 请求报文语法错误或者参数错误</p>
-<p>401 Unauthorized: 需要通过HTTP认证，或认证失败</p>
-<p>403 Forbidden: 请求资源被拒绝</p>
-<p>404 Not Found: 无法找到请求资源(服务器无理由拒绝)</p>
-<p>500 Internal Server Error: 服务器故障或Web应用故障</p>
-<p>503 Service Unavailable: 服务器超负载或停机维护</p>
-<p>27, django生命周期?</p>
-<p>从用户输入url到用户看到网页的整个过程。</p>
-<ol>
-<li><p>用户输入网址，浏览器发起请求</p>
-</li>
-<li><p>WSGI（服务器网关接口）创建socket服务端，接受请求</p>
-</li>
-</ol>
-<p>3）中间件处理请求</p>
-<p>4）url路由，根据当前请求的url找到相应的视图函数</p>
-<p>5）进入view，进行业务处理，执行类或者函数，返回字符串</p>
-<p>6）再次通过中间件处理相应的请求</p>
-<p>7）WSGI返回响应</p>
-<p>8）浏览器渲染</p>
-<p>1,深拷贝,浅拷贝的区别?</p>
-<p>深拷贝: 外部元素和内部元素都拷贝了对象本身,而不是引用,把对象复制一遍,对象中引用的其他对象也复制</p>
-<p>浅拷贝:拷贝了最外围对象本身,内部元素知识拷贝了一个引用,也就是说,把对象复制一遍,该对象引用的其他对象不复制.</p>
-<p>2,python的垃圾回收机制?</p>
-<p>① 在python语言内部,当一个对象的引用计数是0时,它将被垃圾收集机制处理掉</p>
-<p>② 当遇到两个对象a和b相互引用时的情况,del语句可以减少a和b的引用计数,并销毁用于底层对象的名称,需要注意的是,并不是每个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0,对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这问题,解释器会定期执行一个循环检测器,搜索不可访问对象的循环并进行删除.</p>
-<p>3,可变和不可变数据类型</p>
-<p>不可变:数值型,字符串型,和元组</p>
-<p>可变:列表和字典</p>
-<p>不可变原因: 如果变量值发生了变化,相当于新建一个对象,而对于相同值的对象,在内存中只有一个地址</p>
-<p>可变原因.如果对对象进行了添加,修改等操作之后,只是改变了变量的值,而不会新建一个对象,变量引用的对象的地址也不会发生变化,不过相对于相同值的不同对象,即每个对象都有自己的地址.</p>
-<p>去重:集合去重,</p>
-<p>4,列表切片属于浅拷贝</p>
-<p>5,闭包</p>
-<p>闭包:外函数包含内函数,在高阶函数之上,对函数功能进行扩展,一般在装饰器情况下写闭包.</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>概念</tag>
       </tags>
   </entry>
   <entry>
@@ -609,6 +525,95 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>python基础概念</title>
+    <url>/article/bf330a1e.html</url>
+    <content><![CDATA[<p>1, __new__和__init__的区别</p>
+<p>__new__负责进行对象的创建,__init__负责进行对象的初始化</p>
+<p>2,面向对象?<br>简称oop,把对象当做一个程序的基本单元,一个对象包含数据和操作数据的函数,提高了编程的效率,使其编程的重用性增高.<br>三大特点:<br>封装:把需要重用的函数或功能封装起来,方便其他程序直接调用,<br>继承 :子类继承父类,子类和父类拥有相同的方法和属性,子类会覆盖父类的方法和属性<br>多态:提高函数的健壮性和可扩展性,父类声明指向子类实现</p>
+<p>3,如何提高Python的运行效率?<br>①使用生成器,节省大量内存<br>②针对循环优化,避免过多重复代码的执行<br>③核心代码用Cython,PyPy等,提高效率<br>④多进程,多线程,协程<br>⑤多个if else条件判断,可以把最有可能发生的条件放最前面写,减少程序判断次数,提高效率</p>
+<p>4,描述数据,链表,队列,堆栈的区别?<br>答:数组和链表是数据存储方式的概念,数组在连续的自然空间中存储,链表在非连续的自然空间中存储<br>队列和堆栈是描述数据存储方式的概念,<br>队列是先进先出,堆栈是后进先出,堆栈和队列可以用数组表示,也可以用链表表示,<br>堆和栈<br>内存:<br>栈:内存小,速度快,有序,简单的数据类型放到栈里<br>堆:内存大,速度慢,无序,复杂的数据类型放到堆里</p>
+<p>5,*args和**kw区别?<br>*args和**kw属于不定长参数<br>*args返回值为元组类型,**kw返回值为字典类型</p>
+<p>6,&#x3D;和&#x3D;&#x3D;的区别?<br>&#x3D;:表示赋值.将某一数值赋值 给变量<br>&#x3D;&#x3D;:表示判断是否相等,返回True或者False,相等True,不相等False</p>
+<p>7,TCP&#x2F;UDP&#x2F;HTTP&#x2F;HTTPS的区别?</p>
+<p> TCP协议:是一种面向连接,可靠的,基于字节流的传输层协议,在正式通信前必须和对方建立连接,一个tcp必须经过三次对话才能建立连接,在经历4次对话结束(即三握四挥),传输可靠,速度慢,应用,传输大量数据,对可靠性要求高</p>
+<p>UDP协议:用于www浏览的协议,特点是客户端发送的请求都需要服务器回送响应,在请求结束后会主动释放连接,从建立连接到关闭连接的过程成为”一次连接” 注: 1)在http1.0中客户端的每次请求都要求建立一次单独的连接,在处理完本次请求后就自动释放连接 2)在http1.1中,则可以在一次连接中处理多次请求,并可重叠进行,不需要等一个请求结束后再发下一个请求</p>
+<p>HTTP&#x2F;HTTPS协议 HTTP协议:超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种 发布和接收HTML页面的方法。<br>HTTPS协议: HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL&#x2F;TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。</p>
+<p>8,next()和iter()的区别?<br>我们一般通过iter()函数获取可迭代对象的迭代器,通过对获取到的迭代器不断的通过next函数 进行获取下一条数据,iter()函数 实际上就是调用了可迭代对象的__iter__方法</p>
+<p>9,斐波那契数列<br>items &#x3D; int(input(“请输入斐波那契数列的个数:”))<br>fibs &#x3D; [0,1]<br>for i in range(item - 1):<br>    fibs.append(fibs[-2] + fibs[-1])<br>print(“斐波那契数列为:”,fibsp[1:])</p>
+<p>10,冒泡排序<br>def bubblesort(list):<br>    for i in range(len(lsit)):<br>        for j in range(len(list)-i-1):<br>            if list[j]&gt;list[j+1]:<br>                list[j],list[j+1] &#x3D; list[j+1],list[j]<br>    return list</p>
+<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    #用户输入<br>    str &#x3D; input(“请输入数字(用逗号隔开)”)<br>    list &#x3D; [int(i) for i in str.split(‘,’)]<br>    print(bubblesort(list))</p>
+<p>11, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
+<p>12, 类方法,静态方法,实例方法的区别<br>实例方法主要用于在类中封装一个额外的功能<br>第一个参数必须是self,一般情况下只能用实例化对象调用,不能用类调用,如果要用类调用,需要将实例化对象传递给self.<br>静态方法,主要用于在类中封装一个额外的功能,创建时用@staticmethod装饰器装饰,声明为静态函数,可以用类调用也可以用实例化对象调用<br>类方法主要是将类作为参数传递,相当于将类当成了对象,可以调用该类中的所有方法,创建时用@classmethod装饰器装饰,声明为类函数,第一个参数必须是cls,可以用类调用也可以用实例化对象调用.</p>
+<p>代码展示:<br>class A(object):<br>    #构造函数<br>    def <strong>init</strong>(self,title1):<br>        self.title &#x3D; title1<br>        print(self.title)<br>    #实例函数<br>    def foo(self,title2):<br>        print(title2)<br>   #静态函数<br>    @staticmethod<br>    def  static_foo():<br>        print(“静态方法”)<br>    #类方法<br>    @classmethod<br>    def cls_foo(cls):<br>        cls.foo(a,’类函数调用实例函数’)<br>        print(‘类方法’)</p>
+<p>13, collections库中的counter统计元素个数，</p>
+<p>14，列表合并<br>a.extend(b)</p>
+<p>15,字典合并<br>dic1.update(dic2)<br>删除 字典<br>del dic[‘sex’]</p>
+<p>16,<br>del:按索引删除元素<br>remove:默认删除第一个元素<br>pop:默认删除最后一个元素或者根据索引值删除索引</p>
+<p>17,set集合去重的原理<br>set集合去重主要是通过函数__hash__和__eq__结合实现的<br>①当两个变量的哈希值不相同时,就认为两个变量时不相同的<br>②当两个变量哈希值一样时,调用__eq__方法,当返回值为True时认为两个变量时同一个,应该去除一个,返回FALSE时,不去重</p>
+<p>18,分别从前端,后端,数据库阐述web项目的性能优化</p>
+<p>前端优化:</p>
+<p>①,减少http请求,例如制作精灵图</p>
+<p>②,html和CSS放在页面上部,javascript放在页面下部</p>
+<p>后端优化:</p>
+<p>①,缓存存储读写次数高,变化少的数据,</p>
+<p>②,异步方式,如果有耗时操作,可采用异步,如celery</p>
+<p>③,代码优化,避免循环和判断次数太多,如果多个if else判断,优先判断最有可能发生的情况</p>
+<p>数据库优化:</p>
+<p>①,如有条件,数据可以存放于redis,读取速度快,</p>
+<p>②,建立索引,外键等</p>
+<p>19, 常见转态码和意义</p>
+<p>200 OK: 请求正常处理完毕</p>
+<p>204 No Content: 请求成功处理，没有实体的主体返回</p>
+<p>206 Partial Content: GET范围请求已成功处理</p>
+<p>301 Moved Permanently: 永久重定向，资源已永久分配新URI</p>
+<p>302 Found: 临时重定向，资源已临时分配新URI</p>
+<p>303 See Other: 临时重定向，期望使用GET定向获取</p>
+<p>304 Not Modified: 发送的附带条件请求未满足</p>
+<p>307 Temporary Redirect: 临时重定向，POST不会变成GET</p>
+<p>400 Bad Request: 请求报文语法错误或者参数错误</p>
+<p>401 Unauthorized: 需要通过HTTP认证，或认证失败</p>
+<p>403 Forbidden: 请求资源被拒绝</p>
+<p>404 Not Found: 无法找到请求资源(服务器无理由拒绝)</p>
+<p>500 Internal Server Error: 服务器故障或Web应用故障</p>
+<p>503 Service Unavailable: 服务器超负载或停机维护</p>
+<p>20, django生命周期?</p>
+<p>从用户输入url到用户看到网页的整个过程。</p>
+<p>1）用户输入网址，浏览器发起请求</p>
+<p>2）WSGI（服务器网关接口）创建socket服务端，接受请求</p>
+<p>3）中间件处理请求</p>
+<p>4）url路由，根据当前请求的url找到相应的视图函数</p>
+<p>5）进入view，进行业务处理，执行类或者函数，返回字符串</p>
+<p>6）再次通过中间件处理相应的请求</p>
+<p>7）WSGI返回响应</p>
+<p>8）浏览器渲染</p>
+<p>21,列表切片属于浅拷贝</p>
+<p>22, 深拷贝浅拷贝<br>深拷贝: 外围和内部元素都拷贝了对象本身,而不是引用,也就是说把对象复制一遍,对象中引用的其他对象也复制.<br>浅拷贝: 拷贝了最外围对象本身, 内部元素只拷贝了一个引用, 也就是说把对象复制一遍,对象中引用的其他对象不复制.</p>
+<p>23, django和flask的区别<br>django: 自带数据库管理app, 第三方库丰富, 开发文档丰富,资料丰富<br>flask: 适用于做小型网站及web服务的api, 开发大型网站无压力,架构需自行设计,与关系型数据库的结合不弱于django, 与非关系型数据库的结合远远强于django.</p>
+<p>24, python垃圾回收机制<br>在python内部, 当一个对象的引用计数是0时, 它将被垃圾回收机制处理掉<br>当两个对象a和b相互引用时的情况,del语句可以减少a和b的引用计数,并销毁用于底层对象的名称,需要注意的是,并不是每一个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0, 对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这个问题,解释器会定期执行一个循环检测器,搜素不可访问对象的循环并进行删除.</p>
+<p>25, 线程与进程,协程<br>进程: 是程序执行的一次过程,是临时的,有生命周期的, 任何进程都可以同其他进程一起并发执行,是系统进行资源分配和调度的一个独立单位,由程序,数据和进程控制块三部分组成<br>进程池:当存在多个进程时,为避免资源损耗,创建适当的进程放入进程池,等待待处理的事件,当处理完所有事件之后,进程退出<br>线程: 线程是程序执行中一个单一的顺序控制流程,是程序执行的最小单元,一个进程可以有一个或多个线程,<br>死锁: 在线程间共享多个资源时,两个线程分别占用资源并且同时等待对方的资源,就会造成死锁,<br>协程: 执行函数A时可以随时中断执行函数B,然后中断函数B继续执行函数A,协程是一个线程在执行.</p>
+<p>26, 可变数据类型,不可变数据类型(为什么不可变,为什么可变)<br>可变: 列表,字典,<br>原因: 如果对对象进行了添加,修改等操作之后, 只是改变了变量的值,而不会新建一个对象, 变量引用的对象地址也不会发生变化,不过对于相同值的对象,即每个对象都有自己的地址,<br>不可变: 整型,字符串,布尔型,元组,<br>原因: 如果变量值发生了变化,相当于新建一个对象,而对于相同值的对象,在内存中只有一个地址,</p>
+<p>27, 装饰器,闭包,迭代器,生成器<br>闭包: 外函数包含内函数, 对函数功能进行扩展,一般在装饰器下写闭包<br>装饰器: 为已经存在的对象添加额外的功能,在不改变原代码的情况下,扩展额外功能.<br>迭代器: for循环遍历取值的过程<br>生成器: yield关键字来返回值的函数</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">装饰器</span><br><span class="line">def funA(fn):</span><br><span class="line">    pass</span><br><span class="line"><span class="meta">@funA</span></span><br><span class="line">def <span class="function"><span class="title">fun</span><span class="params">()</span></span>:</span><br><span class="line">    print(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+
+<p>28, celery<br>主要是用于处理耗时任务，包含的三个模块</p>
+<p>  1, broker： 存储生产者发出的各种任务 （将任务添加到broker）</p>
+<pre><code> 2. worker： 实时监控消息队列，如果有任务就获取任务并执行它 （worker服务）
+ 3. task: 定义任务函数 （任务函数）
+</code></pre>
+<p>29, mysq与redis,mongodb的区别<br>mysql: 关系型数据库,数据保存在磁盘中,速度慢<br>redis: 内存型非关系数据库,数据保存在内存中, 速度快<br>mongodb: 非关系型数据库,虚拟内存加持久化存储,有独特的mongodb查询方式</p>
+<p>30, python的GIL锁<br>GIL锁,全局解释器锁,同一进程加入有多个线程运行,一个线程在运行python程序时会霸占python解释器,也就增加了一把锁,使该进程中的其他线程无法运行,等该线程运行完成后其他线程才能运行,</p>
+<p>31, python的单例模式<br>对__new__方式进行重写,</p>
+<p>32, docker<br>docker search mysql : 查询镜像<br>docker pull mysql: 下载镜像<br>docker images: 查看镜像<br>docker run -it 镜像名称 &#x2F;bin&#x2F;bash<br>docker ps -a : 查看镜像状态<br>docker start 容器id; 启动容器<br>docker exec -it  &lt;容器 ID&gt; &#x2F;bin&#x2F;bash　　# 退出容器是，不会导致容器状态变为停止，推荐使用这种方法。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>scrapy框架使用</title>
     <url>/article/1d5ab057.html</url>
     <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
@@ -625,19 +630,6 @@ TPL:事务处理语言
       <tags>
         <tag>爬虫</tag>
         <tag>scrapy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pycharm插件整理</title>
-    <url>/article/fb4b156c.html</url>
-    <content><![CDATA[<p>1, Chinese: 汉化<br>2, translation: 翻译<br>3, Rainbow Brackets: 括号高亮<br>4, json parser: json格式的数据显示<br>5, markdown image support: markdown文档编辑器<br>6, Aixcoder code complate: 自动补全<br>7,CSV plugin<br>8,wakatime<br>9, .ignore<br>10, Context Free Grammar<br>11, SonarLint<br>12, Key Promoter X<br>13, Indent Rainbow<br>14, CodeGlance</p>
-]]></content>
-      <categories>
-        <category>pycharm</category>
-      </categories>
-      <tags>
-        <tag>pycharm</tag>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -890,6 +882,34 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
+    <title>web开发1_nginx部署</title>
+    <url>/article/3c1ae316.html</url>
+    <content><![CDATA[<p>uwsgi的安装:<br>pip install uwsgi</p>
+<p>创建配置文件:<br>uwsgi8001.ini</p>
+<p>uwsgi启动:<br>uwsgi –ini uwsgi8001.ini</p>
+<p>uwsgi重启：<br>uwsgi –reload uwsgi8001.pid</p>
+<p>uwsgi停止:<br>uwsgi –stop uwsgi8001.pid</p>
+<p>uwsgi.ini 配置文件内容</p>
+<p>[uwsgi]<br>#直接做web服务器使用，Django程序所在服务器地址<br>http&#x3D;127.0.0.1:8001<br>#项目目录<br>chdir&#x3D;&#x2F;home&#x2F;parallels&#x2F;Desktop&#x2F;meiduo_mall<br>#项目中wsgi.py文件的目录，相对于项目目录<br>wsgi-file&#x3D;meiduo_mall&#x2F;wsgi.py<br>进程数</p>
+<p>processes&#x3D;2<br>线程数</p>
+<p>threads&#x3D;2<br>是否开启master进程</p>
+<p>master&#x3D;True<br>存放进程编号的文件</p>
+<p>pidfile&#x3D;uwsgi.pid<br>日志文件，因为uwsgi可以脱离终端在后台运行，日志看不见。我们以前的runserver是依赖终端的</p>
+<p>daemonize&#x3D;uwsgi.log<br>指定依赖的虚拟环境</p>
+<p>virtualenv&#x3D;&#x2F;home&#x2F;parallels&#x2F;.virtualenv&#x2F;django_py3</p>
+<p>我们使用apt-get安装:     apt-get install nginx -y<br>查看服务状态:     systemctl status nginx &#x2F; service nginx status<br>检查配置文件:     nginx -t<br>重新加载配置文件:     nginx -s reload</p>
+<p>nginx目录介绍:<br>配置目录：&#x2F;etc&#x2F;nginx<br>执行文件: &#x2F;usr&#x2F;sbin&#x2F;nginx<br>日志目录：&#x2F;var&#x2F;log&#x2F;nginx<br>启动文件：&#x2F;etc&#x2F;init.d&#x2F;nginx<br>web目录：&#x2F;var&#x2F;www&#x2F;html&#x2F;，首页文件是index.nginx-debian.html</p>
+<p>nginx配置文件:<br>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
+]]></content>
+      <categories>
+        <category>web开发</category>
+      </categories>
+      <tags>
+        <tag>web开发</tag>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web开发2_python项目部署</title>
     <url>/article/dbe3cbd9.html</url>
     <content><![CDATA[<p>pm2运行命令:<br>pm2 ls<br>pm2 start<br>pm2 stop<br>pm2 log</p>
@@ -981,34 +1001,6 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       </tags>
   </entry>
   <entry>
-    <title>web开发1_nginx部署</title>
-    <url>/article/3c1ae316.html</url>
-    <content><![CDATA[<p>uwsgi的安装:<br>pip install uwsgi</p>
-<p>创建配置文件:<br>uwsgi8001.ini</p>
-<p>uwsgi启动:<br>uwsgi –ini uwsgi8001.ini</p>
-<p>uwsgi重启：<br>uwsgi –reload uwsgi8001.pid</p>
-<p>uwsgi停止:<br>uwsgi –stop uwsgi8001.pid</p>
-<p>uwsgi.ini 配置文件内容</p>
-<p>[uwsgi]<br>#直接做web服务器使用，Django程序所在服务器地址<br>http&#x3D;127.0.0.1:8001<br>#项目目录<br>chdir&#x3D;&#x2F;home&#x2F;parallels&#x2F;Desktop&#x2F;meiduo_mall<br>#项目中wsgi.py文件的目录，相对于项目目录<br>wsgi-file&#x3D;meiduo_mall&#x2F;wsgi.py<br>进程数</p>
-<p>processes&#x3D;2<br>线程数</p>
-<p>threads&#x3D;2<br>是否开启master进程</p>
-<p>master&#x3D;True<br>存放进程编号的文件</p>
-<p>pidfile&#x3D;uwsgi.pid<br>日志文件，因为uwsgi可以脱离终端在后台运行，日志看不见。我们以前的runserver是依赖终端的</p>
-<p>daemonize&#x3D;uwsgi.log<br>指定依赖的虚拟环境</p>
-<p>virtualenv&#x3D;&#x2F;home&#x2F;parallels&#x2F;.virtualenv&#x2F;django_py3</p>
-<p>我们使用apt-get安装:     apt-get install nginx -y<br>查看服务状态:     systemctl status nginx &#x2F; service nginx status<br>检查配置文件:     nginx -t<br>重新加载配置文件:     nginx -s reload</p>
-<p>nginx目录介绍:<br>配置目录：&#x2F;etc&#x2F;nginx<br>执行文件: &#x2F;usr&#x2F;sbin&#x2F;nginx<br>日志目录：&#x2F;var&#x2F;log&#x2F;nginx<br>启动文件：&#x2F;etc&#x2F;init.d&#x2F;nginx<br>web目录：&#x2F;var&#x2F;www&#x2F;html&#x2F;，首页文件是index.nginx-debian.html</p>
-<p>nginx配置文件:<br>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
-]]></content>
-      <categories>
-        <category>web开发</category>
-      </categories>
-      <tags>
-        <tag>web开发</tag>
-        <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>window快捷键</title>
     <url>/article/d1988cc4.html</url>
     <content><![CDATA[<p>1,calc:计算器</p>
@@ -1052,6 +1044,75 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       </categories>
       <tags>
         <tag>window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编码习惯整理</title>
+    <url>/article/e541c025.html</url>
+    <content><![CDATA[<ol>
+<li><p>修改完代码,记得自测一下(再小的修改也最好自测一下)</p>
+</li>
+<li><p>方法入参最好都检验</p>
+</li>
+<li><p>修改老接口时,思考接口的兼容性</p>
+</li>
+<li><p>对于复杂的代码逻辑,添加清楚的注释</p>
+</li>
+<li><p>使用完IO资源流,需要关闭</p>
+</li>
+<li><p>代码采取措施避免运行错误(如数组边界溢出)</p>
+</li>
+<li><p>尽量不要在循环里远程调用或者对数据库操作,优先考虑批量进行</p>
+</li>
+<li><p>写完代码,脑洞一下多线程执行会怎样,注意并发一致性问题,</p>
+</li>
+<li><p>获取对象的属性,先判断对象是否为空</p>
+</li>
+<li><p>多线程异步优先考虑恰当的线程池,而不是new thread(降低资源损耗,题号响应速度,便于重复利用)&lt;注意线程池隔离&gt;</p>
+</li>
+<li><p>手动写完代码业务的SQL,先拿去数据库跑一下,同时也explain看下执行计划</p>
+</li>
+<li><p>调用第三方接口,需要考虑异常处理.安全性,超时重试这几个点(重点的需要考虑签名,加密)</p>
+</li>
+<li><p>接口考虑幂等性</p>
+</li>
+<li><p>多线程情况下,考虑线程安全问题</p>
+</li>
+<li><p>主从延迟问题考虑</p>
+</li>
+<li><p>缓存的时候,考虑缓存跟DB的一致性,还有(缓存穿透,缓存雪崩和缓存击穿)</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编码习惯</category>
+      </categories>
+      <tags>
+        <tag>编码习惯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件安装</title>
+    <url>/article/f025fac7.html</url>
+    <content><![CDATA[<p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用密码</title>
+    <url>/article/b68a8f57.html</url>
+    <content><![CDATA[<p>1,<br>steam账户Python_Enthusiasts<br>密码Fy19961009</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -1111,18 +1172,6 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       <tags>
         <tag>目标识别</tag>
         <tag>yolo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用密码</title>
-    <url>/article/b68a8f57.html</url>
-    <content><![CDATA[<p>1,<br>steam账户Python_Enthusiasts<br>密码Fy19961009</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -1201,63 +1250,6 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       </categories>
       <tags>
         <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>编码习惯整理</title>
-    <url>/article/e541c025.html</url>
-    <content><![CDATA[<ol>
-<li><p>修改完代码,记得自测一下(再小的修改也最好自测一下)</p>
-</li>
-<li><p>方法入参最好都检验</p>
-</li>
-<li><p>修改老接口时,思考接口的兼容性</p>
-</li>
-<li><p>对于复杂的代码逻辑,添加清楚的注释</p>
-</li>
-<li><p>使用完IO资源流,需要关闭</p>
-</li>
-<li><p>代码采取措施避免运行错误(如数组边界溢出)</p>
-</li>
-<li><p>尽量不要在循环里远程调用或者对数据库操作,优先考虑批量进行</p>
-</li>
-<li><p>写完代码,脑洞一下多线程执行会怎样,注意并发一致性问题,</p>
-</li>
-<li><p>获取对象的属性,先判断对象是否为空</p>
-</li>
-<li><p>多线程异步优先考虑恰当的线程池,而不是new thread(降低资源损耗,题号响应速度,便于重复利用)&lt;注意线程池隔离&gt;</p>
-</li>
-<li><p>手动写完代码业务的SQL,先拿去数据库跑一下,同时也explain看下执行计划</p>
-</li>
-<li><p>调用第三方接口,需要考虑异常处理.安全性,超时重试这几个点(重点的需要考虑签名,加密)</p>
-</li>
-<li><p>接口考虑幂等性</p>
-</li>
-<li><p>多线程情况下,考虑线程安全问题</p>
-</li>
-<li><p>主从延迟问题考虑</p>
-</li>
-<li><p>缓存的时候,考虑缓存跟DB的一致性,还有(缓存穿透,缓存雪崩和缓存击穿)</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编码习惯</category>
-      </categories>
-      <tags>
-        <tag>编码习惯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件安装</title>
-    <url>/article/f025fac7.html</url>
-    <content><![CDATA[<p>Java环境变量配置:<br>1,<br>JAVA_HOME      F:\Java\jdk-10.0.2<br>2,<br>CLASSPATH        .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<br>3,<br>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
       </tags>
   </entry>
 </search>
