@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>deeplearning1</title>
-    <url>/article/b6750f91.html</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_44791964/article/details/107517428">深度学习链接</a><br><a href="https://www.bilibili.com/read/cv10239076?spm_id_from=333.999.0.0">深度学习链接2</a><br>1, 查看gpu使用情况,nvidia-smi</p>
-]]></content>
-      <categories>
-        <category>deeplearning</category>
-      </categories>
-      <tags>
-        <tag>deeplearning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>django使用教程</title>
-    <url>/article/ba447774.html</url>
-    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
-<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
-<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
-<pre><code>    #密码
-    &#39;PASSWORD&#39;:&#39;root&#39;,
-    #url 服务器地址
-    &#39;HOST&#39;:&#39;localhost&#39;,
-    #端口号
-    &#39;PORT&#39;:3306,
-&#125;
-</code></pre>
-<p>4,更新应用数据库<br>python manage.py makemigrations<br>python manage.py migrate</p>
-<p>5,创建超级管理员<br>python manage.py createsuperuser</p>
-<p>6,运行项目<br>python manage.py runserver</p>
-<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’<br>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>django</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker常用命令</title>
     <url>/article/749ad7d8.html</url>
     <content><![CDATA[<p>安装:apt-get&#x2F;yum install docekr<br>查看服务状态:systemctl status docker<br>启动服务:systemctl start docker<br>拉取镜像:docker pull centos&#x2F;ubuntu<br>进入镜像:docker run -it ubuntu &#x2F;bin&#x2F;bash<br>退出:exit<br>查看所有容器:docker ps -a<br>启动容器:docker start id<br>进入容器:docker exec -it id bash<br>重启:docker restart id</p>
@@ -100,6 +61,44 @@
       </tags>
   </entry>
   <entry>
+    <title>git使用</title>
+    <url>/article/4896de77.html</url>
+    <content><![CDATA[<p>1, 配置全局的用户名和邮箱</p>
+<p>git config –global user.name “注册的用户名”</p>
+<p>git config –global user.email “注册的邮箱”</p>
+<p>2,生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
+<p>将.ssh下的id_rsa.pub内容复制到github中</p>
+<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
+<p>3, 文件上传</p>
+<p>git init</p>
+<p>git add .</p>
+<p>git commit -m “”</p>
+<p>git remote add origin 远程库地址</p>
+<p>git push -u origin master &#x2F; git push -f origin master</p>
+<p>1,常用(上传代码)<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>扩展:<br>git checkout 分支名:切换分支<br>git pull origin master: 拉取主分支代码<br>git merge dev: 合并dev分支代码到主分支</p>
+<p><img src="https://img-blog.csdnimg.cn/eb1e2203dd17421ebbf075e02cda5e0c.png" alt="git使用"></p>
+<p>1, 配置git<br>git config –global user.name “注册的用户名”<br>git config –global user.email “注册的邮箱”<br>2, 生成ssh配置文件<br>①生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”<br>②将.ssh下的id_rsa.pub内容复制到github中<br>③用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮<br>3,文件上传<br>git init<br>git add .<br>git commit -m “”<br>git remote add origin 远程库地址<br>git push -u origin master &#x2F; git push -f origin master<br>4,常用文件上传（上传到远程分支）<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>5, 文件下载<br>git clone -b 分支名 版本库地址<br>6, git 上传代码到远程分支<br>git branch # 查看分支<br>git checkout -b 分支名 #创建并切换分支<br>git add .  #添加文件到暂存区<br>git push origin 分支名 #提交分支<br>7,  分支合并<br>git checkout master #切换到主分支<br>git merge 分支名 #合并分支到主分支</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>deeplearning1</title>
+    <url>/article/b6750f91.html</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_44791964/article/details/107517428">深度学习链接</a><br><a href="https://www.bilibili.com/read/cv10239076?spm_id_from=333.999.0.0">深度学习链接2</a><br>1, 查看gpu使用情况,nvidia-smi</p>
+]]></content>
+      <categories>
+        <category>deeplearning</category>
+      </categories>
+      <tags>
+        <tag>deeplearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令</title>
     <url>/article/fe4ef317.html</url>
     <content><![CDATA[<p>1, 安装deb</p>
@@ -119,6 +118,33 @@
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>django使用教程</title>
+    <url>/article/ba447774.html</url>
+    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
+<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
+<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
+<pre><code>    #密码
+    &#39;PASSWORD&#39;:&#39;root&#39;,
+    #url 服务器地址
+    &#39;HOST&#39;:&#39;localhost&#39;,
+    #端口号
+    &#39;PORT&#39;:3306,
+&#125;
+</code></pre>
+<p>4,更新应用数据库<br>python manage.py makemigrations<br>python manage.py migrate</p>
+<p>5,创建超级管理员<br>python manage.py createsuperuser</p>
+<p>6,运行项目<br>python manage.py runserver</p>
+<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’<br>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>django</tag>
       </tags>
   </entry>
   <entry>
@@ -162,52 +188,30 @@
       </tags>
   </entry>
   <entry>
-    <title>mongodb使用</title>
-    <url>/article/a7b87908.html</url>
-    <content><![CDATA[<p>window下mongodb的使用:</p>
-<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p>
-<p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p>
-<p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p>
-<p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p>
-<p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p>
-<p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p>
-<p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p>
-<p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p>
-<p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p>
-<p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>
+    <title>mysql面试题</title>
+    <url>/article/c45230cb.html</url>
+    <content><![CDATA[<p>1, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
+<p>2, 数据库优化<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,建立索引,外键等<br>③使用联合来代替手动创建的临时表<br>④使用事物<br>⑤使用锁定表<br>⑥选取合适的字段属性<br>⑦使用连接代替子查询</p>
+<p>3,创建数据库的四大原则?<br>答:<br>事物: 是数据库操作的最小工作单元,是一组不可再分割的操作集合<br>原子性: 整个程序中的所有操作,要么全部完成,要么全部不完成,不可能停滞在中间某个环节<br>一致性: 倘若事物操作失败,则回滚事物时,与原状态一致.<br>隔离性: 当在进行事物操作时, 其他事物的操作不可能影响当前事物操作,事物与事物之间是隔离的,互不干扰,干完再整合.<br>持久性: 事物的操作具有持久性, 事物结果一旦写入数据库,在不改动的情况下,数据库一直都是这个数据.</p>
+<p>4,orm数据库?<br>orm数据库:称为对象–关系映射,主要实现模型对象到关系数据库数据的映射,把数据表中的每一条记录映射为一个模型对象,</p>
+<p>5,数据表student有id,name,score,city字段,其中name中的名字可有重复,需消除重复行,请写sql语句<br>答:select distinct name from student;</p>
+<p>6, 表合并<br>①<br>#sql union 不允许重复的值<br>select 字段名 from 表名 union select 字段名2 from 表名2</p>
+<p>#sql union all 允许重复的值<br>elect 字段名 from 表名 union all select 字段名2 from 表名2</p>
+<p>②<br>insert into 表1 select * from 表2</p>
+<p>7,数据库优化查询方法<br>答:外键,索引,联合查询,选择特定字段等等</p>
+<p>8,写5条常用sql语句<br>答:show databases;<br>show tables;<br>desc tb_name;<br>select * from tb_name<br>delete from tb_name where id &#x3D; 5;<br>update tb_name set name&#x3D;’xue’,age&#x3D;23 where id &#x3D; 5;</p>
+<p>9, <a href="https://fies09.github.io/article/8e40d0ad.html?highlight=mysql">mysql</a><br>排序: order by<br>分组: group by<br>条件: where<br>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p>
+<p>10,列出常见mysql数据存储引擎<br>InnoDB:支持事物处理,支持外键,支持崩溃修复能力和并发控制.<br>MyISAM:插入数据快,空间和内存使用比较低,<br>MEMORY:所有数据都在内存中,数据的处理速度快.但是安全性不高</p>
+<p>11,Mysql数据库的隔离级别<br>①Read Uncommitted(读取末提交内容)<br>在该隔离级别,所有事物都可以看到其他末提交事物的执行结果,本隔离级别很少用于实际应用，因为它的性能也不比其他级别好多少。读取未提交的数据，也被称之为脏读（Dirty Read）。<br>②Read Committed（读取提交内容）<br>这是大多数数据库系统的默认隔离级别（但不是MySQL默认的）。它满足了隔离的简单定义：一个事务只能看见已经提交事务所做的改变。这种隔离级别 也支持所谓的不可重复读（Nonrepeatable Read），因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。<br>③Repeatable Read（可重读）<br>这是MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行。不过理论上，这会导致另一个棘手的问题：幻读（PhantomRead）。简单的说，幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。<br>④Serializable（可串行化）<br>这是最高的隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简言之，它是在每个读的数据行上加上共享锁。在这个级别，可能导致大量的超时现象和锁竞争。</p>
+<p>12, mysq与redis,mongodb的区别<br>mysql: 关系型数据库,数据保存在磁盘中,速度慢<br>redis: 内存型非关系数据库,数据保存在内存中, 速度快<br>mongodb: 非关系型数据库,虚拟内存加持久化存储,有独特的mongodb查询方式</p>
+<p>13, join<br>inner jon 内连接<br>内连接又叫等值连接，此时的inner可以省略。<br>获取两个表中有匹配关系的记录，即两表取交集<br>select * from a join b on a.’name’ &#x3D; b.’name’<br>left join 左连接<br>以左表为基础，获取匹配关系的记录，如果右表中没有匹配项，NULL表示<br>select * from a left join b on a.’name’&#x3D;b.’name’<br>right join 右连接<br>以右表为基础，获取匹配关系的记录，如果左表中没有匹配项，NULL表示<br>select * from a right join b on a.’name’&#x3D;b.’name’</p>
 ]]></content>
       <categories>
-        <category>sql</category>
+        <category>mysql</category>
       </categories>
       <tags>
-        <tag>sql</tag>
-        <tag>mongodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git使用</title>
-    <url>/article/4896de77.html</url>
-    <content><![CDATA[<p>1, 配置全局的用户名和邮箱</p>
-<p>git config –global user.name “注册的用户名”</p>
-<p>git config –global user.email “注册的邮箱”</p>
-<p>2,生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
-<p>将.ssh下的id_rsa.pub内容复制到github中</p>
-<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
-<p>3, 文件上传</p>
-<p>git init</p>
-<p>git add .</p>
-<p>git commit -m “”</p>
-<p>git remote add origin 远程库地址</p>
-<p>git push -u origin master &#x2F; git push -f origin master</p>
-<p>1,常用(上传代码)<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>扩展:<br>git checkout 分支名:切换分支<br>git pull origin master: 拉取主分支代码<br>git merge dev: 合并dev分支代码到主分支</p>
-<p><img src="https://img-blog.csdnimg.cn/eb1e2203dd17421ebbf075e02cda5e0c.png" alt="git使用"></p>
-<p>1, 配置git<br>git config –global user.name “注册的用户名”<br>git config –global user.email “注册的邮箱”<br>2, 生成ssh配置文件<br>①生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”<br>②将.ssh下的id_rsa.pub内容复制到github中<br>③用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮<br>3,文件上传<br>git init<br>git add .<br>git commit -m “”<br>git remote add origin 远程库地址<br>git push -u origin master &#x2F; git push -f origin master<br>4,常用文件上传（上传到远程分支）<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>5, 文件下载<br>git clone -b 分支名 版本库地址<br>6, git 上传代码到远程分支<br>git branch # 查看分支<br>git checkout -b 分支名 #创建并切换分支<br>git add .  #添加文件到暂存区<br>git push origin 分支名 #提交分支<br>7,  分支合并<br>git checkout master #切换到主分支<br>git merge 分支名 #合并分支到主分支</p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
+        <tag>面试题</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -319,35 +323,55 @@ TPL:事务处理语言
         <category>mysql</category>
       </categories>
       <tags>
-        <tag>sql</tag>
         <tag>mysql</tag>
+        <tag>sql</tag>
       </tags>
   </entry>
   <entry>
-    <title>mysql面试题</title>
-    <url>/article/c45230cb.html</url>
-    <content><![CDATA[<p>1, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
-<p>2, 数据库优化<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,建立索引,外键等<br>③使用联合来代替手动创建的临时表<br>④使用事物<br>⑤使用锁定表<br>⑥选取合适的字段属性<br>⑦使用连接代替子查询</p>
-<p>3,创建数据库的四大原则?<br>答:<br>事物: 是数据库操作的最小工作单元,是一组不可再分割的操作集合<br>原子性: 整个程序中的所有操作,要么全部完成,要么全部不完成,不可能停滞在中间某个环节<br>一致性: 倘若事物操作失败,则回滚事物时,与原状态一致.<br>隔离性: 当在进行事物操作时, 其他事物的操作不可能影响当前事物操作,事物与事物之间是隔离的,互不干扰,干完再整合.<br>持久性: 事物的操作具有持久性, 事物结果一旦写入数据库,在不改动的情况下,数据库一直都是这个数据.</p>
-<p>4,orm数据库?<br>orm数据库:称为对象–关系映射,主要实现模型对象到关系数据库数据的映射,把数据表中的每一条记录映射为一个模型对象,</p>
-<p>5,数据表student有id,name,score,city字段,其中name中的名字可有重复,需消除重复行,请写sql语句<br>答:select distinct name from student;</p>
-<p>6, 表合并<br>①<br>#sql union 不允许重复的值<br>select 字段名 from 表名 union select 字段名2 from 表名2</p>
-<p>#sql union all 允许重复的值<br>elect 字段名 from 表名 union all select 字段名2 from 表名2</p>
-<p>②<br>insert into 表1 select * from 表2</p>
-<p>7,数据库优化查询方法<br>答:外键,索引,联合查询,选择特定字段等等</p>
-<p>8,写5条常用sql语句<br>答:show databases;<br>show tables;<br>desc tb_name;<br>select * from tb_name<br>delete from tb_name where id &#x3D; 5;<br>update tb_name set name&#x3D;’xue’,age&#x3D;23 where id &#x3D; 5;</p>
-<p>9, <a href="https://fies09.github.io/article/8e40d0ad.html?highlight=mysql">mysql</a><br>排序: order by<br>分组: group by<br>条件: where<br>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p>
-<p>10,列出常见mysql数据存储引擎<br>InnoDB:支持事物处理,支持外键,支持崩溃修复能力和并发控制.<br>MyISAM:插入数据快,空间和内存使用比较低,<br>MEMORY:所有数据都在内存中,数据的处理速度快.但是安全性不高</p>
-<p>11,Mysql数据库的隔离级别<br>①Read Uncommitted(读取末提交内容)<br>在该隔离级别,所有事物都可以看到其他末提交事物的执行结果,本隔离级别很少用于实际应用，因为它的性能也不比其他级别好多少。读取未提交的数据，也被称之为脏读（Dirty Read）。<br>②Read Committed（读取提交内容）<br>这是大多数数据库系统的默认隔离级别（但不是MySQL默认的）。它满足了隔离的简单定义：一个事务只能看见已经提交事务所做的改变。这种隔离级别 也支持所谓的不可重复读（Nonrepeatable Read），因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。<br>③Repeatable Read（可重读）<br>这是MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行。不过理论上，这会导致另一个棘手的问题：幻读（PhantomRead）。简单的说，幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。<br>④Serializable（可串行化）<br>这是最高的隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简言之，它是在每个读的数据行上加上共享锁。在这个级别，可能导致大量的超时现象和锁竞争。</p>
-<p>12, mysq与redis,mongodb的区别<br>mysql: 关系型数据库,数据保存在磁盘中,速度慢<br>redis: 内存型非关系数据库,数据保存在内存中, 速度快<br>mongodb: 非关系型数据库,虚拟内存加持久化存储,有独特的mongodb查询方式</p>
-<p>13, join<br>inner jon 内连接<br>内连接又叫等值连接，此时的inner可以省略。<br>获取两个表中有匹配关系的记录，即两表取交集<br>select * from a join b on a.’name’ &#x3D; b.’name’<br>left join 左连接<br>以左表为基础，获取匹配关系的记录，如果右表中没有匹配项，NULL表示<br>select * from a left join b on a.’name’&#x3D;b.’name’<br>right join 右连接<br>以右表为基础，获取匹配关系的记录，如果左表中没有匹配项，NULL表示<br>select * from a right join b on a.’name’&#x3D;b.’name’</p>
+    <title>mongodb使用</title>
+    <url>/article/a7b87908.html</url>
+    <content><![CDATA[<p>window下mongodb的使用:</p>
+<p>MongoDB数据库:(两种方式一般使用第二种方便快捷)<br><em><strong>管理员</strong></em><br>一 ,使用流程:<br>1,启动服务器(连接):在bin目录下:mongod –dbpath “data目录”<br>2,访问(打开): <a href="http://localhost:27017/">http://localhost:27017/</a><br>3,在bin目录下输入mongo,进入数据库<br>3,进入:use admin (use进入,创建,切换)<br>3,db.shutdownServer() :关闭数据库(关闭)<br>3,访问(打开 ): <a href="http://localhost:27017/">http://localhost:27017/</a><br>{手动}</p>
+<p>{自动}<br>也可直接打开:<br>二 ,升级为系统服务:<br>1, 解压zip到MongoDB64文件夹下 –&gt; 创建data和log文件夹 –&gt;在log文件夹下创建MongoDB.log文件–&gt; 进入bin目录 –&gt; 输入 mongod –dbpath “data目录” –logpath “MongoDB.log目录及名称” –install -serviceName “MongoDB”<br>将服务手动启动:net start MongoDB&#x2F;net stop MongoDB<br>2,在bin目录下输入mongo,进入数据库<br>3,use 数据库名 :切换&#x2F;创建数据库<br>4,db:查看当前所在的数据库<br>5,show dbs:查看当前MongoDB数据库中的所有数据库<br>6,在数据库中创建一个集合(表)movie并插入一条记录<br>db.movie(表名).insert({name:”mymovie01”})(记录)<br>7,当数据库中没有数据库对象(数据)时,show dbs 不会显示<br>8,删除数据库:db.dropDatabase():删除当前所在的数据库<br>9,集合的创建(数据表的创建)(与上述区别,没插入数据)<br>db.createCollection(name)<br>10,show collections:显示所有集合<br>11,索引的元信息存储在每个数据库的system.indexes集合中,不能插入删除<br>12,集合的删除操作db.集合名.drop()<br>13,数据类型:<br>String:字符串(utf8)<br>Integer:整数<br>Boolean:布尔型:(true&#x2F;false)<br>Double:浮点型(小数)<br>Min&#x2F;Max keys:最低和最高值比较<br>Arrays:多个值放到一个key中<br>Timestamp:时间戳<br>Object:此数据类型用于嵌入式文件(1 v 1,1 v多,多 v 1, 多 v 多)<br>Null:空值<br>Symbol:通常保留给特定符号类型的语言,此数据类型用于字符串相同<br>Date:日期<br>Object ID:文档(表,集合)ID<br>Binary data :二进制数据<br>Code:用于存储到文档中的js代码<br>Regular expression:正则表达式</p>
+<p>文档对象的增查更删:<br>增加:<br>①db.文档名.insert([{k1:v1},{k2:v2}])<br>②var docs &#x3D; [{k1:v1},{k2:v2}]<br>db.文档名.insert(docs)<br>查看文件结构:db.文档名.find()</p>
+<p>查:<br>db.集合名.find() :查询所有<br>db.集合名.findOne() :返回集合中的第一条文档数据<br>db.集合名.find().pretty() :结构化显示数据<br>条件查询:<br>db.集合名.find(k:”v”).pretty()<br>小于:$lt  小于等于:$lte<br>大于: $gt     大于等于:$gte<br>不等于:$ne<br>db.集合名.find({k:{$ne:v}}).pretty()</p>
+<p>AND&#x2F;OR<br>AND<br>db.集合名.find({k1:”v1”,k2:”v2”}).pretty()<br>OR<br>db.集合名.find({$or:[{k1:”v1”},{k2:”v2”}]}).pretty()<br>大于并且..或..<br>db.集合名.find({k1:{$gt:v1},$or:[{k2:”v2”},{k3:”v3”}]}).pretty() </p>
+<p>更新(修改):<br>Criteria:更新操作条件,类似sql语句中的where子句<br>ObjNEW:更新的操作符::(如$,$inc…),也可以理解为sql update查询内set后面的<br>Upsert:如果不存在update的记录,是否插入objNEW,true为插入,默认是false,不插入<br>Multi:默认是false,只更新找到的第一条记录,如果这个参数为true,就把按条件查出来<br>多条记录全部更新<br>db.集合名.update({k1:”v1”},{$set:{k2:”要修改的值”}},false,true)</p>
+<p>删除:<br>remove:db.infos.remove({k1:”v1”})<br>deletion criteria(可选):<br>justOne(可选):<br>投影(不显示0,1显示):db.infos.find({},{k1:0,k2:0,k3:0}).pretty()</p>
+<p>限制记录limit()<br>只显示n个记录:db.infos.find().limit(n)<br>先跳过m条记录,然后显示n条记录:db.infos.find().limit(n).skip(m)</p>
+<p>组合使用(限制记录+分页处理):n –&gt; 显示文档个数  m –&gt; 文档个数(页数 - 1)<br>Skip()+Limit():分页显示<br>db.infos.find().limit(n).skip(m)</p>
+<p>排序:1:升序(小到大)  -1:降序(大到小)<br>db.infos.find().sort({key:-1}).pretty()</p>
 ]]></content>
       <categories>
-        <category>mysql</category>
+        <category>sql</category>
       </categories>
       <tags>
-        <tag>面试题</tag>
-        <tag>mysql</tag>
+        <tag>sql</tag>
+        <tag>mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>o基础也能学会的人工智能笔记整理</title>
+    <url>/article/2a662cad.html</url>
+    <content><![CDATA[<p>1,机器学习<br>用大量数据进行训练，获取到 一个数据模型，预测就是应用训练的模型，来解决一个未知的问题</p>
+<p>2,knn实现流程<br>收集相关的数据<br>选择合适的feature和label<br>如果不知道如何选择feature可以先单独每个feature计算与label的相关度<br>选取合适的k<br>使用数据集进行新的预测</p>
+<p>3,分类和回归的区别(classification和regression)<br>回归是求topk的value求平均值<br>分类是求topk中出现最多的 类别</p>
+<p>4,标准化和归一化的选择<br>知道数据范围用归一化<br>不知道数据范围,数据变化可能很大,用标准化</p>
+<p>5,数据归一化<br>压缩样本数据到0~1之间,让向量之间的欧式距离变为标准欧式距离</p>
+<p>6,线性回归和knn的区别<br>knn必须需要有全套数据集，每次预测都要重新计算整套数据集<br>线性回归，数据集用完后，其实可以丢弃。 线性回归是算一个<br>模型。<br>knn可以理解成是数学统计学的方法研究问题<br>线性回归，是一种总结规律，总结模型的解决问题的方法。</p>
+<p>7,线性回归就是求线性函数的参数的值的过程</p>
+<p>8,梯度下降算法原理<br>随机选取m和b<br>分别对mse 求m和b的偏导<br>如果m和b的偏导都很小(接近0),就成功<br>根据学习速率计算出修改的值<br>b和m 分别减去要修改的值</p>
+<p>9,线性回归和逻辑回归的区别<br>线性回归:预测的数据是连续的<br>逻辑回归:预测的是分类的问题</p>
+<p>10,人脸识别操作<br>安装百度api<br>pip install -U baidu-api</p>
+<p>11,knn算法<br>调参:k<br>k一般取值总个数开平方<br>训练集的数据训练k.训练出的结果用测试集测试准确率</p>
+<p>机器学习开发流程<br>1)获取数据<br>2)数据处理<br>3)特征工程<br>4)机器学习算法训练 - 模型<br>5)模型评估<br>6)应用</p>
+<p>1,feature:变量  —- label:结果<br>变量和结果一一对应<br>2,np.array():表示数组<br>3,abs:绝对值<br>4,predicePoint:预测点—&gt;针对knn:k近邻<br>5,np.argsort():返回元素排序的下标位置<br>np.argsort(针对索引排序)<br>label —&gt; sortlabel<br>6,<br>np.sum:+<br>np.squart:平方<br>np.sqrt:开平方跟<br>np.loadtxt:读取文件:<br>属性<br>delimiter &#x3D; “,” :分隔符”,”<br>skiprows &#x3D; 1    :空除第一行<br>usecols &#x3D; (17,13,2):使用第17,13,2列<br>np.mean:平均值<br>np.stu:标准差<br>#显示完整的所有数据<br>np.set_printoptions(threshold&#x3D;np.inf)</p>
+]]></content>
+      <categories>
+        <category>数据处理</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -439,30 +463,6 @@ TPL:事务处理语言
       </categories>
       <tags>
         <tag>关键字</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>o基础也能学会的人工智能笔记整理</title>
-    <url>/article/2a662cad.html</url>
-    <content><![CDATA[<p>1,机器学习<br>用大量数据进行训练，获取到 一个数据模型，预测就是应用训练的模型，来解决一个未知的问题</p>
-<p>2,knn实现流程<br>收集相关的数据<br>选择合适的feature和label<br>如果不知道如何选择feature可以先单独每个feature计算与label的相关度<br>选取合适的k<br>使用数据集进行新的预测</p>
-<p>3,分类和回归的区别(classification和regression)<br>回归是求topk的value求平均值<br>分类是求topk中出现最多的 类别</p>
-<p>4,标准化和归一化的选择<br>知道数据范围用归一化<br>不知道数据范围,数据变化可能很大,用标准化</p>
-<p>5,数据归一化<br>压缩样本数据到0~1之间,让向量之间的欧式距离变为标准欧式距离</p>
-<p>6,线性回归和knn的区别<br>knn必须需要有全套数据集，每次预测都要重新计算整套数据集<br>线性回归，数据集用完后，其实可以丢弃。 线性回归是算一个<br>模型。<br>knn可以理解成是数学统计学的方法研究问题<br>线性回归，是一种总结规律，总结模型的解决问题的方法。</p>
-<p>7,线性回归就是求线性函数的参数的值的过程</p>
-<p>8,梯度下降算法原理<br>随机选取m和b<br>分别对mse 求m和b的偏导<br>如果m和b的偏导都很小(接近0),就成功<br>根据学习速率计算出修改的值<br>b和m 分别减去要修改的值</p>
-<p>9,线性回归和逻辑回归的区别<br>线性回归:预测的数据是连续的<br>逻辑回归:预测的是分类的问题</p>
-<p>10,人脸识别操作<br>安装百度api<br>pip install -U baidu-api</p>
-<p>11,knn算法<br>调参:k<br>k一般取值总个数开平方<br>训练集的数据训练k.训练出的结果用测试集测试准确率</p>
-<p>机器学习开发流程<br>1)获取数据<br>2)数据处理<br>3)特征工程<br>4)机器学习算法训练 - 模型<br>5)模型评估<br>6)应用</p>
-<p>1,feature:变量  —- label:结果<br>变量和结果一一对应<br>2,np.array():表示数组<br>3,abs:绝对值<br>4,predicePoint:预测点—&gt;针对knn:k近邻<br>5,np.argsort():返回元素排序的下标位置<br>np.argsort(针对索引排序)<br>label —&gt; sortlabel<br>6,<br>np.sum:+<br>np.squart:平方<br>np.sqrt:开平方跟<br>np.loadtxt:读取文件:<br>属性<br>delimiter &#x3D; “,” :分隔符”,”<br>skiprows &#x3D; 1    :空除第一行<br>usecols &#x3D; (17,13,2):使用第17,13,2列<br>np.mean:平均值<br>np.stu:标准差<br>#显示完整的所有数据<br>np.set_printoptions(threshold&#x3D;np.inf)</p>
-]]></content>
-      <categories>
-        <category>数据处理</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -598,43 +598,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>python第三方模块整理</title>
-    <url>/article/f6e83c4a.html</url>
-    <content><![CDATA[<p>1.必装模块pypiwin32 wheel:主要是为了装whl文件</p>
-<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
-<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
-<p>4,pip文件的配置<br>pip文件的配置</p>
-<p>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
-<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
-<p>6,Beautiful Soup:<br>用于数据收集的Python库:<br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
-<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
-<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
-<p>9,**用于数据清理和数据操作的Python库<br>**<br>pandas:主要用于数据操作和数据分析</p>
-<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
-<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
-<p>12,用于数据可视化的Python库<br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
-<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
-<p>14,用于建模的Python库<br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
-<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
-<p>16,用于数据解释型的Python库<br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
-<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
-<p>18,用于音频处理的Python库:<br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
-<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
-<p>20,用于图像处理的Python库<br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
-<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
-<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
-<p>用于部署的Python库<br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
-<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
-]]></content>
-      <categories>
-        <category>第三方库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>第三方库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ros系统学习笔记</title>
     <url>/article/3e9342ec.html</url>
     <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1qV41167d2?p=1">视频链接</a></p>
@@ -692,6 +655,25 @@ TPL:事务处理语言
       <tags>
         <tag>linix</tag>
         <tag>ros</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>scrapy框架使用</title>
+    <url>/article/1d5ab057.html</url>
+    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
+<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
+<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
+<p>③,编写主程序</p>
+<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
+<p>注意:设置浏览器标识时,第一个应为项目名</p>
+<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>scrapy</tag>
       </tags>
   </entry>
   <entry>
@@ -771,6 +753,300 @@ TPL:事务处理语言
       <tags>
         <tag>web开发</tag>
         <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web开发2_python项目部署</title>
+    <url>/article/dbe3cbd9.html</url>
+    <content><![CDATA[<p>pm2运行命令:<br>pm2 ls<br>pm2 start<br>pm2 stop<br>pm2 log</p>
+<p>python文件运行命令:<br>nohup python3 -u risk_sql.py &gt;risk.log &amp;</p>
+<p>pm2 start &#x2F;home&#x2F;project&#x2F;net_diagnose&#x2F;sanit.py  -x –interpreter python3</p>
+<p>python3 manage.py runserver 0.0.0.0:8000</p>
+<p>鉴权:<br>基于BaseResource:测试注释掉,线上取消注释</p>
+<p>运行flask:<br>env FLASK_APP&#x3D;scheduler.py flask run -h 0.0.0.0 -p 5008</p>
+<p>docker容器部署:<br>docker+Nginx+supervisor+gunicron</p>
+<ol>
+<li><code>docker exec -it saint_container bash</code></li>
+<li><code>supervisorctl start monitor_business</code></li>
+</ol>
+<p>部署方式1:<br>    cd &#x2F;home&#x2F;project<br>    ll<br>    docker images<br>    docker ps -a<br>    cd net_diagnose<br>    cd &#x2F;etc&#x2F;supervisord.d&#x2F;<br>    vi velery.ini<br>    cd &#x2F;home&#x2F;log<br>    vi saintwork.log<br>    cd ..&#x2F;project&#x2F;net_diagnose<br>    supervisorctl</p>
+<p>python3 -m pip install –upgrade pip<br>pip3 install -r requirements.txt -i  <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
+<p>部署方式2:<br>nginx + pm2&#x2F;uwsgi&#x2F;gunicorn&#x2F;supervisor + nohup<br>工具安装:<br>sudo apt-get install nginx</p>
+<p>pip安装部署工具</p>
+<p>pip install gunicorn<br>pip install supervisor<br>pip install uwsgi</p>
+<p>安装PM2</p>
+<p>sudo apt-get install -y nodejs &#x2F; sudo yum -y install nodejs<br>sudo npm install pm2 -g </p>
+<ul>
+<li><strong>gunicorn部署</strong></li>
+</ul>
+<p>gunicorn  -c 配置文件 运行模块名:应用名</p>
+<p>  nohup gunicorn -b 0.0.0.0:9000 -w 4 –access-logfile&#x3D;logs&#x2F;access.log –error-logfile&#x3D;logs&#x2F;error.log app:app &gt; nohup.log &amp;</p>
+<p>  nohup gunicorn -b 0.0.0.0:9000 -w 4 app:app &gt; nohup.log &amp;</p>
+<p>开启异步并发</p>
+<p>  nohup gunicorn -b 0.0.0.0:9000 -w 4 -k gevent app:app &gt; nohup.log &amp;</p>
+<p>  其中 -k, –worker-class 可以指定异步进程类 需要先安装: <code>pip3 install psutil==5.7.0</code></p>
+<p>  pm2部署:</p>
+<p>pm2 start app.py -x –interpreter python3  -o .&#x2F;logs&#x2F;access.log -e .&#x2F;logs&#x2F;error.log -i max</p>
+<ul>
+<li><p><strong>docker部署</strong></p>
+<p>docker start saint_container<br>docker exec -it saint_container bash<br>service supervisor start<br>ps ef | grep nginx | grep -v grep | awk ‘print {$2}’ | xargs kill -9<br>supervisord -c &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf<br>supervisorctl</p>
+</li>
+</ul>
+<p>日志</p>
+<p>  less -fN &#x2F;opt&#x2F;logs&#x2F;process&#x2F;gunicorn_out_port_9001.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;process&#x2F;nginx_stdout.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;gunicorn&#x2F;access.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;nginx&#x2F;access.log</p>
+<p>依赖安装:<br>pipreqs .&#x2F; –encoding&#x3D;utf8 –force<br>pip3 install -r requirements.txt -i  <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host </p>
+<p>&#x3D;&#x3D;&#x3D; 源 &#x3D;&#x3D;&#x3D;</p>
+<p><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a>      # 清华源<br><a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a>       # 阿里源<br><a href="http://mirrors.cloud.tencent.com/pypi/simple">http://mirrors.cloud.tencent.com/pypi/simple</a>  # 腾讯源<br><a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a>                # 豆瓣源pypi.douban.com</p>
+<p>部署:</p>
+<p>nohup:</p>
+<p>nohup python3 -u server.py &gt; nohup.log &amp;</p>
+<p>pm2:</p>
+<p>pm2 start server.py -x –interpreter python3  -o .&#x2F;logs&#x2F;access.log -e .&#x2F;logs&#x2F;error.log</p>
+<p>or</p>
+<p>pm2 start ecosystem.config.js –env production</p>
+<p>docker:</p>
+<p>docker rmi $(docker images | grep “<none>“| awk ‘{print $3}’)<br>.&#x2F;gen_image_push.sh<br>docker run -itd –name deploy -p 8000:8000 <container_id> </p>
+<p>tar xzvf aliyun-cli-linux-3.0.16-amd64.tgz</p>
+<p>chmod +x .&#x2F;scheduler.sh &amp;&amp; .&#x2F;scheduler.sh</p>
+<p>部署:</p>
+<p>1. </p>
+<p>项目部署:</p>
+<p>方法一：</p>
+<p>  nohup python3 -u Main.py &gt; nohup.log &amp;</p>
+<p>方法二：</p>
+<p>  pm2 start Main.py -x –interpreter python3  -o .&#x2F;logs&#x2F;pm2_info.log -e .&#x2F;logs&#x2F;pm2_error.log</p>
+<p>方法三：</p>
+<p>  supervisord -c &#x2F;etc&#x2F;supervisor.conf</p>
+<p>or </p>
+<p>  cd Bin &amp;&amp; sh start.sh</p>
+<pre><code># 任务部署:
+
+1. celery+supervisor
+
+supervisord -c /etc/supervisord.conf
+supervisorctl reload
+
+2. 定时框架+pm2
+
+pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.log -e ./logs/node_task_error.log
+
+3. tornado+定时框架
+
+与tornado主程序一起执行
+
+查看rds是否在白名单
+</code></pre>
+<p>telnet rm-bp1ujkssv4gxkqqvv4o.mysql.rds.aliyuncs.com 3306</p>
+]]></content>
+      <categories>
+        <category>web开发</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>web开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>window快捷键</title>
+    <url>/article/d1988cc4.html</url>
+    <content><![CDATA[<p>1,calc:计算器</p>
+<p>2,regedit;注册表编辑器</p>
+<p>3,ipconfig:ip地址</p>
+<p>4,win+L:锁屏</p>
+<p>5,win+E:打开电脑</p>
+<p>6,pycharm中:ctrl+r:多个替换</p>
+<p>7,双击alt:电脑管家火箭加速</p>
+<p>8,alt + tab:软件界面切换</p>
+<p>9,tree &#x2F;f:显示目录结构</p>
+<p>10,win+x  a:管理员命令操作提示符</p>
+<p>11,选中模块,alt+enter:安装模块</p>
+<p>12.alt用鼠标选中,多条修改</p>
+<p>13,函数()内,ctrl+p:提示 </p>
+<p>14,win + r :mspaint:画图快捷键</p>
+<p>15,slidetoshutdown :关机快捷键</p>
+<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
+<p>17,win + R :powershell:打开管理员模式</p>
+<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
+<p>19:定时关机:shutdown -s -t 秒数</p>
+<p>20,ctrl+alt+del:进入任务管理器</p>
+<p>21,打开服务:services.msc</p>
+<p>22，远程连接：mstsc</p>
+<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
+<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32时区下的已安装物理内存就是笔记本内存大小</p>
+<p>25,安装服务(根目录下|管理员权限):</p>
+<p>安装: .\installService.cmd</p>
+<p>卸载: .\uninstallService.cmd</p>
+<p>26,C盘清理旧文件:</p>
+<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
+<p>27,  关机: slidetoshutdown</p>
+<p>28:  win10激活:</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX </p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>28, win10打开系统属性快捷键:  dxdiag </p>
+]]></content>
+      <categories>
+        <category>快捷键</category>
+      </categories>
+      <tags>
+        <tag>window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用密码</title>
+    <url>/article/b68a8f57.html</url>
+    <content><![CDATA[<p>1,<br>steam账户Python_Enthusiasts<br>密码Fy19961009</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web开发面试题</title>
+    <url>/article/45b9fa15.html</url>
+    <content><![CDATA[<p>1, Django的MVT模式(MVC:M相当于model,V相当于template,C相当于view)<br>M： Model, 模型 与MVC中的M相同，负责对数据的处理<br>V： View, 视图 与MVC中的C类似，负责处理用户请求，调用M和T，响应请求<br>T： Template, 模板 与MVC中的V类似，负责如何显示数据（产生html界面）</p>
+<p>2, get&#x2F;post<br>GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
+<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</p>
+<p>GET请求在URL中传送的参数是有长度限制的，而POST没有。</p>
+<p>GET参数通过URL传递，POST放在Request body中。</p>
+<p>3,csrf</p>
+<p>跨站请求伪造: 主要用于在html中设计token访问令牌</p>
+<p>4,FBV&#x2F;CBV</p>
+<p>FBV:基于函数视图</p>
+<p>CBV:基于类视图</p>
+<p>5, django请求周期</p>
+<p>（1）用户输入网址，浏览器发起请求<br>（2）WSGI（服务器网关接口）创建socket服务端，接受请求<br>（3）中间件处理请求<br>（4）url路由，根据当前请求的url找到相应的视图函数<br>（5）进入view，进行业务处理，执行类或者函数，返回字符串<br>（6）再次通过中间件处理相应<br>（7）WSGI返回响应<br>（8）浏览器渲染</p>
+<p>6,wsgi</p>
+<p>web服务器(应用服务器),用于连接Web服务器和Web应用框架</p>
+<p>7,中间件</p>
+<p>是一个轻量低级别的插件系统,在全局变量改变django的输入与输出,在settings中注册,,例如csrf跨站请求伪造</p>
+<p>8,内置组件</p>
+<p>Admin: 对model中对应的数据表进行增删改查提供的组件<br>model：负责操作数据库<br>form：1.生成HTML代码 2.数据有效性校验 3校验信息返回并展示<br>ModelForm: 即用于数据库操作,也可用于用户请求的验证</p>
+<p>9,悲观锁,乐观锁</p>
+<p>乐观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
+<p>悲观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
+<p>10, JWT</p>
+<p>第一次认证通过用户名密码，服务端签发一个json格式的token。后续客户端的请求都携带这个token，服务端仅需要解析这个token，来判别客户端的身份和合法性</p>
+<p>11,cookie和session</p>
+<p>1.cookie:<br>cookie是保存在浏览器端的键值对,可以用来做用户认证<br>2.session：<br>将用户的会话信息保存在服务端,key值是随机产生的自符串,value值时session的内容<br>依赖于cookie将每个用户的随机字符串保存到用户浏览器上<br>Django中session默认保存在数据库中：django_session表flask,session默认将加密的数据写在用户的cookie中</p>
+<p>12,  如何实现用户的登陆认证</p>
+<p>1.cookie session<br>2.token 登陆成功后生成加密字符串<br>3.JWT：json wed token缩写 它将用户信息加密到token中,服务器不保存任何用户信息<br>服务器通过使用保存的密钥来验证token的正确性</p>
+<p>13, restful风格</p>
+<p>restful其实就是一套编写接口的协议，协议规定如何编写以及如何设置返回值、状态码等信息。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>yolo学习笔记</title>
+    <url>/article/4ada0a.html</url>
+    <content><![CDATA[<p>1,目录详解</p>
+<p>assets:需要测试的不同类型的文件</p>
+<p>datasets:存放的数据集,例如Coco</p>
+<p>demo:官方提供的4种部署方式</p>
+<p>docs数据集信息</p>
+<p>exps:Yolo所有版本的数据集</p>
+<p>tools:程序入口</p>
+<p>demo.py :  测试文件</p>
+<p>train.py: 也是测试文件</p>
+<p>weights:权重文件</p>
+<p>yolox:模型代码</p>
+<p>2,环境</p>
+<p>pyhon环境&#x2F;anaconda</p>
+<p>pytorch</p>
+<p>pycharm</p>
+<p>下载环境:在根目录下输入pip install requirements.txt</p>
+<p>3,运行</p>
+<p>tools下的demo.py</p>
+<p>parser.add_argument</p>
+<p>约24行修改测试的类型 default &#x3D; ‘类型’</p>
+<p>约28行修改测试的内容 default &#x3D; ‘源文件’</p>
+<p>约39行修改权重的默认位置 default &#x3D; ‘具体权重文件位置’</p>
+<p>约43行修改默认的权重 default &#x3D; ‘具体权重文件位置’</p>
+<p>约44行修改默认的cpu&#x2F;gpu default &#x3D; ‘运行类型’</p>
+<p>测试输出图像保存在tools&#x2F;YOLOX_output</p>
+<p>数据集测试:步骤</p>
+<p>1,安装apex:</p>
+<p>pip install apex</p>
+<p>减少模型显存占用的工具</p>
+<p>2,修改train文件中的参数</p>
+<p>2-1,修改patch,默认50,约30行</p>
+<p>2-2,数据集路径:在yolo_voc_nano.py下约54行的data_dir &#x3D; ‘具体路径’</p>
+<p>#55行修改:目录根据实际情况(可不修改)</p>
+<p>train修改内容: </p>
+<p>具体的文件目录:</p>
+<p>40行.</p>
+<p>权重修改:</p>
+<p>47行</p>
+<p>GPU使用修改为True:</p>
+<p>68行左右</p>
+<p>输出内容主要有:</p>
+<p>权重信息目录</p>
+<p>训练完成后,利用权重进行测试</p>
+<p>测试在demo目录下修改</p>
+<p>类别和内容</p>
+<p>权重文件和训练时的权重文件一致 .py         39行 : yolox_voc_nano.py</p>
+<p>43 行权重改为训练后保存的权重文件             </p>
+]]></content>
+      <categories>
+        <category>目标识别</category>
+      </categories>
+      <tags>
+        <tag>目标识别</tag>
+        <tag>yolo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编码习惯整理</title>
+    <url>/article/e541c025.html</url>
+    <content><![CDATA[<ol>
+<li><p>修改完代码,记得自测一下(再小的修改也最好自测一下)</p>
+</li>
+<li><p>方法入参最好都检验</p>
+</li>
+<li><p>修改老接口时,思考接口的兼容性</p>
+</li>
+<li><p>对于复杂的代码逻辑,添加清楚的注释</p>
+</li>
+<li><p>使用完IO资源流,需要关闭</p>
+</li>
+<li><p>代码采取措施避免运行错误(如数组边界溢出)</p>
+</li>
+<li><p>尽量不要在循环里远程调用或者对数据库操作,优先考虑批量进行</p>
+</li>
+<li><p>写完代码,脑洞一下多线程执行会怎样,注意并发一致性问题,</p>
+</li>
+<li><p>获取对象的属性,先判断对象是否为空</p>
+</li>
+<li><p>多线程异步优先考虑恰当的线程池,而不是new thread(降低资源损耗,题号响应速度,便于重复利用)&lt;注意线程池隔离&gt;</p>
+</li>
+<li><p>手动写完代码业务的SQL,先拿去数据库跑一下,同时也explain看下执行计划</p>
+</li>
+<li><p>调用第三方接口,需要考虑异常处理.安全性,超时重试这几个点(重点的需要考虑签名,加密)</p>
+</li>
+<li><p>接口考虑幂等性</p>
+</li>
+<li><p>多线程情况下,考虑线程安全问题</p>
+</li>
+<li><p>主从延迟问题考虑</p>
+</li>
+<li><p>缓存的时候,考虑缓存跟DB的一致性,还有(缓存穿透,缓存雪崩和缓存击穿)</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编码习惯</category>
+      </categories>
+      <tags>
+        <tag>编码习惯</tag>
       </tags>
   </entry>
   <entry>
@@ -972,274 +1248,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>web开发2_python项目部署</title>
-    <url>/article/dbe3cbd9.html</url>
-    <content><![CDATA[<p>pm2运行命令:<br>pm2 ls<br>pm2 start<br>pm2 stop<br>pm2 log</p>
-<p>python文件运行命令:<br>nohup python3 -u risk_sql.py &gt;risk.log &amp;</p>
-<p>pm2 start &#x2F;home&#x2F;project&#x2F;net_diagnose&#x2F;sanit.py  -x –interpreter python3</p>
-<p>python3 manage.py runserver 0.0.0.0:8000</p>
-<p>鉴权:<br>基于BaseResource:测试注释掉,线上取消注释</p>
-<p>运行flask:<br>env FLASK_APP&#x3D;scheduler.py flask run -h 0.0.0.0 -p 5008</p>
-<p>docker容器部署:<br>docker+Nginx+supervisor+gunicron</p>
-<ol>
-<li><code>docker exec -it saint_container bash</code></li>
-<li><code>supervisorctl start monitor_business</code></li>
-</ol>
-<p>部署方式1:<br>    cd &#x2F;home&#x2F;project<br>    ll<br>    docker images<br>    docker ps -a<br>    cd net_diagnose<br>    cd &#x2F;etc&#x2F;supervisord.d&#x2F;<br>    vi velery.ini<br>    cd &#x2F;home&#x2F;log<br>    vi saintwork.log<br>    cd ..&#x2F;project&#x2F;net_diagnose<br>    supervisorctl</p>
-<p>python3 -m pip install –upgrade pip<br>pip3 install -r requirements.txt -i  <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
-<p>部署方式2:<br>nginx + pm2&#x2F;uwsgi&#x2F;gunicorn&#x2F;supervisor + nohup<br>工具安装:<br>sudo apt-get install nginx</p>
-<p>pip安装部署工具</p>
-<p>pip install gunicorn<br>pip install supervisor<br>pip install uwsgi</p>
-<p>安装PM2</p>
-<p>sudo apt-get install -y nodejs &#x2F; sudo yum -y install nodejs<br>sudo npm install pm2 -g </p>
-<ul>
-<li><strong>gunicorn部署</strong></li>
-</ul>
-<p>gunicorn  -c 配置文件 运行模块名:应用名</p>
-<p>  nohup gunicorn -b 0.0.0.0:9000 -w 4 –access-logfile&#x3D;logs&#x2F;access.log –error-logfile&#x3D;logs&#x2F;error.log app:app &gt; nohup.log &amp;</p>
-<p>  nohup gunicorn -b 0.0.0.0:9000 -w 4 app:app &gt; nohup.log &amp;</p>
-<p>开启异步并发</p>
-<p>  nohup gunicorn -b 0.0.0.0:9000 -w 4 -k gevent app:app &gt; nohup.log &amp;</p>
-<p>  其中 -k, –worker-class 可以指定异步进程类 需要先安装: <code>pip3 install psutil==5.7.0</code></p>
-<p>  pm2部署:</p>
-<p>pm2 start app.py -x –interpreter python3  -o .&#x2F;logs&#x2F;access.log -e .&#x2F;logs&#x2F;error.log -i max</p>
-<ul>
-<li><p><strong>docker部署</strong></p>
-<p>docker start saint_container<br>docker exec -it saint_container bash<br>service supervisor start<br>ps ef | grep nginx | grep -v grep | awk ‘print {$2}’ | xargs kill -9<br>supervisord -c &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf<br>supervisorctl</p>
-</li>
-</ul>
-<p>日志</p>
-<p>  less -fN &#x2F;opt&#x2F;logs&#x2F;process&#x2F;gunicorn_out_port_9001.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;process&#x2F;nginx_stdout.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;gunicorn&#x2F;access.log<br>  less -fN &#x2F;opt&#x2F;logs&#x2F;nginx&#x2F;access.log</p>
-<p>依赖安装:<br>pipreqs .&#x2F; –encoding&#x3D;utf8 –force<br>pip3 install -r requirements.txt -i  <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host </p>
-<p>&#x3D;&#x3D;&#x3D; 源 &#x3D;&#x3D;&#x3D;</p>
-<p><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a>      # 清华源<br><a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a>       # 阿里源<br><a href="http://mirrors.cloud.tencent.com/pypi/simple">http://mirrors.cloud.tencent.com/pypi/simple</a>  # 腾讯源<br><a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a>                # 豆瓣源pypi.douban.com</p>
-<p>部署:</p>
-<p>nohup:</p>
-<p>nohup python3 -u server.py &gt; nohup.log &amp;</p>
-<p>pm2:</p>
-<p>pm2 start server.py -x –interpreter python3  -o .&#x2F;logs&#x2F;access.log -e .&#x2F;logs&#x2F;error.log</p>
-<p>or</p>
-<p>pm2 start ecosystem.config.js –env production</p>
-<p>docker:</p>
-<p>docker rmi $(docker images | grep “<none>“| awk ‘{print $3}’)<br>.&#x2F;gen_image_push.sh<br>docker run -itd –name deploy -p 8000:8000 <container_id> </p>
-<p>tar xzvf aliyun-cli-linux-3.0.16-amd64.tgz</p>
-<p>chmod +x .&#x2F;scheduler.sh &amp;&amp; .&#x2F;scheduler.sh</p>
-<p>部署:</p>
-<p>1. </p>
-<p>项目部署:</p>
-<p>方法一：</p>
-<p>  nohup python3 -u Main.py &gt; nohup.log &amp;</p>
-<p>方法二：</p>
-<p>  pm2 start Main.py -x –interpreter python3  -o .&#x2F;logs&#x2F;pm2_info.log -e .&#x2F;logs&#x2F;pm2_error.log</p>
-<p>方法三：</p>
-<p>  supervisord -c &#x2F;etc&#x2F;supervisor.conf</p>
-<p>or </p>
-<p>  cd Bin &amp;&amp; sh start.sh</p>
-<pre><code># 任务部署:
-
-1. celery+supervisor
-
-supervisord -c /etc/supervisord.conf
-supervisorctl reload
-
-2. 定时框架+pm2
-
-pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.log -e ./logs/node_task_error.log
-
-3. tornado+定时框架
-
-与tornado主程序一起执行
-
-查看rds是否在白名单
-</code></pre>
-<p>telnet rm-bp1ujkssv4gxkqqvv4o.mysql.rds.aliyuncs.com 3306</p>
-]]></content>
-      <categories>
-        <category>web开发</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>web开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web开发面试题</title>
-    <url>/article/45b9fa15.html</url>
-    <content><![CDATA[<p>1, Django的MVT模式(MVC:M相当于model,V相当于template,C相当于view)<br>M： Model, 模型 与MVC中的M相同，负责对数据的处理<br>V： View, 视图 与MVC中的C类似，负责处理用户请求，调用M和T，响应请求<br>T： Template, 模板 与MVC中的V类似，负责如何显示数据（产生html界面）</p>
-<p>2, get&#x2F;post<br>GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
-<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</p>
-<p>GET请求在URL中传送的参数是有长度限制的，而POST没有。</p>
-<p>GET参数通过URL传递，POST放在Request body中。</p>
-<p>3,csrf</p>
-<p>跨站请求伪造: 主要用于在html中设计token访问令牌</p>
-<p>4,FBV&#x2F;CBV</p>
-<p>FBV:基于函数视图</p>
-<p>CBV:基于类视图</p>
-<p>5, django请求周期</p>
-<p>（1）用户输入网址，浏览器发起请求<br>（2）WSGI（服务器网关接口）创建socket服务端，接受请求<br>（3）中间件处理请求<br>（4）url路由，根据当前请求的url找到相应的视图函数<br>（5）进入view，进行业务处理，执行类或者函数，返回字符串<br>（6）再次通过中间件处理相应<br>（7）WSGI返回响应<br>（8）浏览器渲染</p>
-<p>6,wsgi</p>
-<p>web服务器(应用服务器),用于连接Web服务器和Web应用框架</p>
-<p>7,中间件</p>
-<p>是一个轻量低级别的插件系统,在全局变量改变django的输入与输出,在settings中注册,,例如csrf跨站请求伪造</p>
-<p>8,内置组件</p>
-<p>Admin: 对model中对应的数据表进行增删改查提供的组件<br>model：负责操作数据库<br>form：1.生成HTML代码 2.数据有效性校验 3校验信息返回并展示<br>ModelForm: 即用于数据库操作,也可用于用户请求的验证</p>
-<p>9,悲观锁,乐观锁</p>
-<p>乐观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
-<p>悲观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
-<p>10, JWT</p>
-<p>第一次认证通过用户名密码，服务端签发一个json格式的token。后续客户端的请求都携带这个token，服务端仅需要解析这个token，来判别客户端的身份和合法性</p>
-<p>11,cookie和session</p>
-<p>1.cookie:<br>cookie是保存在浏览器端的键值对,可以用来做用户认证<br>2.session：<br>将用户的会话信息保存在服务端,key值是随机产生的自符串,value值时session的内容<br>依赖于cookie将每个用户的随机字符串保存到用户浏览器上<br>Django中session默认保存在数据库中：django_session表flask,session默认将加密的数据写在用户的cookie中</p>
-<p>12,  如何实现用户的登陆认证</p>
-<p>1.cookie session<br>2.token 登陆成功后生成加密字符串<br>3.JWT：json wed token缩写 它将用户信息加密到token中,服务器不保存任何用户信息<br>服务器通过使用保存的密钥来验证token的正确性</p>
-<p>13, restful风格</p>
-<p>restful其实就是一套编写接口的协议，协议规定如何编写以及如何设置返回值、状态码等信息。</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用密码</title>
-    <url>/article/b68a8f57.html</url>
-    <content><![CDATA[<p>1,<br>steam账户Python_Enthusiasts<br>密码Fy19961009</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>yolo学习笔记</title>
-    <url>/article/4ada0a.html</url>
-    <content><![CDATA[<p>1,目录详解</p>
-<p>assets:需要测试的不同类型的文件</p>
-<p>datasets:存放的数据集,例如Coco</p>
-<p>demo:官方提供的4种部署方式</p>
-<p>docs数据集信息</p>
-<p>exps:Yolo所有版本的数据集</p>
-<p>tools:程序入口</p>
-<p>demo.py :  测试文件</p>
-<p>train.py: 也是测试文件</p>
-<p>weights:权重文件</p>
-<p>yolox:模型代码</p>
-<p>2,环境</p>
-<p>pyhon环境&#x2F;anaconda</p>
-<p>pytorch</p>
-<p>pycharm</p>
-<p>下载环境:在根目录下输入pip install requirements.txt</p>
-<p>3,运行</p>
-<p>tools下的demo.py</p>
-<p>parser.add_argument</p>
-<p>约24行修改测试的类型 default &#x3D; ‘类型’</p>
-<p>约28行修改测试的内容 default &#x3D; ‘源文件’</p>
-<p>约39行修改权重的默认位置 default &#x3D; ‘具体权重文件位置’</p>
-<p>约43行修改默认的权重 default &#x3D; ‘具体权重文件位置’</p>
-<p>约44行修改默认的cpu&#x2F;gpu default &#x3D; ‘运行类型’</p>
-<p>测试输出图像保存在tools&#x2F;YOLOX_output</p>
-<p>数据集测试:步骤</p>
-<p>1,安装apex:</p>
-<p>pip install apex</p>
-<p>减少模型显存占用的工具</p>
-<p>2,修改train文件中的参数</p>
-<p>2-1,修改patch,默认50,约30行</p>
-<p>2-2,数据集路径:在yolo_voc_nano.py下约54行的data_dir &#x3D; ‘具体路径’</p>
-<p>#55行修改:目录根据实际情况(可不修改)</p>
-<p>train修改内容: </p>
-<p>具体的文件目录:</p>
-<p>40行.</p>
-<p>权重修改:</p>
-<p>47行</p>
-<p>GPU使用修改为True:</p>
-<p>68行左右</p>
-<p>输出内容主要有:</p>
-<p>权重信息目录</p>
-<p>训练完成后,利用权重进行测试</p>
-<p>测试在demo目录下修改</p>
-<p>类别和内容</p>
-<p>权重文件和训练时的权重文件一致 .py         39行 : yolox_voc_nano.py</p>
-<p>43 行权重改为训练后保存的权重文件             </p>
-]]></content>
-      <categories>
-        <category>目标识别</category>
-      </categories>
-      <tags>
-        <tag>目标识别</tag>
-        <tag>yolo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>window快捷键</title>
-    <url>/article/d1988cc4.html</url>
-    <content><![CDATA[<p>1,calc:计算器</p>
-<p>2,regedit;注册表编辑器</p>
-<p>3,ipconfig:ip地址</p>
-<p>4,win+L:锁屏</p>
-<p>5,win+E:打开电脑</p>
-<p>6,pycharm中:ctrl+r:多个替换</p>
-<p>7,双击alt:电脑管家火箭加速</p>
-<p>8,alt + tab:软件界面切换</p>
-<p>9,tree &#x2F;f:显示目录结构</p>
-<p>10,win+x  a:管理员命令操作提示符</p>
-<p>11,选中模块,alt+enter:安装模块</p>
-<p>12.alt用鼠标选中,多条修改</p>
-<p>13,函数()内,ctrl+p:提示 </p>
-<p>14,win + r :mspaint:画图快捷键</p>
-<p>15,slidetoshutdown :关机快捷键</p>
-<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
-<p>17,win + R :powershell:打开管理员模式</p>
-<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
-<p>19:定时关机:shutdown -s -t 秒数</p>
-<p>20,ctrl+alt+del:进入任务管理器</p>
-<p>21,打开服务:services.msc</p>
-<p>22，远程连接：mstsc</p>
-<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
-<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32时区下的已安装物理内存就是笔记本内存大小</p>
-<p>25,安装服务(根目录下|管理员权限):</p>
-<p>安装: .\installService.cmd</p>
-<p>卸载: .\uninstallService.cmd</p>
-<p>26,C盘清理旧文件:</p>
-<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
-<p>27,  关机: slidetoshutdown</p>
-<p>28:  win10激活:</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX </p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>28, win10打开系统属性快捷键:  dxdiag </p>
-]]></content>
-      <categories>
-        <category>快捷键</category>
-      </categories>
-      <tags>
-        <tag>window</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>scrapy框架使用</title>
-    <url>/article/1d5ab057.html</url>
-    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
-<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
-<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
-<p>③,编写主程序</p>
-<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
-<p>注意:设置浏览器标识时,第一个应为项目名</p>
-<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-        <tag>scrapy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据分析</title>
     <url>/article/d1c27656.html</url>
     <content><![CDATA[<p>numpy模块<br>1,数组的创建语法:<br>一维数组:</p>
@@ -1318,48 +1326,40 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       </tags>
   </entry>
   <entry>
-    <title>编码习惯整理</title>
-    <url>/article/e541c025.html</url>
-    <content><![CDATA[<ol>
-<li><p>修改完代码,记得自测一下(再小的修改也最好自测一下)</p>
-</li>
-<li><p>方法入参最好都检验</p>
-</li>
-<li><p>修改老接口时,思考接口的兼容性</p>
-</li>
-<li><p>对于复杂的代码逻辑,添加清楚的注释</p>
-</li>
-<li><p>使用完IO资源流,需要关闭</p>
-</li>
-<li><p>代码采取措施避免运行错误(如数组边界溢出)</p>
-</li>
-<li><p>尽量不要在循环里远程调用或者对数据库操作,优先考虑批量进行</p>
-</li>
-<li><p>写完代码,脑洞一下多线程执行会怎样,注意并发一致性问题,</p>
-</li>
-<li><p>获取对象的属性,先判断对象是否为空</p>
-</li>
-<li><p>多线程异步优先考虑恰当的线程池,而不是new thread(降低资源损耗,题号响应速度,便于重复利用)&lt;注意线程池隔离&gt;</p>
-</li>
-<li><p>手动写完代码业务的SQL,先拿去数据库跑一下,同时也explain看下执行计划</p>
-</li>
-<li><p>调用第三方接口,需要考虑异常处理.安全性,超时重试这几个点(重点的需要考虑签名,加密)</p>
-</li>
-<li><p>接口考虑幂等性</p>
-</li>
-<li><p>多线程情况下,考虑线程安全问题</p>
-</li>
-<li><p>主从延迟问题考虑</p>
-</li>
-<li><p>缓存的时候,考虑缓存跟DB的一致性,还有(缓存穿透,缓存雪崩和缓存击穿)</p>
-</li>
-</ol>
+    <title>python第三方模块整理</title>
+    <url>/article/f6e83c4a.html</url>
+    <content><![CDATA[<p>1.必装模块pypiwin32 wheel:主要是为了装whl文件</p>
+<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
+<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
+<p>4,pip文件的配置<br>pip文件的配置</p>
+<p>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
+<p>6,Beautiful Soup:<br>用于数据收集的Python库:<br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
+<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
+<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
+<p>9,**用于数据清理和数据操作的Python库<br>**<br>pandas:主要用于数据操作和数据分析</p>
+<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
+<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
+<p>12,用于数据可视化的Python库<br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
+<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
+<p>14,用于建模的Python库<br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
+<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
+<p>16,用于数据解释型的Python库<br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
+<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
+<p>18,用于音频处理的Python库:<br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
+<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
+<p>20,用于图像处理的Python库<br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
+<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
+<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
+<p>用于部署的Python库<br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
+<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
 ]]></content>
       <categories>
-        <category>编码习惯</category>
+        <category>第三方库</category>
       </categories>
       <tags>
-        <tag>编码习惯</tag>
+        <tag>python</tag>
+        <tag>第三方库</tag>
       </tags>
   </entry>
   <entry>
