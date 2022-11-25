@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>django使用教程</title>
-    <url>/article/ba447774.html</url>
-    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
-<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
-<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
-<pre><code>    #密码
-    &#39;PASSWORD&#39;:&#39;root&#39;,
-    #url 服务器地址
-    &#39;HOST&#39;:&#39;localhost&#39;,
-    #端口号
-    &#39;PORT&#39;:3306,
-&#125;
-</code></pre>
-<p>4,更新应用数据库<br>python manage.py makemigrations<br>python manage.py migrate</p>
-<p>5,创建超级管理员<br>python manage.py createsuperuser</p>
-<p>6,运行项目<br>python manage.py runserver</p>
-<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’<br>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
+    <title>deeplearning1</title>
+    <url>/article/b6750f91.html</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_44791964/article/details/107517428">深度学习链接</a><br><a href="https://www.bilibili.com/read/cv10239076?spm_id_from=333.999.0.0">深度学习链接2</a><br>1, 查看gpu使用情况,nvidia-smi</p>
 ]]></content>
       <categories>
-        <category>web</category>
+        <category>deeplearning</category>
       </categories>
       <tags>
-        <tag>web</tag>
-        <tag>django</tag>
+        <tag>deeplearning</tag>
       </tags>
   </entry>
   <entry>
@@ -61,41 +46,79 @@
       </tags>
   </entry>
   <entry>
-    <title>git使用</title>
-    <url>/article/4896de77.html</url>
-    <content><![CDATA[<p>1, 配置全局的用户名和邮箱</p>
-<p>git config –global user.name “注册的用户名”</p>
-<p>git config –global user.email “注册的邮箱”</p>
-<p>2,生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
-<p>将.ssh下的id_rsa.pub内容复制到github中</p>
-<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
-<p>3, 文件上传</p>
-<p>git init</p>
-<p>git add .</p>
-<p>git commit -m “”</p>
-<p>git remote add origin 远程库地址</p>
-<p>git push -u origin master &#x2F; git push -f origin master</p>
-<p>1,常用(上传代码)<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>扩展:<br>git checkout 分支名:切换分支<br>git pull origin master: 拉取主分支代码<br>git merge dev: 合并dev分支代码到主分支</p>
-<p><img src="https://img-blog.csdnimg.cn/eb1e2203dd17421ebbf075e02cda5e0c.png" alt="git使用"></p>
-<p>1, 配置git<br>git config –global user.name “注册的用户名”<br>git config –global user.email “注册的邮箱”<br>2, 生成ssh配置文件<br>①生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”<br>②将.ssh下的id_rsa.pub内容复制到github中<br>③用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮<br>3,文件上传<br>git init<br>git add .<br>git commit -m “”<br>git remote add origin 远程库地址<br>git push -u origin master &#x2F; git push -f origin master<br>4,常用文件上传（上传到远程分支）<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>5, 文件下载<br>git clone -b 分支名 版本库地址<br>6, git 上传代码到远程分支<br>git branch # 查看分支<br>git checkout -b 分支名 #创建并切换分支<br>git add .  #添加文件到暂存区<br>git push origin 分支名 #提交分支<br>7,  分支合并<br>git checkout master #切换到主分支<br>git merge 分支名 #合并分支到主分支</p>
+    <title>hexo基本使用</title>
+    <url>/article/d4fee3ae.html</url>
+    <content><![CDATA[<p>1, <a href="https://nodejs.org/en/download/">下载nodejs</a></p>
+<p>2,  下载淘宝镜像</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>3, 下载hexo</p>
+<p>cnpm install -g hexo-cli</p>
+<p>4, 建立文件夹,生成博客</p>
+<p>mkdir blog</p>
+<p>cd blog </p>
+<p>hexo init</p>
+<p>下载next主题: </p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>在github上建立仓库: </p>
+<p>github名.github.io</p>
+<p>安装git相关模块<br>npm install –save hexo-deployer-git</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#x2F;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
 ]]></content>
       <categories>
-        <category>git</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>git</tag>
+        <tag>blog</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
-    <title>deeplearning1</title>
-    <url>/article/b6750f91.html</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_44791964/article/details/107517428">深度学习链接</a><br><a href="https://www.bilibili.com/read/cv10239076?spm_id_from=333.999.0.0">深度学习链接2</a><br>1, 查看gpu使用情况,nvidia-smi</p>
+    <title>django使用教程</title>
+    <url>/article/ba447774.html</url>
+    <content><![CDATA[<p>1、创建Django项目(在指定目录下)<br>命令：django-admin startproject 项目名</p>
+<p>2、创建Django应用<br>一个项目由很多个应用组成的，每一个应用完成一个功能模块。<br>创建应用的命令如下：(进入项目文件夹中)<br>python manage.py startapp 应用名</p>
+<p>3, 在django项目中配置数据库连接信息<br>‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>    #数据库名（需要提前创建）<br>        ‘NAME’: ‘db_django’,<br>        #用户名<br>        ‘USER’:’root’,</p>
+<pre><code>    #密码
+    &#39;PASSWORD&#39;:&#39;root&#39;,
+    #url 服务器地址
+    &#39;HOST&#39;:&#39;localhost&#39;,
+    #端口号
+    &#39;PORT&#39;:3306,
+&#125;
+</code></pre>
+<p>4,更新应用数据库<br>python manage.py makemigrations<br>python manage.py migrate</p>
+<p>5,创建超级管理员<br>python manage.py createsuperuser</p>
+<p>6,运行项目<br>python manage.py runserver</p>
+<p>7,admin管理员页面汉化:<br>setting中修改为:<br>LANGUAGE_CODE &#x3D; ‘zh-Hans’<br>TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’</p>
 ]]></content>
       <categories>
-        <category>deeplearning</category>
+        <category>web</category>
       </categories>
       <tags>
-        <tag>deeplearning</tag>
+        <tag>web</tag>
+        <tag>django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令</title>
+    <url>/article/fe4ef317.html</url>
+    <content><![CDATA[<p>1, 安装deb</p>
+<p>dpkg -i 文件名</p>
+<p>2, window与liunx的shell脚本编码问题<br>修改编码:<br>vim 文件名<br>esc :<br>set ff&#x3D;unix<br>esc : wq</p>
+<p>查看编码<br>esc :<br>set ff</p>
+<p>3, 解决vmware tools失效<br>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop<br>重启: init 0&#x2F;reboot</p>
+<p>4, 查看进程：ps -ef | grep 文件名<br>杀死进程：kill -9 id</p>
+<p>5, shell文件运行命令<br>chmod +x .&#x2F;auto_download.sh &amp;&amp; .&#x2F;auto_download.sh</p>
+<p>6,定时器<br>cat &#x2F;etc&#x2F;crontab</p>
+<p>Ubuntu:<br>1, 安装防火墙<br>sudo su<br>apt-get install firewalld<br>查看状态<br>systemctl status firewalld<br>2,乌班图源的处理:<br><a href="https://blog.csdn.net/wssywh/article/details/79216437">pip源和软件源处理</a><br>3,安装deb文件<br>dpkg -i xxx.deb<br>3,定时任务<br>待测: cat &#x2F;etc&#x2F;corntab<br>①先创建py文件<br>②在py文件下输入crontab -e<br>③设置执行时间间隔<br><img src="https://img-blog.csdnimg.cn/d8720c2d022a485985c260796741466e.jpeg" alt="文件内容"><br><img src="https://img-blog.csdnimg.cn/f874919abf8145c88291ce275a54b608.jpeg" alt="常见的时间设置"><br>4,端口&#x2F;进程查看<br>查看端口是否占用<br>lsof -i:22<br>netstat -tunlp|grep 22<br>查看进程<br>ps aux|grep API.py<br>杀死进程<br>kill -9<br>5,实时查看日志<br>tail -f demo.log</p>
+<p>查看后200行日志内容</p>
+<p>tail -f -n 200 demo.log<br>6,服务器启动<br>nohup python3 &#x2F;opt&#x2F;moss_robot&#x2F;lib&#x2F;dispatch_v5.3.2&#x2F;robot_wait.py &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;<br>7,shell脚本运行<br>chmod +x .&#x2F;start.sh &amp;&amp; .&#x2F;start.sh</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -103,28 +126,50 @@
     <url>/article/e171c965.html</url>
     <content><![CDATA[<p>1, <a href="https://blog.csdn.net/Dabie_haze/article/details/118969328?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166920428516800215048409%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166920428516800215048409&biz_id=0&utm_medium=distribute.pc_chrome_plugin_search_result.none-task-blog-2~all~top_click~default-4-118969328-null-null.nonecase&utm_term=linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&spm=1018.2226.3001.4187">常用命令</a></p>
 <ol>
-<li>ls&#x2F;ll：列出文件list</li>
-<li>cd：切换目录change directory</li>
-<li>cp：复制copy</li>
-<li>mv：移动move</li>
-<li>rm：移除，删除remove</li>
-<li>mkdir：创建文件夹make directory</li>
-<li>rmdir：移除，删除文件夹remove directory</li>
-<li>chown：更改所有者change owner</li>
-<li>chmod：更改文件的权限模式change mode</li>
-<li>find：查找</li>
-<li>|：管道</li>
-<li>grep：按行查找并匹配</li>
-<li>tar：打包，压缩，解压</li>
-<li>cat：打印文件内容</li>
-<li>ps：查看进程process select</li>
-<li>kill：杀死进程</li>
-<li>passwd：修改密码password</li>
-<li>pwd：显示工作目录print work directory</li>
-<li>tee：显示并保存</li>
-<li>reboot：重启</li>
-<li>lsof&#x2F;netstat: 查看端口 是否被占用<br>lsof -i:22<br>netstat -tunlp|grep 22</li>
-<li>tail: 查看日志<br>实时查看:<br>tail -f 日志名<br>查看后200行日志内容<br>tail -f -n 200 demo.log</li>
+<li><p>ls&#x2F;ll：列出文件list</p>
+</li>
+<li><p>cd：切换目录change directory</p>
+</li>
+<li><p>cp：复制copy</p>
+</li>
+<li><p>mv：移动move</p>
+</li>
+<li><p>rm：移除，删除remove</p>
+</li>
+<li><p>mkdir：创建文件夹make directory</p>
+</li>
+<li><p>rmdir：移除，删除文件夹remove directory</p>
+</li>
+<li><p>chown：更改所有者change owner</p>
+</li>
+<li><p>chmod：更改文件的权限模式change mode</p>
+</li>
+<li><p>find：查找</p>
+</li>
+<li><p>|：管道</p>
+</li>
+<li><p>grep：按行查找并匹配</p>
+</li>
+<li><p>tar：打包，压缩，解压</p>
+</li>
+<li><p>cat：打印文件内容</p>
+</li>
+<li><p>ps：查看进程process select</p>
+</li>
+<li><p>kill：杀死进程</p>
+</li>
+<li><p>passwd：修改密码password</p>
+</li>
+<li><p>pwd：显示工作目录print work directory</p>
+</li>
+<li><p>tee：显示并保存</p>
+</li>
+<li><p>reboot：重启</p>
+</li>
+<li><p>lsof&#x2F;netstat: 查看端口 是否被占用<br>lsof -i:22<br>netstat -tunlp|grep 22</p>
+</li>
+<li><p>tail: 查看日志<br>实时查看:<br>tail -f 日志名<br>查看后200行日志内容<br>tail -f -n 200 demo.log</p>
+</li>
 </ol>
 <p>2, uwsgi和nginx<br><a href="https://fies09.github.io/article/3c1ae316.html#more">详解</a><br>uwsgi: web服务器(应用服务器),用于连接Web服务器和Web应用框架<br>uwsgi启动:<br>uwsgi –ini uwsgi8001.ini<br>uwsgi重启：<br>uwsgi –reload uwsgi8001.pid<br>uwsgi停止:<br>uwsgi –stop uwsgi8001.pid<br>nginx: 是一个高性能、轻量级的http和反向代理服务器</p>
 <p>3, pm2 . nohup<br>pm2: 进程管理工具<br>pm2 ls<br>pm2 start<br>pm2 stop<br>pm2 log<br>pm2 start Tasker&#x2F;schedule_task.py -x –interpreter python3  -o .&#x2F;logs&#x2F;node_task.log -e .&#x2F;logs&#x2F;node_task_error.log<br>nohup:  后台运行项目<br>保存日志:<br>nohup python3 -u Main.py &gt; nohup.log &amp;<br>不保存日志:<br>nohup python3.6 &#x2F;opt&#x2F;moss_robot&#x2F;lib&#x2F;dispatch_v5.3.2&#x2F;robot_wait.py &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;</p>
@@ -159,33 +204,6 @@
       <tags>
         <tag>sql</tag>
         <tag>mongodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo基本使用</title>
-    <url>/article/d4fee3ae.html</url>
-    <content><![CDATA[<p>1, <a href="https://nodejs.org/en/download/">下载nodejs</a></p>
-<p>2,  下载淘宝镜像</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>3, 下载hexo</p>
-<p>cnpm install -g hexo-cli</p>
-<p>4, 建立文件夹,生成博客</p>
-<p>mkdir blog</p>
-<p>cd blog </p>
-<p>hexo init</p>
-<p>下载next主题: </p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-next.git">https://github.com/litten/hexo-theme-next.git</a> themes&#x2F;next</p>
-<p>在github上建立仓库: </p>
-<p>github名.github.io</p>
-<p>安装git相关模块<br>npm install –save hexo-deployer-git</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#x2F;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -302,25 +320,104 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令</title>
-    <url>/article/fe4ef317.html</url>
-    <content><![CDATA[<p>1, 安装deb</p>
-<p>dpkg -i 文件名</p>
-<p>2, window与liunx的shell脚本编码问题<br>修改编码:<br>vim 文件名<br>esc :<br>set ff&#x3D;unix<br>esc : wq</p>
-<p>查看编码<br>esc :<br>set ff</p>
-<p>3, 解决vmware tools失效<br>sudo apt-get autoremove open-vm-tools    &#x2F;&#x2F;卸载已有的工具<br>sudo apt-get install open-vm-tools        &#x2F;&#x2F;安装工具open-vm-tools<br>sudo apt-get install open-vm-tools-desktop  &#x2F;&#x2F;安装open-vm-tools-desktop<br>重启: init 0&#x2F;reboot</p>
-<p>4, 查看进程：ps -ef | grep 文件名<br>杀死进程：kill -9 id</p>
-<p>5, shell文件运行命令<br>chmod +x .&#x2F;auto_download.sh &amp;&amp; .&#x2F;auto_download.sh</p>
-<p>6,定时器<br>cat &#x2F;etc&#x2F;crontab</p>
-<p>Ubuntu:<br>1, 安装防火墙<br>sudo su<br>apt-get install firewalld<br>查看状态<br>systemctl status firewalld<br>2,乌班图源的处理:<br><a href="https://blog.csdn.net/wssywh/article/details/79216437">pip源和软件源处理</a><br>3,安装deb文件<br>dpkg -i xxx.deb<br>3,定时任务<br>待测: cat &#x2F;etc&#x2F;corntab<br>①先创建py文件<br>②在py文件下输入crontab -e<br>③设置执行时间间隔<br><img src="https://img-blog.csdnimg.cn/d8720c2d022a485985c260796741466e.jpeg" alt="文件内容"><br><img src="https://img-blog.csdnimg.cn/f874919abf8145c88291ce275a54b608.jpeg" alt="常见的时间设置"><br>4,端口&#x2F;进程查看<br>查看端口是否占用<br>lsof -i:22<br>netstat -tunlp|grep 22<br>查看进程<br>ps aux|grep API.py<br>杀死进程<br>kill -9<br>5,实时查看日志<br>tail -f demo.log</p>
-<p>查看后200行日志内容</p>
-<p>tail -f -n 200 demo.log<br>6,服务器启动<br>nohup python3 &#x2F;opt&#x2F;moss_robot&#x2F;lib&#x2F;dispatch_v5.3.2&#x2F;robot_wait.py &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;<br>7,shell脚本运行<br>chmod +x .&#x2F;start.sh &amp;&amp; .&#x2F;start.sh</p>
+    <title>o基础也能学会的人工智能笔记整理</title>
+    <url>/article/2a662cad.html</url>
+    <content><![CDATA[<p>1,机器学习<br>用大量数据进行训练，获取到 一个数据模型，预测就是应用训练的模型，来解决一个未知的问题</p>
+<p>2,knn实现流程<br>收集相关的数据<br>选择合适的feature和label<br>如果不知道如何选择feature可以先单独每个feature计算与label的相关度<br>选取合适的k<br>使用数据集进行新的预测</p>
+<p>3,分类和回归的区别(classification和regression)<br>回归是求topk的value求平均值<br>分类是求topk中出现最多的 类别</p>
+<p>4,标准化和归一化的选择<br>知道数据范围用归一化<br>不知道数据范围,数据变化可能很大,用标准化</p>
+<p>5,数据归一化<br>压缩样本数据到0~1之间,让向量之间的欧式距离变为标准欧式距离</p>
+<p>6,线性回归和knn的区别<br>knn必须需要有全套数据集，每次预测都要重新计算整套数据集<br>线性回归，数据集用完后，其实可以丢弃。 线性回归是算一个<br>模型。<br>knn可以理解成是数学统计学的方法研究问题<br>线性回归，是一种总结规律，总结模型的解决问题的方法。</p>
+<p>7,线性回归就是求线性函数的参数的值的过程</p>
+<p>8,梯度下降算法原理<br>随机选取m和b<br>分别对mse 求m和b的偏导<br>如果m和b的偏导都很小(接近0),就成功<br>根据学习速率计算出修改的值<br>b和m 分别减去要修改的值</p>
+<p>9,线性回归和逻辑回归的区别<br>线性回归:预测的数据是连续的<br>逻辑回归:预测的是分类的问题</p>
+<p>10,人脸识别操作<br>安装百度api<br>pip install -U baidu-api</p>
+<p>11,knn算法<br>调参:k<br>k一般取值总个数开平方<br>训练集的数据训练k.训练出的结果用测试集测试准确率</p>
+<p>机器学习开发流程<br>1)获取数据<br>2)数据处理<br>3)特征工程<br>4)机器学习算法训练 - 模型<br>5)模型评估<br>6)应用</p>
+<p>1,feature:变量  —- label:结果<br>变量和结果一一对应<br>2,np.array():表示数组<br>3,abs:绝对值<br>4,predicePoint:预测点—&gt;针对knn:k近邻<br>5,np.argsort():返回元素排序的下标位置<br>np.argsort(针对索引排序)<br>label —&gt; sortlabel<br>6,<br>np.sum:+<br>np.squart:平方<br>np.sqrt:开平方跟<br>np.loadtxt:读取文件:<br>属性<br>delimiter &#x3D; “,” :分隔符”,”<br>skiprows &#x3D; 1    :空除第一行<br>usecols &#x3D; (17,13,2):使用第17,13,2列<br>np.mean:平均值<br>np.stu:标准差<br>#显示完整的所有数据<br>np.set_printoptions(threshold&#x3D;np.inf)</p>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>数据处理</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql面试题</title>
+    <url>/article/c45230cb.html</url>
+    <content><![CDATA[<p>1, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
+<p>2, 数据库优化<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,建立索引,外键等<br>③使用联合来代替手动创建的临时表<br>④使用事物<br>⑤使用锁定表<br>⑥选取合适的字段属性<br>⑦使用连接代替子查询</p>
+<p>3,创建数据库的四大原则?<br>答:<br>事物: 是数据库操作的最小工作单元,是一组不可再分割的操作集合<br>原子性: 整个程序中的所有操作,要么全部完成,要么全部不完成,不可能停滞在中间某个环节<br>一致性: 倘若事物操作失败,则回滚事物时,与原状态一致.<br>隔离性: 当在进行事物操作时, 其他事物的操作不可能影响当前事物操作,事物与事物之间是隔离的,互不干扰,干完再整合.<br>持久性: 事物的操作具有持久性, 事物结果一旦写入数据库,在不改动的情况下,数据库一直都是这个数据.</p>
+<p>4,orm数据库?<br>orm数据库:称为对象–关系映射,主要实现模型对象到关系数据库数据的映射,把数据表中的每一条记录映射为一个模型对象,</p>
+<p>5,数据表student有id,name,score,city字段,其中name中的名字可有重复,需消除重复行,请写sql语句<br>答:select distinct name from student;</p>
+<p>6, 表合并<br>①<br>#sql union 不允许重复的值<br>select 字段名 from 表名 union select 字段名2 from 表名2</p>
+<p>#sql union all 允许重复的值<br>elect 字段名 from 表名 union all select 字段名2 from 表名2</p>
+<p>②<br>insert into 表1 select * from 表2</p>
+<p>7,数据库优化查询方法<br>答:外键,索引,联合查询,选择特定字段等等</p>
+<p>8,写5条常用sql语句<br>答:show databases;<br>show tables;<br>desc tb_name;<br>select * from tb_name<br>delete from tb_name where id &#x3D; 5;<br>update tb_name set name&#x3D;’xue’,age&#x3D;23 where id &#x3D; 5;</p>
+<p>9, <a href="https://fies09.github.io/article/8e40d0ad.html?highlight=mysql">mysql</a><br>排序: order by<br>分组: group by<br>条件: where<br>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p>
+<p>10,列出常见mysql数据存储引擎<br>InnoDB:支持事物处理,支持外键,支持崩溃修复能力和并发控制.<br>MyISAM:插入数据快,空间和内存使用比较低,<br>MEMORY:所有数据都在内存中,数据的处理速度快.但是安全性不高</p>
+<p>11,Mysql数据库的隔离级别<br>①Read Uncommitted(读取末提交内容)<br>在该隔离级别,所有事物都可以看到其他末提交事物的执行结果,本隔离级别很少用于实际应用，因为它的性能也不比其他级别好多少。读取未提交的数据，也被称之为脏读（Dirty Read）。<br>②Read Committed（读取提交内容）<br>这是大多数数据库系统的默认隔离级别（但不是MySQL默认的）。它满足了隔离的简单定义：一个事务只能看见已经提交事务所做的改变。这种隔离级别 也支持所谓的不可重复读（Nonrepeatable Read），因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。<br>③Repeatable Read（可重读）<br>这是MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行。不过理论上，这会导致另一个棘手的问题：幻读（PhantomRead）。简单的说，幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。<br>④Serializable（可串行化）<br>这是最高的隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简言之，它是在每个读的数据行上加上共享锁。在这个级别，可能导致大量的超时现象和锁竞争。</p>
+<p>12, mysq与redis,mongodb的区别<br>mysql: 关系型数据库,数据保存在磁盘中,速度慢<br>redis: 内存型非关系数据库,数据保存在内存中, 速度快<br>mongodb: 非关系型数据库,虚拟内存加持久化存储,有独特的mongodb查询方式</p>
+<p>13, join<br>inner jon 内连接<br>内连接又叫等值连接，此时的inner可以省略。<br>获取两个表中有匹配关系的记录，即两表取交集<br>select * from a join b on a.’name’ &#x3D; b.’name’<br>left join 左连接<br>以左表为基础，获取匹配关系的记录，如果右表中没有匹配项，NULL表示<br>select * from a left join b on a.’name’&#x3D;b.’name’<br>right join 右连接<br>以右表为基础，获取匹配关系的记录，如果左表中没有匹配项，NULL表示<br>select * from a right join b on a.’name’&#x3D;b.’name’</p>
+]]></content>
+      <categories>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>面试题</tag>
+        <tag>mysql面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pycharm插件整理</title>
+    <url>/article/fb4b156c.html</url>
+    <content><![CDATA[<p>1, Chinese: 汉化<br>2, translation: 翻译<br>3, Rainbow Brackets: 括号高亮<br>4, json parser: json格式的数据显示<br>5, markdown image support: markdown文档编辑器<br>6, Aixcoder code complate: 自动补全<br>7,CSV plugin<br>8,wakatime<br>9, .ignore<br>10, Context Free Grammar<br>11, SonarLint<br>12, Key Promoter X<br>13, Indent Rainbow<br>14, CodeGlance</p>
+]]></content>
+      <categories>
+        <category>pycharm</category>
+      </categories>
+      <tags>
+        <tag>pycharm</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python第三方模块整理</title>
+    <url>/article/f6e83c4a.html</url>
+    <content><![CDATA[<p>1.必装模块pypiwin32 wheel:主要是为了装whl文件</p>
+<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
+<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
+<p>4,pip文件的配置<br>pip文件的配置</p>
+<p>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
+<p>6,Beautiful Soup:<br>用于数据收集的Python库:<br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
+<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
+<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
+<p>9,**用于数据清理和数据操作的Python库<br>**<br>pandas:主要用于数据操作和数据分析</p>
+<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
+<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
+<p>12,用于数据可视化的Python库<br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
+<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
+<p>14,用于建模的Python库<br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
+<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
+<p>16,用于数据解释型的Python库<br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
+<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
+<p>18,用于音频处理的Python库:<br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
+<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
+<p>20,用于图像处理的Python库<br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
+<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
+<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
+<p>用于部署的Python库<br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
+<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
+]]></content>
+      <categories>
+        <category>第三方库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>第三方库</tag>
       </tags>
   </entry>
   <entry>
@@ -402,145 +499,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>python第三方模块整理</title>
-    <url>/article/f6e83c4a.html</url>
-    <content><![CDATA[<p>1.必装模块pypiwin32 wheel:主要是为了装whl文件</p>
-<p>2,pyinstaller:将python文件转化为exe文件<br>进入py文件目录下:cmd —&gt;pyinstaller -F 文件名.py</p>
-<p>3,虚拟机教程<br>安装:pip install -U virtualenv<br>设置虚拟路径:virtualenv -p d:\dev\python\python36\python.exe\py36<br>进入虚拟环境:cd py36\scripts<br>启动:activate</p>
-<p>4,pip文件的配置<br>pip文件的配置</p>
-<p>内容:<br>[global]<br>index-url&#x3D;<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
-<p>5, pyc文件的编译<br>python -m py_compile 文件名.py<br>pyo文件的编译:<br>python -O -m py_compile 文件名.py</p>
-<p>6,Beautiful Soup:<br>用于数据收集的Python库:<br>这个是一个HTML和XML解析器,可用于从web页面中提取数据,这个过程叫做网页抓取</p>
-<p>7,Scrapy:这是一个用于大规模网页抓取的框架,提供所有需要的工具有效的从网站中抓取数据,以使用者偏好的结构和格式存储数据</p>
-<p>8,Selenium:这是一个倍受欢迎的自动化浏览器工具,在业界常用于测试,但对于网页抓取也非常方便</p>
-<p>9,**用于数据清理和数据操作的Python库<br>**<br>pandas:主要用于数据操作和数据分析</p>
-<p>10:numpy:这是一个开源库,引入了支持大型多维数组和矩阵的函数</p>
-<p>11,PyOD:一个全面的,可伸缩的Python工具包,用于检测外围对象</p>
-<p>12,用于数据可视化的Python库<br>Matplotlib:这是Python中最流行的数据可视化库,允许生成和构建各种各样的图</p>
-<p>13,Seaborn:另一个基于Matplotlib的绘图库为绘制有吸引力的图像而提供高级接口</p>
-<p>14,用于建模的Python库<br>Scikit-learn:它是Python建模中的佼佼者,支持机器学习中执行的不同操作,如分类,回归,聚类和模型选择等</p>
-<p>15,Tensorflow:这是一个流行的深度学习库,提供模型构建,机器学习生产及强大的实验工具和库</p>
-<p>16,用于数据解释型的Python库<br>LIME:这是一种算法(库),可以解释任何分类器或回归量的预测</p>
-<p>17,H2O:通过可视化提供机器学习可解释性(MLI)说明建模结构和模型中特征的影响</p>
-<p>18,用于音频处理的Python库:<br>LibROSA:一个用于音乐和音频分析的Python库,提供了创建音乐信息检索系统所需的构建块</p>
-<p>19,pyAudioAnalysis:一个用于音频特征提取,分类和分段的Python库,涵盖广泛的音频分析任务</p>
-<p>20,用于图像处理的Python库<br>OpenCV-Python:用于图像处理的Python API,主要用于解决计算机视觉问题</p>
-<p>21,Scikit-image:可执行多个不同图像处理任务的算法集合,用于图像分割,几何变换,色彩空间操作等等</p>
-<p>22,Pillow:它是从Python Imaging Library 中派生出来的,可以执行逐像素操作掩模和透明处理等等</p>
-<p>用于部署的Python库<br>23,django:Python web框架的先驱,大而全,功能及其强大,非常适合企业级网站的开发</p>
-<p>24,flask:一个用Python编写的Web框架,小巧,灵活,非常适用于小型网站</p>
-]]></content>
-      <categories>
-        <category>第三方库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>第三方库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python面试题</title>
-    <url>/article/bf330a1e.html</url>
-    <content><![CDATA[<p>1, __new__和__init__的区别<br>①__new__负责进行对象的创建,__init__负责进行对象的初始化<br>②__new__是在实例创建之前被调用,用于创建实例,然后返回该实例对象,是个静态方法,__init__是当实例对象创建完成之后被调用,用于初始化一个类实例,是个实例方法<br>③__new__至少有一个参数cls,必须要有返回值,返回的是实例化出来的实例,__init__在__new__基础上完成一些其他初始化的动作,__init__不需要有返回值</p>
-<p>2,面向对象?<br>简称oop,把对象当做一个程序的基本单元,一个对象包含数据和操作数据的函数,提高了编程的效率,使其编程的重用性增高.<br>三大特点:<br>封装:把需要重用的函数或功能封装起来,方便其他程序直接调用,<br>继承 :子类继承父类,子类和父类拥有相同的方法和属性,子类会覆盖父类的方法和属性<br>多态:提高函数的健壮性和可扩展性,父类声明指向子类实现<br>多态的实现方式：<br>①对象多态: 在继承体系中,定义时的类型和运行时的类型不一样,此时构成多态<br>②类多态 : 只通过@classmethod形式多态构成的构造对象,而不是使用python默认的__init__构造器  </p>
-<p>3,如何提高Python的运行效率?<br>①使用生成器,节省大量内存<br>②针对循环优化,避免过多重复代码的执行<br>③多个if else条件判断,可以把最有可能发生的条件放最前面写,减少程序判断次数,提高效率</p>
-<p>4,描述数据,链表,队列,堆栈的区别?<br>答:数组和链表是数据存储方式的概念,数组在连续的自然空间中存储,链表在非连续的自然空间中存储<br>队列和堆栈是描述数据存储方式的概念,<br>队列是先进先出,堆栈是后进先出,堆栈和队列可以用数组表示,也可以用链表表示,<br>堆和栈<br>内存:<br>栈:内存小,速度快,有序,简单的数据类型放到栈里<br>堆:内存大,速度慢,无序,复杂的数据类型放到堆里</p>
-<p>5,*args和**kw区别?<br>*args和**kw属于不定长参数<br>*args返回值为元组类型,**kw返回值为字典类型</p>
-<p>6,&#x3D;和&#x3D;&#x3D;的区别?<br>&#x3D;:表示赋值.将某一数值赋值 给变量<br>&#x3D;&#x3D;:表示判断是否相等,返回True或者False,相等True,不相等False</p>
-<p>7,TCP&#x2F;UDP&#x2F;HTTP&#x2F;HTTPS的区别?<br> TCP协议:是一种面向连接,可靠的,基于字节流的传输层协议,在正式通信前必须和对方建立连接,一个tcp必须经过三次对话才能建立连接,在经历4次对话结束(即三握四挥),传输可靠,速度慢,应用,传输大量数据,对可靠性要求高</p>
-<p>UDP协议:用于www浏览的协议,特点是客户端发送的请求都需要服务器回送响应,在请求结束后会主动释放连接,从建立连接到关闭连接的过程成为”一次连接” 注: 1)在http1.0中客户端的每次请求都要求建立一次单独的连接,在处理完本次请求后就自动释放连接 2)在http1.1中,则可以在一次连接中处理多次请求,并可重叠进行,不需要等一个请求结束后再发下一个请求</p>
-<p>HTTP&#x2F;HTTPS协议 HTTP协议:超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种 发布和接收HTML页面的方法。<br>HTTPS协议: HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL&#x2F;TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。<br>HTTP 明文传输，数据都是未加密的，安全性较差，HTTPS（SSL+HTTP） 数据传输过程是加密的，安全性较好。</p>
-<p>8, http1.0与2.0,3.0的区别<br>http1.0存在连接无法复用问题,导致每发送一次请求都需要进行三次握手的过程,重新建立连接,效率太低,存在堵塞问题 ,http1.0是下一次请求的发送必须等到上一个请求返回后才会进行,如果上一个请求没有返回,name后面的请求就会全部堵塞,最后就是安全问题,http1.0所传输的内容都是明文的,无法保证数据的安全性.<br>http2.0比较专注性能,它采用二进制格式传输数据,http2.0也采用了多路复用的技术,他可以只通过一个TCP连接传输所有的请求数据,还有就是采用了头部压缩技术,这也解决了http1.0的header里携带的内容过大的问题,在一定程度上减轻了传输的成本,不过它也存在一定的问题,如果在传输的过程中存在丢包的情况的话,那么整个tcp就得重新传输,后面资源就会被堵塞.<br>http3.0放弃了tcp协议,改用了QUIC协议,此协议基于传输层UDP协议,UDP协议无需三次连接四次挥手,所以传输速率更高,如果出现丢包,只需要重发丢掉的包就可以.</p>
-<p>9, next()和iter()的区别?<br>我们一般通过iter()函数获取可迭代对象的迭代器,通过对获取到的迭代器不断的通过next函数 进行获取下一条数据,iter()函数 实际上就是调用了可迭代对象的__iter__方法</p>
-<p>10, 斐波那契数列<br>items &#x3D; int(input(“请输入斐波那契数列的个数:”))<br>fibs &#x3D; [0,1]<br>for i in range(item - 1):<br>    fibs.append(fibs[-2] + fibs[-1])<br>print(“斐波那契数列为:”,fibsp[1:])</p>
-<p>11,冒泡排序<br>def bubblesort(list):<br>    for i in range(len(lsit)):<br>        for j in range(len(list)-i-1):<br>            if list[j]&gt;list[j+1]:<br>                list[j],list[j+1] &#x3D; list[j+1],list[j]<br>    return list</p>
-<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    #用户输入<br>    str &#x3D; input(“请输入数字(用逗号隔开)”)<br>    list &#x3D; [int(i) for i in str.split(‘,’)]<br>    print(bubblesort(list))</p>
-<p>12, 类方法,静态方法,实例方法的区别<br>实例方法主要用于在类中封装一个额外的功能<br>第一个参数必须是self,一般情况下只能用实例化对象调用,不能用类调用,如果要用类调用,需要将实例化对象传递给self.<br>静态方法,主要用于在类中封装一个额外的功能,创建时用@staticmethod装饰器装饰,声明为静态函数,可以用类调用也可以用实例化对象调用<br>类方法主要是将类作为参数传递,相当于将类当成了对象,可以调用该类中的所有方法,创建时用@classmethod装饰器装饰,声明为类函数,第一个参数必须是cls,可以用类调用也可以用实例化对象调用.</p>
-<p>代码展示:<br>class A(object):<br>    #构造函数<br>    def <strong>init</strong>(self,title1):<br>        self.title &#x3D; title1<br>        print(self.title)<br>    #实例函数<br>    def foo(self,title2):<br>        print(title2)<br>   #静态函数<br>    @staticmethod<br>    def  static_foo():<br>        print(“静态方法”)<br>    #类方法<br>    @classmethod<br>    def cls_foo(cls):<br>        cls.foo(a,’类函数调用实例函数’)<br>        print(‘类方法’)</p>
-<p>13, collections库中的counter统计元素个数，</p>
-<p>14，列表合并<br>a.extend(b)</p>
-<p>15,字典合并<br>dic1.update(dic2)<br>删除 字典<br>del dic[‘sex’]<br>del:按索引删除元素<br>remove:默认删除第一个元素<br>pop:默认删除最后一个元素或者根据索引值删除索引</p>
-<p>16,set集合去重的原理<br>set集合去重主要是通过函数__hash__和__eq__结合实现的<br>①当两个变量的哈希值不相同时,就认为两个变量时不相同的<br>②当两个变量哈希值一样时,调用__eq__方法,当返回值为True时认为两个变量时同一个,应该去除一个,返回FALSE时,不去重</p>
-<p>17,分别从前端,后端,数据库阐述web项目的性能优化<br>前端优化:<br>①,减少http请求,例如制作精灵图<br>②,html和CSS放在页面上部,javascript放在页面下部</p>
-<p>后端优化:<br>①,缓存存储读写次数高,变化少的数据,<br>②,异步方式,如果有耗时操作,可采用异步,如celery<br>③,代码优化,避免循环和判断次数太多,如果多个if else判断,优先判断最有可能发生的情况</p>
-<p>数据库优化:<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,建立索引,外键等</p>
-<p>18,列表切片属于浅拷贝</p>
-<p>19, 深拷贝浅拷贝<br>深拷贝: 外围和内部元素都拷贝了对象本身,而不是引用,也就是说把对象复制一遍,对象中引用的其他对象也复制.<br>浅拷贝: 拷贝了最外围对象本身, 内部元素只拷贝了一个引用, 也就是说把对象复制一遍,对象中引用的其他对象不复制.</p>
-<p>20, Django 、Flask、Tornado的对比<br>1.Django走的是大而全的方向,开发效率高。它的MTV框架,自带的ORM,admin后台管理,自带的sqlite数据库和开发测试用的服务器 给开发者提高了超高的开发效率<br>2.Flask是轻量级的框架,自由,灵活,可扩展性很强,核心基于Werkzeug WSGI工具和jinja2模板引擎<br>3.Tornado走的是少而精的方向,性能优越。它最出名的是异步非阻塞的设计方式<br>Tornado的两大核心模块：<br>1.iostraem：对非阻塞式的socket进行简单的封装<br>2.ioloop：对I&#x2F;O多路复用的封装，它实现了一个单例</p>
-<p>21, python垃圾回收机制<br>在python内部, 当一个对象的引用计数是0时, 它将被垃圾回收机制处理掉<br>当两个对象a和b相互引用时的情况,del语句可以减少a和b的引用计数,并销毁用于底层对象的名称,需要注意的是,并不是每一个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0, 对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这个问题,解释器会定期执行一个循环检测器,搜素不可访问对象的循环并进行删除.</p>
-<p>22, 线程与进程,协程<br>进程: 是程序执行的一次过程,是临时的,有生命周期的, 任何进程都可以同其他进程一起并发执行,是系统进行资源分配和调度的一个独立单位,由程序,数据和进程控制块三部分组成<br>进程池:当存在多个进程时,为避免资源损耗,创建适当的进程放入进程池,等待待处理的事件,当处理完所有事件之后,进程退出<br>线程: 线程是程序执行中一个单一的顺序控制流程,是程序执行的最小单元,一个进程可以有一个或多个线程,</p>
-<p>死锁: 在线程间共享多个资源时,两个线程分别占用资源并且同时等待对方的资源,就会造成死锁,<br>协程: 执行函数A时可以随时中断执行函数B,然后中断函数B继续执行函数A,协程是一个线程在执行.</p>
-<p>GIL锁:</p>
-<p>全局解释器锁,同一进程加入有多个线程运行,一个线程在运行python程序时会霸占python解释器,也就增加了一把锁,使该进程中的其他线程无法运行,等该线程运行完成后其他线程才能运行,</p>
-<p>23, 可变数据类型,不可变数据类型(为什么不可变,为什么可变)<br>可变: 列表,字典,<br>原因: 如果对对象进行了添加,修改等操作之后, 只是改变了变量的值,而不会新建一个对象, 变量引用的对象地址也不会发生变化,不过对于相同值的对象,即每个对象都有自己的地址,<br>不可变: 整型,字符串,布尔型,元组,<br>原因: 如果变量值发生了变化,相当于新建一个对象,而对于相同值的对象,在内存中只有一个地址,</p>
-<p>24,  装饰器,闭包,迭代器,生成器<br>闭包: 外函数包含内函数, 对函数功能进行扩展,一般在装饰器下写闭包<br>装饰器: 为已经存在的对象添加额外的功能,在不改变原代码的情况下,扩展额外功能.(在什么情况下使用)<br>eg: 定义验证登录状态的装饰器<br>判断用户是否登录,如果登录,执行视图函数,如果未登录,返回未登录信息,然后在退出以及需要验证登录的模块调用装饰器<br>迭代器: for循环遍历取值的过程<br>生成器: yield关键字来返回值的函数</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">装饰器</span><br><span class="line">def funA(fn):</span><br><span class="line">    pass</span><br><span class="line"><span class="meta">@funA</span></span><br><span class="line">def <span class="function"><span class="title">fun</span><span class="params">()</span></span>:</span><br><span class="line">    print(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-
-<p>25, celery<br>主要是用于处理耗时任务，包含的三个模块<br>  1, broker： 存储生产者发出的各种任务 （将任务添加到broker）<br>     2. worker： 实时监控消息队列，如果有任务就获取任务并执行它 （worker服务）<br>     3. task: 定义任务函数 （任务函数）</p>
-<p>26, Python如何处理高并发？<br>1.HTML页面静态化<br>2.图片服务器分离（可以用fastdfs轻量级的分布式文件存储系统）<br>3.使用缓存（用redis）<br>4.数据库集群、读写分离。减轻数据库服务器的读写压力。<br>5.使用负载均衡的方法（配置nigix服务器，用nginx来配置负载均衡，只需要设置 如下代码，即可实现简单的负载均衡)</p>
-<p>应用场景</p>
-<p>27, python的单例模式和工厂模式<br>单例模式:对__new__方式进行重写,确保一个类只有一个实例,并且提供一个访问该实例的全局访问点,<br>单例模式只生成一个实例对象,减少对系统资源的开销,当一个对象产生比较多的资源,如读取配置文件,产生其他依赖对象时,可以产生一个”单例对象”,然后永久驻留内存中,从而极大的降低开销.<br>工厂模式:实现了创建者和调用者的分离,使用专门的工厂类将选择实现类,创建对象进行统一的管理和控制.</p>
-<p>28， python的异常类型<br> ① ZeroDivisionError 除(或取模)零(所有数据类型)<br> ② IndexError #序列中没有此索引<br> ③ KeyError #映射中没有这个键<br> ④ NameError #未声明&#x2F;初始化对象 (没有属性)<br> ⑤ SyntaxError #python语法错误<br> ⑥ ValueError #传入无效的参数</p>
-<p>29， json和字典的相互转换<br>json转字典： json.loads()<br>字典转json: json.jumps</p>
-<p>30，finally关键字的作用<br>try:<br>    正确语句<br>except:<br>    错误信息提示<br>finally:<br>    最后执行的模块</p>
-<p>31, numpy,  pandas,<br>np: 数组处理,矩阵运算<br>pd: 对csv&#x2F;txt文件进行读取写入操作, 对json, 数据库, excel进行读取写操作</p>
-<p>32,当后端任务执行完成后如何通知前端<br>1,前端定时发送请求询问后端有无消息,<br>2.django:<br>    channels: 依赖于redis, twisted<br>    dwebsocket:<br>3.在celery的tasks.py之中，当后端完成数据库读写后，往当前request所在的群组之中发送消息，随后channels会调用chat_message函数，通过self.send()方法将消息发送给前端</p>
-<p>33,  正则表达式:<br>re.search(),res.match()匹配一次<br> match和search的区别<br> match()只会检测re是不是在string的开始位置匹配<br> search()会扫描整个string查找匹配<br> match()只有在0位置匹配成功的话才有返回, 如果不是开始位置匹配成功的话,match就返回none.<br>re.findall(): 匹配所有<br>re.sub()替换<br>re.split()分割<br>. 任意字符</p>
-<ul>
-<li>零个或多个<br>? 匹配零个或一个由前面的正则表达式定义的片段,<br>贪婪模式和非贪婪模式<br>在满足匹配时,匹配尽可能长的字符串,默认情况下,采用贪婪模式<br>匹配到结果就好,少的匹配字符,就是非贪婪模式</li>
-</ul>
-<p>34, Python中的self是什么？<br>self是类的实例或对象。在Python中，self包含在第一个参数中。但是，Java中的情况并非如此，它是可选的。它有助于区分具有局部变量的类的方法和属性。init方法中的self变量引用新创建的对象，而在其他方法中，它引用其方法被调用的对象。</p>
-<p>35, Python数组和列表有什么区别？<br>python本身并没有数组类型，但Numpy库中有数组类型。<br>Python中的数组和列表具有相同的存储数据方式。<br>数组里面元素的数据类型必须是相同的，而列表可以包含任何数据类型元素。</p>
-<p>36, classmethod, staticmethod,property</p>
-<p>classmethod，staticmethod，property都是装饰器， 他们都作用在类的方法上。<br>classmethod：使得被装饰的方法成为一个类方法既不需要实例化类就可以直接调用的方法，第一个参数为cls。<br>staticmethod： 使得被装饰的方法成为一个静态函数既与普通的函数无区别。<br>property: 将一个方法变成一个属性来使用。</p>
-<p>37, 暂未理解:[多线程,线程池,多线程与高并发的关系]</p>
-]]></content>
-      <categories>
-        <category>面试题</category>
-      </categories>
-      <tags>
-        <tag>面试题</tag>
-        <tag>python面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>o基础也能学会的人工智能笔记整理</title>
-    <url>/article/2a662cad.html</url>
-    <content><![CDATA[<p>1,机器学习<br>用大量数据进行训练，获取到 一个数据模型，预测就是应用训练的模型，来解决一个未知的问题</p>
-<p>2,knn实现流程<br>收集相关的数据<br>选择合适的feature和label<br>如果不知道如何选择feature可以先单独每个feature计算与label的相关度<br>选取合适的k<br>使用数据集进行新的预测</p>
-<p>3,分类和回归的区别(classification和regression)<br>回归是求topk的value求平均值<br>分类是求topk中出现最多的 类别</p>
-<p>4,标准化和归一化的选择<br>知道数据范围用归一化<br>不知道数据范围,数据变化可能很大,用标准化</p>
-<p>5,数据归一化<br>压缩样本数据到0~1之间,让向量之间的欧式距离变为标准欧式距离</p>
-<p>6,线性回归和knn的区别<br>knn必须需要有全套数据集，每次预测都要重新计算整套数据集<br>线性回归，数据集用完后，其实可以丢弃。 线性回归是算一个<br>模型。<br>knn可以理解成是数学统计学的方法研究问题<br>线性回归，是一种总结规律，总结模型的解决问题的方法。</p>
-<p>7,线性回归就是求线性函数的参数的值的过程</p>
-<p>8,梯度下降算法原理<br>随机选取m和b<br>分别对mse 求m和b的偏导<br>如果m和b的偏导都很小(接近0),就成功<br>根据学习速率计算出修改的值<br>b和m 分别减去要修改的值</p>
-<p>9,线性回归和逻辑回归的区别<br>线性回归:预测的数据是连续的<br>逻辑回归:预测的是分类的问题</p>
-<p>10,人脸识别操作<br>安装百度api<br>pip install -U baidu-api</p>
-<p>11,knn算法<br>调参:k<br>k一般取值总个数开平方<br>训练集的数据训练k.训练出的结果用测试集测试准确率</p>
-<p>机器学习开发流程<br>1)获取数据<br>2)数据处理<br>3)特征工程<br>4)机器学习算法训练 - 模型<br>5)模型评估<br>6)应用</p>
-<p>1,feature:变量  —- label:结果<br>变量和结果一一对应<br>2,np.array():表示数组<br>3,abs:绝对值<br>4,predicePoint:预测点—&gt;针对knn:k近邻<br>5,np.argsort():返回元素排序的下标位置<br>np.argsort(针对索引排序)<br>label —&gt; sortlabel<br>6,<br>np.sum:+<br>np.squart:平方<br>np.sqrt:开平方跟<br>np.loadtxt:读取文件:<br>属性<br>delimiter &#x3D; “,” :分隔符”,”<br>skiprows &#x3D; 1    :空除第一行<br>usecols &#x3D; (17,13,2):使用第17,13,2列<br>np.mean:平均值<br>np.stu:标准差<br>#显示完整的所有数据<br>np.set_printoptions(threshold&#x3D;np.inf)</p>
-]]></content>
-      <categories>
-        <category>数据处理</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pycharm插件整理</title>
-    <url>/article/fb4b156c.html</url>
-    <content><![CDATA[<p>1, Chinese: 汉化<br>2, translation: 翻译<br>3, Rainbow Brackets: 括号高亮<br>4, json parser: json格式的数据显示<br>5, markdown image support: markdown文档编辑器<br>6, Aixcoder code complate: 自动补全<br>7,CSV plugin<br>8,wakatime<br>9, .ignore<br>10, Context Free Grammar<br>11, SonarLint<br>12, Key Promoter X<br>13, Indent Rainbow<br>14, CodeGlance</p>
-]]></content>
-      <categories>
-        <category>pycharm</category>
-      </categories>
-      <tags>
-        <tag>pycharm</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ros系统学习笔记</title>
     <url>/article/3e9342ec.html</url>
     <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1qV41167d2?p=1">视频链接</a></p>
@@ -601,22 +559,29 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>scrapy框架使用</title>
-    <url>/article/1d5ab057.html</url>
-    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
-<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
-<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
-<p>③,编写主程序</p>
-<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
-<p>注意:设置浏览器标识时,第一个应为项目名</p>
-<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+    <title>git使用</title>
+    <url>/article/4896de77.html</url>
+    <content><![CDATA[<p>1, 配置全局的用户名和邮箱</p>
+<p>git config –global user.name “注册的用户名”</p>
+<p>git config –global user.email “注册的邮箱”</p>
+<p>2,生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”</p>
+<p>将.ssh下的id_rsa.pub内容复制到github中</p>
+<p>用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮</p>
+<p>3, 文件上传</p>
+<p>git init</p>
+<p>git add .</p>
+<p>git commit -m “”</p>
+<p>git remote add origin 远程库地址</p>
+<p>git push -u origin master &#x2F; git push -f origin master</p>
+<p>1,常用(上传代码)<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>扩展:<br>git checkout 分支名:切换分支<br>git pull origin master: 拉取主分支代码<br>git merge dev: 合并dev分支代码到主分支</p>
+<p><img src="https://img-blog.csdnimg.cn/eb1e2203dd17421ebbf075e02cda5e0c.png" alt="git使用"></p>
+<p>1, 配置git<br>git config –global user.name “注册的用户名”<br>git config –global user.email “注册的邮箱”<br>2, 生成ssh配置文件<br>①生成SSH KEY命令:ssh-keygen -t rsa -C “注册的邮箱”<br>②将.ssh下的id_rsa.pub内容复制到github中<br>③用户中心—&gt;settings—&gt;左侧的SSH KEYS,权限RW,点击添加按钮<br>3,文件上传<br>git init<br>git add .<br>git commit -m “”<br>git remote add origin 远程库地址<br>git push -u origin master &#x2F; git push -f origin master<br>4,常用文件上传（上传到远程分支）<br>git stash<br>git pull<br>git stash pop<br>git add .<br>git commit -m “”<br>git push<br>5, 文件下载<br>git clone -b 分支名 版本库地址<br>6, git 上传代码到远程分支<br>git branch # 查看分支<br>git checkout -b 分支名 #创建并切换分支<br>git add .  #添加文件到暂存区<br>git push origin 分支名 #提交分支<br>7,  分支合并<br>git checkout master #切换到主分支<br>git merge 分支名 #合并分支到主分支</p>
 ]]></content>
       <categories>
-        <category>爬虫</category>
+        <category>git</category>
       </categories>
       <tags>
-        <tag>爬虫</tag>
-        <tag>scrapy</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -671,30 +636,102 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>mysql面试题</title>
-    <url>/article/c45230cb.html</url>
-    <content><![CDATA[<p>1, mysql索引<br><a href="https://www.cnblogs.com/jiuya/p/10023483.html">mysql索引的详细说明</a><br>普通索引:<br>是最基本的索引,没有任何限制<br>唯一索引:<br>索引列的值必须唯一,但允许有空值,如果是组合索引,则列值的组合必须唯一<br>主键索引:<br>一个表只能有一个主键,不允许有空值,一般在建表的同时创建主键索引<br>组合索引:<br>指多个字段上创建的索引,只有在查询条件中使用了创建索引时的第一个字段,索引才会被使用.使用组合索引时遵循最左前缀集合<br>全文索引:<br>主要是用来查找文本中的关键字,而不是直接与索引中的值相比较.</p>
-<p>2, 数据库优化<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,建立索引,外键等<br>③使用联合来代替手动创建的临时表<br>④使用事物<br>⑤使用锁定表<br>⑥选取合适的字段属性<br>⑦使用连接代替子查询</p>
-<p>3,创建数据库的四大原则?<br>答:<br>事物: 是数据库操作的最小工作单元,是一组不可再分割的操作集合<br>原子性: 整个程序中的所有操作,要么全部完成,要么全部不完成,不可能停滞在中间某个环节<br>一致性: 倘若事物操作失败,则回滚事物时,与原状态一致.<br>隔离性: 当在进行事物操作时, 其他事物的操作不可能影响当前事物操作,事物与事物之间是隔离的,互不干扰,干完再整合.<br>持久性: 事物的操作具有持久性, 事物结果一旦写入数据库,在不改动的情况下,数据库一直都是这个数据.</p>
-<p>4,orm数据库?<br>orm数据库:称为对象–关系映射,主要实现模型对象到关系数据库数据的映射,把数据表中的每一条记录映射为一个模型对象,</p>
-<p>5,数据表student有id,name,score,city字段,其中name中的名字可有重复,需消除重复行,请写sql语句<br>答:select distinct name from student;</p>
-<p>6, 表合并<br>①<br>#sql union 不允许重复的值<br>select 字段名 from 表名 union select 字段名2 from 表名2</p>
-<p>#sql union all 允许重复的值<br>elect 字段名 from 表名 union all select 字段名2 from 表名2</p>
-<p>②<br>insert into 表1 select * from 表2</p>
-<p>7,数据库优化查询方法<br>答:外键,索引,联合查询,选择特定字段等等</p>
-<p>8,写5条常用sql语句<br>答:show databases;<br>show tables;<br>desc tb_name;<br>select * from tb_name<br>delete from tb_name where id &#x3D; 5;<br>update tb_name set name&#x3D;’xue’,age&#x3D;23 where id &#x3D; 5;</p>
-<p>9, <a href="https://fies09.github.io/article/8e40d0ad.html?highlight=mysql">mysql</a><br>排序: order by<br>分组: group by<br>条件: where<br>where 和having 的区别<br>where 只能用在表名后<br>having用在group by 后</p>
-<p>10,列出常见mysql数据存储引擎<br>InnoDB:支持事物处理,支持外键,支持崩溃修复能力和并发控制.<br>MyISAM:插入数据快,空间和内存使用比较低,<br>MEMORY:所有数据都在内存中,数据的处理速度快.但是安全性不高</p>
-<p>11,Mysql数据库的隔离级别<br>①Read Uncommitted(读取末提交内容)<br>在该隔离级别,所有事物都可以看到其他末提交事物的执行结果,本隔离级别很少用于实际应用，因为它的性能也不比其他级别好多少。读取未提交的数据，也被称之为脏读（Dirty Read）。<br>②Read Committed（读取提交内容）<br>这是大多数数据库系统的默认隔离级别（但不是MySQL默认的）。它满足了隔离的简单定义：一个事务只能看见已经提交事务所做的改变。这种隔离级别 也支持所谓的不可重复读（Nonrepeatable Read），因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。<br>③Repeatable Read（可重读）<br>这是MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行。不过理论上，这会导致另一个棘手的问题：幻读（PhantomRead）。简单的说，幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。<br>④Serializable（可串行化）<br>这是最高的隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简言之，它是在每个读的数据行上加上共享锁。在这个级别，可能导致大量的超时现象和锁竞争。</p>
-<p>12, mysq与redis,mongodb的区别<br>mysql: 关系型数据库,数据保存在磁盘中,速度慢<br>redis: 内存型非关系数据库,数据保存在内存中, 速度快<br>mongodb: 非关系型数据库,虚拟内存加持久化存储,有独特的mongodb查询方式</p>
-<p>13, join<br>inner jon 内连接<br>内连接又叫等值连接，此时的inner可以省略。<br>获取两个表中有匹配关系的记录，即两表取交集<br>select * from a join b on a.’name’ &#x3D; b.’name’<br>left join 左连接<br>以左表为基础，获取匹配关系的记录，如果右表中没有匹配项，NULL表示<br>select * from a left join b on a.’name’&#x3D;b.’name’<br>right join 右连接<br>以右表为基础，获取匹配关系的记录，如果左表中没有匹配项，NULL表示<br>select * from a right join b on a.’name’&#x3D;b.’name’</p>
+    <title>python面试题</title>
+    <url>/article/bf330a1e.html</url>
+    <content><![CDATA[<p>1, __new__和__init__的区别<br>①__new__负责进行对象的创建,__init__负责进行对象的初始化<br>②__new__是在实例创建之前被调用,用于创建实例,然后返回该实例对象,是个静态方法,__init__是当实例对象创建完成之后被调用,用于初始化一个类实例,是个实例方法<br>③__new__至少有一个参数cls,必须要有返回值,返回的是实例化出来的实例,__init__在__new__基础上完成一些其他初始化的动作,__init__不需要有返回值</p>
+<p>2,面向对象?<br>简称oop,把对象当做一个程序的基本单元,一个对象包含数据和操作数据的函数,提高了编程的效率,使其编程的重用性增高.<br>三大特点:<br>封装:把需要重用的函数或功能封装起来,方便其他程序直接调用,<br>继承 :子类继承父类,子类和父类拥有相同的方法和属性,子类会覆盖父类的方法和属性<br>多态:提高函数的健壮性和可扩展性,父类声明指向子类实现<br>多态的实现方式：<br>①对象多态: 在继承体系中,定义时的类型和运行时的类型不一样,此时构成多态<br>②类多态 : 只通过@classmethod形式多态构成的构造对象,而不是使用python默认的__init__构造器  </p>
+<p>3,如何提高Python的运行效率?<br>①使用生成器,节省大量内存<br>②针对循环优化,避免过多重复代码的执行<br>③多个if else条件判断,可以把最有可能发生的条件放最前面写,减少程序判断次数,提高效率</p>
+<p>4,描述数据,链表,队列,堆栈的区别?<br>答:数组和链表是数据存储方式的概念,数组在连续的自然空间中存储,链表在非连续的自然空间中存储<br>队列和堆栈是描述数据存储方式的概念,<br>队列是先进先出,堆栈是后进先出,堆栈和队列可以用数组表示,也可以用链表表示,<br>堆和栈<br>内存:<br>栈:内存小,速度快,有序,简单的数据类型放到栈里<br>堆:内存大,速度慢,无序,复杂的数据类型放到堆里</p>
+<p>5,*args和**kw区别?<br>*args和**kw属于不定长参数<br>*args返回值为元组类型,**kw返回值为字典类型</p>
+<p>6,&#x3D;和&#x3D;&#x3D;的区别?<br>&#x3D;:表示赋值.将某一数值赋值 给变量<br>&#x3D;&#x3D;:表示判断是否相等,返回True或者False,相等True,不相等False</p>
+<p>7,TCP&#x2F;UDP&#x2F;HTTP&#x2F;HTTPS的区别?<br> TCP协议:是一种面向连接,可靠的,基于字节流的传输层协议,在正式通信前必须和对方建立连接,一个tcp必须经过三次对话才能建立连接,在经历4次对话结束(即三握四挥),传输可靠,速度慢,应用,传输大量数据,对可靠性要求高</p>
+<p>UDP协议:用于www浏览的协议,特点是客户端发送的请求都需要服务器回送响应,在请求结束后会主动释放连接,从建立连接到关闭连接的过程成为”一次连接” 注: 1)在http1.0中客户端的每次请求都要求建立一次单独的连接,在处理完本次请求后就自动释放连接 2)在http1.1中,则可以在一次连接中处理多次请求,并可重叠进行,不需要等一个请求结束后再发下一个请求</p>
+<p>HTTP&#x2F;HTTPS协议 HTTP协议:超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种 发布和接收HTML页面的方法。<br>HTTPS协议: HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL&#x2F;TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。<br>HTTP 明文传输，数据都是未加密的，安全性较差，HTTPS（SSL+HTTP） 数据传输过程是加密的，安全性较好。</p>
+<p>8, http1.0与2.0,3.0的区别<br>http1.0存在连接无法复用问题,导致每发送一次请求都需要进行三次握手的过程,重新建立连接,效率太低,存在堵塞问题 ,http1.0是下一次请求的发送必须等到上一个请求返回后才会进行,如果上一个请求没有返回,name后面的请求就会全部堵塞,最后就是安全问题,http1.0所传输的内容都是明文的,无法保证数据的安全性.<br>http2.0比较专注性能,它采用二进制格式传输数据,http2.0也采用了多路复用的技术,他可以只通过一个TCP连接传输所有的请求数据,还有就是采用了头部压缩技术,这也解决了http1.0的header里携带的内容过大的问题,在一定程度上减轻了传输的成本,不过它也存在一定的问题,如果在传输的过程中存在丢包的情况的话,那么整个tcp就得重新传输,后面资源就会被堵塞.<br>http3.0放弃了tcp协议,改用了QUIC协议,此协议基于传输层UDP协议,UDP协议无需三次连接四次挥手,所以传输速率更高,如果出现丢包,只需要重发丢掉的包就可以.</p>
+<p>9, next()和iter()的区别?<br>我们一般通过iter()函数获取可迭代对象的迭代器,通过对获取到的迭代器不断的通过next函数 进行获取下一条数据,iter()函数 实际上就是调用了可迭代对象的__iter__方法</p>
+<p>10, 斐波那契数列<br>items &#x3D; int(input(“请输入斐波那契数列的个数:”))<br>fibs &#x3D; [0,1]<br>for i in range(item - 1):<br>    fibs.append(fibs[-2] + fibs[-1])<br>print(“斐波那契数列为:”,fibsp[1:])</p>
+<p>11,冒泡排序<br>def bubblesort(list):<br>    for i in range(len(lsit)):<br>        for j in range(len(list)-i-1):<br>            if list[j]&gt;list[j+1]:<br>                list[j],list[j+1] &#x3D; list[j+1],list[j]<br>    return list</p>
+<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>    #用户输入<br>    str &#x3D; input(“请输入数字(用逗号隔开)”)<br>    list &#x3D; [int(i) for i in str.split(‘,’)]<br>    print(bubblesort(list))</p>
+<p>12, 类方法,静态方法,实例方法的区别<br>实例方法主要用于在类中封装一个额外的功能<br>第一个参数必须是self,一般情况下只能用实例化对象调用,不能用类调用,如果要用类调用,需要将实例化对象传递给self.<br>静态方法,主要用于在类中封装一个额外的功能,创建时用@staticmethod装饰器装饰,声明为静态函数,可以用类调用也可以用实例化对象调用<br>类方法主要是将类作为参数传递,相当于将类当成了对象,可以调用该类中的所有方法,创建时用@classmethod装饰器装饰,声明为类函数,第一个参数必须是cls,可以用类调用也可以用实例化对象调用.</p>
+<p>代码展示:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="comment">#构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,title1</span>):</span></span><br><span class="line">        self.title = title1</span><br><span class="line">        <span class="built_in">print</span>(self.title)</span><br><span class="line">    <span class="comment">#实例函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span>(<span class="params">self,title2</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(title2)</span><br><span class="line">   <span class="comment">#静态函数</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span>  <span class="title">static_foo</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;静态方法&quot;</span>)</span><br><span class="line">    <span class="comment">#类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cls_foo</span>(<span class="params">cls</span>):</span></span><br><span class="line">        cls.foo(a,<span class="string">&#x27;类函数调用实例函数&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;类方法&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>13, collections库中的counter统计元素个数，</p>
+<p>14，列表合并<br>a.extend(b)</p>
+<p>15,字典合并<br>dic1.update(dic2)<br>删除 字典<br>del dic[‘sex’]<br>del:按索引删除元素<br>remove:默认删除第一个元素<br>pop:默认删除最后一个元素或者根据索引值删除索引</p>
+<p>16,set集合去重的原理<br>set集合去重主要是通过函数__hash__和__eq__结合实现的<br>①当两个变量的哈希值不相同时,就认为两个变量时不相同的<br>②当两个变量哈希值一样时,调用__eq__方法,当返回值为True时认为两个变量时同一个,应该去除一个,返回FALSE时,不去重</p>
+<p>17,分别从前端,后端,数据库阐述web项目的性能优化<br>前端优化:<br>①,减少http请求,例如制作精灵图<br>②,html和CSS放在页面上部,javascript放在页面下部</p>
+<p>后端优化:<br>①,缓存存储读写次数高,变化少的数据,<br>②,异步方式,如果有耗时操作,可采用异步,如celery<br>③,代码优化,避免循环和判断次数太多,如果多个if else判断,优先判断最有可能发生的情况</p>
+<p>数据库优化:<br>①,如有条件,数据可以存放于redis,读取速度快,<br>②,建立索引,外键等</p>
+<p>18,列表切片属于浅拷贝</p>
+<p>19, 深拷贝浅拷贝<br>深拷贝: 外围和内部元素都拷贝了对象本身,而不是引用,也就是说把对象复制一遍,对象中引用的其他对象也复制.<br>浅拷贝: 拷贝了最外围对象本身, 内部元素只拷贝了一个引用, 也就是说把对象复制一遍,对象中引用的其他对象不复制.</p>
+<p>20, Django 、Flask、Tornado的对比<br>1.Django走的是大而全的方向,开发效率高。它的MTV框架,自带的ORM,admin后台管理,自带的sqlite数据库和开发测试用的服务器 给开发者提高了超高的开发效率<br>2.Flask是轻量级的框架,自由,灵活,可扩展性很强,核心基于Werkzeug WSGI工具和jinja2模板引擎<br>3.Tornado走的是少而精的方向,性能优越。它最出名的是异步非阻塞的设计方式<br>Tornado的两大核心模块：<br>1.iostraem：对非阻塞式的socket进行简单的封装<br>2.ioloop：对I&#x2F;O多路复用的封装，它实现了一个单例</p>
+<p>21, python垃圾回收机制<br>在python内部, 当一个对象的引用计数是0时, 它将被垃圾回收机制处理掉<br>当两个对象a和b相互引用时的情况,del语句可以减少a和b的引用计数,并销毁用于底层对象的名称,需要注意的是,并不是每一个对象都包含一个对其他对象的应用,所以这种情况下引用计数不会归0, 对象也不会被销毁,这就是可能会导致内存泄露,所以为了解决这个问题,解释器会定期执行一个循环检测器,搜素不可访问对象的循环并进行删除.</p>
+<p>22, 线程与进程,协程<br>进程: 是程序执行的一次过程,是临时的,有生命周期的, 任何进程都可以同其他进程一起并发执行,是系统进行资源分配和调度的一个独立单位,由程序,数据和进程控制块三部分组成<br>进程池:当存在多个进程时,为避免资源损耗,创建适当的进程放入进程池,等待待处理的事件,当处理完所有事件之后,进程退出<br>线程: 线程是程序执行中一个单一的顺序控制流程,是程序执行的最小单元,一个进程可以有一个或多个线程,</p>
+<p>死锁: 在线程间共享多个资源时,两个线程分别占用资源并且同时等待对方的资源,就会造成死锁,<br>协程: 执行函数A时可以随时中断执行函数B,然后中断函数B继续执行函数A,协程是一个线程在执行.</p>
+<p>GIL锁:</p>
+<p>全局解释器锁,同一进程加入有多个线程运行,一个线程在运行python程序时会霸占python解释器,也就增加了一把锁,使该进程中的其他线程无法运行,等该线程运行完成后其他线程才能运行,</p>
+<p>23, 可变数据类型,不可变数据类型(为什么不可变,为什么可变)<br>可变: 列表,字典,<br>原因: 如果对对象进行了添加,修改等操作之后, 只是改变了变量的值,而不会新建一个对象, 变量引用的对象地址也不会发生变化,不过对于相同值的对象,即每个对象都有自己的地址,<br>不可变: 整型,字符串,布尔型,元组,<br>原因: 如果变量值发生了变化,相当于新建一个对象,而对于相同值的对象,在内存中只有一个地址,</p>
+<p>24,  装饰器,闭包,迭代器,生成器<br>闭包: 外函数包含内函数, 对函数功能进行扩展,一般在装饰器下写闭包<br>装饰器: 为已经存在的对象添加额外的功能,在不改变原代码的情况下,扩展额外功能.(在什么情况下使用)<br>eg: 定义验证登录状态的装饰器<br>判断用户是否登录,如果登录,执行视图函数,如果未登录,返回未登录信息,然后在退出以及需要验证登录的模块调用装饰器<br>迭代器: for循环遍历取值的过程<br>生成器: yield关键字来返回值的函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">装饰器</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funA</span>(<span class="params">fn</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="meta">@funA</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">fun()</span><br></pre></td></tr></table></figure>
+
+
+
+<p>25, celery<br>主要是用于处理耗时任务，包含的三个模块<br>  1, broker： 存储生产者发出的各种任务 （将任务添加到broker）<br>     2. worker： 实时监控消息队列，如果有任务就获取任务并执行它 （worker服务）<br>     3. task: 定义任务函数 （任务函数）</p>
+<p>26, Python如何处理高并发？<br>1.HTML页面静态化<br>2.图片服务器分离（可以用fastdfs轻量级的分布式文件存储系统）<br>3.使用缓存（用redis）<br>4.数据库集群、读写分离。减轻数据库服务器的读写压力。<br>5.使用负载均衡的方法（配置nigix服务器，用nginx来配置负载均衡，只需要设置 如下代码，即可实现简单的负载均衡)</p>
+<p>应用场景</p>
+<p>27, python的单例模式和工厂模式<br>单例模式:对__new__方式进行重写,确保一个类只有一个实例,并且提供一个访问该实例的全局访问点,<br>单例模式只生成一个实例对象,减少对系统资源的开销,当一个对象产生比较多的资源,如读取配置文件,产生其他依赖对象时,可以产生一个”单例对象”,然后永久驻留内存中,从而极大的降低开销.<br>工厂模式:实现了创建者和调用者的分离,使用专门的工厂类将选择实现类,创建对象进行统一的管理和控制.</p>
+<p>28， python的异常类型<br> ① ZeroDivisionError 除(或取模)零(所有数据类型)<br> ② IndexError #序列中没有此索引<br> ③ KeyError #映射中没有这个键<br> ④ NameError #未声明&#x2F;初始化对象 (没有属性)<br> ⑤ SyntaxError #python语法错误<br> ⑥ ValueError #传入无效的参数</p>
+<p>29， json和字典的相互转换<br>json转字典： json.loads()<br>字典转json: json.jumps</p>
+<p>30，finally关键字的作用<br>try:<br>    正确语句<br>except:<br>    错误信息提示<br>finally:<br>    最后执行的模块</p>
+<p>31, numpy,  pandas,<br>np: 数组处理,矩阵运算<br>pd: 对csv&#x2F;txt文件进行读取写入操作, 对json, 数据库, excel进行读取写操作</p>
+<p>32,当后端任务执行完成后如何通知前端<br>1,前端定时发送请求询问后端有无消息,<br>2.django:<br>    channels: 依赖于redis, twisted<br>    dwebsocket:<br>3.在celery的tasks.py之中，当后端完成数据库读写后，往当前request所在的群组之中发送消息，随后channels会调用chat_message函数，通过self.send()方法将消息发送给前端</p>
+<p>33,  正则表达式:<br>re.search(),res.match()匹配一次<br> match和search的区别<br> match()只会检测re是不是在string的开始位置匹配<br> search()会扫描整个string查找匹配<br> match()只有在0位置匹配成功的话才有返回, 如果不是开始位置匹配成功的话,match就返回none.<br>re.findall(): 匹配所有<br>re.sub()替换<br>re.split()分割<br>. 任意字符</p>
+<ul>
+<li>零个或多个<br>? 匹配零个或一个由前面的正则表达式定义的片段,<br>贪婪模式和非贪婪模式<br>在满足匹配时,匹配尽可能长的字符串,默认情况下,采用贪婪模式<br>匹配到结果就好,少的匹配字符,就是非贪婪模式</li>
+</ul>
+<p>34, Python中的self是什么？<br>self是类的实例或对象。在Python中，self包含在第一个参数中。但是，Java中的情况并非如此，它是可选的。它有助于区分具有局部变量的类的方法和属性。init方法中的self变量引用新创建的对象，而在其他方法中，它引用其方法被调用的对象。</p>
+<p>35, Python数组和列表有什么区别？<br>python本身并没有数组类型，但Numpy库中有数组类型。<br>Python中的数组和列表具有相同的存储数据方式。<br>数组里面元素的数据类型必须是相同的，而列表可以包含任何数据类型元素。</p>
+<p>36, classmethod, staticmethod,property</p>
+<p>classmethod，staticmethod，property都是装饰器， 他们都作用在类的方法上。<br>classmethod：使得被装饰的方法成为一个类方法既不需要实例化类就可以直接调用的方法，第一个参数为cls。<br>staticmethod： 使得被装饰的方法成为一个静态函数既与普通的函数无区别。<br>property: 将一个方法变成一个属性来使用。</p>
+<p>37, 暂未理解:[多线程,线程池,多线程与高并发的关系]</p>
 ]]></content>
       <categories>
         <category>面试题</category>
       </categories>
       <tags>
         <tag>面试题</tag>
-        <tag>mysql面试题</tag>
+        <tag>python面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web开发1_nginx部署</title>
+    <url>/article/3c1ae316.html</url>
+    <content><![CDATA[<p>uwsgi的安装:<br>pip install uwsgi</p>
+<p>创建配置文件:<br>uwsgi8001.ini</p>
+<p>uwsgi启动:<br>uwsgi –ini uwsgi8001.ini</p>
+<p>uwsgi重启：<br>uwsgi –reload uwsgi8001.pid</p>
+<p>uwsgi停止:<br>uwsgi –stop uwsgi8001.pid</p>
+<p>uwsgi.ini 配置文件内容</p>
+<p>[uwsgi]<br>#直接做web服务器使用，Django程序所在服务器地址<br>http&#x3D;127.0.0.1:8001<br>#项目目录<br>chdir&#x3D;&#x2F;home&#x2F;parallels&#x2F;Desktop&#x2F;meiduo_mall<br>#项目中wsgi.py文件的目录，相对于项目目录<br>wsgi-file&#x3D;meiduo_mall&#x2F;wsgi.py<br>进程数</p>
+<p>processes&#x3D;2<br>线程数</p>
+<p>threads&#x3D;2<br>是否开启master进程</p>
+<p>master&#x3D;True<br>存放进程编号的文件</p>
+<p>pidfile&#x3D;uwsgi.pid<br>日志文件，因为uwsgi可以脱离终端在后台运行，日志看不见。我们以前的runserver是依赖终端的</p>
+<p>daemonize&#x3D;uwsgi.log<br>指定依赖的虚拟环境</p>
+<p>virtualenv&#x3D;&#x2F;home&#x2F;parallels&#x2F;.virtualenv&#x2F;django_py3</p>
+<p>我们使用apt-get安装:     apt-get install nginx -y<br>查看服务状态:     systemctl status nginx &#x2F; service nginx status<br>检查配置文件:     nginx -t<br>重新加载配置文件:     nginx -s reload</p>
+<p>nginx目录介绍:<br>配置目录：&#x2F;etc&#x2F;nginx<br>执行文件: &#x2F;usr&#x2F;sbin&#x2F;nginx<br>日志目录：&#x2F;var&#x2F;log&#x2F;nginx<br>启动文件：&#x2F;etc&#x2F;init.d&#x2F;nginx<br>web目录：&#x2F;var&#x2F;www&#x2F;html&#x2F;，首页文件是index.nginx-debian.html</p>
+<p>nginx配置文件:<br>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
+]]></content>
+      <categories>
+        <category>web开发</category>
+      </categories>
+      <tags>
+        <tag>web开发</tag>
+        <tag>nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -896,211 +933,6 @@ TPL:事务处理语言
       </tags>
   </entry>
   <entry>
-    <title>web开发1_nginx部署</title>
-    <url>/article/3c1ae316.html</url>
-    <content><![CDATA[<p>uwsgi的安装:<br>pip install uwsgi</p>
-<p>创建配置文件:<br>uwsgi8001.ini</p>
-<p>uwsgi启动:<br>uwsgi –ini uwsgi8001.ini</p>
-<p>uwsgi重启：<br>uwsgi –reload uwsgi8001.pid</p>
-<p>uwsgi停止:<br>uwsgi –stop uwsgi8001.pid</p>
-<p>uwsgi.ini 配置文件内容</p>
-<p>[uwsgi]<br>#直接做web服务器使用，Django程序所在服务器地址<br>http&#x3D;127.0.0.1:8001<br>#项目目录<br>chdir&#x3D;&#x2F;home&#x2F;parallels&#x2F;Desktop&#x2F;meiduo_mall<br>#项目中wsgi.py文件的目录，相对于项目目录<br>wsgi-file&#x3D;meiduo_mall&#x2F;wsgi.py<br>进程数</p>
-<p>processes&#x3D;2<br>线程数</p>
-<p>threads&#x3D;2<br>是否开启master进程</p>
-<p>master&#x3D;True<br>存放进程编号的文件</p>
-<p>pidfile&#x3D;uwsgi.pid<br>日志文件，因为uwsgi可以脱离终端在后台运行，日志看不见。我们以前的runserver是依赖终端的</p>
-<p>daemonize&#x3D;uwsgi.log<br>指定依赖的虚拟环境</p>
-<p>virtualenv&#x3D;&#x2F;home&#x2F;parallels&#x2F;.virtualenv&#x2F;django_py3</p>
-<p>我们使用apt-get安装:     apt-get install nginx -y<br>查看服务状态:     systemctl status nginx &#x2F; service nginx status<br>检查配置文件:     nginx -t<br>重新加载配置文件:     nginx -s reload</p>
-<p>nginx目录介绍:<br>配置目录：&#x2F;etc&#x2F;nginx<br>执行文件: &#x2F;usr&#x2F;sbin&#x2F;nginx<br>日志目录：&#x2F;var&#x2F;log&#x2F;nginx<br>启动文件：&#x2F;etc&#x2F;init.d&#x2F;nginx<br>web目录：&#x2F;var&#x2F;www&#x2F;html&#x2F;，首页文件是index.nginx-debian.html</p>
-<p>nginx配置文件:<br>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
-]]></content>
-      <categories>
-        <category>web开发</category>
-      </categories>
-      <tags>
-        <tag>web开发</tag>
-        <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web面试题</title>
-    <url>/article/45b9fa15.html</url>
-    <content><![CDATA[<p>1, Django的MVT模式(MVC:M相当于model,V相当于template,C相当于view)<br>M： Model, 模型 与MVC中的M相同，负责对数据的处理<br>V： View, 视图 与MVC中的C类似，负责处理用户请求，调用M和T，响应请求<br>T： Template, 模板 与MVC中的V类似，负责如何显示数据（产生html界面）</p>
-<p>2, get&#x2F;post<br>GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
-<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</p>
-<p>GET请求在URL中传送的参数是有长度限制的，而POST没有。</p>
-<p>GET参数通过URL传递，POST放在Request body中。</p>
-<p>3,csrf</p>
-<p>跨站请求伪造: 主要用于在html中设计token访问令牌</p>
-<p>4,FBV&#x2F;CBV</p>
-<p>FBV:基于函数视图</p>
-<p>CBV:基于类视图</p>
-<p>5, django请求周期</p>
-<p>（1）用户输入网址，浏览器发起请求<br>（2）WSGI（服务器网关接口）创建socket服务端，接受请求<br>（3）中间件处理请求<br>（4）url路由，根据当前请求的url找到相应的视图函数<br>（5）进入view，进行业务处理，执行类或者函数，返回字符串<br>（6）再次通过中间件处理相应<br>（7）WSGI返回响应<br>（8）浏览器渲染</p>
-<p>6,uwsgi</p>
-<p>web服务器(应用服务器),用于连接Web服务器和Web应用框架</p>
-<p>7,中间件</p>
-<p>是一个轻量低级别的插件系统,在全局变量改变django的输入与输出,在settings中注册,,例如csrf跨站请求伪造</p>
-<p>8,内置组件</p>
-<p>Admin: 对model中对应的数据表进行增删改查提供的组件<br>model：负责操作数据库<br>form：1.生成HTML代码 2.数据有效性校验 3校验信息返回并展示<br>ModelForm: 即用于数据库操作,也可用于用户请求的验证</p>
-<p>9,悲观锁,乐观锁</p>
-<p>乐观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
-<p>悲观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
-<p>10, JWT</p>
-<p>第一次认证通过用户名密码，服务端签发一个json格式的token。后续客户端的请求都携带这个token，服务端仅需要解析这个token，来判别客户端的身份和合法性</p>
-<p>11,cookie和session</p>
-<p>1.cookie:<br>cookie是保存在浏览器端的键值对,可以用来做用户认证<br>2.session：<br>将用户的会话信息保存在服务端,key值是随机产生的自符串,value值时session的内容<br>依赖于cookie将每个用户的随机字符串保存到用户浏览器上<br>Django中session默认保存在数据库中：django_session表flask,session默认将加密的数据写在用户的cookie中</p>
-<p>12,  如何实现用户的登陆认证</p>
-<p>1.cookie session<br>2.token 登陆成功后生成加密字符串<br>3.JWT：json wed token缩写 它将用户信息加密到token中,服务器不保存任何用户信息<br>服务器通过使用保存的密钥来验证token的正确性</p>
-<p>13, restful风格</p>
-<p>restful其实就是一套编写接口的协议，协议规定如何编写以及如何设置返回值、状态码等信息。</p>
-]]></content>
-      <categories>
-        <category>面试题</category>
-      </categories>
-      <tags>
-        <tag>面试题</tag>
-        <tag>web面试题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析</title>
-    <url>/article/d1c27656.html</url>
-    <content><![CDATA[<p>numpy模块<br>1,数组的创建语法:<br>一维数组:</p>
-<p>&#x2F; : 表示或者</p>
-<p>arr &#x3D; np.array(列表&#x2F;range(5))</p>
-<p>二维数组:<br>arr2 &#x3D; np.array([[1,2,3,4],[5,6,7,8]])</p>
-<p>2,shape:一个表示各维度大小的数组组arr2的维度:arr2.shape<br>,查看各数组的结构(几行几列)  </p>
-<p>3,dtype:一个用于说明数组数据类型的对象<br>arr2的数组类型:arr2.dtype<br>4,10代表一维数组的元素个数:arr_zeros &#x3D; np.zeros(10)</p>
-<p>5, 3,一维数组的个数,6,每个数组的元素个数:arr_ones &#x3D; np.ones((3,6))</p>
-<p>6, 2代表三维度值在数组中的个数,3代表二维度值在数组中的个数,2代表一维度值在数据中的个数 :<br>arr_empty &#x3D; np.empty([2,4])</p>
-<p>7, np.arange(5) :构建一维数组[0,1,2,3,4]                     —&gt;序列数组<br>   np.array([[6,7,8,9],np.arange(4)]) :构建二维数组[[6,7,8,9][0,1,2,3,4]]</p>
-<p>8,(matrix)矩阵的创建(一般表示二维数组)<br>np.matrix(np.arange(5))  np.maxtrix([[6,7,8,9],np.arange(4)])   </p>
-<p>arange返回的是ndarray,<br>range返回的是列表<br>np.arange(8).reshape(4,2):生成4行2列的二维数组</p>
-<p>ndarray数据类型可一致可不一致:如果其中包含dtype,数据类型必须一致</p>
-<p>9,arr &#x3D; np.array([1,2,3],dtype &#x3D; np.int32)<br>[含dtype数据类型必须一致,不指定默认int64]<br> arr.dtype</p>
-<p>10,arr &#x3D; np.array([1.1,2.7,3.5],dtype &#x3D; np.int64)<br>   arr &#x3D; [1,2,3]  将arr数组中的每一个元素类型由 float64 浮点型 转换成 int64 整型数据， 因此小数部分被截取只保留整数部分。</p>
-<p>11,ndarray数据类型的转换<br>arr &#x3D; np.array(range(5),dtype &#x3D; np.int64)<br>arr_float &#x3D; arr.astype(np.float64)<br>#整数转小数,若小数转整数会被截取,若有字符数字,也可以转为数值类型</p>
-<p>12,将数组的类型转换成另一个数组的类型<br>arr_int &#x3D; np.arange(5)<br>#int转换为float<br>arr &#x3D; arr_int.astype(np.float64)<br> #一维数组<br>arr_float &#x3D; np.array([[1.1,2.7], [5.7,6.3]])<br>#浮点型二维数组<br>将arr_float数组类型转换成arr_int数组类型<br>arr_temp&#x3D;arr_float.astype(arr_int.dtype)转化后小数部分被截取</p>
-<p>13,创建二维数组矩阵arr(浮点类型)  —35<br>arr &#x3D; np.array([np.arange(1,5), np.arange(6,10)], dtype&#x3D;np.float64)</p>
-<p>矩阵自乘,二维数组中的每个元素都乘以自身得到一个新的结果</p>
-<p>arr1 &#x3D; arr * arr </p>
-<p>矩阵自乘,二维数组中的每个元素都减去自身得到一个新的结果</p>
-<p>arr2 &#x3D; arr - arr</p>
-<p>与标量相除,一个标量数字除以二维数组中的每个元素得到一个新的结果</p>
-<p>arr3 &#x3D; 1 &#x2F; arr</p>
-<p>矩阵1&#x2F;2次幂运算,二维数组中的每个元素计算自身1&#x2F;2 次幂得到一个新的结果</p>
-<p>arr4 &#x3D; arr ** 0.5 </p>
-<p>14,数组复制<br>b &#x3D; a.view():共用同一个值,<br>b改变,a也跟着改变<br>c &#x3D; a. copy():值不会随着c的值改变而改变</p>
-<p>15,np.title(a.(m,n)):扩展<br>将数组扩展为m行n列<br>np.sin(数组):取正弦<br>np.arange(2):2个元素&#x2F;几到几&#x2F;几到几,步长<br>reshape(矩阵,行,列):改变矩阵形状(行列)</p>
-<p>16,矩阵.argmax(axis &#x3D; 0):列中最大值索引<br>数组.index(对象):求索引<br>np.sort(matrix,axis&#x3D;1):横向排序:<br>np.argsort(a):最小值索引</p>
-<p>17,一般情况下,float和int默认64</p>
-<p>18,根据索引查值<br>arr &#x3D; np.arange(10)<br>arr[5]:下标(索引)为5的元素<br>二维数组索引:<br>二维数组对象[二维数组下标索引值,一维数组下标索引值]<br>三维:数组对象[三维度轴索引值,二维度下标索引值,一维度元素下标索引值]<br>所得值为二维数组<br>19,names&#x3D;np.array([‘cnm’,’Bob’,’Jane’,’Bob’])<br>data &#x3D; np.random.randn(4,3):生成正态分布的一些随机数据的二维数组<br>4:根据第一行数组的个数决定<br>print(data[names &#x3D;&#x3D; ‘Bob’,1:]):取Bob所在行的所有数据<br>—&gt;|或   &amp;与  and     or </p>
-<p>20,及时创建副本</p>
-<p>21,花式索引:针对二维数组:<br>print([[行数1,行数2]]):取具体某行</p>
-<p>22,np.ix_:可以将两个一维数组转换成一个用于选取正方形区域的索引器</p>
-<p>23,arr.T:可以将一个4行3列的二维数组转换成一个3行4列的二维数组</p>
-<p>24,arr&#x3D;np.arange(24).reshape(2,3,4)<br>(2轴3行4列)<br>arr.transpose(1,0,2)<br>(3轴2行4列)</p>
-<p>25,arr.swapaxex(1,2):实现三维数组轴对换<br>相当用于将原三维数组以轴z为轴心,向左推90°</p>
-<p>26,针对二维数组<br>arr.tofile(‘a.bin’):写入数据<br>print(a.dtype)<br>b &#x3D; np.fromfile(‘a.bin’,dtype &#x3D; a的数据类型):读取数据</p>
-<p>27,np.save(‘a.npy’,a):保存数据<br>np.load(‘a.npy’):读取数据</p>
-<p>28,保存数据到一个文件中<br>np.savez(‘res.npz’,a,b,c):文件名及数组名<br>np.load(‘res.npz’):读取文件</p>
-<p>29,savetext和loadtext可读写一维数组,二维数组,csv文件<br>np.savetext(‘a.txt’,a,fmt&#x3D;’%d’,delimiter&#x3D;’,’):保存为整数,以逗号隔开<br>np.loadtext(‘a.txt’,delimiter&#x3D;’,’):读取时以,隔开</p>
-<p>30,np.sqrt(arr):计算各元素的平方根<br>np.exp(arr):计算常量值e各元素值</p>
-<p>31,np.maximum(arr1,arr2):对比数组中各元组的大小取大的组成最终数组<br>arr &#x3D; np.random.randn(4)*5<br>np.modf(arr):取数列中的小数部分和整数部分</p>
-<p>32,以每个元素为一行,生成N*N的方形二维矩阵<br>xs,xy &#x3D; np.meshgrid(arr,arr)<br>根号下x²+y² :np.sqrt(np.square(xs)) + np.sqrt(np.square(xy))</p>
-<p>33,np.where(布尔型,arr1,arr2):<br>当布尔型为True时,arr1,否则arr2</p>
-<p>34,arr.sum(axis &#x3D; 0):沿轴0(x轴)求和计算<br>arr.mean(axis &#x3D; 1):沿y轴求平均值<br>arr.std()求标准差</p>
-<p>35,arr.sort():默认从小到大排序<br>arr.sort(axis&#x3D;1):每行排序<br>np.unique(arr):去重排序<br>np.inId(arr,[’元素1’,’元素2’]):判断True或False</p>
-<p>36,arr1.dot(arr2):矩阵1*矩阵2<br>np.dot(arr1,np.ones(3)):二维矩阵与一维矩阵点积运算后得到一个一维数组</p>
-<p>inv(arr):获取矩阵逆运算<br>值<br>qr(arr):获取矩阵的qr操作值分解</p>
-<p>37,arr.cumsum(0):所有元素累计和<br>arr.cumprod(0):所有元素累计积</p>
-<p>38,axis &#x3D; 1行,0列,z轴</p>
-<p>39,标准正态(高斯)分布的4*4数组,arr &#x3D; np.random(size&#x3D;(4,4))<br>40,argmax求临界值</p>
-<p>Pandas模块<br>Series,DataFrame<br>Series:<br>obj &#x3D; series([1,3,2,13]):索引在左,内容在右<br>obj.index:求索引<br>obj.values:求值<br>指定索引:<br>obj&#x3D;([1,3,2,7],index&#x3D;[‘a1’,’a3’,’a13’,’a2’])<br>obj[‘a3’]:取值<br>obj[‘a13’]&#x3D;13:改值<br>输出指定范围的索引:obj[[‘a1’,’a13’]]<br>np.exp(obj):e的obj各values值次方<br> a1 in obj:判断索引值是否在obj中<br>dict1 &#x3D; {‘a’:3,’b’:13}<br>#构建series对象<br>obj &#x3D; Series(dict1)<br>new_index &#x3D; [‘w,’’y’]<br>obj2 &#x3D; Series(dict1,new_index)<br>pd.isnull&#x2F;notnull(obj2)::判断是否为空<br>两个series相加:索引并集:values为NaN,</p>
-<p>41,将具有等长的多个列表存入DataFrame,自动发添加索引,列名key值自动排序<br>fram&#x3D;DataFrame(dict1,columns&#x3D;[‘w’,’j’,’y’],index&#x3D;[1,3,13]):columns列顺序排列,index:索引顺序排列<br>fram[‘j’]:求某列<br>fram[‘w’]&#x3D;7:赋值操作<br>Series给DataFrame赋值:精确匹配DataFrame索引<br>字典嵌套,外层key作为列,内层key作为索引处理<br>reindex:新索引<br>Method&#x3D;’ffill’&#x2F;’bfill’:实现前向&#x2F;前后插值处理,<br>ix的标签索引实现行列重置<br>Pandas进阶:s表示Series对象,<br>d表示DataFrame对象<br>s.drop(‘索引名’)<br>d.drop([‘索引1’,’索引2’],axis&#x3D;0):删除索引1和3的一栏</p>
-<p>add, sub减,mul乘,div除</p>
-<p>d1.add(d2,fill_value&#x3D;0):缺失用0代替,相加</p>
-<p>排序:s.sort_index(ascending&#x3D;True):升序,false降序</p>
-<p>d.sort_values(by&#x3D;’b’,&#x2F;[‘a’,’b’]):按照列值或多个列值排序</p>
-<p>操作文件csv&#x2F;txt<br>读取:<br>os:csvPath &#x3D; os.getcwd() + ‘文件存储路径’<br>data &#x3D; pd.read_csv(csvPath + os.sep + ‘tips.csv’):读取数据</p>
-<p>写入:data.to_csv(csvPath &#x3D; os.sep + ‘out.csv’)</p>
-<p>json操作:<br>设置路径:jsonPath &#x3D; os.getcwd + ‘路径’<br>读取:with open(jsonPath + os.sep +’文件名’ , ‘r’,encoding &#x3D; ‘utf8’) as fp:<br>dump()写入json数据<br>data &#x3D; json.load(fp):读取<br>Df &#x3D; DataFrame(data):将json转换为DataFrame对象</p>
-<p>Excel:地址同上<br>xls_file &#x3D; pa.ExcelFile(ExcelPath + os.sep + ‘文件名’)<br>读取有效sheet页<br>table &#x3D; xls_file.prase(‘文件名无后缀,其他都有’)</p>
-<p>读取数据库:<br>import pymysql<br>#获取有效的数据库连接引用对象<br>connection &#x3D; pymysql.connect(host &#x3D;’localhost’,post&#x3D;3306,user&#x3D;’root’,password&#x3D;’1’,db&#x3D;’houserentals’,charser&#x3D;’utf8’)<br>#设置查询语句<br>sql &#x3D; ‘select *from emp e where e.lessor &#x3D; 13 ’<br>#使用read_sql函数 检索并转换DataFrame对象<br>df &#x3D; pd.read_sql(sql,connection)<br>#关闭数据库<br>conncetion.close()<br>#测试输出<br>print(df)</p>
-<p>42, pandas模块</p>
-<p>#显示完整的列</p>
-<p>pd.set_option(‘display.max_columns’, None) </p>
-<p>#显示完整的行</p>
-<p>pd.set_option(‘display.max_rows’, None)</p>
-]]></content>
-      <categories>
-        <category>数据分析</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用密码</title>
-    <url>/article/b68a8f57.html</url>
-    <content><![CDATA[<p>1,<br>steam账户Python_Enthusiasts<br>密码Fy19961009</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>window快捷键</title>
-    <url>/article/d1988cc4.html</url>
-    <content><![CDATA[<p>1,calc:计算器</p>
-<p>2,regedit;注册表编辑器</p>
-<p>3,ipconfig:ip地址</p>
-<p>4,win+L:锁屏</p>
-<p>5,win+E:打开电脑</p>
-<p>6,pycharm中:ctrl+r:多个替换</p>
-<p>7,双击alt:电脑管家火箭加速</p>
-<p>8,alt + tab:软件界面切换</p>
-<p>9,tree &#x2F;f:显示目录结构</p>
-<p>10,win+x  a:管理员命令操作提示符</p>
-<p>11,选中模块,alt+enter:安装模块</p>
-<p>12.alt用鼠标选中,多条修改</p>
-<p>13,函数()内,ctrl+p:提示 </p>
-<p>14,win + r :mspaint:画图快捷键</p>
-<p>15,slidetoshutdown :关机快捷键</p>
-<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
-<p>17,win + R :powershell:打开管理员模式</p>
-<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
-<p>19:定时关机:shutdown -s -t 秒数</p>
-<p>20,ctrl+alt+del:进入任务管理器</p>
-<p>21,打开服务:services.msc</p>
-<p>22，远程连接：mstsc</p>
-<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
-<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32时区下的已安装物理内存就是笔记本内存大小</p>
-<p>25,安装服务(根目录下|管理员权限):</p>
-<p>安装: .\installService.cmd</p>
-<p>卸载: .\uninstallService.cmd</p>
-<p>26,C盘清理旧文件:</p>
-<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
-<p>27,  关机: slidetoshutdown</p>
-<p>28:  win10激活:</p>
-<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX </p>
-<p>slmgr &#x2F;skms kms.03k.org</p>
-<p>slmgr &#x2F;ato </p>
-<p>28, win10打开系统属性快捷键:  dxdiag </p>
-]]></content>
-      <categories>
-        <category>快捷键</category>
-      </categories>
-      <tags>
-        <tag>window</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>web开发2_python项目部署</title>
     <url>/article/dbe3cbd9.html</url>
     <content><![CDATA[<p>pm2运行命令:<br>pm2 ls<br>pm2 start<br>pm2 stop<br>pm2 log</p>
@@ -1192,48 +1024,109 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       </tags>
   </entry>
   <entry>
-    <title>编码习惯整理</title>
-    <url>/article/e541c025.html</url>
-    <content><![CDATA[<ol>
-<li><p>修改完代码,记得自测一下(再小的修改也最好自测一下)</p>
-</li>
-<li><p>方法入参最好都检验</p>
-</li>
-<li><p>修改老接口时,思考接口的兼容性</p>
-</li>
-<li><p>对于复杂的代码逻辑,添加清楚的注释</p>
-</li>
-<li><p>使用完IO资源流,需要关闭</p>
-</li>
-<li><p>代码采取措施避免运行错误(如数组边界溢出)</p>
-</li>
-<li><p>尽量不要在循环里远程调用或者对数据库操作,优先考虑批量进行</p>
-</li>
-<li><p>写完代码,脑洞一下多线程执行会怎样,注意并发一致性问题,</p>
-</li>
-<li><p>获取对象的属性,先判断对象是否为空</p>
-</li>
-<li><p>多线程异步优先考虑恰当的线程池,而不是new thread(降低资源损耗,题号响应速度,便于重复利用)&lt;注意线程池隔离&gt;</p>
-</li>
-<li><p>手动写完代码业务的SQL,先拿去数据库跑一下,同时也explain看下执行计划</p>
-</li>
-<li><p>调用第三方接口,需要考虑异常处理.安全性,超时重试这几个点(重点的需要考虑签名,加密)</p>
-</li>
-<li><p>接口考虑幂等性</p>
-</li>
-<li><p>多线程情况下,考虑线程安全问题</p>
-</li>
-<li><p>主从延迟问题考虑</p>
-</li>
-<li><p>缓存的时候,考虑缓存跟DB的一致性,还有(缓存穿透,缓存雪崩和缓存击穿)</p>
-</li>
-</ol>
+    <title>window快捷键</title>
+    <url>/article/d1988cc4.html</url>
+    <content><![CDATA[<p>1,calc:计算器</p>
+<p>2,regedit;注册表编辑器</p>
+<p>3,ipconfig:ip地址</p>
+<p>4,win+L:锁屏</p>
+<p>5,win+E:打开电脑</p>
+<p>6,pycharm中:ctrl+r:多个替换</p>
+<p>7,双击alt:电脑管家火箭加速</p>
+<p>8,alt + tab:软件界面切换</p>
+<p>9,tree &#x2F;f:显示目录结构</p>
+<p>10,win+x  a:管理员命令操作提示符</p>
+<p>11,选中模块,alt+enter:安装模块</p>
+<p>12.alt用鼠标选中,多条修改</p>
+<p>13,函数()内,ctrl+p:提示 </p>
+<p>14,win + r :mspaint:画图快捷键</p>
+<p>15,slidetoshutdown :关机快捷键</p>
+<p>16,convert g:&#x2F;fs:ntfs :u盘文件过大,无法复制,g为u盘盘符</p>
+<p>17,win + R :powershell:打开管理员模式</p>
+<p>18,在linux打开pycharm:.&#x2F;pycharm.sh</p>
+<p>19:定时关机:shutdown -s -t 秒数</p>
+<p>20,ctrl+alt+del:进入任务管理器</p>
+<p>21,打开服务:services.msc</p>
+<p>22，远程连接：mstsc</p>
+<p>23,删除多余服务(在根目录下):sc delete 服务器名称</p>
+<p>24,查看电脑系统内存大小:win+r —&gt; msinfo32时区下的已安装物理内存就是笔记本内存大小</p>
+<p>25,安装服务(根目录下|管理员权限):</p>
+<p>安装: .\installService.cmd</p>
+<p>卸载: .\uninstallService.cmd</p>
+<p>26,C盘清理旧文件:</p>
+<p>C盘—&gt;属性—&gt;磁盘清理—&gt;清理系统文件—&gt;以前的windows安装—&gt;确定</p>
+<p>27,  关机: slidetoshutdown</p>
+<p>28:  win10激活:</p>
+<p>slmgr &#x2F;ipk W269N-WFGWX-YVC9B-4J6C9-T83GX </p>
+<p>slmgr &#x2F;skms kms.03k.org</p>
+<p>slmgr &#x2F;ato </p>
+<p>28, win10打开系统属性快捷键:  dxdiag </p>
 ]]></content>
       <categories>
-        <category>编码习惯</category>
+        <category>快捷键</category>
       </categories>
       <tags>
-        <tag>编码习惯</tag>
+        <tag>window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>scrapy框架使用</title>
+    <url>/article/1d5ab057.html</url>
+    <content><![CDATA[<p>1,Scrapy的安装配置(根据个人实际情况,每个人项目不一样)<br>①,先安装将twisted文件放到E盘根目录下<br>#前提必须安装wheel模块,为了安装whl文件<br>②,E:—&gt;pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl<br>③,pip install scrapy&#x3D;&#x3D;1.5.0</p>
+<p>2,在E盘创建Scrapy工程:<br>E: —&gt; scrapy startproject doubanmovie —&gt;<br>cd doubanmovie —&gt;scrapy genspider moviespider douban.com</p>
+<p>3,爬虫主程序的编写:<br>在Pycharm工具打开doubanmovie下级目录的doubanmovie<br>①,添加浏览器标识<br>将rotate_useragent文件放到doubanmovie文件夹下<br>②,在settings中的DOWNLOAD_MIDDLEWARES中添加配置信息<br>添加禁用框架自带的浏览器标识及设置浏览器标识<br>#禁用框架自带的浏览器标识<br>‘scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware’: None,<br>#设置浏览器标识<br>‘doubanmovie.rotate_useragent.RotateUserAgentMiddleware’:400<br>②-①,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p>
+<p>③,编写主程序</p>
+<p>④,执行<br>scrapy crawl (spiders下文件,不包含后缀)</p>
+<p>注意:设置浏览器标识时,第一个应为项目名</p>
+<p>爬虫爬取数据流程(scrapy)<br>1,scrapy startproject XXXX<br>2,scrapy genspider XXXX “<a href="http://www.xxxx.com”/">http://www.XXXX.com”</a><br>3,编写item.py,明确需要提取的数据<br>4,编写spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>5,编写pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>6,编写settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置<br>7,执行爬虫</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web面试题</title>
+    <url>/article/45b9fa15.html</url>
+    <content><![CDATA[<p>1, Django的MVT模式(MVC:M相当于model,V相当于template,C相当于view)<br>M： Model, 模型 与MVC中的M相同，负责对数据的处理<br>V： View, 视图 与MVC中的C类似，负责处理用户请求，调用M和T，响应请求<br>T： Template, 模板 与MVC中的V类似，负责如何显示数据（产生html界面）</p>
+<p>2, get&#x2F;post<br>GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
+<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</p>
+<p>GET请求在URL中传送的参数是有长度限制的，而POST没有。</p>
+<p>GET参数通过URL传递，POST放在Request body中。</p>
+<p>3,csrf</p>
+<p>跨站请求伪造: 主要用于在html中设计token访问令牌</p>
+<p>4,FBV&#x2F;CBV</p>
+<p>FBV:基于函数视图</p>
+<p>CBV:基于类视图</p>
+<p>5, django请求周期</p>
+<p>（1）用户输入网址，浏览器发起请求<br>（2）WSGI（服务器网关接口）创建socket服务端，接受请求<br>（3）中间件处理请求<br>（4）url路由，根据当前请求的url找到相应的视图函数<br>（5）进入view，进行业务处理，执行类或者函数，返回字符串<br>（6）再次通过中间件处理相应<br>（7）WSGI返回响应<br>（8）浏览器渲染</p>
+<p>6,uwsgi</p>
+<p>web服务器(应用服务器),用于连接Web服务器和Web应用框架</p>
+<p>7,中间件</p>
+<p>是一个轻量低级别的插件系统,在全局变量改变django的输入与输出,在settings中注册,,例如csrf跨站请求伪造</p>
+<p>8,内置组件</p>
+<p>Admin: 对model中对应的数据表进行增删改查提供的组件<br>model：负责操作数据库<br>form：1.生成HTML代码 2.数据有效性校验 3校验信息返回并展示<br>ModelForm: 即用于数据库操作,也可用于用户请求的验证</p>
+<p>9,悲观锁,乐观锁</p>
+<p>乐观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
+<p>悲观锁: 总是认为不会产生并发问题，每次去取数据的时候总认为不会有其他线程对数据进行修改，因此不会上锁，但是在更新时会判断其他线程在这之前有没有对数据进行修改</p>
+<p>10, JWT</p>
+<p>第一次认证通过用户名密码，服务端签发一个json格式的token。后续客户端的请求都携带这个token，服务端仅需要解析这个token，来判别客户端的身份和合法性</p>
+<p>11,cookie和session</p>
+<p>1.cookie:<br>cookie是保存在浏览器端的键值对,可以用来做用户认证<br>2.session：<br>将用户的会话信息保存在服务端,key值是随机产生的自符串,value值时session的内容<br>依赖于cookie将每个用户的随机字符串保存到用户浏览器上<br>Django中session默认保存在数据库中：django_session表flask,session默认将加密的数据写在用户的cookie中</p>
+<p>12,  如何实现用户的登陆认证</p>
+<p>1.cookie session<br>2.token 登陆成功后生成加密字符串<br>3.JWT：json wed token缩写 它将用户信息加密到token中,服务器不保存任何用户信息<br>服务器通过使用保存的密钥来验证token的正确性</p>
+<p>13, restful风格</p>
+<p>restful其实就是一套编写接口的协议，协议规定如何编写以及如何设置返回值、状态码等信息。</p>
+]]></content>
+      <categories>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>面试题</tag>
+        <tag>web面试题</tag>
       </tags>
   </entry>
   <entry>
@@ -1293,6 +1186,141 @@ pm2 start Tasker/schedule_task.py -x --interpreter python3  -o ./logs/node_task.
       <tags>
         <tag>目标识别</tag>
         <tag>yolo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用密码</title>
+    <url>/article/b68a8f57.html</url>
+    <content><![CDATA[<p>1,<br>steam账户Python_Enthusiasts<br>密码Fy19961009</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编码习惯整理</title>
+    <url>/article/e541c025.html</url>
+    <content><![CDATA[<ol>
+<li><p>修改完代码,记得自测一下(再小的修改也最好自测一下)</p>
+</li>
+<li><p>方法入参最好都检验</p>
+</li>
+<li><p>修改老接口时,思考接口的兼容性</p>
+</li>
+<li><p>对于复杂的代码逻辑,添加清楚的注释</p>
+</li>
+<li><p>使用完IO资源流,需要关闭</p>
+</li>
+<li><p>代码采取措施避免运行错误(如数组边界溢出)</p>
+</li>
+<li><p>尽量不要在循环里远程调用或者对数据库操作,优先考虑批量进行</p>
+</li>
+<li><p>写完代码,脑洞一下多线程执行会怎样,注意并发一致性问题,</p>
+</li>
+<li><p>获取对象的属性,先判断对象是否为空</p>
+</li>
+<li><p>多线程异步优先考虑恰当的线程池,而不是new thread(降低资源损耗,题号响应速度,便于重复利用)&lt;注意线程池隔离&gt;</p>
+</li>
+<li><p>手动写完代码业务的SQL,先拿去数据库跑一下,同时也explain看下执行计划</p>
+</li>
+<li><p>调用第三方接口,需要考虑异常处理.安全性,超时重试这几个点(重点的需要考虑签名,加密)</p>
+</li>
+<li><p>接口考虑幂等性</p>
+</li>
+<li><p>多线程情况下,考虑线程安全问题</p>
+</li>
+<li><p>主从延迟问题考虑</p>
+</li>
+<li><p>缓存的时候,考虑缓存跟DB的一致性,还有(缓存穿透,缓存雪崩和缓存击穿)</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编码习惯</category>
+      </categories>
+      <tags>
+        <tag>编码习惯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析</title>
+    <url>/article/d1c27656.html</url>
+    <content><![CDATA[<p>numpy模块<br>1,数组的创建语法:<br>一维数组:</p>
+<p>&#x2F; : 表示或者</p>
+<p>arr &#x3D; np.array(列表&#x2F;range(5))</p>
+<p>二维数组:<br>arr2 &#x3D; np.array([[1,2,3,4],[5,6,7,8]])</p>
+<p>2,shape:一个表示各维度大小的数组组arr2的维度:arr2.shape<br>,查看各数组的结构(几行几列)  </p>
+<p>3,dtype:一个用于说明数组数据类型的对象<br>arr2的数组类型:arr2.dtype<br>4,10代表一维数组的元素个数:arr_zeros &#x3D; np.zeros(10)</p>
+<p>5, 3,一维数组的个数,6,每个数组的元素个数:arr_ones &#x3D; np.ones((3,6))</p>
+<p>6, 2代表三维度值在数组中的个数,3代表二维度值在数组中的个数,2代表一维度值在数据中的个数 :<br>arr_empty &#x3D; np.empty([2,4])</p>
+<p>7, np.arange(5) :构建一维数组[0,1,2,3,4]                     —&gt;序列数组<br>   np.array([[6,7,8,9],np.arange(4)]) :构建二维数组[[6,7,8,9][0,1,2,3,4]]</p>
+<p>8,(matrix)矩阵的创建(一般表示二维数组)<br>np.matrix(np.arange(5))  np.maxtrix([[6,7,8,9],np.arange(4)])   </p>
+<p>arange返回的是ndarray,<br>range返回的是列表<br>np.arange(8).reshape(4,2):生成4行2列的二维数组</p>
+<p>ndarray数据类型可一致可不一致:如果其中包含dtype,数据类型必须一致</p>
+<p>9,arr &#x3D; np.array([1,2,3],dtype &#x3D; np.int32)<br>[含dtype数据类型必须一致,不指定默认int64]<br> arr.dtype</p>
+<p>10,arr &#x3D; np.array([1.1,2.7,3.5],dtype &#x3D; np.int64)<br>   arr &#x3D; [1,2,3]  将arr数组中的每一个元素类型由 float64 浮点型 转换成 int64 整型数据， 因此小数部分被截取只保留整数部分。</p>
+<p>11,ndarray数据类型的转换<br>arr &#x3D; np.array(range(5),dtype &#x3D; np.int64)<br>arr_float &#x3D; arr.astype(np.float64)<br>#整数转小数,若小数转整数会被截取,若有字符数字,也可以转为数值类型</p>
+<p>12,将数组的类型转换成另一个数组的类型<br>arr_int &#x3D; np.arange(5)<br>#int转换为float<br>arr &#x3D; arr_int.astype(np.float64)<br> #一维数组<br>arr_float &#x3D; np.array([[1.1,2.7], [5.7,6.3]])<br>#浮点型二维数组<br>将arr_float数组类型转换成arr_int数组类型<br>arr_temp&#x3D;arr_float.astype(arr_int.dtype)转化后小数部分被截取</p>
+<p>13,创建二维数组矩阵arr(浮点类型)  —35<br>arr &#x3D; np.array([np.arange(1,5), np.arange(6,10)], dtype&#x3D;np.float64)</p>
+<p>矩阵自乘,二维数组中的每个元素都乘以自身得到一个新的结果</p>
+<p>arr1 &#x3D; arr * arr </p>
+<p>矩阵自乘,二维数组中的每个元素都减去自身得到一个新的结果</p>
+<p>arr2 &#x3D; arr - arr</p>
+<p>与标量相除,一个标量数字除以二维数组中的每个元素得到一个新的结果</p>
+<p>arr3 &#x3D; 1 &#x2F; arr</p>
+<p>矩阵1&#x2F;2次幂运算,二维数组中的每个元素计算自身1&#x2F;2 次幂得到一个新的结果</p>
+<p>arr4 &#x3D; arr ** 0.5 </p>
+<p>14,数组复制<br>b &#x3D; a.view():共用同一个值,<br>b改变,a也跟着改变<br>c &#x3D; a. copy():值不会随着c的值改变而改变</p>
+<p>15,np.title(a.(m,n)):扩展<br>将数组扩展为m行n列<br>np.sin(数组):取正弦<br>np.arange(2):2个元素&#x2F;几到几&#x2F;几到几,步长<br>reshape(矩阵,行,列):改变矩阵形状(行列)</p>
+<p>16,矩阵.argmax(axis &#x3D; 0):列中最大值索引<br>数组.index(对象):求索引<br>np.sort(matrix,axis&#x3D;1):横向排序:<br>np.argsort(a):最小值索引</p>
+<p>17,一般情况下,float和int默认64</p>
+<p>18,根据索引查值<br>arr &#x3D; np.arange(10)<br>arr[5]:下标(索引)为5的元素<br>二维数组索引:<br>二维数组对象[二维数组下标索引值,一维数组下标索引值]<br>三维:数组对象[三维度轴索引值,二维度下标索引值,一维度元素下标索引值]<br>所得值为二维数组<br>19,names&#x3D;np.array([‘cnm’,’Bob’,’Jane’,’Bob’])<br>data &#x3D; np.random.randn(4,3):生成正态分布的一些随机数据的二维数组<br>4:根据第一行数组的个数决定<br>print(data[names &#x3D;&#x3D; ‘Bob’,1:]):取Bob所在行的所有数据<br>—&gt;|或   &amp;与  and     or </p>
+<p>20,及时创建副本</p>
+<p>21,花式索引:针对二维数组:<br>print([[行数1,行数2]]):取具体某行</p>
+<p>22,np.ix_:可以将两个一维数组转换成一个用于选取正方形区域的索引器</p>
+<p>23,arr.T:可以将一个4行3列的二维数组转换成一个3行4列的二维数组</p>
+<p>24,arr&#x3D;np.arange(24).reshape(2,3,4)<br>(2轴3行4列)<br>arr.transpose(1,0,2)<br>(3轴2行4列)</p>
+<p>25,arr.swapaxex(1,2):实现三维数组轴对换<br>相当用于将原三维数组以轴z为轴心,向左推90°</p>
+<p>26,针对二维数组<br>arr.tofile(‘a.bin’):写入数据<br>print(a.dtype)<br>b &#x3D; np.fromfile(‘a.bin’,dtype &#x3D; a的数据类型):读取数据</p>
+<p>27,np.save(‘a.npy’,a):保存数据<br>np.load(‘a.npy’):读取数据</p>
+<p>28,保存数据到一个文件中<br>np.savez(‘res.npz’,a,b,c):文件名及数组名<br>np.load(‘res.npz’):读取文件</p>
+<p>29,savetext和loadtext可读写一维数组,二维数组,csv文件<br>np.savetext(‘a.txt’,a,fmt&#x3D;’%d’,delimiter&#x3D;’,’):保存为整数,以逗号隔开<br>np.loadtext(‘a.txt’,delimiter&#x3D;’,’):读取时以,隔开</p>
+<p>30,np.sqrt(arr):计算各元素的平方根<br>np.exp(arr):计算常量值e各元素值</p>
+<p>31,np.maximum(arr1,arr2):对比数组中各元组的大小取大的组成最终数组<br>arr &#x3D; np.random.randn(4)*5<br>np.modf(arr):取数列中的小数部分和整数部分</p>
+<p>32,以每个元素为一行,生成N*N的方形二维矩阵<br>xs,xy &#x3D; np.meshgrid(arr,arr)<br>根号下x²+y² :np.sqrt(np.square(xs)) + np.sqrt(np.square(xy))</p>
+<p>33,np.where(布尔型,arr1,arr2):<br>当布尔型为True时,arr1,否则arr2</p>
+<p>34,arr.sum(axis &#x3D; 0):沿轴0(x轴)求和计算<br>arr.mean(axis &#x3D; 1):沿y轴求平均值<br>arr.std()求标准差</p>
+<p>35,arr.sort():默认从小到大排序<br>arr.sort(axis&#x3D;1):每行排序<br>np.unique(arr):去重排序<br>np.inId(arr,[’元素1’,’元素2’]):判断True或False</p>
+<p>36,arr1.dot(arr2):矩阵1*矩阵2<br>np.dot(arr1,np.ones(3)):二维矩阵与一维矩阵点积运算后得到一个一维数组</p>
+<p>inv(arr):获取矩阵逆运算<br>值<br>qr(arr):获取矩阵的qr操作值分解</p>
+<p>37,arr.cumsum(0):所有元素累计和<br>arr.cumprod(0):所有元素累计积</p>
+<p>38,axis &#x3D; 1行,0列,z轴</p>
+<p>39,标准正态(高斯)分布的4*4数组,arr &#x3D; np.random(size&#x3D;(4,4))<br>40,argmax求临界值</p>
+<p>Pandas模块<br>Series,DataFrame<br>Series:<br>obj &#x3D; series([1,3,2,13]):索引在左,内容在右<br>obj.index:求索引<br>obj.values:求值<br>指定索引:<br>obj&#x3D;([1,3,2,7],index&#x3D;[‘a1’,’a3’,’a13’,’a2’])<br>obj[‘a3’]:取值<br>obj[‘a13’]&#x3D;13:改值<br>输出指定范围的索引:obj[[‘a1’,’a13’]]<br>np.exp(obj):e的obj各values值次方<br> a1 in obj:判断索引值是否在obj中<br>dict1 &#x3D; {‘a’:3,’b’:13}<br>#构建series对象<br>obj &#x3D; Series(dict1)<br>new_index &#x3D; [‘w,’’y’]<br>obj2 &#x3D; Series(dict1,new_index)<br>pd.isnull&#x2F;notnull(obj2)::判断是否为空<br>两个series相加:索引并集:values为NaN,</p>
+<p>41,将具有等长的多个列表存入DataFrame,自动发添加索引,列名key值自动排序<br>fram&#x3D;DataFrame(dict1,columns&#x3D;[‘w’,’j’,’y’],index&#x3D;[1,3,13]):columns列顺序排列,index:索引顺序排列<br>fram[‘j’]:求某列<br>fram[‘w’]&#x3D;7:赋值操作<br>Series给DataFrame赋值:精确匹配DataFrame索引<br>字典嵌套,外层key作为列,内层key作为索引处理<br>reindex:新索引<br>Method&#x3D;’ffill’&#x2F;’bfill’:实现前向&#x2F;前后插值处理,<br>ix的标签索引实现行列重置<br>Pandas进阶:s表示Series对象,<br>d表示DataFrame对象<br>s.drop(‘索引名’)<br>d.drop([‘索引1’,’索引2’],axis&#x3D;0):删除索引1和3的一栏</p>
+<p>add, sub减,mul乘,div除</p>
+<p>d1.add(d2,fill_value&#x3D;0):缺失用0代替,相加</p>
+<p>排序:s.sort_index(ascending&#x3D;True):升序,false降序</p>
+<p>d.sort_values(by&#x3D;’b’,&#x2F;[‘a’,’b’]):按照列值或多个列值排序</p>
+<p>操作文件csv&#x2F;txt<br>读取:<br>os:csvPath &#x3D; os.getcwd() + ‘文件存储路径’<br>data &#x3D; pd.read_csv(csvPath + os.sep + ‘tips.csv’):读取数据</p>
+<p>写入:data.to_csv(csvPath &#x3D; os.sep + ‘out.csv’)</p>
+<p>json操作:<br>设置路径:jsonPath &#x3D; os.getcwd + ‘路径’<br>读取:with open(jsonPath + os.sep +’文件名’ , ‘r’,encoding &#x3D; ‘utf8’) as fp:<br>dump()写入json数据<br>data &#x3D; json.load(fp):读取<br>Df &#x3D; DataFrame(data):将json转换为DataFrame对象</p>
+<p>Excel:地址同上<br>xls_file &#x3D; pa.ExcelFile(ExcelPath + os.sep + ‘文件名’)<br>读取有效sheet页<br>table &#x3D; xls_file.prase(‘文件名无后缀,其他都有’)</p>
+<p>读取数据库:<br>import pymysql<br>#获取有效的数据库连接引用对象<br>connection &#x3D; pymysql.connect(host &#x3D;’localhost’,post&#x3D;3306,user&#x3D;’root’,password&#x3D;’1’,db&#x3D;’houserentals’,charser&#x3D;’utf8’)<br>#设置查询语句<br>sql &#x3D; ‘select *from emp e where e.lessor &#x3D; 13 ’<br>#使用read_sql函数 检索并转换DataFrame对象<br>df &#x3D; pd.read_sql(sql,connection)<br>#关闭数据库<br>conncetion.close()<br>#测试输出<br>print(df)</p>
+<p>42, pandas模块</p>
+<p>#显示完整的列</p>
+<p>pd.set_option(‘display.max_columns’, None) </p>
+<p>#显示完整的行</p>
+<p>pd.set_option(‘display.max_rows’, None)</p>
+]]></content>
+      <categories>
+        <category>数据分析</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
