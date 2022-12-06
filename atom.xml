@@ -6,7 +6,7 @@
   <link href="http://fies09.github.io/atom.xml" rel="self"/>
   
   <link href="http://fies09.github.io/"/>
-  <updated>2022-12-05T08:45:50.322Z</updated>
+  <updated>2022-12-06T04:22:24.657Z</updated>
   <id>http://fies09.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://fies09.github.io/article/70982e52.html"/>
     <id>http://fies09.github.io/article/70982e52.html</id>
     <published>2022-12-01T00:42:26.000Z</published>
-    <updated>2022-12-05T08:45:50.322Z</updated>
+    <updated>2022-12-06T04:22:24.657Z</updated>
     
-    <content type="html"><![CDATA[<p>1,xpath关键字position和contian的区别</p><p>psotiton:通过标签的具体所有位置获取标签内容</p><p>contian:获取某个属性含有某个字段的标签.</p><p>2, scrapy框架各模块的作用</p><p>item.py,明确需要提取的数据<br>spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p><p>3, python处理js反爬过程主要是在headers请求头中添加对网页中的cookie字段进行处理的数据信息.</p><p>4,高并发爬虫</p><p>高并发爬虫主要通过asynci进行异步处理操作以及通过aiohttp模块对多个url请求进行处理</p><p>5,如何将爬取的数据保存到本地或者数据库当中</p><p>管道文件中一个管道类对应的是将数据存储到一种平台,爬虫文件提交的item只会给管道文件中第一个被执行的管道类接受,process_item中的return表示将item传递给下一个即将被执行的管道类</p><p>6,反爬机制主要包含对多个ip进行反爬处理,防止ip被封,多个ua请求头以及对登录时的验证码进行破解已实现登录功能,</p><p>7,分布式爬虫</p><p>1, 安装scrapy_redis组件,给原生的scrapy框架提供可以被共享的管道以及调度器,</p><p>2, 修改爬虫文件,添加一个新的属性,可以被共享的调度器队列名称,</p><p>3, 修改配置文件,指定使用可以被共享的管道,指定调度器以及redis服务,</p><p>4, 提升爬取数据的效率</p><p>8,增量式爬虫: 监测网站数据更新情况,只会爬取网站最新更新出来的数据</p>]]></content>
+    <content type="html"><![CDATA[<p>1,xpath关键字position和contian的区别</p><p>psotiton:通过标签的具体所有位置获取标签内容</p><p>contian:获取某个属性含有某个字段的标签.</p><p>2, scrapy框架各模块的作用</p><p>item.py,明确需要提取的数据<br>spiders&#x2F;xxxx.py ,编写爬虫文件,处理请求和响应,以及提取数据(yield item )<br>pipelines.py , 编写管道文件,处理spider返回item,比如本地持久化存储等…<br>settings,py,启动管道组件,ITEM_PIPELINES 以及其他相关设置</p><p>3, python处理js反爬过程主要是在headers请求头中添加对网页中的cookie字段进行处理的数据信息.</p><p>4,高并发爬虫</p><p>高并发爬虫主要通过asynci进行异步处理操作以及通过aiohttp模块对多个url请求进行处理</p><p>5,如何将爬取的数据保存到本地或者数据库当中</p><p>管道文件中一个管道类对应的是将数据存储到一种平台,爬虫文件提交的item只会给管道文件中第一个被执行的管道类接受,process_item中的return表示将item传递给下一个即将被执行的管道类</p><p>6,反爬机制主要包含对多个ip进行反爬处理,防止ip被封,多个ua请求头以及对登录时的验证码进行破解已实现登录功能,</p><p>破解验证码可以通过①ddddocr模块.②pytesseract模块,③通过冰拓第三方网站的API进行验证码的识别并破解,实现模拟登录,④先将验证码进行二值化以及灰度化处理,然后通过百度api模块对验证码进行识别处理.</p><p>7,分布式爬虫(提升爬取数据的效率)</p><p>1, 安装scrapy_redis组件,给原生的scrapy框架提供可以被共享的管道以及调度器,</p><p>2, 修改爬虫文件,添加一个新的属性,可以被共享的调度器队列名称,编写数据解析相关操作,</p><p>3, 将当前爬虫类的父类修改成RedisCrawSpider</p><p>3, 修改配置文件,指定使用可以被共享的管道,指定调度器以及redis服务,</p><p>4, 配置redis</p><p>8,增量式爬虫: 监测网站数据更新情况,只会爬取网站最新更新出来的数据</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;1,xpath关键字position和contian的区别&lt;/p&gt;
