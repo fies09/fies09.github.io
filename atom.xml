@@ -155,9 +155,9 @@
     <category term="面试题" scheme="http://fies09.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-    <category term="面试题" scheme="http://fies09.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
     <category term="linux面试题" scheme="http://fies09.github.io/tags/linux%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="面试题" scheme="http://fies09.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -331,9 +331,9 @@
     <category term="web开发" scheme="http://fies09.github.io/categories/web%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="web开发" scheme="http://fies09.github.io/tags/web%E5%BC%80%E5%8F%91/"/>
-    
     <category term="python" scheme="http://fies09.github.io/tags/python/"/>
+    
+    <category term="web开发" scheme="http://fies09.github.io/tags/web%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -687,9 +687,9 @@
     <category term="面试题" scheme="http://fies09.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-    <category term="mysql面试题" scheme="http://fies09.github.io/tags/mysql%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
     <category term="面试题" scheme="http://fies09.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="mysql面试题" scheme="http://fies09.github.io/tags/mysql%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
